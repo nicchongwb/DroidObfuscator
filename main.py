@@ -33,6 +33,10 @@ outfile = open(outfile_file_name, "w+", encoding="utf-8")
 edit_mode = False
 label_start = None
 label_end = None
+label_loop = None
+loop_A_label = None
+loop_B_label = None
+loop_C_label = None
 
 for line in get_lines:
 	# Check if start of method
@@ -48,12 +52,24 @@ for line in get_lines:
 		if label_start and label_end:
 			outfile.write("\t:{0}\n".format(label_end))
 			outfile.write("\tgoto/32 :{0}\n".format(label_start))
+
+			outfile.write("\t:{0}\n".format(label_loop))
+			outfile.write("\tgoto/32 :{0}\n".format(loop_A_label))
+			outfile.write("\t:{0}\n".format(loop_A_label))
+			outfile.write("\tgoto/32 :{0}\n".format(loop_B_label))
+			outfile.write("\t:{0}\n".format(loop_B_label))
+			outfile.write("\tgoto/32 :{0}\n".format(label_loop))
+
 	        # Reset labels
 			label_start = None
 			label_end = None
+			label_loop = None
+			loop_A_label = None
+			loop_B_label = None
+			loop_C_label = None
+
 		outfile.write(line + "\n")
 		edit_mode = False
-
 
 	# for lines inside method
 	elif edit_mode:
@@ -68,9 +84,17 @@ for line in get_lines:
 			label_start = generate_randStr(16)
 			label_end = generate_randStr(16)
 			label_tmp = generate_randStr(16)
+			label_loop = generate_randStr(16)
+			loop_A_label = generate_randStr(16)
+			loop_B_label = generate_randStr(16)
+			loop_C_label = generate_randStr(16)
+
 			outfile.write("\n\tconst v0, {0}\n".format(v0))
 			outfile.write("\tconst v1, {0}\n".format(v1))
 			outfile.write("\tadd-int v0, v0, v1\n")
+
+			outfile.write("\tif-eq v0, v1, :{0}\n".format(label_loop))
+
 			outfile.write("\trem-int v0, v0, v1\n")
 			outfile.write("\tif-gtz v0, :{0}\n".format(label_tmp))
 			outfile.write("\tgoto/32 :{0}\n".format(label_end))

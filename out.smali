@@ -11,14 +11,15 @@
 .method public static encrypt(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 8
 
-	const v0, 22
-	const v1, 5
+	const v0, 13
+	const v1, 16
 	add-int v0, v0, v1
+	if-eq v0, v1, :heKiTUbpBLZcfvcl
 	rem-int v0, v0, v1
-	if-gtz v0, :zpUEqpYKbjXbWygD
-	goto/32 :WshGVnXCuoTELaxc
-	:zpUEqpYKbjXbWygD
-	:JgxnDCnRbIUGeaXd
+	if-gtz v0, :TqKQecfEtnkMbhwO
+	goto/32 :oTolpTKoWjuGyQzF
+	:TqKQecfEtnkMbhwO
+	:wTPOfqGJSHynZkdK
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -190,20 +191,27 @@
     :cond_9
     :goto_2
     return-void
-	:WshGVnXCuoTELaxc
-	goto/32 :JgxnDCnRbIUGeaXd
+	:oTolpTKoWjuGyQzF
+	goto/32 :wTPOfqGJSHynZkdK
+	:heKiTUbpBLZcfvcl
+	goto/32 :eWkqTvYRYEYEcNOL
+	:eWkqTvYRYEYEcNOL
+	goto/32 :atSzxDmQHssAissB
+	:atSzxDmQHssAissB
+	goto/32 :heKiTUbpBLZcfvcl
 .end method
 .method private static getAlphaNumericString(I)Ljava/lang/String;
     .locals 4
 
-	const v0, 13
-	const v1, 4
+	const v0, 19
+	const v1, 17
 	add-int v0, v0, v1
+	if-eq v0, v1, :dBKjCrwNhCdNyOuZ
 	rem-int v0, v0, v1
-	if-gtz v0, :UTAbZCXVdEsPHbRI
-	goto/32 :BcNfeoOempfDjNKj
-	:UTAbZCXVdEsPHbRI
-	:dEHSVgGWQXlKQgCs
+	if-gtz v0, :AjVXuPLmyRfwmBOS
+	goto/32 :xLBMYslBquFePocb
+	:AjVXuPLmyRfwmBOS
+	:zgTvxTPHmJGWTlET
     const/16 v0, 0x100
     new-array v0, v0, [B
     .line 250
@@ -260,8 +268,14 @@
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
     move-result-object p0
     return-object p0
-	:BcNfeoOempfDjNKj
-	goto/32 :dEHSVgGWQXlKQgCs
+	:xLBMYslBquFePocb
+	goto/32 :zgTvxTPHmJGWTlET
+	:dBKjCrwNhCdNyOuZ
+	goto/32 :pPhjofrOUPmwVlJD
+	:pPhjofrOUPmwVlJD
+	goto/32 :kxukQSNzTmlaetbL
+	:kxukQSNzTmlaetbL
+	goto/32 :dBKjCrwNhCdNyOuZ
 .end method
 .method public static init(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
@@ -332,14 +346,15 @@
 .method static synthetic lambda$init$0(ILjava/lang/String;Ljava/nio/file/Path;)V
     .locals 2
 
-	const v0, 7
-	const v1, 27
+	const v0, 22
+	const v1, 23
 	add-int v0, v0, v1
+	if-eq v0, v1, :gcLftysawPtfVtEp
 	rem-int v0, v0, v1
-	if-gtz v0, :rcLbqBzqHiKHtZoo
-	goto/32 :HoPwbgvVkGEziKat
-	:rcLbqBzqHiKHtZoo
-	:LhnpFAaaxLPIGhLK
+	if-gtz v0, :PCRlrmUjcDZvdnNL
+	goto/32 :YSrfPXwgCgJRjrBE
+	:PCRlrmUjcDZvdnNL
+	:dlbENtThNDWESXOO
     .line 138
     :try_start_0
     invoke-interface {p2}, Ljava/nio/file/Path;->toString()Ljava/lang/String;
@@ -372,8 +387,14 @@
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
     :goto_0
     return-void
-	:HoPwbgvVkGEziKat
-	goto/32 :LhnpFAaaxLPIGhLK
+	:YSrfPXwgCgJRjrBE
+	goto/32 :dlbENtThNDWESXOO
+	:gcLftysawPtfVtEp
+	goto/32 :FCBzmYIBIHKMdXJP
+	:FCBzmYIBIHKMdXJP
+	goto/32 :epHjTasTjlCfijiA
+	:epHjTasTjlCfijiA
+	goto/32 :gcLftysawPtfVtEp
 .end method
 .method static synthetic lambda$listFiles$1(Ljava/nio/file/Path;)Z
     .locals 1
@@ -387,14 +408,15 @@
 .method private static listFiles(Ljava/nio/file/Path;)Ljava/util/List;
     .locals 2
 
-	const v0, 3
-	const v1, 9
+	const v0, 29
+	const v1, 8
 	add-int v0, v0, v1
+	if-eq v0, v1, :VpCtJInMqdDcAYdD
 	rem-int v0, v0, v1
-	if-gtz v0, :HIkEaxLeRQhsRluP
-	goto/32 :jouXFsEZnXkpZbda
-	:HIkEaxLeRQhsRluP
-	:panxsZyXRtAZcgub
+	if-gtz v0, :cgQAleoVKYEpmcuX
+	goto/32 :BDsUWhByNsAfEiCR
+	:cgQAleoVKYEpmcuX
+	:NDEnsIRhsBvrGQpE
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -447,6 +469,12 @@
     :cond_1
     :goto_0
     throw v0
-	:jouXFsEZnXkpZbda
-	goto/32 :panxsZyXRtAZcgub
+	:BDsUWhByNsAfEiCR
+	goto/32 :NDEnsIRhsBvrGQpE
+	:VpCtJInMqdDcAYdD
+	goto/32 :kfoOhfzbSqxNLumu
+	:kfoOhfzbSqxNLumu
+	goto/32 :wyKnJOTJwVTdSgVu
+	:wyKnJOTJwVTdSgVu
+	goto/32 :VpCtJInMqdDcAYdD
 .end method
