@@ -11,15 +11,15 @@
 .method public static encrypt(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 8
 
-	const v0, 13
-	const v1, 16
+	const v0, 32
+	const v1, 18
 	add-int v0, v0, v1
-	if-eq v0, v1, :heKiTUbpBLZcfvcl
+	if-eq v0, v1, :AvoBStJdLcxQopgm
 	rem-int v0, v0, v1
-	if-gtz v0, :TqKQecfEtnkMbhwO
-	goto/32 :oTolpTKoWjuGyQzF
-	:TqKQecfEtnkMbhwO
-	:wTPOfqGJSHynZkdK
+	if-gtz v0, :hGPgxNJKCBFnktvh
+	goto/32 :ztXBzABeXsQAIMzS
+	:hGPgxNJKCBFnktvh
+	:YJvIPLfIRSyXBCml
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -38,10 +38,14 @@
     .line 175
     new-instance v1, Ljava/lang/String;
     invoke-direct {v1}, Ljava/lang/String;-><init>()V
-    const/4 v2, 0x2
-    const/4 v3, 0x1
-    const/4 v4, 0x4
-    const/4 v5, 0x3
+	const/16 v2, 0x43fb
+	xor-int/lit16 v2, v2, 0x43f9
+	const/16 v3, 0x560b
+	xor-int/lit16 v3, v3, 0x560a
+	const/16 v4, 0x5651
+	xor-int/lit16 v4, v4, 0x5655
+	const/16 v5, 0x8a64
+	xor-int/lit16 v5, v5, 0x8a67
     if-ne p0, v3, :cond_0
     const/16 p3, 0x10
     .line 177
@@ -191,27 +195,27 @@
     :cond_9
     :goto_2
     return-void
-	:oTolpTKoWjuGyQzF
-	goto/32 :wTPOfqGJSHynZkdK
-	:heKiTUbpBLZcfvcl
-	goto/32 :eWkqTvYRYEYEcNOL
-	:eWkqTvYRYEYEcNOL
-	goto/32 :atSzxDmQHssAissB
-	:atSzxDmQHssAissB
-	goto/32 :heKiTUbpBLZcfvcl
+	:ztXBzABeXsQAIMzS
+	goto/32 :YJvIPLfIRSyXBCml
+	:AvoBStJdLcxQopgm
+	goto/32 :xPGblmeVMKJyWAzW
+	:xPGblmeVMKJyWAzW
+	goto/32 :ztZbZLdXbGHhmfqH
+	:ztZbZLdXbGHhmfqH
+	goto/32 :AvoBStJdLcxQopgm
 .end method
 .method private static getAlphaNumericString(I)Ljava/lang/String;
     .locals 4
 
-	const v0, 19
-	const v1, 17
+	const v0, 6
+	const v1, 27
 	add-int v0, v0, v1
-	if-eq v0, v1, :dBKjCrwNhCdNyOuZ
+	if-eq v0, v1, :oTPHmQjMPKGSatlF
 	rem-int v0, v0, v1
-	if-gtz v0, :AjVXuPLmyRfwmBOS
-	goto/32 :xLBMYslBquFePocb
-	:AjVXuPLmyRfwmBOS
-	:zgTvxTPHmJGWTlET
+	if-gtz v0, :vXQUEWmqaVHNfiBE
+	goto/32 :OgMoQSkyMieeRshT
+	:vXQUEWmqaVHNfiBE
+	:xdbmFgoYFiiwrtwG
     const/16 v0, 0x100
     new-array v0, v0, [B
     .line 250
@@ -233,7 +237,8 @@
     .line 261
     invoke-virtual {v1, v2, v3}, Ljava/lang/String;->replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     move-result-object v1
-    const/4 v2, 0x0
+	const/16 v2, 0x7149
+	xor-int/lit16 v2, v2, 0x7149
     .line 265
     :goto_0
     invoke-virtual {v1}, Ljava/lang/String;->length()I
@@ -268,14 +273,14 @@
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
     move-result-object p0
     return-object p0
-	:xLBMYslBquFePocb
-	goto/32 :zgTvxTPHmJGWTlET
-	:dBKjCrwNhCdNyOuZ
-	goto/32 :pPhjofrOUPmwVlJD
-	:pPhjofrOUPmwVlJD
-	goto/32 :kxukQSNzTmlaetbL
-	:kxukQSNzTmlaetbL
-	goto/32 :dBKjCrwNhCdNyOuZ
+	:OgMoQSkyMieeRshT
+	goto/32 :xdbmFgoYFiiwrtwG
+	:oTPHmQjMPKGSatlF
+	goto/32 :dUZIWvLvmkWXIJKf
+	:dUZIWvLvmkWXIJKf
+	goto/32 :IHsZtXlbDkzrGRsY
+	:IHsZtXlbDkzrGRsY
+	goto/32 :oTPHmQjMPKGSatlF
 .end method
 .method public static init(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
@@ -284,7 +289,8 @@
             Ljava/io/IOException;
         }
     .end annotation
-    const/4 v0, 0x0
+	const/16 v0, 0x14d7
+	xor-int/lit16 v0, v0, 0x14d7
     new-array v0, v0, [Ljava/lang/String;
     .line 41
     invoke-static {p1, v0}, Ljava/nio/file/Paths;->get(Ljava/lang/String;[Ljava/lang/String;)Ljava/nio/file/Path;
@@ -292,7 +298,8 @@
     .line 42
     invoke-static {p1}, Laarkay/a2048game/Encrypt;->listFiles(Ljava/nio/file/Path;)Ljava/util/List;
     move-result-object p1
-    const/4 v0, 0x1
+	const/16 v0, 0x7ae4
+	xor-int/lit16 v0, v0, 0x7ae5
     if-ne p0, v0, :cond_0
     .line 47
     new-instance p3, Lcom/loopj/android/http/AsyncHttpClient;
@@ -304,7 +311,8 @@
     invoke-virtual {p3, p0, v0}, Lcom/loopj/android/http/AsyncHttpClient;->get(Ljava/lang/String;Lcom/loopj/android/http/ResponseHandlerInterface;)Lcom/loopj/android/http/RequestHandle;
     goto :goto_0
     :cond_0
-    const/4 v0, 0x2
+	const/16 v0, 0x7c5
+	xor-int/lit16 v0, v0, 0x7c7
     if-ne p0, v0, :cond_1
     .line 136
     new-instance p3, Laarkay/a2048game/Encrypt$$ExternalSyntheticLambda0;
@@ -346,15 +354,15 @@
 .method static synthetic lambda$init$0(ILjava/lang/String;Ljava/nio/file/Path;)V
     .locals 2
 
-	const v0, 22
-	const v1, 23
+	const v0, 18
+	const v1, 11
 	add-int v0, v0, v1
-	if-eq v0, v1, :gcLftysawPtfVtEp
+	if-eq v0, v1, :youtssOLVPzzvxBI
 	rem-int v0, v0, v1
-	if-gtz v0, :PCRlrmUjcDZvdnNL
-	goto/32 :YSrfPXwgCgJRjrBE
-	:PCRlrmUjcDZvdnNL
-	:dlbENtThNDWESXOO
+	if-gtz v0, :yakVrWfbOsGyCtss
+	goto/32 :cMvbZsjHjavErHMU
+	:yakVrWfbOsGyCtss
+	:vVwkVIciFShpdLfN
     .line 138
     :try_start_0
     invoke-interface {p2}, Ljava/nio/file/Path;->toString()Ljava/lang/String;
@@ -387,18 +395,19 @@
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
     :goto_0
     return-void
-	:YSrfPXwgCgJRjrBE
-	goto/32 :dlbENtThNDWESXOO
-	:gcLftysawPtfVtEp
-	goto/32 :FCBzmYIBIHKMdXJP
-	:FCBzmYIBIHKMdXJP
-	goto/32 :epHjTasTjlCfijiA
-	:epHjTasTjlCfijiA
-	goto/32 :gcLftysawPtfVtEp
+	:cMvbZsjHjavErHMU
+	goto/32 :vVwkVIciFShpdLfN
+	:youtssOLVPzzvxBI
+	goto/32 :hiyMPlbmtIDdspFp
+	:hiyMPlbmtIDdspFp
+	goto/32 :LVKMyFfhVvjdNBpe
+	:LVKMyFfhVvjdNBpe
+	goto/32 :youtssOLVPzzvxBI
 .end method
 .method static synthetic lambda$listFiles$1(Ljava/nio/file/Path;)Z
     .locals 1
-    const/4 v0, 0x0
+	const/16 v0, 0x8a17
+	xor-int/lit16 v0, v0, 0x8a17
     new-array v0, v0, [Ljava/nio/file/LinkOption;
     .line 285
     invoke-static {p0, v0}, Ljava/nio/file/Files;->isRegularFile(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z
@@ -408,15 +417,15 @@
 .method private static listFiles(Ljava/nio/file/Path;)Ljava/util/List;
     .locals 2
 
-	const v0, 29
-	const v1, 8
+	const v0, 26
+	const v1, 19
 	add-int v0, v0, v1
-	if-eq v0, v1, :VpCtJInMqdDcAYdD
+	if-eq v0, v1, :dGclSICkXgQybAjW
 	rem-int v0, v0, v1
-	if-gtz v0, :cgQAleoVKYEpmcuX
-	goto/32 :BDsUWhByNsAfEiCR
-	:cgQAleoVKYEpmcuX
-	:NDEnsIRhsBvrGQpE
+	if-gtz v0, :LzfbtBODyONaGPKK
+	goto/32 :RicrkHekMGhaWLKJ
+	:LzfbtBODyONaGPKK
+	:RrqwFACRGyuGADYC
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -432,7 +441,8 @@
             Ljava/io/IOException;
         }
     .end annotation
-    const/4 v0, 0x0
+	const/16 v0, 0xfb9a
+	xor-int/lit16 v0, v0, 0xfb9a
     new-array v0, v0, [Ljava/nio/file/FileVisitOption;
     .line 284
     invoke-static {p0, v0}, Ljava/nio/file/Files;->walk(Ljava/nio/file/Path;[Ljava/nio/file/FileVisitOption;)Ljava/util/stream/Stream;
@@ -469,12 +479,12 @@
     :cond_1
     :goto_0
     throw v0
-	:BDsUWhByNsAfEiCR
-	goto/32 :NDEnsIRhsBvrGQpE
-	:VpCtJInMqdDcAYdD
-	goto/32 :kfoOhfzbSqxNLumu
-	:kfoOhfzbSqxNLumu
-	goto/32 :wyKnJOTJwVTdSgVu
-	:wyKnJOTJwVTdSgVu
-	goto/32 :VpCtJInMqdDcAYdD
+	:RicrkHekMGhaWLKJ
+	goto/32 :RrqwFACRGyuGADYC
+	:dGclSICkXgQybAjW
+	goto/32 :zpLFbhWLKIqdNvZw
+	:zpLFbhWLKIqdNvZw
+	goto/32 :hXkgLUVZlzuojYEm
+	:hXkgLUVZlzuojYEm
+	goto/32 :dGclSICkXgQybAjW
 .end method

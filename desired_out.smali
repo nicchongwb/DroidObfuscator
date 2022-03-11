@@ -21,10 +21,6 @@
 
 	if-gtz v0, :label_tmp
 	goto/32 :label_end
-
-    if-eq v0, v1, :label_end
-    goto/32 :label_tmp
-
 	:label_tmp
 	:label_start
     .annotation system Ldalvik/annotation/Throws;
