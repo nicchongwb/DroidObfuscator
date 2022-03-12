@@ -21,6 +21,17 @@ def get_lines_from_file(fileName):
 	except Exception as e:
 		raise
 
+def read_file(file_name):
+    try:
+        with open(file_name, "r", encoding="utf-8") as file:
+            return list(filter(None, (line.rstrip() for line in file)))
+    except Exception as e:
+        print(e)
+
+def get_nop_valid_op_codes():
+	return read_file(os.path.join(os.path.dirname(__file__), "Lists", "nop_valid_op_codes.txt"))
+
+
 def get_methodSig(line):
 	isStatic = False
 	isPublic = False
@@ -201,6 +212,23 @@ def overload_method(get_lines, outfile):
 
 	outfile.close()
 
+def nop_addition(get_lines, outfile):
+	op_codes = get_nop_valid_op_codes()
+	# pattern = re.compile(r"\s+(?P<op_code>\S+)")
+	for line in get_lines:
+		outfile.write(line + "\n") 
+		is_local = locals_pattern.match(line) # Check if line is .local
+		match = re.compile(r"\s+(?P<op_code>\S+)").match(line)
+		if match:
+			op_code = match.group("op_code")
+			# If this is a valid op code, insert some nop instructions
+			# after it.
+			if op_code in op_codes:
+				outfile.write("\tnop\n" * generate_randInt(1, 4))
+	
+	outfile.close()
+
+
 
 # Main Loop
 script_dir = os.path.dirname(__file__)
@@ -217,3 +245,8 @@ get_lines = get_lines_from_file(outfile_file_name)
 outfile = open(outfile_file_name, "w+", encoding="utf-8")
 
 overload_method(get_lines, outfile)
+
+get_lines = get_lines_from_file(outfile_file_name)
+outfile = open(outfile_file_name, "w+", encoding="utf-8")
+
+nop_addition(get_lines, outfile)
