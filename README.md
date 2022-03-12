@@ -19,7 +19,7 @@ keytool -genkey -v -keystore game_2048.keystore -alias key_2048 -keyalg RSA -key
 jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore game_2048.keystore game2048/dist/game2048.apk key_2048
 
 # Verify if apk is signed
-jarsigner -verify -verbose -certs game2048.apk
+jarsigner -verify -verbose -certs game2048/dist/game2048.apk
 
 # Zip align apk - don't really work when installing on emulator
 zipalign -v 4 game2048.apk game2048_zipaligned.apk

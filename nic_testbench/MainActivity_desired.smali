@@ -214,16 +214,18 @@
 .end method
 
 .method private Q()V
-	.locals 4
+    .locals 2
 
-	const/16 v0, 0x21ee
-	const/16 v1, 0x78d4
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :rFCalAQkOyqzKJOa
-	goto/32 :mVsdLSoGFRMUyjYm
-	:rFCalAQkOyqzKJOa
-	:hiORBEUHHEBhMsJx
+    # Arithmetic branching
+    const v0, 7
+    const v1, 4
+
+    add-int v0, v0, v1 # v0 = 11
+    rem-int v0, v0, v1 # v0 = 4%11 = 4
+    if-gtz v0, :tmp_label # this will always be true, gt zero, randInt(1,32)
+    goto/32 :end_label
+    :tmp_label
+    :start_label
 
     iget v0, p0, Lcom/androbaby/game2048/MainActivity;->H:I
 
@@ -277,8 +279,8 @@
     :cond_4
     :goto_1
     return-void
-	:mVsdLSoGFRMUyjYm
-	goto/32 :hiORBEUHHEBhMsJx
+    :end_label
+    goto/32 :start_label
 .end method
 
 .method private R()Z
@@ -302,16 +304,7 @@
 .end method
 
 .method private S()V
-	.locals 4
-
-	const/16 v0, 0x1898
-	const/16 v1, 0xd572
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :PWCwCjolslHlWFQf
-	goto/32 :WszgLkvecmHnWjMU
-	:PWCwCjolslHlWFQf
-	:UKJwbTMFvXcbNiJO
+    .locals 2
 
     const-string v0, "SIGN"
 
@@ -333,21 +326,10 @@
 
     :cond_0
     return-void
-	:WszgLkvecmHnWjMU
-	goto/32 :UKJwbTMFvXcbNiJO
 .end method
 
 .method private T()V
-	.locals 5
-
-	const/16 v0, 0x8ed4
-	const/16 v1, 0x7ae7
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :bcosSzDeSJodgXPX
-	goto/32 :qpCGEjwbIrJRmEEz
-	:bcosSzDeSJodgXPX
-	:AJnCOjicgKPTjCTP
+    .locals 3
 
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->J:Landroid/widget/TextView;
 
@@ -419,21 +401,10 @@
     invoke-direct {p0}, Lcom/androbaby/game2048/MainActivity;->Q()V
 
     return-void
-	:qpCGEjwbIrJRmEEz
-	goto/32 :AJnCOjicgKPTjCTP
 .end method
 
 .method private U()V
-	.locals 4
-
-	const/16 v0, 0xedf1
-	const/16 v1, 0x6864
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :mjbAHKWlDqcQwXEg
-	goto/32 :FUlNzygmThPdPJMf
-	:mjbAHKWlDqcQwXEg
-	:MOJpsvytDzFJZpad
+    .locals 2
 
     const-string v0, "SIGN"
 
@@ -454,21 +425,10 @@
     invoke-virtual {v0, p0, v1}, Lb/c/b/a/g/h;->a(Landroid/app/Activity;Lb/c/b/a/g/c;)Lb/c/b/a/g/h;
 
     return-void
-	:FUlNzygmThPdPJMf
-	goto/32 :MOJpsvytDzFJZpad
 .end method
 
 .method private V()V
-	.locals 4
-
-	const/16 v0, 0x5a28
-	const/16 v1, 0xf3b5
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :rEddVMhzDeWXDSEw
-	goto/32 :FzIshVLwdwWSvaUi
-	:rEddVMhzDeWXDSEw
-	:XSvneUhhxCdxxkwn
+    .locals 2
 
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->da:Lcom/google/android/gms/auth/api/signin/c;
 
@@ -481,8 +441,6 @@
     invoke-virtual {p0, v0, v1}, La/b/b/a/n;->startActivityForResult(Landroid/content/Intent;I)V
 
     return-void
-	:FzIshVLwdwWSvaUi
-	goto/32 :XSvneUhhxCdxxkwn
 .end method
 
 .method static synthetic a(Lcom/androbaby/game2048/MainActivity;)V
@@ -502,16 +460,7 @@
 .end method
 
 .method private a(Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;)V
-	.locals 4
-
-	const/16 v0, 0xff58
-	const/16 v1, 0x63ad
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :HqgHsisdUqvoNWUU
-	goto/32 :OJeYFayFEWCGlGBe
-	:HqgHsisdUqvoNWUU
-	:xjPpxEENkDfqxXHM
+    .locals 2
 
     const-string v0, "SIGN"
 
@@ -545,21 +494,10 @@
 
     :cond_0
     return-void
-	:OJeYFayFEWCGlGBe
-	goto/32 :xjPpxEENkDfqxXHM
 .end method
 
 .method private b(Ljava/lang/String;)V
-	.locals 11
-
-	const/16 v0, 0x8c29
-	const/16 v1, 0xdf7b
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :IMoGsHMmdFTMwPFD
-	goto/32 :gcSeyrjnvaDVYxxp
-	:IMoGsHMmdFTMwPFD
-	:SUClwIhWKdYegmQW
+    .locals 9
 
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->X:Lcom/androbaby/game2048/K;
 
@@ -836,21 +774,10 @@
     iput v0, p1, Lcom/androbaby/game2048/J;->l:I
 
     return-void
-	:gcSeyrjnvaDVYxxp
-	goto/32 :SUClwIhWKdYegmQW
 .end method
 
 .method private c(Ljava/lang/String;)V
-	.locals 10
-
-	const/16 v0, 0x96a1
-	const/16 v1, 0x2c98
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :gjHypluFYkRGMRXU
-	goto/32 :zMYJTIHgTqWMrCdp
-	:gjHypluFYkRGMRXU
-	:mtAVBHwMcZnKihJU
+    .locals 8
 
     invoke-virtual {p0}, Lcom/androbaby/game2048/MainActivity;->I()V
 
@@ -1087,23 +1014,12 @@
     invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
-	:zMYJTIHgTqWMrCdp
-	goto/32 :mtAVBHwMcZnKihJU
 .end method
 
 
 # virtual methods
 .method public A()I
-	.locals 5
-
-	const/16 v0, 0x97b3
-	const/16 v1, 0x31fe
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :ePxfyuMkBRoYyBGj
-	goto/32 :ajNfKiHePEVGKRvN
-	:ePxfyuMkBRoYyBGj
-	:lkQBVNkSazTlYSyi
+    .locals 3
 
     const/4 v0, 0x0
 
@@ -1124,21 +1040,10 @@
     move-result v0
 
     return v0
-	:ajNfKiHePEVGKRvN
-	goto/32 :lkQBVNkSazTlYSyi
 .end method
 
 .method public B()I
-	.locals 5
-
-	const/16 v0, 0x52dc
-	const/16 v1, 0x33fb
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :VsFPWQvIOtDnTIQa
-	goto/32 :mVAkMIkXednetnNA
-	:VsFPWQvIOtDnTIQa
-	:EHKpYSqmJyOwrVUa
+    .locals 3
 
     const/4 v0, 0x0
 
@@ -1159,21 +1064,10 @@
     move-result v0
 
     return v0
-	:mVAkMIkXednetnNA
-	goto/32 :EHKpYSqmJyOwrVUa
 .end method
 
 .method public C()V
-	.locals 7
-
-	const/16 v0, 0xe2fc
-	const/16 v1, 0xb1a6
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :BfJdviuYlOUDBnqQ
-	goto/32 :xjxTXLmmQJOXFJMU
-	:BfJdviuYlOUDBnqQ
-	:ZMAAeBRTtnDlHIWK
+    .locals 5
 
     invoke-virtual {p0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
@@ -1332,21 +1226,10 @@
     sput-wide v0, Lcom/androbaby/game2048/MainActivity;->u:D
 
     return-void
-	:xjxTXLmmQJOXFJMU
-	goto/32 :ZMAAeBRTtnDlHIWK
 .end method
 
 .method public D()V
-	.locals 4
-
-	const/16 v0, 0xc7b3
-	const/16 v1, 0xb2aa
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :UbUeeFNIQjqalndp
-	goto/32 :aFLtFcYuxFtsNtIi
-	:UbUeeFNIQjqalndp
-	:caggZpOPNyYVOXuh
+    .locals 2
 
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->ma:Ljava/lang/Boolean;
 
@@ -1372,21 +1255,10 @@
     invoke-virtual {v1, v0}, Lcom/google/android/gms/ads/i;->a(Lcom/google/android/gms/ads/d;)V
 
     return-void
-	:aFLtFcYuxFtsNtIi
-	goto/32 :caggZpOPNyYVOXuh
 .end method
 
 .method public E()V
-	.locals 4
-
-	const/16 v0, 0xef41
-	const/16 v1, 0xb9ba
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :PSjWIupSnfEQkjyZ
-	goto/32 :krVnZhtOVjFJaYFk
-	:PSjWIupSnfEQkjyZ
-	:TyYmnmjoisyUPfez
+    .locals 2
 
     const/4 v0, 0x1
 
@@ -1450,21 +1322,10 @@
     invoke-virtual {p0}, Lcom/androbaby/game2048/MainActivity;->L()V
 
     return-void
-	:krVnZhtOVjFJaYFk
-	goto/32 :TyYmnmjoisyUPfez
 .end method
 
 .method public F()V
-	.locals 4
-
-	const/16 v0, 0xcd45
-	const/16 v1, 0x5397
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :wUxiJpuvXMZMgACH
-	goto/32 :pyPXxfBbjoxJCoGh
-	:wUxiJpuvXMZMgACH
-	:LMSjiIKTjcWXGocb
+    .locals 2
 
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->ca:Lcom/google/android/gms/games/f;
 
@@ -1488,21 +1349,10 @@
 
     :cond_0
     return-void
-	:pyPXxfBbjoxJCoGh
-	goto/32 :LMSjiIKTjcWXGocb
 .end method
 
 .method public G()V
-	.locals 4
-
-	const/16 v0, 0xd88e
-	const/16 v1, 0xb371
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :fSunwyFZBHRSKlbd
-	goto/32 :UivvlglVQiOjVaBz
-	:fSunwyFZBHRSKlbd
-	:sTbemYamyIWOEWdO
+    .locals 2
 
     const/4 v0, 0x0
 
@@ -1597,21 +1447,10 @@
     :cond_4
     :goto_0
     return-void
-	:UivvlglVQiOjVaBz
-	goto/32 :sTbemYamyIWOEWdO
 .end method
 
 .method public H()V
-	.locals 5
-
-	const/16 v0, 0x4da3
-	const/16 v1, 0x46cc
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :nboWxbtMLcKFggwx
-	goto/32 :pEakTSRaKrzwHzpU
-	:nboWxbtMLcKFggwx
-	:pOxrSeDnLOMcHXgp
+    .locals 3
 
     const/4 v0, 0x0
 
@@ -1640,21 +1479,10 @@
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
-	:pEakTSRaKrzwHzpU
-	goto/32 :pOxrSeDnLOMcHXgp
 .end method
 
 .method public I()V
-	.locals 5
-
-	const/16 v0, 0x7ee5
-	const/16 v1, 0x68f9
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :eVtWZTtXYbBelkLI
-	goto/32 :ePMbCuKJxmSFzDOS
-	:eVtWZTtXYbBelkLI
-	:jqwNteLjtmYTOuls
+    .locals 3
 
     invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
@@ -1673,21 +1501,10 @@
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
-	:ePMbCuKJxmSFzDOS
-	goto/32 :jqwNteLjtmYTOuls
 .end method
 
 .method public J()V
-	.locals 5
-
-	const/16 v0, 0x1fef
-	const/16 v1, 0x3d31
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :ctuNaLXvUCIodQcd
-	goto/32 :dIPpUgfxmJnhzMwr
-	:ctuNaLXvUCIodQcd
-	:DaoeyABLPETQiMZh
+    .locals 3
 
     const-string v0, "SCORE"
 
@@ -1714,21 +1531,10 @@
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
-	:dIPpUgfxmJnhzMwr
-	goto/32 :DaoeyABLPETQiMZh
 .end method
 
 .method public K()V
-	.locals 5
-
-	const/16 v0, 0x5848
-	const/16 v1, 0xd6ec
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :yNntdsvksPXKHhsO
-	goto/32 :TWjOPhFKrkbhXbLv
-	:yNntdsvksPXKHhsO
-	:cdRPsbcioycEXzkY
+    .locals 3
 
     const-string v0, "CHOICE"
 
@@ -1759,21 +1565,10 @@
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
-	:TWjOPhFKrkbhXbLv
-	goto/32 :cdRPsbcioycEXzkY
 .end method
 
 .method public L()V
-	.locals 5
-
-	const/16 v0, 0x3ef5
-	const/16 v1, 0x9f78
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :TFNecXHOmayRVddG
-	goto/32 :BrjjOUXWeAyDAttj
-	:TFNecXHOmayRVddG
-	:fVMIOaqefTwgTytL
+    .locals 3
 
     const-string v0, "SCORE"
 
@@ -1804,21 +1599,10 @@
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
-	:BrjjOUXWeAyDAttj
-	goto/32 :fVMIOaqefTwgTytL
 .end method
 
 .method public M()V
-	.locals 4
-
-	const/16 v0, 0xcb2b
-	const/16 v1, 0xbbe3
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :gUWUPRzFeKbSsXye
-	goto/32 :YTdVqArwEWXtRGev
-	:gUWUPRzFeKbSsXye
-	:YpXkceMtmtfWLECZ
+    .locals 2
 
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->R:Landroid/app/Dialog;
 
@@ -1855,8 +1639,6 @@
 
     :goto_0
     return-void
-	:YTdVqArwEWXtRGev
-	goto/32 :YpXkceMtmtfWLECZ
 .end method
 
 .method public N()V
@@ -1884,16 +1666,7 @@
 .end method
 
 .method public O()V
-	.locals 5
-
-	const/16 v0, 0x9bef
-	const/16 v1, 0xe6fb
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :WHRpYvtojkinZEts
-	goto/32 :AYnriwGnfGyyDJKy
-	:WHRpYvtojkinZEts
-	:MEFAharbksUpFcJx
+    .locals 3
 
     const/4 v0, 0x1
 
@@ -1916,21 +1689,10 @@
     invoke-virtual {v0, v1, v2}, Landroid/view/Window;->setLayout(II)V
 
     return-void
-	:AYnriwGnfGyyDJKy
-	goto/32 :MEFAharbksUpFcJx
 .end method
 
 .method public P()V
-	.locals 7
-
-	const/16 v0, 0xc4a6
-	const/16 v1, 0xa247
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :nYLEQqSXefgxeTtG
-	goto/32 :YhcIJktAefDVmHsl
-	:nYLEQqSXefgxeTtG
-	:fvUdDTxUxBQcWWEH
+    .locals 5
 
     invoke-virtual {p0}, Landroid/app/Activity;->getLayoutInflater()Landroid/view/LayoutInflater;
 
@@ -1997,21 +1759,10 @@
     invoke-virtual {v1}, Landroid/widget/Toast;->show()V
 
     return-void
-	:YhcIJktAefDVmHsl
-	goto/32 :fvUdDTxUxBQcWWEH
 .end method
 
 .method public a(J)V
-	.locals 5
-
-	const/16 v0, 0xfe26
-	const/16 v1, 0x5c24
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :wewHzjxRUYkArjtz
-	goto/32 :EJRzEwnRJREgbXYR
-	:wewHzjxRUYkArjtz
-	:CxKTiPbOFkfNjExR
+    .locals 3
 
     const-wide/16 v0, 0x0
 
@@ -2088,21 +1839,10 @@
     :cond_5
     :goto_1
     return-void
-	:EJRzEwnRJREgbXYR
-	goto/32 :CxKTiPbOFkfNjExR
 .end method
 
 .method public b(I)V
-	.locals 4
-
-	const/16 v0, 0xde8d
-	const/16 v1, 0xc169
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :kAlaYuOeJjHoBxoM
-	goto/32 :qoplqgbuQoIwiVYv
-	:kAlaYuOeJjHoBxoM
-	:obOfycfVIBQBpVSW
+    .locals 2
 
     const-string v0, "CHOICE"
 
@@ -2127,21 +1867,10 @@
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
-	:qoplqgbuQoIwiVYv
-	goto/32 :obOfycfVIBQBpVSW
 .end method
 
 .method public c(I)V
-	.locals 4
-
-	const/16 v0, 0x681a
-	const/16 v1, 0x79c3
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :fhGoCVXujRCLngRy
-	goto/32 :nkcWhSfVAUQgeUhb
-	:fhGoCVXujRCLngRy
-	:aanDECSsGtHQMdxB
+    .locals 2
 
     const-string v0, "SCORE"
 
@@ -2166,21 +1895,10 @@
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
-	:nkcWhSfVAUQgeUhb
-	goto/32 :aanDECSsGtHQMdxB
 .end method
 
 .method public d(I)V
-	.locals 4
-
-	const/16 v0, 0x4ffa
-	const/16 v1, 0x1ff4
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :XYEvmLCMTCDSilvU
-	goto/32 :XdeuIUXcjkvQvtSo
-	:XYEvmLCMTCDSilvU
-	:xYYZxNyJFtFJtpAi
+    .locals 2
 
     const-string v0, "SCORE"
 
@@ -2205,21 +1923,10 @@
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
-	:XdeuIUXcjkvQvtSo
-	goto/32 :xYYZxNyJFtFJtpAi
 .end method
 
 .method public e(I)V
-	.locals 5
-
-	const/16 v0, 0x5a18
-	const/16 v1, 0xc28e
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :OodIUdcqjFgPHzKc
-	goto/32 :wHHIFSTviRoJWNbh
-	:OodIUdcqjFgPHzKc
-	:SFWImLkTcaVTSZuq
+    .locals 3
 
     iput p1, p0, Lcom/androbaby/game2048/MainActivity;->va:I
 
@@ -2341,21 +2048,10 @@
     :cond_4
     :goto_3
     return-void
-	:wHHIFSTviRoJWNbh
-	goto/32 :SFWImLkTcaVTSZuq
 .end method
 
 .method public o()V
-	.locals 6
-
-	const/16 v0, 0x376f
-	const/16 v1, 0x1619
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :QzjDaEtWDBJCLYnp
-	goto/32 :NXFpYBkIYYBGzLGt
-	:QzjDaEtWDBJCLYnp
-	:wNSEkLkrBysLBmKu
+    .locals 4
 
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
@@ -2390,21 +2086,10 @@
     invoke-virtual {v0}, Landroid/app/AlertDialog;->show()V
 
     return-void
-	:NXFpYBkIYYBGzLGt
-	goto/32 :wNSEkLkrBysLBmKu
 .end method
 
 .method protected onActivityResult(IILandroid/content/Intent;)V
-	.locals 5
-
-	const/16 v0, 0x87bb
-	const/16 v1, 0x9652
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :sLLfRwetIPVIUIni
-	goto/32 :FLcrjvOSuSsNjuxz
-	:sLLfRwetIPVIUIni
-	:iMcyikRTqsMWOqOd
+    .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2487,21 +2172,10 @@
 
     :goto_1
     return-void
-	:FLcrjvOSuSsNjuxz
-	goto/32 :iMcyikRTqsMWOqOd
 .end method
 
 .method public onBackPressed()V
-	.locals 4
-
-	const/16 v0, 0x9587
-	const/16 v1, 0xebea
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :sDbNYLeCzOtovuSm
-	goto/32 :RsAFTLnrDdtuLKLG
-	:sDbNYLeCzOtovuSm
-	:QpYBeMdxKfuZYEQy
+    .locals 2
 
     iget v0, p0, Lcom/androbaby/game2048/MainActivity;->C:I
 
@@ -2603,21 +2277,10 @@
 
     :goto_0
     return-void
-	:RsAFTLnrDdtuLKLG
-	goto/32 :QpYBeMdxKfuZYEQy
 .end method
 
 .method protected onCreate(Landroid/os/Bundle;)V
-	.locals 6
-
-	const/16 v0, 0x2863
-	const/16 v1, 0x2ead
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :nBZsjfgnxMYJJCCn
-	goto/32 :xedwEcaQLzUoOUId
-	:nBZsjfgnxMYJJCCn
-	:fCBfieTRXgLXLkVS
+    .locals 4
 
     invoke-super {p0, p1}, La/b/b/a/n;->onCreate(Landroid/os/Bundle;)V
 
@@ -2810,8 +2473,6 @@
     invoke-virtual {p1}, Lcom/androbaby/game2048/n;->b()V
 
     return-void
-	:xedwEcaQLzUoOUId
-	goto/32 :fCBfieTRXgLXLkVS
 .end method
 
 .method protected onDestroy()V
@@ -2827,16 +2488,7 @@
 .end method
 
 .method protected onPause()V
-	.locals 4
-
-	const/16 v0, 0xa859
-	const/16 v1, 0x88c4
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :OOyAPjNOxFkWhxaO
-	goto/32 :IwpfmbIdUbYHRHMI
-	:OOyAPjNOxFkWhxaO
-	:QbzHouCCFCBOPHHX
+    .locals 2
 
     invoke-super {p0}, La/b/b/a/n;->onPause()V
 
@@ -2859,21 +2511,10 @@
     invoke-direct {p0, v0}, Lcom/androbaby/game2048/MainActivity;->c(Ljava/lang/String;)V
 
     return-void
-	:IwpfmbIdUbYHRHMI
-	goto/32 :QbzHouCCFCBOPHHX
 .end method
 
 .method protected onResume()V
-	.locals 4
-
-	const/16 v0, 0x4e87
-	const/16 v1, 0xf65a
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :XnNrlAiiqZzQcNVu
-	goto/32 :nkuAIOWSDRbQYnYs
-	:XnNrlAiiqZzQcNVu
-	:EsqKNkGWMGJDLxVL
+    .locals 2
 
     invoke-super {p0}, La/b/b/a/n;->onResume()V
 
@@ -2898,21 +2539,10 @@
     invoke-direct {p0}, Lcom/androbaby/game2048/MainActivity;->U()V
 
     return-void
-	:nkuAIOWSDRbQYnYs
-	goto/32 :EsqKNkGWMGJDLxVL
 .end method
 
 .method public onSaveInstanceState(Landroid/os/Bundle;)V
-	.locals 4
-
-	const/16 v0, 0x29ea
-	const/16 v1, 0xaa95
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :vZJmpCwQSRbRkrLj
-	goto/32 :EedOBrdfjkWrYEfp
-	:vZJmpCwQSRbRkrLj
-	:yGkwtfQlWtdkwxIz
+    .locals 2
 
     invoke-super {p0, p1}, La/b/b/a/n;->onSaveInstanceState(Landroid/os/Bundle;)V
 
@@ -2941,21 +2571,10 @@
     invoke-direct {p0, p1}, Lcom/androbaby/game2048/MainActivity;->c(Ljava/lang/String;)V
 
     return-void
-	:EedOBrdfjkWrYEfp
-	goto/32 :yGkwtfQlWtdkwxIz
 .end method
 
 .method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
-	.locals 4
-
-	const/16 v0, 0x1546
-	const/16 v1, 0x14ce
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :HHTWjWWXrCbGTrBh
-	goto/32 :nNldIKXTJAVrATdg
-	:HHTWjWWXrCbGTrBh
-	:bmqnArzCUwnpjoIZ
+    .locals 2
 
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
@@ -3049,21 +2668,10 @@
     :cond_6
     :goto_1
     return v1
-	:nNldIKXTJAVrATdg
-	goto/32 :bmqnArzCUwnpjoIZ
 .end method
 
 .method public p()V
-	.locals 14
-
-	const/16 v0, 0x9162
-	const/16 v1, 0x6c18
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :uKSMEHIZSneErkCh
-	goto/32 :cUcElqQnFPONHvtW
-	:uKSMEHIZSneErkCh
-	:XjqslcuiUGIAwKKr
+    .locals 12
 
     sget v0, Lcom/androbaby/game2048/MainActivity;->s:I
 
@@ -3266,21 +2874,10 @@
     invoke-virtual {v0, v1}, Landroid/view/Window;->setBackgroundDrawableResource(I)V
 
     return-void
-	:cUcElqQnFPONHvtW
-	goto/32 :XjqslcuiUGIAwKKr
 .end method
 
 .method public q()V
     .locals 17
-
-	const/16 v0, 0x28a4
-	const/16 v1, 0xae71
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :aaadwUHdHHwobEbS
-	goto/32 :SaZhOTkBStTzfhJy
-	:aaadwUHdHHwobEbS
-	:awTdYByrLvViRgzh
 
     move-object/from16 v0, p0
 
@@ -3713,21 +3310,10 @@
     invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
 
     return-void
-	:SaZhOTkBStTzfhJy
-	goto/32 :awTdYByrLvViRgzh
 .end method
 
 .method public r()V
-	.locals 4
-
-	const/16 v0, 0xd3ca
-	const/16 v1, 0x9363
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :xjHDBMqMYBrWtUmT
-	goto/32 :MzjdsvXBIiaSAyKw
-	:xjHDBMqMYBrWtUmT
-	:KILmcPcnbcswxMBG
+    .locals 2
 
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->ma:Ljava/lang/Boolean;
 
@@ -3763,21 +3349,10 @@
     invoke-virtual {p0}, Lcom/androbaby/game2048/MainActivity;->D()V
 
     return-void
-	:MzjdsvXBIiaSAyKw
-	goto/32 :KILmcPcnbcswxMBG
 .end method
 
 .method public s()V
     .locals 19
-
-	const/16 v0, 0x447a
-	const/16 v1, 0x8b82
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :JKycLlenepAJmFky
-	goto/32 :DUDGYRgMQVcLrkPd
-	:JKycLlenepAJmFky
-	:ZJElNLXXBGpoZvww
 
     move-object/from16 v0, p0
 
@@ -4407,21 +3982,10 @@
     invoke-virtual {v1, v2}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
 
     return-void
-	:DUDGYRgMQVcLrkPd
-	goto/32 :ZJElNLXXBGpoZvww
 .end method
 
 .method public t()V
     .locals 24
-
-	const/16 v0, 0x3abc
-	const/16 v1, 0x953a
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :rjqWlLttgGPujqSL
-	goto/32 :njMOWDqmzfXaLOeu
-	:rjqWlLttgGPujqSL
-	:GaYIkaGngNSxtVDB
 
     move-object/from16 v0, p0
 
@@ -5212,21 +4776,10 @@
     invoke-virtual {v1, v2}, Landroid/view/Window;->setBackgroundDrawableResource(I)V
 
     return-void
-	:njMOWDqmzfXaLOeu
-	goto/32 :GaYIkaGngNSxtVDB
 .end method
 
 .method public u()Z
-	.locals 4
-
-	const/16 v0, 0x3a44
-	const/16 v1, 0x248b
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :DdxqmbeSsXTXSZBu
-	goto/32 :FgGKuJAZEaPyOYmC
-	:DdxqmbeSsXTXSZBu
-	:zehjfHlVKNOMXDPN
+    .locals 2
 
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->ma:Ljava/lang/Boolean;
 
@@ -5261,21 +4814,10 @@
     invoke-virtual {p0}, Lcom/androbaby/game2048/MainActivity;->D()V
 
     return v1
-	:FgGKuJAZEaPyOYmC
-	goto/32 :zehjfHlVKNOMXDPN
 .end method
 
 .method public v()I
-	.locals 5
-
-	const/16 v0, 0xfcd2
-	const/16 v1, 0x27c7
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :ToUGTBGbKKwDFzeK
-	goto/32 :CDFcUQaFjgbGudVD
-	:ToUGTBGbKKwDFzeK
-	:UsubkrkOJzEdxuAO
+    .locals 3
 
     invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
@@ -5294,21 +4836,10 @@
     iget v0, p0, Lcom/androbaby/game2048/MainActivity;->H:I
 
     return v0
-	:CDFcUQaFjgbGudVD
-	goto/32 :UsubkrkOJzEdxuAO
 .end method
 
 .method public w()I
-	.locals 5
-
-	const/16 v0, 0xb6f6
-	const/16 v1, 0x5592
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :YyTCfPRlwcwZWFbu
-	goto/32 :iGgnwhFoAjyVcLEN
-	:YyTCfPRlwcwZWFbu
-	:vMpKbYqodKbIdGxu
+    .locals 3
 
     const/4 v0, 0x0
 
@@ -5329,21 +4860,10 @@
     move-result v0
 
     return v0
-	:iGgnwhFoAjyVcLEN
-	goto/32 :vMpKbYqodKbIdGxu
 .end method
 
 .method public x()I
-	.locals 5
-
-	const/16 v0, 0xa47b
-	const/16 v1, 0xc3cb
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :UAXnDQtUiiCgCYoN
-	goto/32 :HCzOioyQvztALnAs
-	:UAXnDQtUiiCgCYoN
-	:OsOlpSRFNrwezkbE
+    .locals 3
 
     const/4 v0, 0x0
 
@@ -5364,21 +4884,10 @@
     move-result v0
 
     return v0
-	:HCzOioyQvztALnAs
-	goto/32 :OsOlpSRFNrwezkbE
 .end method
 
 .method public y()I
-	.locals 5
-
-	const/16 v0, 0x5f81
-	const/16 v1, 0xc5c5
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :uKeQxCTSjgqbUPCU
-	goto/32 :OrWTBUfuNVCGSjOU
-	:uKeQxCTSjgqbUPCU
-	:tdUSSrOGyEwczqJM
+    .locals 3
 
     const/4 v0, 0x0
 
@@ -5399,21 +4908,10 @@
     move-result v0
 
     return v0
-	:OrWTBUfuNVCGSjOU
-	goto/32 :tdUSSrOGyEwczqJM
 .end method
 
 .method public z()I
-	.locals 5
-
-	const/16 v0, 0x17cf
-	const/16 v1, 0x638d
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :CMXIGbQVxjpcloJI
-	goto/32 :vQLUShjFDHWKaHxB
-	:CMXIGbQVxjpcloJI
-	:CtyEMBBxkyXFLufm
+    .locals 3
 
     const/4 v0, 0x0
 
@@ -5434,6 +4932,4 @@
     move-result v0
 
     return v0
-	:vQLUShjFDHWKaHxB
-	goto/32 :CtyEMBBxkyXFLufm
 .end method
