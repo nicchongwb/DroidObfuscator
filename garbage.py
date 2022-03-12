@@ -57,7 +57,6 @@ def repackage(targetFile):
             subprocess.run(["jarsigner", "-verify", "-verbose", "-certs", targetFile + ".apk"])
         else:
             print("Key Found!")
-            subprocess.run(["keytool", "-genkey", "-v", "-keystore", searchResult, "-keyalg", "RSA", "-keysize", "2048","-validity", "10000", "-alias", "2207"])
             subprocess.run(["jarsigner", "-verbose", "-sigalg", "SHA1withRSA", "-digestalg", "SHA1", "-keystore", searchResult, targetFile +".apk", "2207"])
             subprocess.run(["jarsigner", "-verify", "-verbose", "-certs", targetFile + ".apk"])     
 
