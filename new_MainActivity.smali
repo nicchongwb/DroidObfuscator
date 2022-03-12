@@ -2,7 +2,6 @@
 
 .super La/b/b/a/n;
 
-.source ""
 
 
 
@@ -305,6 +304,8 @@
     const/4 v0, 0x0
 
 	nop
+	nop
+	nop
 
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -315,22 +316,23 @@
 
 	nop
 	nop
+	nop
 
 
     iput v0, p0, Lcom/androbaby/game2048/MainActivity;->C:I
 
-	nop
-	nop
 	nop
 
 
     iput v0, p0, Lcom/androbaby/game2048/MainActivity;->F:I
 
 	nop
+	nop
 
 
     const/4 v2, 0x4
 
+	nop
 	nop
 	nop
 
@@ -353,6 +355,9 @@
     const/16 v2, 0x1389
 
 	nop
+	nop
+	nop
+	nop
 
 
     iput v2, p0, Lcom/androbaby/game2048/MainActivity;->ba:I
@@ -362,6 +367,7 @@
 
     iput v0, p0, Lcom/androbaby/game2048/MainActivity;->fa:I
 
+	nop
 	nop
 	nop
 
@@ -376,11 +382,11 @@
 
 	nop
 	nop
-	nop
 
 
     const-string v2, "ca-app-pub-6838441978875625/2392948331"
 
+	nop
 	nop
 	nop
 
@@ -394,6 +400,7 @@
 
 	nop
 	nop
+	nop
 
 
     iput v2, p0, Lcom/androbaby/game2048/MainActivity;->ja:I
@@ -401,11 +408,11 @@
 	nop
 	nop
 	nop
+	nop
 
 
     iput-object v1, p0, Lcom/androbaby/game2048/MainActivity;->ma:Ljava/lang/Boolean;
 
-	nop
 	nop
 	nop
 
@@ -440,26 +447,21 @@
     const-string v1, "EB6427B331E63FB03410649713F5B6F5"
 
 	nop
-	nop
-	nop
 
 
     iput-object v1, p0, Lcom/androbaby/game2048/MainActivity;->pa:Ljava/lang/String;
 
-	nop
-	nop
 	nop
 
 
     iput v0, p0, Lcom/androbaby/game2048/MainActivity;->va:I
 
 	nop
-	nop
-	nop
 
 
     iput-boolean v0, p0, Lcom/androbaby/game2048/MainActivity;->wa:Z
 
+	nop
 	nop
 	nop
 	nop
@@ -475,6 +477,8 @@
     new-instance v0, Lcom/androbaby/game2048/D;
 
 	nop
+	nop
+	nop
 
 
     invoke-direct {v0, p0}, Lcom/androbaby/game2048/D;-><init>(Lcom/androbaby/game2048/MainActivity;)V
@@ -485,32 +489,32 @@
 
 	nop
 	nop
-	nop
 
 
     return-void
 
 	nop
 	nop
-	nop
 .end method
 
 
 
-.method private Q(ISF)V
+.method private Q(C)V
 
-	.locals 5
+	.locals 3
 
 
 
-	const/16 v0, 0xe47f
+	const/16 v0, 0x7f7c
 
+	nop
+	nop
+	nop
 	nop
 
 
-	const/16 v1, 0x3764
+	const/16 v1, 0x79f8
 
-	nop
 	nop
 	nop
 
@@ -519,9 +523,10 @@
 
 	nop
 	nop
+	nop
 
 
-	const/16 v0, 0xa6a4
+	const/16 v0, 0x128e
 
 	nop
 	nop
@@ -529,7 +534,7 @@
 	nop
 
 
-	const/16 v1, 0xbbdf
+	const/16 v1, 0xe28f
 
 	nop
 	nop
@@ -539,6 +544,29 @@
 
 	rem-int v0, v0, v1
 
+	nop
+	nop
+
+
+	const/16 v0, 0xad64
+
+	nop
+	nop
+
+
+	const/16 v1, 0x9e22
+
+	nop
+	nop
+	nop
+	nop
+
+
+	add-int v0, v0, v1
+
+	nop
+	nop
+	nop
 	nop
 
 
@@ -557,41 +585,45 @@
 
 
 
-	const/16 v0, 0x33c4
+	const/16 v0, 0xe1d6
 
 	nop
-	const/16 v1, 0xadc6
+	nop
+	const/16 v1, 0x1e2f
 
 	nop
 	nop
 	add-int v0, v0, v1
 
 	nop
+	nop
+	nop
 	rem-int v0, v0, v1
 
 	nop
-	nop
-	if-gtz v0, :qHkmeHTJLkscKdbJ
+	if-gtz v0, :rVtUsELJTeTnpacV
 
 	nop
 	nop
-	goto/32 :nAiqyhQCsOTCcgMF
+	nop
+	goto/32 :XssexehFPosDmTQX
 
 	nop
-	:qHkmeHTJLkscKdbJ
+	nop
+	:rVtUsELJTeTnpacV
 
-	:oEjXqiePoTCktQqR
+	:nHHaBZmvXaYACxMm
 
 
 
     iget v0, p0, Lcom/androbaby/game2048/MainActivity;->H:I
 
 	nop
+	nop
 
 
     const/4 v1, 0x4
 
-	nop
 	nop
 
 
@@ -599,15 +631,10 @@
 
 	nop
 	nop
-	nop
-	nop
 
 
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->S:Lcom/androbaby/game2048/K;
 
-	nop
-	nop
-	nop
 	nop
 
 
@@ -617,10 +644,13 @@
 
 	nop
 	nop
+	nop
 
 
     goto :goto_1
 
+	nop
+	nop
 	nop
 	nop
 
@@ -630,13 +660,10 @@
     const/4 v1, 0x5
 
 	nop
-	nop
-	nop
 
 
     if-ne v0, v1, :cond_1
 
-	nop
 	nop
 	nop
 	nop
@@ -645,11 +672,11 @@
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->T:Lcom/androbaby/game2048/K;
 
 	nop
-	nop
 
 
     goto :goto_0
 
+	nop
 	nop
 	nop
 
@@ -666,6 +693,8 @@
     if-ne v0, v1, :cond_2
 
 	nop
+	nop
+	nop
 
 
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->U:Lcom/androbaby/game2048/K;
@@ -680,6 +709,7 @@
 	nop
 	nop
 	nop
+	nop
 
 
     :cond_2
@@ -687,17 +717,17 @@
     const/16 v1, 0x8
 
 	nop
-	nop
-	nop
 
 
     if-ne v0, v1, :cond_3
 
 	nop
+	nop
 
 
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->V:Lcom/androbaby/game2048/K;
 
+	nop
 	nop
 	nop
 
@@ -712,7 +742,6 @@
     const/4 v1, 0x3
 
 	nop
-	nop
 
 
     if-ne v0, v1, :cond_4
@@ -724,6 +753,8 @@
 
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->W:Lcom/androbaby/game2048/K;
 
+	nop
+	nop
 	nop
 	nop
 
@@ -741,44 +772,25 @@
     return-void
 
 	nop
-	:nAiqyhQCsOTCcgMF
+	nop
+	nop
+	nop
+	:XssexehFPosDmTQX
 
-	goto/32 :oEjXqiePoTCktQqR
+	goto/32 :nHHaBZmvXaYACxMm
 
-	nop
-	nop
-	nop
 	nop
 .end method
 
 
 
-.method private R(BSFC)Z
+.method private R(SC)Z
 
-	.locals 6
-
-
-
-	const/16 v0, 0xaccd
-
-	nop
+	.locals 4
 
 
-	const/16 v1, 0x8c69
 
-	nop
-	nop
-	nop
-
-
-	mul-int/2addr v0, v1
-
-	nop
-	nop
-	nop
-
-
-	const/16 v0, 0x1c18
+	const/16 v0, 0x27c7
 
 	nop
 	nop
@@ -786,21 +798,19 @@
 	nop
 
 
-	const/16 v1, 0x8c98
+	const/16 v1, 0x14e2
 
 	nop
 	nop
 
 
-	rem-int v0, v0, v1
+	xor-int/2addr v0, v1
 
-	nop
 	nop
 
 
 	return v0
 
-	nop
 	nop
 	nop
 .end method
@@ -820,22 +830,23 @@
     move-result-object v0
 
 	nop
-	nop
 
 
     if-eqz v0, :cond_0
 
+	nop
+	nop
 	nop
 
 
     const/4 v0, 0x1
 
 	nop
+	nop
 
 
     goto :goto_0
 
-	nop
 	nop
 	nop
 
@@ -845,6 +856,9 @@
     const/4 v0, 0x0
 
 	nop
+	nop
+	nop
+	nop
 
 
     :goto_0
@@ -852,43 +866,50 @@
     return v0
 
 	nop
+	nop
+	nop
+	nop
 .end method
 
 
 
-.method private S(SIF)V
+.method private S(ZZCB)V
 
-	.locals 5
+	.locals 6
 
 
 
-	const/16 v0, 0x772e
+	const/16 v0, 0x38a7
+
+	nop
+
+
+	const/16 v1, 0xcb4f
+
+	nop
+
+
+	rem-int v0, v0, v1
 
 	nop
 	nop
 	nop
 
 
-	const/16 v1, 0xa8d8
+	const/16 v0, 0x6f31
 
 	nop
 	nop
 
 
-	add-int v0, v0, v1
-
-	nop
-
-
-	const/16 v0, 0x92eb
+	const/16 v1, 0xbf1a
 
 	nop
 	nop
 	nop
-	nop
 
 
-	const/16 v1, 0x4e7b
+	mul-int/2addr v0, v1
 
 	nop
 	nop
@@ -896,18 +917,29 @@
 	nop
 
 
-	add-int v0, v0, v1
+	const/16 v0, 0x877c
 
 	nop
 	nop
 	nop
+	nop
+
+
+	const/16 v1, 0xb5e2
+
+	nop
+	nop
+	nop
+	nop
+
+
+	rem-int v0, v0, v1
+
 	nop
 
 
 	return-void
 
-	nop
-	nop
 	nop
 	nop
 .end method
@@ -920,11 +952,13 @@
 
 
 
-	const/16 v0, 0xb1a3
+	const/16 v0, 0xc729
 
 	nop
-	const/16 v1, 0x5ca8
+	nop
+	const/16 v1, 0xaea7
 
+	nop
 	nop
 	nop
 	add-int v0, v0, v1
@@ -932,23 +966,24 @@
 	nop
 	nop
 	nop
+	nop
 	rem-int v0, v0, v1
 
 	nop
 	nop
-	if-gtz v0, :NhefzbUHWbLWrczl
+	nop
+	nop
+	if-gtz v0, :dJbpLoBaPevcYtte
 
 	nop
 	nop
-	nop
-	goto/32 :FrupnGmsCnmBbwZG
+	goto/32 :lxqXYPTiKLwAkXRH
 
 	nop
 	nop
-	nop
-	:NhefzbUHWbLWrczl
+	:dJbpLoBaPevcYtte
 
-	:ZekuTvnJwqFOVvCX
+	:hGJLrTBwbGDEaXXQ
 
 
 
@@ -957,12 +992,10 @@
 	nop
 	nop
 	nop
-	nop
 
 
     const-string v1, "onDisconnected()"
 
-	nop
 	nop
 	nop
 
@@ -973,9 +1006,6 @@
 
     const/4 v0, 0x0
 
-	nop
-	nop
-	nop
 	nop
 
 
@@ -989,11 +1019,12 @@
     iget-boolean v0, p0, Lcom/androbaby/game2048/MainActivity;->aa:Z
 
 	nop
+	nop
+	nop
 
 
     if-eqz v0, :cond_0
 
-	nop
 	nop
 	nop
 	nop
@@ -1003,13 +1034,11 @@
 
 	nop
 	nop
+	nop
 
 
     iput-boolean v0, p0, Lcom/androbaby/game2048/MainActivity;->aa:Z
 
-	nop
-	nop
-	nop
 	nop
 
 
@@ -1021,41 +1050,63 @@
 	nop
 	nop
 	nop
-	:FrupnGmsCnmBbwZG
+	:lxqXYPTiKLwAkXRH
 
-	goto/32 :ZekuTvnJwqFOVvCX
+	goto/32 :hGJLrTBwbGDEaXXQ
 
+	nop
 	nop
 .end method
 
 
 
-.method private T(BBB)V
+.method private T(B)V
 
-	.locals 5
+	.locals 3
 
 
 
-	const/16 v0, 0x6e33
+	const/16 v0, 0xe513
+
+	nop
+	nop
+	nop
+
+
+	const/16 v1, 0xe613
+
+	nop
+	nop
+	nop
+	nop
+
+
+	add-int v0, v0, v1
+
+	nop
+	nop
+	nop
+
+
+	const/16 v0, 0xb3c9
 
 	nop
 	nop
 
 
-	const/16 v1, 0xc199
+	const/16 v1, 0xa8f1
 
 	nop
 
 
-	mul-int/2addr v0, v1
+	xor-int/2addr v0, v1
 
-	nop
-	nop
 	nop
 
 
 	return-void
 
+	nop
 	nop
 	nop
 .end method
@@ -1068,12 +1119,13 @@
 
 
 
-	const/16 v0, 0xeb49
+	const/16 v0, 0x4c48
 
 	nop
 	nop
-	const/16 v1, 0x6e25
+	const/16 v1, 0x61d9
 
+	nop
 	nop
 	nop
 	add-int v0, v0, v1
@@ -1085,28 +1137,24 @@
 	rem-int v0, v0, v1
 
 	nop
-	nop
-	nop
-	nop
-	if-gtz v0, :yRgoMAMAanmmHiEE
+	if-gtz v0, :PTkfDKEXfvhzBLPI
 
 	nop
 	nop
 	nop
-	goto/32 :nbgJBUyHsWYhUCIE
+	goto/32 :CakdhgApVaPmSRrP
 
 	nop
 	nop
 	nop
-	:yRgoMAMAanmmHiEE
+	:PTkfDKEXfvhzBLPI
 
-	:kAfHwSoqIyRItMRU
+	:DHTxvFhgwGYVtGVP
 
 
 
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->J:Landroid/widget/TextView;
 
-	nop
 	nop
 	nop
 	nop
@@ -1124,10 +1172,12 @@
 
 	nop
 	nop
+	nop
 
 
     aget-object v1, v1, v2
 
+	nop
 	nop
 	nop
 	nop
@@ -1139,6 +1189,7 @@
 
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->K:Landroid/widget/ImageView;
 
+	nop
 	nop
 
 
@@ -1159,6 +1210,8 @@
     aget v1, v1, v2
 
 	nop
+	nop
+	nop
 
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -1168,26 +1221,35 @@
     iget v0, p0, Lcom/androbaby/game2048/MainActivity;->F:I
 
 	nop
+	nop
+	nop
+	nop
 
 
     const/4 v1, 0x4
 
+	nop
+	nop
+	nop
 	nop
 
 
     if-nez v0, :cond_0
 
 	nop
+	nop
+	nop
+	nop
 
 
     iput v1, p0, Lcom/androbaby/game2048/MainActivity;->H:I
 
 	nop
+	nop
 
 
     goto :goto_1
 
-	nop
 	nop
 	nop
 
@@ -1197,15 +1259,20 @@
     const/4 v2, 0x1
 
 	nop
+	nop
 
 
     if-ne v0, v2, :cond_1
 
 	nop
+	nop
 
 
     const/4 v0, 0x5
 
+	nop
+	nop
+	nop
 	nop
 
 
@@ -1214,10 +1281,13 @@
     iput v0, p0, Lcom/androbaby/game2048/MainActivity;->H:I
 
 	nop
+	nop
 
 
     goto :goto_1
 
+	nop
+	nop
 	nop
 	nop
 
@@ -1240,10 +1310,12 @@
 	nop
 	nop
 	nop
+	nop
 
 
     goto :goto_0
 
+	nop
 	nop
 	nop
 
@@ -1253,10 +1325,15 @@
     const/4 v2, 0x3
 
 	nop
+	nop
+	nop
+	nop
 
 
     if-ne v0, v2, :cond_3
 
+	nop
+	nop
 	nop
 
 
@@ -1271,6 +1348,9 @@
     goto :goto_0
 
 	nop
+	nop
+	nop
+	nop
 
 
     :cond_3
@@ -1280,11 +1360,11 @@
 	nop
 	nop
 	nop
+	nop
 
 
     iput v2, p0, Lcom/androbaby/game2048/MainActivity;->H:I
 
-	nop
 	nop
 
 
@@ -1301,49 +1381,52 @@
 	nop
 	nop
 	nop
-	:nbgJBUyHsWYhUCIE
+	:CakdhgApVaPmSRrP
 
-	goto/32 :kAfHwSoqIyRItMRU
+	goto/32 :DHTxvFhgwGYVtGVP
 
-	nop
-	nop
-	nop
 	nop
 .end method
 
 
 
-.method private U(ZBI)V
+.method private U(F)V
 
-	.locals 5
-
-
-
-	const/16 v0, 0x7646
-
-	nop
+	.locals 3
 
 
-	const/16 v1, 0x12e5
 
-	nop
-
-
-	rem-int v0, v0, v1
+	const/16 v0, 0xeaad
 
 	nop
 	nop
 	nop
 
 
-	const/16 v0, 0xeab2
+	const/16 v1, 0x184b
 
 	nop
 	nop
 	nop
 
 
-	const/16 v1, 0xbac8
+	add-int v0, v0, v1
+
+	nop
+	nop
+	nop
+	nop
+
+
+	const/16 v0, 0x361d
+
+	nop
+	nop
+	nop
+	nop
+
+
+	const/16 v1, 0x4ed8
 
 	nop
 	nop
@@ -1356,18 +1439,19 @@
 	nop
 	nop
 	nop
-
-
-	const/16 v0, 0xde83
-
-	nop
-	nop
-	nop
 	nop
 
 
-	const/16 v1, 0xa8c2
+	const/16 v0, 0x56f9
 
+	nop
+	nop
+
+
+	const/16 v1, 0xd659
+
+	nop
+	nop
 	nop
 	nop
 
@@ -1376,14 +1460,10 @@
 
 	nop
 	nop
-	nop
 
 
 	return-void
 
-	nop
-	nop
-	nop
 	nop
 .end method
 
@@ -1395,14 +1475,14 @@
 
 
 
-	const/16 v0, 0x346e
+	const/16 v0, 0x413e
 
 	nop
 	nop
 	nop
-	nop
-	const/16 v1, 0x99b1
+	const/16 v1, 0x4851
 
+	nop
 	nop
 	nop
 	nop
@@ -1410,25 +1490,22 @@
 
 	nop
 	nop
+	nop
+	nop
 	rem-int v0, v0, v1
 
 	nop
-	nop
-	nop
-	if-gtz v0, :iBotJBaTsZzgXQyn
+	if-gtz v0, :VxXPNwUtyRltGtfR
 
 	nop
 	nop
 	nop
-	nop
-	goto/32 :mkGxSElbShPTrOIO
+	goto/32 :IzdKhYafiQGzOqII
 
 	nop
-	nop
-	nop
-	:iBotJBaTsZzgXQyn
+	:VxXPNwUtyRltGtfR
 
-	:qPiLvOywlkQhxWFE
+	:onoKaGltwuHPbDQr
 
 
 
@@ -1436,10 +1513,13 @@
 
 	nop
 	nop
+	nop
 
 
     const-string v1, "signInSilently()"
 
+	nop
+	nop
 	nop
 	nop
 
@@ -1451,6 +1531,9 @@
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->da:Lcom/google/android/gms/auth/api/signin/c;
 
 	nop
+	nop
+	nop
+	nop
 
 
     invoke-virtual {v0}, Lcom/google/android/gms/auth/api/signin/c;->j()Lb/c/b/a/g/h;
@@ -1461,14 +1544,10 @@
 
 	nop
 	nop
-	nop
 
 
     new-instance v1, Lcom/androbaby/game2048/C;
 
-	nop
-	nop
-	nop
 	nop
 
 
@@ -1483,31 +1562,33 @@
     return-void
 
 	nop
-	nop
-	nop
-	:mkGxSElbShPTrOIO
+	:IzdKhYafiQGzOqII
 
-	goto/32 :qPiLvOywlkQhxWFE
+	goto/32 :onoKaGltwuHPbDQr
 
+	nop
 	nop
 	nop
 .end method
 
 
 
-.method private V(SFF)V
+.method private V(C)V
 
-	.locals 5
+	.locals 3
 
 
 
-	const/16 v0, 0x7e9c
+	const/16 v0, 0x8fd1
 
+	nop
+	nop
 	nop
 
 
-	const/16 v1, 0xe64f
+	const/16 v1, 0x6d76
 
+	nop
 	nop
 
 
@@ -1515,52 +1596,11 @@
 
 	nop
 	nop
-
-
-	const/16 v0, 0xfd77
-
-	nop
-	nop
-	nop
-
-
-	const/16 v1, 0xcf4e
-
-	nop
-	nop
-	nop
-	nop
-
-
-	xor-int/2addr v0, v1
-
-	nop
-	nop
-	nop
-
-
-	const/16 v0, 0x6255
-
-	nop
-	nop
-
-
-	const/16 v1, 0x486f
-
-	nop
-	nop
-	nop
-
-
-	xor-int/2addr v0, v1
-
-	nop
 	nop
 
 
 	return-void
 
-	nop
 	nop
 	nop
 .end method
@@ -1573,35 +1613,34 @@
 
 
 
-	const/16 v0, 0x3c82
+	const/16 v0, 0xda1e
 
 	nop
 	nop
 	nop
-	const/16 v1, 0x994d
+	const/16 v1, 0x9b83
 
-	nop
-	nop
 	nop
 	add-int v0, v0, v1
 
-	nop
-	nop
 	nop
 	rem-int v0, v0, v1
 
 	nop
 	nop
 	nop
-	if-gtz v0, :DkYusBJMpVyiHzLK
+	if-gtz v0, :yNEnSPQFaHkhmBVF
 
 	nop
-	goto/32 :QhEOZFuVUSKRkmlY
+	nop
+	goto/32 :BXYNUBljgVHVJNHN
 
 	nop
-	:DkYusBJMpVyiHzLK
+	nop
+	nop
+	:yNEnSPQFaHkhmBVF
 
-	:PvvTwXcingRCvfea
+	:KhpBMxPfkVCJBjlY
 
 
 
@@ -1621,11 +1660,12 @@
 
 	nop
 	nop
+	nop
+	nop
 
 
     const/16 v1, 0x2329
 
-	nop
 	nop
 	nop
 	nop
@@ -1638,25 +1678,31 @@
     return-void
 
 	nop
-	:QhEOZFuVUSKRkmlY
+	nop
+	nop
+	:BXYNUBljgVHVJNHN
 
-	goto/32 :PvvTwXcingRCvfea
+	goto/32 :KhpBMxPfkVCJBjlY
 
-	nop
-	nop
-	nop
 	nop
 .end method
 
 
 
-.method private static a(FSZ)V
+.method private static a(BBB)V
 
 	.locals 5
 
 
 
-	const/16 v0, 0x8cc8
+	const/16 v0, 0x3d9c
+
+	nop
+	nop
+	nop
+
+
+	const/16 v1, 0x6d34
 
 	nop
 	nop
@@ -1664,24 +1710,17 @@
 	nop
 
 
-	const/16 v1, 0x96e1
+	xor-int/2addr v0, v1
 
-	nop
-	nop
-	nop
-	nop
-
-
-	add-int v0, v0, v1
-
-	nop
-	nop
 	nop
 	nop
 
 
 	return-void
 
+	nop
+	nop
+	nop
 	nop
 .end method
 
@@ -1700,30 +1739,17 @@
     return-void
 
 	nop
-	nop
 .end method
 
 
 
-.method private static a(ZC)V
+.method private static a(CC)V
 
 	.locals 4
 
 
 
-	const/16 v0, 0xf99c
-
-	nop
-	nop
-	nop
-
-
-	const/16 v1, 0x5bcf
-
-	nop
-
-
-	rem-int v0, v0, v1
+	const/16 v0, 0x53cc
 
 	nop
 	nop
@@ -1731,14 +1757,9 @@
 	nop
 
 
-	const/16 v0, 0x3e85
+	const/16 v1, 0xe2c7
 
 	nop
-	nop
-
-
-	const/16 v1, 0xfa2f
-
 	nop
 
 
@@ -1750,7 +1771,24 @@
 	nop
 
 
-	const/16 v0, 0x757e
+	const/16 v0, 0x7c7d
+
+	nop
+	nop
+
+
+	const/16 v1, 0x2e1c
+
+	nop
+
+
+	rem-int v0, v0, v1
+
+	nop
+	nop
+
+
+	const/16 v0, 0xc9d2
 
 	nop
 	nop
@@ -1758,23 +1796,22 @@
 	nop
 
 
-	const/16 v1, 0x82e7
+	const/16 v1, 0xe4ce
 
+	nop
+	nop
 	nop
 	nop
 
 
-	xor-int/2addr v0, v1
+	add-int v0, v0, v1
 
-	nop
-	nop
 	nop
 	nop
 
 
 	return-void
 
-	nop
 	nop
 	nop
 .end method
@@ -1795,31 +1832,35 @@
 
 	nop
 	nop
+	nop
+	nop
 .end method
 
 
 
-.method private a(SZ)V
+.method private a(B)V
 
-	.locals 4
+	.locals 3
 
 
 
-	const/16 v0, 0x9fbd
+	const/16 v0, 0x2c65
 
 	nop
-	nop
-	nop
-
-
-	const/16 v1, 0x8841
-
 	nop
 	nop
 	nop
 
 
-	mul-int/2addr v0, v1
+	const/16 v1, 0x1a7e
+
+	nop
+	nop
+	nop
+	nop
+
+
+	rem-int v0, v0, v1
 
 	nop
 	nop
@@ -1828,8 +1869,6 @@
 
 	return-void
 
-	nop
-	nop
 	nop
 	nop
 .end method
@@ -1842,14 +1881,13 @@
 
 
 
-	const/16 v0, 0xcbd2
+	const/16 v0, 0x639c
 
 	nop
 	nop
 	nop
-	const/16 v1, 0xf51c
+	const/16 v1, 0x2297
 
-	nop
 	nop
 	nop
 	nop
@@ -1860,18 +1898,19 @@
 	rem-int v0, v0, v1
 
 	nop
-	if-gtz v0, :NwvhdfwrgumgMJkr
+	if-gtz v0, :FeRqYMmmGFBffOTF
 
 	nop
 	nop
 	nop
 	nop
-	goto/32 :qjNkTiBKqySZTVcT
+	goto/32 :LSNcPMWTJAnRZLni
 
 	nop
-	:NwvhdfwrgumgMJkr
+	nop
+	:FeRqYMmmGFBffOTF
 
-	:qWrHGFaDRzYvExZb
+	:asHUBEIgYwDHveJp
 
 
 
@@ -1879,13 +1918,10 @@
 
 	nop
 	nop
-	nop
 
 
     const-string v1, "onConnected(): connected to Google APIs"
 
-	nop
-	nop
 	nop
 
 
@@ -1908,19 +1944,15 @@
 
 	nop
 	nop
-	nop
 
 
     iget-boolean p1, p0, Lcom/androbaby/game2048/MainActivity;->aa:Z
 
 	nop
-	nop
-	nop
 
 
     if-eqz p1, :cond_0
 
-	nop
 	nop
 	nop
 	nop
@@ -1930,17 +1962,17 @@
 
 	nop
 	nop
-	nop
-	nop
 
 
     iget-object p1, p1, Lcom/androbaby/game2048/K;->h:Lcom/androbaby/game2048/J;
 
 	nop
+	nop
 
 
     iget-wide v0, p1, Lcom/androbaby/game2048/J;->i:J
 
+	nop
 	nop
 	nop
 	nop
@@ -1957,10 +1989,13 @@
     const/4 p1, 0x0
 
 	nop
+	nop
 
 
     iput-boolean p1, p0, Lcom/androbaby/game2048/MainActivity;->aa:Z
 
+	nop
+	nop
 	nop
 
 
@@ -1969,34 +2004,23 @@
     return-void
 
 	nop
-	nop
-	:qjNkTiBKqySZTVcT
+	:LSNcPMWTJAnRZLni
 
-	goto/32 :qWrHGFaDRzYvExZb
+	goto/32 :asHUBEIgYwDHveJp
 
-	nop
-	nop
 	nop
 	nop
 .end method
 
 
 
-.method private b(FC)V
+.method private b(IFF)V
 
-	.locals 4
-
-
-
-	const/16 v0, 0xa4b1
-
-	nop
-	nop
-	nop
-	nop
+	.locals 5
 
 
-	const/16 v1, 0x9816
+
+	const/16 v0, 0xd7e1
 
 	nop
 	nop
@@ -2004,31 +2028,13 @@
 	nop
 
 
-	rem-int v0, v0, v1
-
-	nop
-	nop
-	nop
-	nop
-
-
-	const/16 v0, 0x4984
+	const/16 v1, 0xa89d
 
 	nop
 
 
-	const/16 v1, 0x2bba
+	xor-int/2addr v0, v1
 
-	nop
-	nop
-	nop
-	nop
-
-
-	mul-int/2addr v0, v1
-
-	nop
-	nop
 	nop
 	nop
 
@@ -2046,52 +2052,54 @@
 
 
 
-	const/16 v0, 0x8abf
-
-	nop
-	const/16 v1, 0xafa9
+	const/16 v0, 0x7a37
 
 	nop
 	nop
-	nop
+	const/16 v1, 0x6e61
+
 	nop
 	add-int v0, v0, v1
 
+	nop
 	nop
 	nop
 	rem-int v0, v0, v1
 
 	nop
 	nop
-	if-gtz v0, :CShiERYjTPdoDTnV
+	nop
+	nop
+	if-gtz v0, :NzHozuhvJrwfoRiN
 
 	nop
-	goto/32 :YscJNlInYvRFHOHE
+	nop
+	nop
+	nop
+	goto/32 :wBemEufCblfuCkpB
 
 	nop
 	nop
 	nop
-	nop
-	:CShiERYjTPdoDTnV
+	:NzHozuhvJrwfoRiN
 
-	:xlvkrPsFGPVynAtc
+	:zMoCOzXmkpqSoqQv
 
 
 
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->X:Lcom/androbaby/game2048/K;
 
 	nop
-	nop
 
 
     iget-object v0, v0, Lcom/androbaby/game2048/K;->h:Lcom/androbaby/game2048/J;
 
 	nop
-	nop
 
 
     iget-object v0, v0, Lcom/androbaby/game2048/J;->c:Lcom/androbaby/game2048/j;
 
+	nop
 	nop
 
 
@@ -2101,8 +2109,6 @@
 
     const/4 v0, 0x0
 
-	nop
-	nop
 	nop
 
 
@@ -2114,15 +2120,20 @@
 
 	nop
 	nop
+	nop
 
 
     iput-object p1, p0, Lcom/androbaby/game2048/MainActivity;->ia:Landroid/content/SharedPreferences;
 
 	nop
+	nop
+	nop
+	nop
 
 
     const/4 p1, 0x0
 
+	nop
 	nop
 
 
@@ -2131,17 +2142,20 @@
     iget-object v1, p0, Lcom/androbaby/game2048/MainActivity;->X:Lcom/androbaby/game2048/K;
 
 	nop
+	nop
+	nop
 
 
     iget-object v1, v1, Lcom/androbaby/game2048/K;->h:Lcom/androbaby/game2048/J;
 
 	nop
 	nop
+	nop
+	nop
 
 
     iget-object v2, v1, Lcom/androbaby/game2048/J;->b:Lcom/androbaby/game2048/p;
 
-	nop
 	nop
 
 
@@ -2177,10 +2191,13 @@
 
 	nop
 	nop
+	nop
+	nop
 
 
     iget-object v2, v2, Lcom/androbaby/game2048/K;->h:Lcom/androbaby/game2048/J;
 
+	nop
 	nop
 	nop
 	nop
@@ -2190,10 +2207,12 @@
 
 	nop
 	nop
+	nop
 
 
     iget-object v2, v2, Lcom/androbaby/game2048/p;->a:[[Lcom/androbaby/game2048/L;
 
+	nop
 	nop
 	nop
 
@@ -2208,11 +2227,11 @@
 	nop
 	nop
 	nop
+	nop
 
 
     if-ge v1, v2, :cond_4
 
-	nop
 	nop
 	nop
 
@@ -2225,8 +2244,6 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-	nop
-	nop
 	nop
 	nop
 
@@ -2261,8 +2278,6 @@
 
 	nop
 	nop
-	nop
-	nop
 
 
     const/4 v5, -0x1
@@ -2280,18 +2295,17 @@
     move-result v2
 
 	nop
+	nop
+	nop
 
 
     const/4 v3, 0x0
 
 	nop
-	nop
-	nop
 
 
     if-lez v2, :cond_0
 
-	nop
 	nop
 	nop
 
@@ -2304,10 +2318,12 @@
     iget-object v6, v6, Lcom/androbaby/game2048/K;->h:Lcom/androbaby/game2048/J;
 
 	nop
+	nop
 
 
     iget-object v6, v6, Lcom/androbaby/game2048/J;->b:Lcom/androbaby/game2048/p;
 
+	nop
 	nop
 	nop
 
@@ -2315,15 +2331,18 @@
     iget-object v6, v6, Lcom/androbaby/game2048/p;->a:[[Lcom/androbaby/game2048/L;
 
 	nop
+	nop
 
 
     aget-object v6, v6, p1
 
 	nop
+	nop
 
 
     new-instance v7, Lcom/androbaby/game2048/L;
 
+	nop
 	nop
 	nop
 
@@ -2336,13 +2355,10 @@
 
 	nop
 	nop
-	nop
 
 
     goto :goto_2
 
-	nop
-	nop
 	nop
 	nop
 
@@ -2354,11 +2370,11 @@
 	nop
 	nop
 	nop
-	nop
 
 
     iget-object v6, p0, Lcom/androbaby/game2048/MainActivity;->X:Lcom/androbaby/game2048/K;
 
+	nop
 	nop
 
 
@@ -2374,7 +2390,6 @@
 
 	nop
 	nop
-	nop
 
 
     iget-object v6, v6, Lcom/androbaby/game2048/p;->a:[[Lcom/androbaby/game2048/L;
@@ -2387,11 +2402,11 @@
     aget-object v6, v6, p1
 
 	nop
-	nop
 
 
     aput-object v3, v6, v1
 
+	nop
 	nop
 
 
@@ -2418,7 +2433,6 @@
 
     const-string v8, "undo"
 
-	nop
 	nop
 	nop
 	nop
@@ -2457,6 +2471,8 @@
 
 	nop
 	nop
+	nop
+	nop
 
 
     if-lez v4, :cond_2
@@ -2466,8 +2482,6 @@
 
     iget-object v2, p0, Lcom/androbaby/game2048/MainActivity;->X:Lcom/androbaby/game2048/K;
 
-	nop
-	nop
 	nop
 
 
@@ -2490,17 +2504,19 @@
 	nop
 	nop
 	nop
-	nop
 
 
     aget-object v2, v2, p1
 
 	nop
 	nop
+	nop
+	nop
 
 
     new-instance v3, Lcom/androbaby/game2048/L;
 
+	nop
 	nop
 
 
@@ -2518,7 +2534,6 @@
 
 	nop
 	nop
-	nop
 
 
     :cond_2
@@ -2528,16 +2543,18 @@
 	nop
 	nop
 	nop
-	nop
 
 
     iget-object v2, p0, Lcom/androbaby/game2048/MainActivity;->X:Lcom/androbaby/game2048/K;
 
 	nop
+	nop
+	nop
 
 
     iget-object v2, v2, Lcom/androbaby/game2048/K;->h:Lcom/androbaby/game2048/J;
 
+	nop
 	nop
 
 
@@ -2557,10 +2574,14 @@
     aget-object v2, v2, p1
 
 	nop
+	nop
+	nop
+	nop
 
 
     aput-object v3, v2, v1
 
+	nop
 	nop
 	nop
 
@@ -2571,6 +2592,7 @@
 
     add-int/lit8 v1, v1, 0x1
 
+	nop
 	nop
 
 
@@ -2585,11 +2607,11 @@
     add-int/lit8 p1, p1, 0x1
 
 	nop
+	nop
 
 
     goto/16 :goto_0
 
-	nop
 	nop
 
 
@@ -2604,7 +2626,6 @@
 
     iget-wide v2, v1, Lcom/androbaby/game2048/J;->i:J
 
-	nop
 	nop
 	nop
 
@@ -2624,7 +2645,6 @@
     move-result-wide v2
 
 	nop
-	nop
 
 
     iput-wide v2, v1, Lcom/androbaby/game2048/J;->i:J
@@ -2637,11 +2657,11 @@
     iget-object p1, p0, Lcom/androbaby/game2048/MainActivity;->X:Lcom/androbaby/game2048/K;
 
 	nop
-	nop
 
 
     iget-object p1, p1, Lcom/androbaby/game2048/K;->h:Lcom/androbaby/game2048/J;
 
+	nop
 	nop
 	nop
 	nop
@@ -2650,17 +2670,19 @@
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->ia:Landroid/content/SharedPreferences;
 
 	nop
+	nop
+	nop
 
 
     iget-wide v1, p1, Lcom/androbaby/game2048/J;->j:J
 
 	nop
 	nop
+	nop
 
 
     const-string v3, "high score temp"
 
-	nop
 	nop
 
 
@@ -2670,7 +2692,6 @@
 
     move-result-wide v0
 
-	nop
 	nop
 	nop
 
@@ -2686,6 +2707,7 @@
 
 	nop
 	nop
+	nop
 
 
     iget-object p1, p1, Lcom/androbaby/game2048/K;->h:Lcom/androbaby/game2048/J;
@@ -2699,7 +2721,6 @@
 
 	nop
 	nop
-	nop
 
 
     iget-wide v1, p1, Lcom/androbaby/game2048/J;->k:J
@@ -2710,9 +2731,6 @@
     const-string v3, "undo score"
 
 	nop
-	nop
-	nop
-	nop
 
 
     invoke-interface {v0, v3, v1, v2}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
@@ -2721,8 +2739,6 @@
 
     move-result-wide v0
 
-	nop
-	nop
 	nop
 
 
@@ -2736,26 +2752,20 @@
     iget-object p1, p0, Lcom/androbaby/game2048/MainActivity;->X:Lcom/androbaby/game2048/K;
 
 	nop
-	nop
-	nop
 
 
     iget-object p1, p1, Lcom/androbaby/game2048/K;->h:Lcom/androbaby/game2048/J;
 
-	nop
 	nop
 
 
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->ia:Landroid/content/SharedPreferences;
 
 	nop
-	nop
-	nop
 
 
     iget-boolean v1, p1, Lcom/androbaby/game2048/J;->h:Z
 
-	nop
 	nop
 
 
@@ -2778,7 +2788,6 @@
     iput-boolean v0, p1, Lcom/androbaby/game2048/J;->h:Z
 
 	nop
-	nop
 
 
     iget-object p1, p0, Lcom/androbaby/game2048/MainActivity;->X:Lcom/androbaby/game2048/K;
@@ -2789,10 +2798,13 @@
     iget-object p1, p1, Lcom/androbaby/game2048/K;->h:Lcom/androbaby/game2048/J;
 
 	nop
+	nop
 
 
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->ia:Landroid/content/SharedPreferences;
 
+	nop
+	nop
 	nop
 
 
@@ -2805,8 +2817,6 @@
 
 	nop
 	nop
-	nop
-	nop
 
 
     invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
@@ -2817,11 +2827,11 @@
 
 	nop
 	nop
-	nop
 
 
     iput v0, p1, Lcom/androbaby/game2048/J;->g:I
 
+	nop
 	nop
 	nop
 
@@ -2831,10 +2841,12 @@
 	nop
 	nop
 	nop
+	nop
 
 
     iget-object p1, p1, Lcom/androbaby/game2048/K;->h:Lcom/androbaby/game2048/J;
 
+	nop
 	nop
 
 
@@ -2842,12 +2854,11 @@
 
 	nop
 	nop
+	nop
 
 
     iget v1, p1, Lcom/androbaby/game2048/J;->l:I
 
-	nop
-	nop
 	nop
 	nop
 
@@ -2867,14 +2878,10 @@
     move-result v0
 
 	nop
-	nop
-	nop
 
 
     iput v0, p1, Lcom/androbaby/game2048/J;->l:I
 
-	nop
-	nop
 	nop
 
 
@@ -2883,83 +2890,44 @@
 	nop
 	nop
 	nop
-	:YscJNlInYvRFHOHE
+	:wBemEufCblfuCkpB
 
-	goto/32 :xlvkrPsFGPVynAtc
+	goto/32 :zMoCOzXmkpqSoqQv
 
-	nop
-	nop
 	nop
 .end method
 
 
 
-.method private c(CFCZ)V
+.method private c(BZZ)V
 
-	.locals 6
-
-
-
-	const/16 v0, 0x7c93
-
-	nop
+	.locals 5
 
 
-	const/16 v1, 0xae2f
+
+	const/16 v0, 0x1f4b
 
 	nop
 	nop
 	nop
 
 
-	xor-int/2addr v0, v1
+	const/16 v1, 0x5a73
 
 	nop
 	nop
 
 
-	const/16 v0, 0x55df
+	add-int v0, v0, v1
 
 	nop
-	nop
-	nop
-
-
-	const/16 v1, 0x72c2
-
-	nop
-	nop
-	nop
-
-
-	xor-int/2addr v0, v1
-
-	nop
-	nop
-
-
-	const/16 v0, 0x6c35
-
-	nop
-	nop
-	nop
-
-
-	const/16 v1, 0xc119
-
-	nop
-	nop
-	nop
-	nop
-
-
-	mul-int/2addr v0, v1
-
 	nop
 
 
 	return-void
 
+	nop
+	nop
 	nop
 .end method
 
@@ -2971,11 +2939,12 @@
 
 
 
-	const/16 v0, 0xf975
+	const/16 v0, 0x4a7e
 
 	nop
 	nop
-	const/16 v1, 0x79f8
+	nop
+	const/16 v1, 0xd7c7
 
 	nop
 	nop
@@ -2989,20 +2958,17 @@
 
 	nop
 	nop
-	if-gtz v0, :jKHeLqimifxvJYJi
+	nop
+	nop
+	if-gtz v0, :XxZoHUgoPulGSJLl
 
 	nop
-	nop
-	nop
-	goto/32 :TrFkWmvLSRUsFBPk
+	goto/32 :pShMhEiuhJlWJvJo
 
 	nop
-	nop
-	nop
-	nop
-	:jKHeLqimifxvJYJi
+	:XxZoHUgoPulGSJLl
 
-	:RibXoZXFASKGPwcx
+	:zqGUkGFWVkadJRfp
 
 
 
@@ -3013,7 +2979,6 @@
     const/4 v0, 0x0
 
 	nop
-	nop
 
 
     invoke-virtual {p0, p1, v0}, Landroid/app/Activity;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
@@ -3023,17 +2988,17 @@
     move-result-object p1
 
 	nop
-	nop
 
 
     iput-object p1, p0, Lcom/androbaby/game2048/MainActivity;->ia:Landroid/content/SharedPreferences;
 
 	nop
+	nop
+	nop
 
 
     iget-object p1, p0, Lcom/androbaby/game2048/MainActivity;->ia:Landroid/content/SharedPreferences;
 
-	nop
 	nop
 	nop
 
@@ -3050,11 +3015,12 @@
     iget-object v1, p0, Lcom/androbaby/game2048/MainActivity;->X:Lcom/androbaby/game2048/K;
 
 	nop
-	nop
 
 
     iget-object v1, v1, Lcom/androbaby/game2048/K;->h:Lcom/androbaby/game2048/J;
 
+	nop
+	nop
 	nop
 	nop
 
@@ -3064,13 +3030,10 @@
 	nop
 	nop
 	nop
-	nop
 
 
     iget-object v2, v1, Lcom/androbaby/game2048/p;->a:[[Lcom/androbaby/game2048/L;
 
-	nop
-	nop
 	nop
 	nop
 
@@ -3079,18 +3042,17 @@
 
 	nop
 	nop
+	nop
 
 
     array-length v3, v2
 
 	nop
 	nop
-	nop
 
 
     const-string v4, "width"
 
-	nop
 	nop
 	nop
 
@@ -3110,7 +3072,6 @@
 
 	nop
 	nop
-	nop
 
 
     invoke-interface {p1, v4, v3}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
@@ -3127,17 +3088,17 @@
     array-length v4, v2
 
 	nop
+	nop
 
 
     if-ge v3, v4, :cond_3
 
 	nop
-	nop
-	nop
 
 
     const/4 v4, 0x0
 
+	nop
 	nop
 	nop
 
@@ -3155,13 +3116,10 @@
 
 	nop
 	nop
-	nop
-	nop
 
 
     if-ge v4, v5, :cond_2
 
-	nop
 	nop
 	nop
 
@@ -3171,11 +3129,13 @@
 	nop
 	nop
 	nop
-	nop
 
 
     aget-object v5, v5, v4
 
+	nop
+	nop
+	nop
 	nop
 
 
@@ -3190,15 +3150,10 @@
 
 	nop
 	nop
-	nop
-	nop
 
 
     new-instance v5, Ljava/lang/StringBuilder;
 
-	nop
-	nop
-	nop
 	nop
 
 
@@ -3225,11 +3180,12 @@
     move-result-object v5
 
 	nop
+	nop
+	nop
 
 
     aget-object v7, v2, v3
 
-	nop
 	nop
 	nop
 	nop
@@ -3250,7 +3206,6 @@
 
 	nop
 	nop
-	nop
 
 
     invoke-interface {p1, v5, v7}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
@@ -3260,13 +3215,15 @@
     goto :goto_2
 
 	nop
+	nop
+	nop
+	nop
 
 
     :cond_0
 
     new-instance v5, Ljava/lang/StringBuilder;
 
-	nop
 	nop
 
 
@@ -3292,7 +3249,6 @@
 
     move-result-object v5
 
-	nop
 	nop
 	nop
 	nop
@@ -3315,14 +3271,10 @@
 
 	nop
 	nop
-	nop
-	nop
 
 
     const-string v7, "undo"
 
-	nop
-	nop
 	nop
 	nop
 
@@ -3330,13 +3282,11 @@
     if-eqz v5, :cond_1
 
 	nop
-	nop
-	nop
-	nop
 
 
     new-instance v5, Ljava/lang/StringBuilder;
 
+	nop
 	nop
 
 
@@ -3369,18 +3319,16 @@
 	nop
 	nop
 	nop
+	nop
 
 
     aget-object v6, v1, v3
 
 	nop
-	nop
-	nop
 
 
     aget-object v6, v6, v4
 
-	nop
 	nop
 	nop
 	nop
@@ -3393,9 +3341,6 @@
     move-result v6
 
 	nop
-	nop
-	nop
-	nop
 
 
     invoke-interface {p1, v5, v6}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
@@ -3404,7 +3349,6 @@
 
     goto :goto_3
 
-	nop
 	nop
 	nop
 
@@ -3446,7 +3390,6 @@
 
 	nop
 	nop
-	nop
 
 
     invoke-interface {p1, v5, v0}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
@@ -3457,7 +3400,6 @@
 
     add-int/lit8 v4, v4, 0x1
 
-	nop
 	nop
 	nop
 
@@ -3471,6 +3413,8 @@
 
     add-int/lit8 v3, v3, 0x1
 
+	nop
+	nop
 	nop
 
 
@@ -3486,22 +3430,26 @@
 
 	nop
 	nop
+	nop
+	nop
 
 
     iget-object v0, v0, Lcom/androbaby/game2048/K;->h:Lcom/androbaby/game2048/J;
 
+	nop
+	nop
 	nop
 
 
     iget-wide v0, v0, Lcom/androbaby/game2048/J;->i:J
 
 	nop
-	nop
-	nop
 
 
     const-string v2, "score"
 
+	nop
+	nop
 	nop
 
 
@@ -3511,8 +3459,6 @@
 
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->X:Lcom/androbaby/game2048/K;
 
-	nop
-	nop
 	nop
 	nop
 
@@ -3527,12 +3473,11 @@
 
 	nop
 	nop
-	nop
-	nop
 
 
     const-string v2, "high score temp"
 
+	nop
 	nop
 	nop
 
@@ -3562,8 +3507,6 @@
 
 	nop
 	nop
-	nop
-	nop
 
 
     invoke-interface {p1, v2, v0, v1}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
@@ -3578,22 +3521,15 @@
     iget-object v0, v0, Lcom/androbaby/game2048/K;->h:Lcom/androbaby/game2048/J;
 
 	nop
-	nop
 
 
     iget-boolean v0, v0, Lcom/androbaby/game2048/J;->h:Z
 
 	nop
-	nop
-	nop
-	nop
 
 
     const-string v1, "can undo"
 
-	nop
-	nop
-	nop
 	nop
 
 
@@ -3606,11 +3542,11 @@
 	nop
 	nop
 	nop
+	nop
 
 
     iget-object v0, v0, Lcom/androbaby/game2048/K;->h:Lcom/androbaby/game2048/J;
 
-	nop
 	nop
 	nop
 
@@ -3619,13 +3555,10 @@
 
 	nop
 	nop
-	nop
-	nop
 
 
     const-string v1, "game state"
 
-	nop
 	nop
 	nop
 	nop
@@ -3638,9 +3571,6 @@
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->X:Lcom/androbaby/game2048/K;
 
 	nop
-	nop
-	nop
-	nop
 
 
     iget-object v0, v0, Lcom/androbaby/game2048/K;->h:Lcom/androbaby/game2048/J;
@@ -3652,7 +3582,6 @@
 
     iget v0, v0, Lcom/androbaby/game2048/J;->l:I
 
-	nop
 	nop
 
 
@@ -3675,9 +3604,9 @@
 
 	nop
 	nop
-	:TrFkWmvLSRUsFBPk
+	:pShMhEiuhJlWJvJo
 
-	goto/32 :RibXoZXFASKGPwcx
+	goto/32 :zqGUkGFWVkadJRfp
 
 	nop
 	nop
@@ -3689,97 +3618,40 @@
 
 # virtual methods
 
-.method public A(I)I
+.method public A(SBIZ)I
 
-	.locals 3
-
-
-
-	const/16 v0, 0x1aa9
-
-	nop
-
-
-	const/16 v1, 0x716d
-
-	nop
-	nop
-	nop
-	nop
-
-
-	mul-int/2addr v0, v1
-
-	nop
-	nop
-	nop
-	nop
-
-
-	return v0
-
-	nop
-	nop
-	nop
-.end method
+	.locals 6
 
 
 
-.method public A()I
-
-	.locals 5
-
-
-
-	const/16 v0, 0xba8d
-
-	nop
-	nop
-	const/16 v1, 0xb6a3
-
-	nop
-	add-int v0, v0, v1
-
-	nop
-	nop
-	nop
-	nop
-	rem-int v0, v0, v1
-
-	nop
-	if-gtz v0, :ExevwOqzOoqOpqnm
-
-	nop
-	nop
-	nop
-	goto/32 :vaxVgXabzXssPWcX
-
-	nop
-	nop
-	nop
-	:ExevwOqzOoqOpqnm
-
-	:LraiHQBtzyMJaKgw
-
-
-
-    const/4 v0, 0x0
-
-	nop
-
-
-    const-string v1, "SCORE"
+	const/16 v0, 0xc2f9
 
 	nop
 	nop
 	nop
 
 
-    invoke-virtual {p0, v1, v0}, Landroid/app/Activity;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+	const/16 v1, 0xfde9
+
+	nop
+	nop
 
 
+	xor-int/2addr v0, v1
 
-    move-result-object v1
+	nop
+	nop
+	nop
+
+
+	const/16 v0, 0x9f94
+
+	nop
+	nop
+	nop
+
+
+	const/16 v1, 0xca1c
 
 	nop
 	nop
@@ -3787,7 +3659,12 @@
 	nop
 
 
-    iput-object v1, p0, Lcom/androbaby/game2048/MainActivity;->ia:Landroid/content/SharedPreferences;
+	xor-int/2addr v0, v1
+
+	nop
+
+
+	const/16 v0, 0x8c11
 
 	nop
 	nop
@@ -3795,54 +3672,10 @@
 	nop
 
 
-    iget-object v1, p0, Lcom/androbaby/game2048/MainActivity;->ia:Landroid/content/SharedPreferences;
-
-	nop
-
-
-    const-string v2, "CODE"
+	const/16 v1, 0x6a33
 
 	nop
 	nop
-	nop
-	nop
-
-
-    invoke-interface {v1, v2, v0}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
-
-
-
-    move-result v0
-
-	nop
-
-
-    return v0
-
-	nop
-	nop
-	:vaxVgXabzXssPWcX
-
-	goto/32 :LraiHQBtzyMJaKgw
-
-	nop
-.end method
-
-
-
-.method public B(SFZ)I
-
-	.locals 5
-
-
-
-	const/16 v0, 0x359a
-
-	nop
-
-
-	const/16 v1, 0x54ce
-
 	nop
 
 
@@ -3857,22 +3690,22 @@
 	return v0
 
 	nop
+	nop
 .end method
 
 
 
-.method public B()I
+.method public A()I
 
 	.locals 5
 
 
 
-	const/16 v0, 0xbecd
+	const/16 v0, 0x552e
 
 	nop
 	nop
-	nop
-	const/16 v1, 0xef62
+	const/16 v1, 0xc3c1
 
 	nop
 	nop
@@ -3881,32 +3714,30 @@
 
 	nop
 	nop
-	nop
-	nop
 	rem-int v0, v0, v1
 
 	nop
 	nop
 	nop
 	nop
-	if-gtz v0, :IQkCbQVMtyrqZzLK
+	if-gtz v0, :CNVLddBIqGNUfFLd
 
 	nop
 	nop
-	goto/32 :GfFxXboJaHMnrbyL
+	nop
+	nop
+	goto/32 :firfZOXpANhnkxxs
 
 	nop
-	:IQkCbQVMtyrqZzLK
+	nop
+	:CNVLddBIqGNUfFLd
 
-	:qRaWTdtlTfUpTmNt
+	:wFViijULIAvZxhsA
 
 
 
     const/4 v0, 0x0
 
-	nop
-	nop
-	nop
 	nop
 
 
@@ -3922,12 +3753,12 @@
     move-result-object v1
 
 	nop
+	nop
+	nop
 
 
     iput-object v1, p0, Lcom/androbaby/game2048/MainActivity;->ia:Landroid/content/SharedPreferences;
 
-	nop
-	nop
 	nop
 	nop
 
@@ -3935,11 +3766,11 @@
     iget-object v1, p0, Lcom/androbaby/game2048/MainActivity;->ia:Landroid/content/SharedPreferences;
 
 	nop
-
-
-    const-string v2, "RATE_TYPE"
-
 	nop
+
+
+    const-string v2, "CODE"
+
 	nop
 	nop
 	nop
@@ -3952,14 +3783,19 @@
     move-result v0
 
 	nop
+	nop
+	nop
+	nop
 
 
     return v0
 
 	nop
-	:GfFxXboJaHMnrbyL
+	nop
+	nop
+	:firfZOXpANhnkxxs
 
-	goto/32 :qRaWTdtlTfUpTmNt
+	goto/32 :wFViijULIAvZxhsA
 
 	nop
 	nop
@@ -3967,60 +3803,21 @@
 
 
 
-.method public C(I)V
+.method public B(F)I
 
 	.locals 3
 
 
 
-	const/16 v0, 0xe5e4
-
-	nop
-
-
-	const/16 v1, 0x82d4
-
-	nop
-	nop
-
-
-	rem-int v0, v0, v1
-
-	nop
-
-
-	const/16 v0, 0x8abd
-
-	nop
-	nop
-	nop
-	nop
-
-
-	const/16 v1, 0xf6c8
-
-	nop
-	nop
-	nop
-	nop
-
-
-	rem-int v0, v0, v1
-
-	nop
-
-
-	const/16 v0, 0x6d3b
+	const/16 v0, 0x2738
 
 	nop
 	nop
 	nop
 
 
-	const/16 v1, 0x248f
+	const/16 v1, 0xe745
 
-	nop
-	nop
 	nop
 	nop
 
@@ -4028,11 +3825,194 @@
 	add-int v0, v0, v1
 
 	nop
+
+
+	const/16 v0, 0x328b
+
+	nop
+	nop
+	nop
+	nop
+
+
+	const/16 v1, 0x2443
+
+	nop
+	nop
+
+
+	rem-int v0, v0, v1
+
+	nop
+
+
+	return v0
+
+	nop
+	nop
+.end method
+
+
+
+.method public B()I
+
+	.locals 5
+
+
+
+	const/16 v0, 0x6e36
+
+	nop
+	nop
+	nop
+	const/16 v1, 0xddad
+
+	nop
+	nop
+	nop
+	add-int v0, v0, v1
+
+	nop
+	nop
+	nop
+	rem-int v0, v0, v1
+
+	nop
+	nop
+	if-gtz v0, :zNQfqiMkRPXwVZZB
+
+	nop
+	nop
+	goto/32 :qHUpHOhuPbFMyqnT
+
+	nop
+	nop
+	:zNQfqiMkRPXwVZZB
+
+	:guZUAVzcHWHMNEsD
+
+
+
+    const/4 v0, 0x0
+
+	nop
+	nop
+	nop
+
+
+    const-string v1, "SCORE"
+
+	nop
+	nop
+	nop
+	nop
+
+
+    invoke-virtual {p0, v1, v0}, Landroid/app/Activity;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+
+
+    move-result-object v1
+
+	nop
+	nop
+
+
+    iput-object v1, p0, Lcom/androbaby/game2048/MainActivity;->ia:Landroid/content/SharedPreferences;
+
+	nop
+	nop
+
+
+    iget-object v1, p0, Lcom/androbaby/game2048/MainActivity;->ia:Landroid/content/SharedPreferences;
+
+	nop
+	nop
+	nop
+	nop
+
+
+    const-string v2, "RATE_TYPE"
+
+	nop
+	nop
+
+
+    invoke-interface {v1, v2, v0}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+
+
+
+    move-result v0
+
+	nop
+	nop
+
+
+    return v0
+
+	nop
+	nop
+	:qHUpHOhuPbFMyqnT
+
+	goto/32 :guZUAVzcHWHMNEsD
+
+	nop
+	nop
+.end method
+
+
+
+.method public C(SC)V
+
+	.locals 4
+
+
+
+	const/16 v0, 0xaa95
+
+	nop
+	nop
+
+
+	const/16 v1, 0x199d
+
+	nop
+	nop
+
+
+	rem-int v0, v0, v1
+
+	nop
+	nop
+	nop
+	nop
+
+
+	const/16 v0, 0x8281
+
+	nop
+	nop
+	nop
+
+
+	const/16 v1, 0xa9b3
+
+	nop
+	nop
+	nop
+
+
+	xor-int/2addr v0, v1
+
+	nop
+	nop
 	nop
 
 
 	return-void
 
+	nop
+	nop
 	nop
 .end method
 
@@ -4044,10 +4024,10 @@
 
 
 
-	const/16 v0, 0xfebf
+	const/16 v0, 0x952f
 
 	nop
-	const/16 v1, 0x4c76
+	const/16 v1, 0xcb98
 
 	nop
 	nop
@@ -4059,22 +4039,19 @@
 	nop
 	nop
 	nop
+	if-gtz v0, :bTSDdZDkpZlSPiPs
+
 	nop
-	if-gtz v0, :cmdXGNkXNzXcHflW
+	nop
+	goto/32 :HXQaEitcjpBXpYlT
 
 	nop
 	nop
 	nop
 	nop
-	goto/32 :nACrmhzLuxmwHdml
+	:bTSDdZDkpZlSPiPs
 
-	nop
-	nop
-	nop
-	nop
-	:cmdXGNkXNzXcHflW
-
-	:ZWaEyoVZcUzhGitR
+	:nydGEsXvJBVIxiXC
 
 
 
@@ -4084,7 +4061,6 @@
 
     move-result-object v0
 
-	nop
 	nop
 
 
@@ -4100,15 +4076,10 @@
     move-result-object v0
 
 	nop
-	nop
-	nop
-	nop
 
 
     iput-object v0, p0, Lcom/androbaby/game2048/MainActivity;->D:[Ljava/lang/String;
 
-	nop
-	nop
 	nop
 
 
@@ -4116,11 +4087,13 @@
 
 	nop
 	nop
-	nop
 
 
     array-length v0, v0
 
+	nop
+	nop
+	nop
 	nop
 
 
@@ -4133,17 +4106,18 @@
 
 	nop
 	nop
+	nop
 
 
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->E:[I
 
 	nop
+	nop
+	nop
 
 
     const/4 v1, 0x0
 
-	nop
-	nop
 	nop
 
 
@@ -4165,13 +4139,11 @@
 	nop
 	nop
 	nop
+	nop
 
 
     const v3, 0x7f06002f
 
-	nop
-	nop
-	nop
 	nop
 
 
@@ -4199,12 +4171,11 @@
     aput v3, v0, v2
 
 	nop
-	nop
-	nop
 
 
     const/4 v3, 0x3
 
+	nop
 	nop
 	nop
 	nop
@@ -4220,6 +4191,7 @@
 	nop
 	nop
 	nop
+	nop
 
 
     const/4 v3, 0x4
@@ -4232,13 +4204,13 @@
     const v4, 0x7f06002d
 
 	nop
-	nop
-	nop
-	nop
 
 
     aput v4, v0, v3
 
+	nop
+	nop
+	nop
 	nop
 
 
@@ -4248,8 +4220,6 @@
 
     move-result-object v0
 
-	nop
-	nop
 	nop
 	nop
 
@@ -4263,6 +4233,7 @@
 	nop
 	nop
 	nop
+	nop
 
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
@@ -4273,11 +4244,12 @@
 
 	nop
 	nop
+	nop
+	nop
 
 
     const-string v1, "ru"
 
-	nop
 	nop
 
 
@@ -4288,10 +4260,13 @@
     move-result v0
 
 	nop
+	nop
+	nop
 
 
     if-eqz v0, :cond_0
 
+	nop
 	nop
 	nop
 	nop
@@ -4306,11 +4281,11 @@
 	nop
 	nop
 	nop
-	nop
 
 
     const-string v1, "Asap-Regular.otf"
 
+	nop
 	nop
 	nop
 	nop
@@ -4332,11 +4307,11 @@
     move-result-object v0
 
 	nop
+	nop
 
 
     const-string v1, "ArchivoNarrow-Regular.otf"
 
-	nop
 	nop
 	nop
 	nop
@@ -4351,11 +4326,13 @@
     move-result-object v0
 
 	nop
+	nop
+	nop
+	nop
 
 
     iput-object v0, p0, Lcom/androbaby/game2048/MainActivity;->G:Landroid/graphics/Typeface;
 
-	nop
 	nop
 	nop
 
@@ -4369,6 +4346,7 @@
 	nop
 	nop
 	nop
+	nop
 
 
     invoke-interface {v0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
@@ -4379,6 +4357,8 @@
 
 	nop
 	nop
+	nop
+	nop
 
 
     invoke-virtual {v0}, Landroid/view/Display;->getHeight()I
@@ -4387,6 +4367,8 @@
 
     move-result v1
 
+	nop
+	nop
 	nop
 
 
@@ -4402,8 +4384,6 @@
     move-result v0
 
 	nop
-	nop
-	nop
 
 
     sput v0, Lcom/androbaby/game2048/MainActivity;->s:I
@@ -4411,11 +4391,11 @@
 	nop
 	nop
 	nop
+	nop
 
 
     new-instance v0, Landroid/util/DisplayMetrics;
 
-	nop
 	nop
 	nop
 
@@ -4426,7 +4406,6 @@
 
     iput-object v0, p0, Lcom/androbaby/game2048/MainActivity;->A:Landroid/util/DisplayMetrics;
 
-	nop
 	nop
 	nop
 	nop
@@ -4447,6 +4426,7 @@
 
     move-result-object v0
 
+	nop
 	nop
 	nop
 
@@ -4466,11 +4446,11 @@
 
 	nop
 	nop
-	nop
 
 
     iget v0, v0, Landroid/util/DisplayMetrics;->density:F
 
+	nop
 	nop
 	nop
 	nop
@@ -4479,16 +4459,20 @@
     float-to-double v0, v0
 
 	nop
+	nop
 
 
     sput-wide v0, Lcom/androbaby/game2048/MainActivity;->v:D
 
 	nop
 	nop
+	nop
 
 
     sget v0, Lcom/androbaby/game2048/MainActivity;->t:I
 
+	nop
+	nop
 	nop
 
 
@@ -4502,12 +4486,10 @@
 
 	nop
 	nop
-	nop
 
 
     int-to-double v2, v2
 
-	nop
 	nop
 	nop
 	nop
@@ -4531,14 +4513,16 @@
 	nop
 	nop
 	nop
+	nop
 
 
     return-void
 
 	nop
-	:nACrmhzLuxmwHdml
+	nop
+	:HXQaEitcjpBXpYlT
 
-	goto/32 :ZWaEyoVZcUzhGitR
+	goto/32 :nydGEsXvJBVIxiXC
 
 	nop
 	nop
@@ -4546,42 +4530,20 @@
 
 
 
-.method public D(Z)V
+.method public D(ICCI)V
 
-	.locals 3
-
-
-
-	const/16 v0, 0x7e89
-
-	nop
+	.locals 6
 
 
-	const/16 v1, 0xb67c
+
+	const/16 v0, 0xf4c4
 
 	nop
 	nop
-	nop
 
 
-	mul-int/2addr v0, v1
+	const/16 v1, 0xa122
 
-	nop
-	nop
-	nop
-	nop
-
-
-	const/16 v0, 0xdae7
-
-	nop
-	nop
-	nop
-
-
-	const/16 v1, 0x9eaf
-
-	nop
 	nop
 	nop
 
@@ -4589,32 +4551,11 @@
 	xor-int/2addr v0, v1
 
 	nop
-	nop
-	nop
-
-
-	const/16 v0, 0xf17c
-
-	nop
-	nop
-	nop
-
-
-	const/16 v1, 0x1a8a
-
-	nop
-
-
-	add-int v0, v0, v1
-
-	nop
-	nop
-	nop
-	nop
 
 
 	return-void
 
+	nop
 	nop
 	nop
 .end method
@@ -4627,13 +4568,13 @@
 
 
 
-	const/16 v0, 0xd5e5
+	const/16 v0, 0xe363
+
+	nop
+	const/16 v1, 0x1794
 
 	nop
 	nop
-	nop
-	const/16 v1, 0xdcad
-
 	nop
 	nop
 	add-int v0, v0, v1
@@ -4641,29 +4582,29 @@
 	nop
 	nop
 	nop
-	nop
 	rem-int v0, v0, v1
 
 	nop
-	if-gtz v0, :hHYXvcSDHDEwDDxo
+	nop
+	nop
+	if-gtz v0, :XZvZpzdBqdBALFOs
 
 	nop
 	nop
-	goto/32 :cUoEGepIpEexoysn
+	goto/32 :bWKUQrEiTlnCuFmw
 
 	nop
 	nop
 	nop
 	nop
-	:hHYXvcSDHDEwDDxo
+	:XZvZpzdBqdBALFOs
 
-	:mhqIeLvwlguYHzGM
+	:TpzpbuYSIGYULFCH
 
 
 
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->ma:Ljava/lang/Boolean;
 
-	nop
 	nop
 	nop
 	nop
@@ -4678,6 +4619,7 @@
 	nop
 	nop
 	nop
+	nop
 
 
     if-eqz v0, :cond_0
@@ -4687,8 +4629,6 @@
 
     return-void
 
-	nop
-	nop
 	nop
 
 
@@ -4713,12 +4653,12 @@
 
 	nop
 	nop
+	nop
+	nop
 
 
     iget-object v1, p0, Lcom/androbaby/game2048/MainActivity;->ea:Lcom/google/android/gms/ads/i;
 
-	nop
-	nop
 	nop
 	nop
 
@@ -4733,11 +4673,10 @@
 	nop
 	nop
 	nop
-	:cUoEGepIpEexoysn
+	:bWKUQrEiTlnCuFmw
 
-	goto/32 :mhqIeLvwlguYHzGM
+	goto/32 :TpzpbuYSIGYULFCH
 
-	nop
 	nop
 	nop
 	nop
@@ -4745,19 +4684,20 @@
 
 
 
-.method public E(IISB)V
+.method public E(S)V
 
-	.locals 6
+	.locals 3
 
 
 
-	const/16 v0, 0xb4e9
+	const/16 v0, 0x526e
 
 	nop
 	nop
+	nop
 
 
-	const/16 v1, 0x4c5b
+	const/16 v1, 0x47c4
 
 	nop
 	nop
@@ -4772,26 +4712,9 @@
 	nop
 
 
-	const/16 v0, 0xb8bc
-
-	nop
-	nop
-	nop
-	nop
-
-
-	const/16 v1, 0xfeba
-
-	nop
-
-
-	mul-int/2addr v0, v1
-
-	nop
-
-
 	return-void
 
+	nop
 	nop
 .end method
 
@@ -4803,32 +4726,37 @@
 
 
 
-	const/16 v0, 0xd27f
+	const/16 v0, 0xfa1a
 
 	nop
 	nop
-	nop
-	const/16 v1, 0x11c5
+	const/16 v1, 0xdecc
 
+	nop
 	nop
 	add-int v0, v0, v1
 
 	nop
 	nop
+	nop
+	nop
 	rem-int v0, v0, v1
 
 	nop
-	if-gtz v0, :wfiwEAAhBHIferOP
+	nop
+	if-gtz v0, :dELYhzXlrhtspFZg
 
 	nop
 	nop
 	nop
-	goto/32 :JFMypCgFgCiFNcaC
+	nop
+	goto/32 :rTJZCIylyUsUKqcM
 
 	nop
-	:wfiwEAAhBHIferOP
+	nop
+	:dELYhzXlrhtspFZg
 
-	:XtAjTSDPdRvAELhR
+	:EAWfPJBmeEvNoMdz
 
 
 
@@ -4843,13 +4771,10 @@
     iput v0, p0, Lcom/androbaby/game2048/MainActivity;->C:I
 
 	nop
-	nop
 
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-	nop
-	nop
 	nop
 	nop
 
@@ -4863,6 +4788,7 @@
 	nop
 	nop
 	nop
+	nop
 
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -4871,7 +4797,6 @@
 
     iget v1, p0, Lcom/androbaby/game2048/MainActivity;->H:I
 
-	nop
 	nop
 	nop
 
@@ -4887,6 +4812,9 @@
     move-result-object v0
 
 	nop
+	nop
+	nop
+	nop
 
 
     invoke-direct {p0, v0}, Lcom/androbaby/game2048/MainActivity;->b(Ljava/lang/String;)V
@@ -4896,10 +4824,12 @@
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->I:Landroid/widget/RelativeLayout;
 
 	nop
+	nop
 
 
     const/16 v1, 0x8
 
+	nop
 	nop
 
 
@@ -4910,14 +4840,10 @@
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->Q:Landroid/widget/RelativeLayout;
 
 	nop
-	nop
-	nop
-	nop
 
 
     if-eqz v0, :cond_0
 
-	nop
 	nop
 	nop
 
@@ -4931,12 +4857,13 @@
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->X:Lcom/androbaby/game2048/K;
 
 	nop
+	nop
+	nop
+	nop
 
 
     const/4 v1, 0x0
 
-	nop
-	nop
 	nop
 
 
@@ -4948,13 +4875,11 @@
 
 	nop
 	nop
+	nop
 
 
     if-eqz v0, :cond_1
 
-	nop
-	nop
-	nop
 	nop
 
 
@@ -4974,8 +4899,6 @@
 
     if-eqz v0, :cond_2
 
-	nop
-	nop
 	nop
 
 
@@ -5004,24 +4927,24 @@
     return-void
 
 	nop
+	:rTJZCIylyUsUKqcM
+
+	goto/32 :EAWfPJBmeEvNoMdz
+
 	nop
-	:JFMypCgFgCiFNcaC
-
-	goto/32 :XtAjTSDPdRvAELhR
-
 	nop
 	nop
 .end method
 
 
 
-.method public F(FZI)V
+.method public F(FFC)V
 
 	.locals 5
 
 
 
-	const/16 v0, 0x3ad2
+	const/16 v0, 0xef39
 
 	nop
 	nop
@@ -5029,16 +4952,34 @@
 	nop
 
 
-	const/16 v1, 0x1aac
+	const/16 v1, 0x5b69
+
+	nop
+
+
+	xor-int/2addr v0, v1
 
 	nop
 	nop
 	nop
+
+
+	const/16 v0, 0x5859
+
 	nop
 
 
-	rem-int v0, v0, v1
+	const/16 v1, 0x4a22
 
+	nop
+	nop
+	nop
+
+
+	add-int v0, v0, v1
+
+	nop
+	nop
 	nop
 
 
@@ -5058,10 +4999,10 @@
 
 
 
-	const/16 v0, 0xcd37
+	const/16 v0, 0x1868
 
 	nop
-	const/16 v1, 0xa8bc
+	const/16 v1, 0xd8fc
 
 	nop
 	nop
@@ -5070,37 +5011,32 @@
 	add-int v0, v0, v1
 
 	nop
+	nop
 	rem-int v0, v0, v1
 
 	nop
+	if-gtz v0, :zJlkfKPcPMjNJGqD
+
 	nop
 	nop
-	if-gtz v0, :vFRVVMRtMgWqAsFr
+	goto/32 :GDQHzqXaETFrvDAu
 
 	nop
 	nop
 	nop
-	nop
-	goto/32 :iRCOlWxANysQTzUj
+	:zJlkfKPcPMjNJGqD
 
-	nop
-	:vFRVVMRtMgWqAsFr
-
-	:EJXoJgFTygYSSjwC
+	:qFvilFbqhuTxwHkS
 
 
 
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->ca:Lcom/google/android/gms/games/f;
 
 	nop
-	nop
-	nop
 
 
     if-eqz v0, :cond_0
 
-	nop
-	nop
 	nop
 	nop
 
@@ -5111,6 +5047,7 @@
 
     move-result-object v0
 
+	nop
 	nop
 
 
@@ -5148,30 +5085,31 @@
     return-void
 
 	nop
+	:GDQHzqXaETFrvDAu
+
+	goto/32 :qFvilFbqhuTxwHkS
+
 	nop
-	:iRCOlWxANysQTzUj
-
-	goto/32 :EJXoJgFTygYSSjwC
-
 	nop
 .end method
 
 
 
-.method public G(CB)V
+.method public G(IBFF)V
 
-	.locals 4
+	.locals 6
 
 
 
-	const/16 v0, 0x3c2d
+	const/16 v0, 0xd49f
 
 	nop
 	nop
 
 
-	const/16 v1, 0x67b6
+	const/16 v1, 0xb979
 
+	nop
 	nop
 	nop
 
@@ -5181,45 +5119,42 @@
 	nop
 	nop
 	nop
+
+
+	const/16 v0, 0x1c47
+
 	nop
 
 
-	const/16 v0, 0x2fef
+	const/16 v1, 0x7c4d
 
 	nop
 	nop
-	nop
-	nop
-
-
-	const/16 v1, 0xface
-
-	nop
-	nop
-	nop
-	nop
-
-
-	rem-int v0, v0, v1
-
-	nop
-	nop
-	nop
-	nop
-
-
-	const/16 v0, 0x2f9e
-
-	nop
-	nop
-
-
-	const/16 v1, 0x7ddd
-
 	nop
 
 
 	mul-int/2addr v0, v1
+
+	nop
+	nop
+	nop
+
+
+	const/16 v0, 0xf6e7
+
+	nop
+	nop
+	nop
+	nop
+
+
+	const/16 v1, 0xa5a7
+
+	nop
+	nop
+
+
+	add-int v0, v0, v1
 
 	nop
 	nop
@@ -5240,18 +5175,16 @@
 
 
 
-	const/16 v0, 0x74a9
+	const/16 v0, 0x4929
 
 	nop
 	nop
-	const/16 v1, 0xfc7a
+	const/16 v1, 0xc77a
 
-	nop
 	nop
 	nop
 	add-int v0, v0, v1
 
-	nop
 	nop
 	nop
 	nop
@@ -5260,18 +5193,17 @@
 	nop
 	nop
 	nop
-	if-gtz v0, :QKakeAqxrNCLiNLm
-
-	nop
-	goto/32 :MxLaUXVNUePknWQP
+	if-gtz v0, :ZjIdSyOxBFfMAlBm
 
 	nop
 	nop
 	nop
-	nop
-	:QKakeAqxrNCLiNLm
+	goto/32 :KRxBaVOZsBdNTEbk
 
-	:ptuDDidmFaEEzwEt
+	nop
+	:ZjIdSyOxBFfMAlBm
+
+	:kmtJgJMQUvCWmdhl
 
 
 
@@ -5284,11 +5216,12 @@
     iput v0, p0, Lcom/androbaby/game2048/MainActivity;->C:I
 
 	nop
+	nop
+	nop
 
 
     iget-object v1, p0, Lcom/androbaby/game2048/MainActivity;->I:Landroid/widget/RelativeLayout;
 
-	nop
 	nop
 
 
@@ -5322,10 +5255,14 @@
 
 	nop
 	nop
+	nop
 
 
     const/16 v1, 0x8
 
+	nop
+	nop
+	nop
 	nop
 
 
@@ -5337,13 +5274,11 @@
 
 	nop
 	nop
+	nop
 
 
     if-eqz v0, :cond_1
 
-	nop
-	nop
-	nop
 	nop
 
 
@@ -5357,12 +5292,10 @@
 
 	nop
 	nop
-	nop
 
 
     if-eqz v0, :cond_2
 
-	nop
 	nop
 
 
@@ -5374,7 +5307,6 @@
 
     iget-boolean v0, p0, Lcom/androbaby/game2048/MainActivity;->xa:Z
 
-	nop
 	nop
 	nop
 	nop
@@ -5390,11 +5322,11 @@
 	nop
 	nop
 	nop
+	nop
 
 
     if-eqz v0, :cond_3
 
-	nop
 	nop
 	nop
 	nop
@@ -5408,13 +5340,11 @@
 
 	nop
 	nop
+	nop
 
 
     if-nez v0, :cond_3
 
-	nop
-	nop
-	nop
 	nop
 
 
@@ -5425,20 +5355,18 @@
     move-result v0
 
 	nop
+	nop
+	nop
 
 
     const/4 v1, 0x1
 
 	nop
 	nop
-	nop
-	nop
 
 
     if-ge v0, v1, :cond_3
 
-	nop
-	nop
 	nop
 	nop
 
@@ -5451,15 +5379,20 @@
 
 	nop
 	nop
+	nop
+	nop
 
 
     iget v1, p0, Lcom/androbaby/game2048/MainActivity;->ja:I
 
 	nop
+	nop
 
 
     if-lt v0, v1, :cond_3
 
+	nop
+	nop
 	nop
 	nop
 
@@ -5470,7 +5403,6 @@
 
     goto :goto_0
 
-	nop
 	nop
 
 
@@ -5484,8 +5416,6 @@
     if-nez v0, :cond_4
 
 	nop
-	nop
-	nop
 
 
     invoke-virtual {p0}, Lcom/androbaby/game2048/MainActivity;->B()I
@@ -5496,13 +5426,12 @@
 
 	nop
 	nop
+	nop
+	nop
 
 
     if-nez v0, :cond_4
 
-	nop
-	nop
-	nop
 	nop
 
 
@@ -5514,6 +5443,8 @@
 
 	nop
 	nop
+	nop
+	nop
 
 
     iget v1, p0, Lcom/androbaby/game2048/MainActivity;->ja:I
@@ -5521,10 +5452,12 @@
 	nop
 	nop
 	nop
+	nop
 
 
     if-lt v0, v1, :cond_4
 
+	nop
 	nop
 	nop
 	nop
@@ -5541,31 +5474,25 @@
     return-void
 
 	nop
-	:MxLaUXVNUePknWQP
-
-	goto/32 :ptuDDidmFaEEzwEt
-
 	nop
+	nop
+	:KRxBaVOZsBdNTEbk
+
+	goto/32 :kmtJgJMQUvCWmdhl
+
 	nop
 	nop
 .end method
 
 
 
-.method public H(SB)V
+.method public H(ICZS)V
 
-	.locals 4
-
-
-
-	const/16 v0, 0xff1f
-
-	nop
-	nop
-	nop
+	.locals 6
 
 
-	const/16 v1, 0x9246
+
+	const/16 v0, 0x21dc
 
 	nop
 	nop
@@ -5573,20 +5500,10 @@
 	nop
 
 
-	mul-int/2addr v0, v1
+	const/16 v1, 0xc621
 
 	nop
 	nop
-	nop
-
-
-	const/16 v0, 0x92d6
-
-	nop
-
-
-	const/16 v1, 0x57c8
-
 	nop
 	nop
 
@@ -5594,19 +5511,16 @@
 	rem-int v0, v0, v1
 
 	nop
-	nop
-	nop
-	nop
 
 
-	const/16 v0, 0x39ec
+	const/16 v0, 0x4da8
 
+	nop
 	nop
 
 
-	const/16 v1, 0x2a35
+	const/16 v1, 0x8123
 
-	nop
 	nop
 	nop
 	nop
@@ -5617,11 +5531,11 @@
 	nop
 	nop
 	nop
+	nop
 
 
 	return-void
 
-	nop
 	nop
 	nop
 	nop
@@ -5635,37 +5549,35 @@
 
 
 
-	const/16 v0, 0xcd54
+	const/16 v0, 0xfa39
 
 	nop
 	nop
 	nop
-	const/16 v1, 0xa69d
+	nop
+	const/16 v1, 0x2ced
 
-	nop
-	nop
 	nop
 	add-int v0, v0, v1
 
-	nop
-	nop
 	nop
 	rem-int v0, v0, v1
 
 	nop
 	nop
 	nop
-	if-gtz v0, :HKjdTHQyZypkXaHQ
+	if-gtz v0, :akfOGCBnfrMtXTSL
+
+	nop
+	nop
+	goto/32 :cRydLgtyurELKUIz
 
 	nop
 	nop
 	nop
-	goto/32 :aqiGmYPjhOAQIPFj
+	:akfOGCBnfrMtXTSL
 
-	nop
-	:HKjdTHQyZypkXaHQ
-
-	:bOGjOWlUdHttRmpd
+	:stvCxtvMOObVzmjH
 
 
 
@@ -5676,6 +5588,8 @@
 
     const-string v1, "CHOICE"
 
+	nop
+	nop
 	nop
 
 
@@ -5688,13 +5602,11 @@
 	nop
 	nop
 	nop
+	nop
 
 
     iput-object v1, p0, Lcom/androbaby/game2048/MainActivity;->ia:Landroid/content/SharedPreferences;
 
-	nop
-	nop
-	nop
 	nop
 
 
@@ -5713,10 +5625,14 @@
 
 	nop
 	nop
+	nop
 
 
     const-string v2, "CHOICE_TYPE"
 
+	nop
+	nop
+	nop
 	nop
 
 
@@ -5726,7 +5642,6 @@
 
     const-string v2, "NO_COUNT"
 
-	nop
 	nop
 	nop
 
@@ -5743,45 +5658,52 @@
 
 	nop
 	nop
-	nop
-	nop
-	:aqiGmYPjhOAQIPFj
+	:cRydLgtyurELKUIz
 
-	goto/32 :bOGjOWlUdHttRmpd
+	goto/32 :stvCxtvMOObVzmjH
 
-	nop
-	nop
-	nop
 	nop
 .end method
 
 
 
-.method public I(SS)V
+.method public I(CS)V
 
 	.locals 4
 
 
 
-	const/16 v0, 0xd35e
+	const/16 v0, 0x86e1
+
+	nop
+
+
+	const/16 v1, 0xfe5a
 
 	nop
 	nop
 	nop
+
+
+	mul-int/2addr v0, v1
+
+	nop
+	nop
 	nop
 
 
-	const/16 v1, 0x34ce
+	const/16 v0, 0xcbb6
 
 	nop
+
+
+	const/16 v1, 0x6c7e
+
 	nop
 
 
 	rem-int v0, v0, v1
 
-	nop
-	nop
-	nop
 	nop
 
 
@@ -5799,20 +5721,17 @@
 
 
 
-	const/16 v0, 0x8575
+	const/16 v0, 0x24aa
 
 	nop
 	nop
 	nop
-	nop
-	const/16 v1, 0xa356
+	const/16 v1, 0x43b5
 
-	nop
 	nop
 	nop
 	add-int v0, v0, v1
 
-	nop
 	nop
 	nop
 	rem-int v0, v0, v1
@@ -5820,19 +5739,17 @@
 	nop
 	nop
 	nop
-	nop
-	if-gtz v0, :tVTeFRubHqWkyzAV
+	if-gtz v0, :ImIRXKNLiFOqEVMa
 
 	nop
 	nop
-	nop
-	nop
-	goto/32 :bLpRCMzCNKdjnzhg
+	goto/32 :HMTFRBqTbmqpLrVE
 
 	nop
-	:tVTeFRubHqWkyzAV
+	nop
+	:ImIRXKNLiFOqEVMa
 
-	:qVSlTMPPaJRGSsRj
+	:DPbaGznZHGDEdRPC
 
 
 
@@ -5842,6 +5759,7 @@
 
     move-result-object v0
 
+	nop
 	nop
 
 
@@ -5857,14 +5775,10 @@
     iget v1, p0, Lcom/androbaby/game2048/MainActivity;->H:I
 
 	nop
-	nop
-	nop
 
 
     const-string v2, "view_type"
 
-	nop
-	nop
 	nop
 
 
@@ -5879,50 +5793,34 @@
     return-void
 
 	nop
-	:bLpRCMzCNKdjnzhg
+	nop
+	nop
+	:HMTFRBqTbmqpLrVE
 
-	goto/32 :qVSlTMPPaJRGSsRj
+	goto/32 :DPbaGznZHGDEdRPC
 
+	nop
+	nop
+	nop
 	nop
 .end method
 
 
 
-.method public J(I)V
+.method public J(SZS)V
 
-	.locals 3
-
-
-
-	const/16 v0, 0x1e57
-
-	nop
+	.locals 5
 
 
-	const/16 v1, 0x7ee6
+
+	const/16 v0, 0xe698
 
 	nop
 	nop
 
 
-	xor-int/2addr v0, v1
+	const/16 v1, 0x315d
 
-	nop
-	nop
-	nop
-	nop
-
-
-	const/16 v0, 0x3181
-
-	nop
-	nop
-	nop
-
-
-	const/16 v1, 0xc87a
-
-	nop
 	nop
 
 
@@ -5930,32 +5828,13 @@
 
 	nop
 	nop
-
-
-	const/16 v0, 0x5629
-
-	nop
-	nop
-	nop
-	nop
-
-
-	const/16 v1, 0xe5df
-
-	nop
-	nop
-	nop
-	nop
-
-
-	add-int v0, v0, v1
-
 	nop
 	nop
 
 
 	return-void
 
+	nop
 	nop
 .end method
 
@@ -5967,38 +5846,37 @@
 
 
 
-	const/16 v0, 0xc969
+	const/16 v0, 0x3453
+
+	nop
+	const/16 v1, 0x4874
 
 	nop
 	nop
-	const/16 v1, 0xd4ee
-
 	nop
 	add-int v0, v0, v1
 
 	nop
+	nop
 	rem-int v0, v0, v1
 
 	nop
-	nop
-	if-gtz v0, :rIFwQWPnhaGuiGbX
+	if-gtz v0, :RMgKXojlkXYZbAaB
 
 	nop
 	nop
-	nop
-	nop
-	goto/32 :UkncJQNUscbZHnLZ
+	goto/32 :ALwlywyVfOrcXkAR
 
 	nop
-	:rIFwQWPnhaGuiGbX
+	nop
+	:RMgKXojlkXYZbAaB
 
-	:EVMgsOihLMOHQRhN
+	:RSkgHpbRsCtGoYKV
 
 
 
     const-string v0, "SCORE"
 
-	nop
 	nop
 
 
@@ -6028,6 +5906,9 @@
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->ia:Landroid/content/SharedPreferences;
 
 	nop
+	nop
+	nop
+	nop
 
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
@@ -6041,6 +5922,7 @@
 
     const-string v1, "BUY"
 
+	nop
 	nop
 	nop
 
@@ -6062,54 +5944,36 @@
 
 	nop
 	nop
-	nop
-	:UkncJQNUscbZHnLZ
+	:ALwlywyVfOrcXkAR
 
-	goto/32 :EVMgsOihLMOHQRhN
+	goto/32 :RSkgHpbRsCtGoYKV
 
-	nop
-	nop
 	nop
 	nop
 .end method
 
 
 
-.method public K(IFBC)V
+.method public K(BIB)V
 
-	.locals 6
-
-
-
-	const/16 v0, 0x6f2e
-
-	nop
+	.locals 5
 
 
-	const/16 v1, 0xddb3
 
-	nop
-	nop
-	nop
-
-
-	xor-int/2addr v0, v1
-
-	nop
-
-
-	const/16 v0, 0xdb4f
-
-	nop
-
-
-	const/16 v1, 0xcda1
+	const/16 v0, 0x3645
 
 	nop
 	nop
 
 
-	mul-int/2addr v0, v1
+	const/16 v1, 0xd563
+
+	nop
+	nop
+	nop
+
+
+	rem-int v0, v0, v1
 
 	nop
 	nop
@@ -6117,8 +5981,6 @@
 
 	return-void
 
-	nop
-	nop
 	nop
 	nop
 .end method
@@ -6131,16 +5993,19 @@
 
 
 
-	const/16 v0, 0x1859
+	const/16 v0, 0xb15b
 
 	nop
 	nop
-	const/16 v1, 0x493d
+	nop
+	const/16 v1, 0xcacd
 
+	nop
 	nop
 	nop
 	add-int v0, v0, v1
 
+	nop
 	nop
 	nop
 	rem-int v0, v0, v1
@@ -6148,21 +6013,17 @@
 	nop
 	nop
 	nop
+	if-gtz v0, :YYHuednnBnQvivHF
+
 	nop
-	if-gtz v0, :xisvwHCKlVvIkvbr
+	goto/32 :vcdFQrRYxfjaBsOV
 
 	nop
 	nop
 	nop
-	nop
-	goto/32 :BIwMCIHaOSoZxuQQ
+	:YYHuednnBnQvivHF
 
-	nop
-	nop
-	nop
-	:xisvwHCKlVvIkvbr
-
-	:KUjQOUJqgAXQqeFR
+	:uHbVOqkzHUKmaiJO
 
 
 
@@ -6171,11 +6032,12 @@
 	nop
 	nop
 	nop
-	nop
 
 
     const/4 v1, 0x0
 
+	nop
+	nop
 	nop
 
 
@@ -6187,19 +6049,18 @@
 
 	nop
 	nop
-	nop
-	nop
 
 
     iput-object v0, p0, Lcom/androbaby/game2048/MainActivity;->ia:Landroid/content/SharedPreferences;
 
 	nop
+	nop
+	nop
+	nop
 
 
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->ia:Landroid/content/SharedPreferences;
 
-	nop
-	nop
 	nop
 	nop
 
@@ -6212,7 +6073,6 @@
 
 	nop
 	nop
-	nop
 
 
     invoke-virtual {p0}, Lcom/androbaby/game2048/MainActivity;->y()I
@@ -6221,7 +6081,6 @@
 
     move-result v1
 
-	nop
 	nop
 
 
@@ -6250,27 +6109,52 @@
 
 	nop
 	nop
-	:BIwMCIHaOSoZxuQQ
+	nop
+	nop
+	:vcdFQrRYxfjaBsOV
 
-	goto/32 :KUjQOUJqgAXQqeFR
+	goto/32 :uHbVOqkzHUKmaiJO
 
+	nop
 	nop
 .end method
 
 
 
-.method public L(CZ)V
+.method public L(F)V
 
-	.locals 4
+	.locals 3
 
 
 
-	const/16 v0, 0xb58f
+	const/16 v0, 0x9fbc
+
+	nop
+	nop
+	nop
+	nop
+
+
+	const/16 v1, 0xbfae
+
+	nop
+	nop
+
+
+	add-int v0, v0, v1
+
+	nop
+	nop
+	nop
+	nop
+
+
+	const/16 v0, 0xb377
 
 	nop
 
 
-	const/16 v1, 0x3b5c
+	const/16 v1, 0xdf77
 
 	nop
 	nop
@@ -6282,26 +6166,21 @@
 	nop
 
 
-	const/16 v0, 0x7fa8
+	const/16 v0, 0xe167
+
+	nop
+	nop
+
+
+	const/16 v1, 0xd9bf
 
 	nop
 	nop
 	nop
 
 
-	const/16 v1, 0x295b
+	mul-int/2addr v0, v1
 
-	nop
-	nop
-	nop
-	nop
-
-
-	xor-int/2addr v0, v1
-
-	nop
-	nop
-	nop
 	nop
 
 
@@ -6320,39 +6199,43 @@
 
 
 
-	const/16 v0, 0x6a4f
+	const/16 v0, 0x58db
 
 	nop
-	nop
-	const/16 v1, 0xe357
+	const/16 v1, 0x385b
 
-	nop
-	nop
 	nop
 	add-int v0, v0, v1
 
+	nop
+	nop
+	nop
 	nop
 	rem-int v0, v0, v1
 
 	nop
 	nop
-	if-gtz v0, :UnTlBuUaLFrOnfGt
+	nop
+	nop
+	if-gtz v0, :NzcSgcVPKsHYWWFG
 
 	nop
 	nop
-	nop
-	nop
-	goto/32 :msHnTamdpICIQJTI
+	goto/32 :PjEWOBqVAXfkWsyV
 
 	nop
-	:UnTlBuUaLFrOnfGt
+	nop
+	:NzcSgcVPKsHYWWFG
 
-	:hYPKSUtJbTqHKkSs
+	:SHbKUxtgWRtvYcSD
 
 
 
     const-string v0, "SCORE"
 
+	nop
+	nop
+	nop
 	nop
 
 
@@ -6369,10 +6252,15 @@
     move-result-object v0
 
 	nop
+	nop
+	nop
 
 
     iput-object v0, p0, Lcom/androbaby/game2048/MainActivity;->ia:Landroid/content/SharedPreferences;
 
+	nop
+	nop
+	nop
 	nop
 
 
@@ -6406,13 +6294,10 @@
 
 	nop
 	nop
-	nop
-	nop
 
 
     const-string v2, "PLAY_COUNT"
 
-	nop
 	nop
 
 
@@ -6427,55 +6312,38 @@
     return-void
 
 	nop
-	:msHnTamdpICIQJTI
+	nop
+	:PjEWOBqVAXfkWsyV
 
-	goto/32 :hYPKSUtJbTqHKkSs
+	goto/32 :SHbKUxtgWRtvYcSD
 
-	nop
-	nop
-	nop
 	nop
 .end method
 
 
 
-.method public M(SZ)V
+.method public M(IBBI)V
 
-	.locals 4
-
-
-
-	const/16 v0, 0xdcaf
-
-	nop
-	nop
+	.locals 6
 
 
-	const/16 v1, 0x8646
 
-	nop
-	nop
-
-
-	rem-int v0, v0, v1
+	const/16 v0, 0x5bad
 
 	nop
 	nop
 	nop
 
 
-	const/16 v0, 0x4d4f
+	const/16 v1, 0x544e
 
+	nop
+	nop
 	nop
 	nop
 
 
-	const/16 v1, 0xea7e
-
-	nop
-
-
-	xor-int/2addr v0, v1
+	mul-int/2addr v0, v1
 
 	nop
 	nop
@@ -6484,6 +6352,8 @@
 
 	return-void
 
+	nop
+	nop
 	nop
 .end method
 
@@ -6495,11 +6365,10 @@
 
 
 
-	const/16 v0, 0x978c
+	const/16 v0, 0x1ba4
 
 	nop
-	nop
-	const/16 v1, 0x3a62
+	const/16 v1, 0xe1c7
 
 	nop
 	nop
@@ -6508,22 +6377,30 @@
 	add-int v0, v0, v1
 
 	nop
+	nop
+	nop
+	nop
 	rem-int v0, v0, v1
 
 	nop
 	nop
 	nop
 	nop
-	if-gtz v0, :QFzbznXDIWDnOIvb
+	if-gtz v0, :bacLnKTuHKAUxhtA
 
 	nop
 	nop
-	goto/32 :ybjvTmCjQiEUcqgQ
+	nop
+	nop
+	goto/32 :wJblHNpeXCsBqxXw
 
 	nop
-	:QFzbznXDIWDnOIvb
+	nop
+	nop
+	nop
+	:bacLnKTuHKAUxhtA
 
-	:SFnXYWIDUocdmLgq
+	:PNGToMcsXYBuaOdu
 
 
 
@@ -6542,19 +6419,18 @@
 
 	nop
 	nop
+	nop
+	nop
 
 
     if-eqz v0, :cond_0
 
 	nop
 	nop
-	nop
-	nop
 
 
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->R:Landroid/app/Dialog;
 
-	nop
 	nop
 
 
@@ -6565,14 +6441,12 @@
     goto :goto_0
 
 	nop
-	nop
 
 
     :cond_0
 
     const/4 v0, 0x1
 
-	nop
 	nop
 
 
@@ -6586,6 +6460,7 @@
 
 	nop
 	nop
+	nop
 
 
     invoke-virtual {v0}, Landroid/app/Dialog;->show()V
@@ -6594,6 +6469,8 @@
 
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->R:Landroid/app/Dialog;
 
+	nop
+	nop
 	nop
 
 
@@ -6604,11 +6481,11 @@
     move-result-object v0
 
 	nop
-	nop
 
 
     iget v1, p0, Lcom/androbaby/game2048/MainActivity;->ka:I
 
+	nop
 	nop
 	nop
 	nop
@@ -6624,9 +6501,11 @@
 
 	nop
 	nop
-	:ybjvTmCjQiEUcqgQ
+	nop
+	nop
+	:wJblHNpeXCsBqxXw
 
-	goto/32 :SFnXYWIDUocdmLgq
+	goto/32 :PNGToMcsXYBuaOdu
 
 	nop
 	nop
@@ -6634,29 +6513,26 @@
 
 
 
-.method public N(CBCS)V
+.method public N(IFZZ)V
 
 	.locals 6
 
 
 
-	const/16 v0, 0x27c1
+	const/16 v0, 0x2584
 
 	nop
-	nop
 
 
-	const/16 v1, 0xd5b9
+	const/16 v1, 0x3832
 
-	nop
 	nop
 	nop
 	nop
 
 
-	rem-int v0, v0, v1
+	xor-int/2addr v0, v1
 
-	nop
 	nop
 	nop
 	nop
@@ -6664,6 +6540,8 @@
 
 	return-void
 
+	nop
+	nop
 	nop
 	nop
 .end method
@@ -6685,11 +6563,11 @@
 	nop
 	nop
 	nop
+	nop
 
 
     if-eqz v0, :cond_0
 
-	nop
 	nop
 
 
@@ -6699,8 +6577,6 @@
 
     goto :goto_0
 
-	nop
-	nop
 	nop
 	nop
 
@@ -6714,6 +6590,7 @@
 
     iput-boolean v0, p0, Lcom/androbaby/game2048/MainActivity;->aa:Z
 
+	nop
 	nop
 	nop
 
@@ -6731,20 +6608,21 @@
 
 
 
-.method public O(BBF)V
+.method public O(Z)V
 
-	.locals 5
+	.locals 3
 
 
 
-	const/16 v0, 0x1553
+	const/16 v0, 0xccc6
 
 	nop
 	nop
 
 
-	const/16 v1, 0x79d8
+	const/16 v1, 0x59eb
 
+	nop
 	nop
 	nop
 	nop
@@ -6753,42 +6631,23 @@
 	add-int v0, v0, v1
 
 	nop
-	nop
-	nop
-	nop
 
 
-	const/16 v0, 0x3231
+	const/16 v0, 0x36f8
 
 	nop
 	nop
 	nop
 
 
-	const/16 v1, 0x5634
+	const/16 v1, 0xac3b
 
 	nop
-	nop
-
-
-	mul-int/2addr v0, v1
-
 	nop
 	nop
 
 
-	const/16 v0, 0x5e92
-
-	nop
-	nop
-
-
-	const/16 v1, 0x2934
-
-	nop
-
-
-	mul-int/2addr v0, v1
+	rem-int v0, v0, v1
 
 	nop
 	nop
@@ -6811,33 +6670,30 @@
 
 
 
-	const/16 v0, 0x23af
+	const/16 v0, 0x5c6a
 
 	nop
-	nop
-	nop
-	const/16 v1, 0x4542
+	const/16 v1, 0x626b
 
+	nop
 	nop
 	add-int v0, v0, v1
 
 	nop
+	nop
 	rem-int v0, v0, v1
 
 	nop
-	nop
-	if-gtz v0, :NkPiDVoqgmqZSEhG
+	if-gtz v0, :NGDArOfHLoCtLbTU
 
 	nop
 	nop
-	nop
-	nop
-	goto/32 :cZvxWgLwyceBJAps
+	goto/32 :tUtOQrbETgIIjUhn
 
 	nop
-	:NkPiDVoqgmqZSEhG
+	:NGDArOfHLoCtLbTU
 
-	:gKDPPhDZXzYKpjLT
+	:eVinLBfxZoaRTkue
 
 
 
@@ -6846,17 +6702,18 @@
 	nop
 	nop
 	nop
+	nop
 
 
     iput-boolean v0, p0, Lcom/androbaby/game2048/MainActivity;->wa:Z
 
 	nop
+	nop
+	nop
 
 
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->Aa:Landroid/app/Dialog;
 
-	nop
-	nop
 	nop
 
 
@@ -6866,8 +6723,6 @@
 
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->Aa:Landroid/app/Dialog;
 
-	nop
-	nop
 	nop
 
 
@@ -6887,6 +6742,7 @@
 
 	nop
 	nop
+	nop
 
 
     iget v2, p0, Lcom/androbaby/game2048/MainActivity;->za:I
@@ -6902,48 +6758,41 @@
 
 	nop
 	nop
-	:cZvxWgLwyceBJAps
-
-	goto/32 :gKDPPhDZXzYKpjLT
-
 	nop
+	:tUtOQrbETgIIjUhn
+
+	goto/32 :eVinLBfxZoaRTkue
+
 	nop
 .end method
 
 
 
-.method public P(I)V
+.method public P(ZZSB)V
 
-	.locals 3
-
-
-
-	const/16 v0, 0x2af6
-
-	nop
-	nop
-	nop
-	nop
+	.locals 6
 
 
-	const/16 v1, 0x4269
+
+	const/16 v0, 0x4f54
 
 	nop
 	nop
+
+
+	const/16 v1, 0xaadb
+
 	nop
 	nop
 
 
-	add-int v0, v0, v1
+	rem-int v0, v0, v1
 
-	nop
-	nop
 	nop
 
 
 	return-void
 
-	nop
 	nop
 	nop
 .end method
@@ -6956,30 +6805,36 @@
 
 
 
-	const/16 v0, 0x2f68
+	const/16 v0, 0x2f29
 
 	nop
-	const/16 v1, 0x7eaf
+	nop
+	const/16 v1, 0x3542
 
+	nop
+	nop
+	nop
 	nop
 	add-int v0, v0, v1
 
 	nop
+	nop
+	nop
+	nop
 	rem-int v0, v0, v1
 
 	nop
-	if-gtz v0, :kiSdsNjsUdSbXzVj
+	nop
+	if-gtz v0, :goEOOTlrtpHBFLck
+
+	nop
+	goto/32 :hrcvqvGBcWprVGTw
 
 	nop
 	nop
-	goto/32 :TKdIJHXlDcAJWjHD
+	:goEOOTlrtpHBFLck
 
-	nop
-	nop
-	nop
-	:kiSdsNjsUdSbXzVj
-
-	:USJOQZPtFdEYOxSV
+	:GUJNkQAEpfNuAuoj
 
 
 
@@ -6991,10 +6846,13 @@
 
 	nop
 	nop
+	nop
 
 
     const v1, 0x7f07000d
 
+	nop
+	nop
 	nop
 
 
@@ -7018,6 +6876,8 @@
     const v2, 0x7f090001
 
 	nop
+	nop
+	nop
 
 
     invoke-virtual {v0, v2, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
@@ -7028,10 +6888,13 @@
 
 	nop
 	nop
+	nop
+	nop
 
 
     const v1, 0x7f070024
 
+	nop
 	nop
 
 
@@ -7042,10 +6905,16 @@
     move-result-object v1
 
 	nop
+	nop
+	nop
+	nop
 
 
     check-cast v1, Landroid/widget/TextView;
 
+	nop
+	nop
+	nop
 	nop
 
 
@@ -7055,6 +6924,9 @@
 
     move-result-object v2
 
+	nop
+	nop
+	nop
 	nop
 
 
@@ -7084,7 +6956,6 @@
 
 	nop
 	nop
-	nop
 
 
     invoke-virtual {p0}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
@@ -7093,6 +6964,8 @@
 
     move-result-object v2
 
+	nop
+	nop
 	nop
 
 
@@ -7103,14 +6976,10 @@
     sget v2, Lcom/androbaby/game2048/MainActivity;->t:I
 
 	nop
-	nop
-	nop
 
 
     div-int/lit8 v2, v2, 0x3
 
-	nop
-	nop
 	nop
 	nop
 
@@ -7119,10 +6988,14 @@
 
 	nop
 	nop
+	nop
 
 
     const/4 v4, 0x0
 
+	nop
+	nop
+	nop
 	nop
 
 
@@ -7150,67 +7023,33 @@
     return-void
 
 	nop
-	:TKdIJHXlDcAJWjHD
+	:hrcvqvGBcWprVGTw
 
-	goto/32 :USJOQZPtFdEYOxSV
+	goto/32 :GUJNkQAEpfNuAuoj
 
+	nop
+	nop
+	nop
 	nop
 .end method
 
 
 
-.method public a(FSC)V
+.method public a(S)V
 
-	.locals 5
-
-
-
-	const/16 v0, 0xd245
-
-	nop
-	nop
+	.locals 3
 
 
-	const/16 v1, 0x967e
 
-	nop
-
-
-	xor-int/2addr v0, v1
-
-	nop
-	nop
-	nop
-
-
-	const/16 v0, 0x9f7f
-
-	nop
-	nop
-	nop
-	nop
-
-
-	const/16 v1, 0x92ce
-
-	nop
-	nop
-	nop
-
-
-	rem-int v0, v0, v1
+	const/16 v0, 0x6334
 
 	nop
 	nop
 
 
-	const/16 v0, 0xaece
+	const/16 v1, 0x9118
 
 	nop
-
-
-	const/16 v1, 0x2ebd
-
 	nop
 	nop
 	nop
@@ -7221,8 +7060,47 @@
 	nop
 
 
+	const/16 v0, 0xe7c7
+
+	nop
+	nop
+	nop
+
+
+	const/16 v1, 0x9c64
+
+	nop
+	nop
+	nop
+	nop
+
+
+	rem-int v0, v0, v1
+
+	nop
+
+
+	const/16 v0, 0x4665
+
+	nop
+
+
+	const/16 v1, 0xa969
+
+	nop
+	nop
+
+
+	rem-int v0, v0, v1
+
+	nop
+	nop
+
+
 	return-void
 
+	nop
+	nop
 	nop
 .end method
 
@@ -7234,46 +7112,45 @@
 
 
 
-	const/16 v0, 0xe449
+	const/16 v0, 0xe223
 
 	nop
-	const/16 v1, 0x5d9d
-
 	nop
+	nop
+	nop
+	const/16 v1, 0xdc29
+
 	nop
 	nop
 	nop
 	add-int v0, v0, v1
 
 	nop
+	nop
+	nop
 	rem-int v0, v0, v1
 
 	nop
 	nop
+	if-gtz v0, :FKKRPzghTvwcWHnQ
+
 	nop
 	nop
-	if-gtz v0, :BAZQSepYzkEiwtjz
+	nop
+	goto/32 :PVeYqOWYceeJPcIh
 
 	nop
 	nop
 	nop
 	nop
-	goto/32 :lXQmQIpEKgyfJVOa
+	:FKKRPzghTvwcWHnQ
 
-	nop
-	nop
-	nop
-	nop
-	:BAZQSepYzkEiwtjz
-
-	:rzNCmqijTpXKNEme
+	:urVsKyxQzobXTlJG
 
 
 
     const-wide/16 v0, 0x0
 
-	nop
-	nop
 	nop
 	nop
 
@@ -7283,17 +7160,20 @@
 	nop
 	nop
 	nop
-	nop
 
 
     if-nez v2, :cond_0
 
 	nop
 	nop
+	nop
 
 
     return-void
 
+	nop
+	nop
+	nop
 	nop
 
 
@@ -7314,17 +7194,19 @@
 	nop
 	nop
 	nop
+	nop
 
 
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->ca:Lcom/google/android/gms/games/f;
 
 	nop
 	nop
+	nop
+	nop
 
 
     if-eqz v0, :cond_5
 
-	nop
 	nop
 	nop
 	nop
@@ -7335,11 +7217,12 @@
 	nop
 	nop
 	nop
-	nop
 
 
     const/4 v2, 0x4
 
+	nop
+	nop
 	nop
 	nop
 
@@ -7348,13 +7231,10 @@
 
 	nop
 	nop
-	nop
 
 
     const v1, 0x7f0b0028
 
-	nop
-	nop
 	nop
 
 
@@ -7377,6 +7257,7 @@
     goto :goto_1
 
 	nop
+	nop
 
 
     :cond_1
@@ -7391,11 +7272,11 @@
 
 	nop
 	nop
+	nop
 
 
     const v1, 0x7f0b0029
 
-	nop
 	nop
 	nop
 
@@ -7418,6 +7299,9 @@
     if-ne v1, v2, :cond_3
 
 	nop
+	nop
+	nop
+	nop
 
 
     const v1, 0x7f0b002a
@@ -7430,6 +7314,7 @@
 
     goto :goto_0
 
+	nop
 	nop
 
 
@@ -7454,10 +7339,12 @@
 
 	nop
 	nop
+	nop
 
 
     goto :goto_0
 
+	nop
 	nop
 	nop
 	nop
@@ -7469,10 +7356,12 @@
 
 	nop
 	nop
+	nop
 
 
     if-ne v1, v2, :cond_5
 
+	nop
 	nop
 	nop
 	nop
@@ -7481,12 +7370,13 @@
     const v1, 0x7f0b0027
 
 	nop
+	nop
+	nop
+	nop
 
 
     goto :goto_0
 
-	nop
-	nop
 	nop
 	nop
 
@@ -7501,33 +7391,31 @@
 	nop
 	nop
 	nop
-	:lXQmQIpEKgyfJVOa
+	:PVeYqOWYceeJPcIh
 
-	goto/32 :rzNCmqijTpXKNEme
+	goto/32 :urVsKyxQzobXTlJG
 
-	nop
 	nop
 	nop
 .end method
 
 
 
-.method public b(ZCZ)V
+.method public b(ZSS)V
 
 	.locals 5
 
 
 
-	const/16 v0, 0xb33f
+	const/16 v0, 0xee7c
 
-	nop
-	nop
 	nop
 	nop
 
 
-	const/16 v1, 0xdc6b
+	const/16 v1, 0xc761
 
+	nop
 	nop
 	nop
 	nop
@@ -7537,11 +7425,50 @@
 
 	nop
 	nop
+
+
+	const/16 v0, 0xe29f
+
+	nop
+	nop
+	nop
+	nop
+
+
+	const/16 v1, 0xdc11
+
+	nop
+	nop
+
+
+	add-int v0, v0, v1
+
+	nop
+	nop
+	nop
+	nop
+
+
+	const/16 v0, 0xc2c9
+
+	nop
+	nop
+
+
+	const/16 v1, 0x555d
+
+	nop
+
+
+	mul-int/2addr v0, v1
+
 	nop
 
 
 	return-void
 
+	nop
+	nop
 	nop
 .end method
 
@@ -7553,33 +7480,32 @@
 
 
 
-	const/16 v0, 0xe619
+	const/16 v0, 0x68fb
 
 	nop
-	const/16 v1, 0xd6f3
+	const/16 v1, 0xb6bd
 
-	nop
 	nop
 	nop
 	add-int v0, v0, v1
 
 	nop
-	nop
 	rem-int v0, v0, v1
 
 	nop
 	nop
-	nop
-	nop
-	if-gtz v0, :uprdWebGyWrleoNy
+	if-gtz v0, :DacNmffeyejMpCyE
 
 	nop
-	goto/32 :PqyiJUKvawlRZecH
+	nop
+	goto/32 :BrBXcZfQcKtloPZm
 
 	nop
-	:uprdWebGyWrleoNy
+	nop
+	nop
+	:DacNmffeyejMpCyE
 
-	:effvDaJptzjzDHWc
+	:gPekGdEvqgcDxxlH
 
 
 
@@ -7594,7 +7520,6 @@
 
 	nop
 	nop
-	nop
 
 
     invoke-virtual {p0, v0, v1}, Landroid/app/Activity;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
@@ -7604,17 +7529,19 @@
     move-result-object v0
 
 	nop
-	nop
 
 
     iput-object v0, p0, Lcom/androbaby/game2048/MainActivity;->ia:Landroid/content/SharedPreferences;
 
 	nop
 	nop
+	nop
+	nop
 
 
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->ia:Landroid/content/SharedPreferences;
 
+	nop
 	nop
 	nop
 	nop
@@ -7627,10 +7554,15 @@
     move-result-object v0
 
 	nop
+	nop
+	nop
+	nop
 
 
     const-string v1, "CHOICE_TYPE"
 
+	nop
+	nop
 	nop
 
 
@@ -7645,24 +7577,23 @@
     return-void
 
 	nop
-	:PqyiJUKvawlRZecH
-
-	goto/32 :effvDaJptzjzDHWc
-
 	nop
-	nop
+	:BrBXcZfQcKtloPZm
+
+	goto/32 :gPekGdEvqgcDxxlH
+
 	nop
 .end method
 
 
 
-.method public c(BI)V
+.method public c(BZ)V
 
 	.locals 4
 
 
 
-	const/16 v0, 0xaefb
+	const/16 v0, 0xed4d
 
 	nop
 	nop
@@ -7670,20 +7601,58 @@
 	nop
 
 
-	const/16 v1, 0x7659
+	const/16 v1, 0x8d17
 
 	nop
 	nop
 	nop
 
 
-	mul-int/2addr v0, v1
+	rem-int v0, v0, v1
 
+	nop
+	nop
+	nop
+	nop
+
+
+	const/16 v0, 0x9d23
+
+	nop
+	nop
+	nop
+
+
+	const/16 v1, 0x3751
+
+	nop
+
+
+	xor-int/2addr v0, v1
+
+	nop
+
+
+	const/16 v0, 0x2f2c
+
+	nop
+
+
+	const/16 v1, 0x83fc
+
+	nop
+	nop
+
+
+	rem-int v0, v0, v1
+
+	nop
 	nop
 
 
 	return-void
 
+	nop
 	nop
 .end method
 
@@ -7695,12 +7664,11 @@
 
 
 
-	const/16 v0, 0x75de
+	const/16 v0, 0xb539
 
 	nop
 	nop
-	nop
-	const/16 v1, 0xfb84
+	const/16 v1, 0x2f85
 
 	nop
 	nop
@@ -7709,21 +7677,24 @@
 	add-int v0, v0, v1
 
 	nop
+	nop
+	nop
 	rem-int v0, v0, v1
 
 	nop
 	nop
-	nop
-	if-gtz v0, :ODhBYLgTbPkfMbiE
-
-	nop
-	goto/32 :nsHbDQxkZaBEqkwj
+	if-gtz v0, :AemXNKWbytVmtjxI
 
 	nop
 	nop
-	:ODhBYLgTbPkfMbiE
+	goto/32 :AHXYpuWmIgRTnzoP
 
-	:kbrKASaLGjbtdOpO
+	nop
+	nop
+	nop
+	:AemXNKWbytVmtjxI
+
+	:pcgMPCfhJPdIQUIS
 
 
 
@@ -7731,10 +7702,13 @@
 
 	nop
 	nop
+	nop
 
 
     const/4 v1, 0x0
 
+	nop
+	nop
 	nop
 	nop
 
@@ -7746,20 +7720,18 @@
     move-result-object v0
 
 	nop
-	nop
-	nop
 
 
     iput-object v0, p0, Lcom/androbaby/game2048/MainActivity;->ia:Landroid/content/SharedPreferences;
 
 	nop
+	nop
+	nop
+	nop
 
 
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->ia:Landroid/content/SharedPreferences;
 
-	nop
-	nop
-	nop
 	nop
 
 
@@ -7769,6 +7741,8 @@
 
     move-result-object v0
 
+	nop
+	nop
 	nop
 
 
@@ -7790,33 +7764,72 @@
 
 	nop
 	nop
-	:nsHbDQxkZaBEqkwj
-
-	goto/32 :kbrKASaLGjbtdOpO
-
 	nop
+	:AHXYpuWmIgRTnzoP
+
+	goto/32 :pcgMPCfhJPdIQUIS
+
 	nop
 	nop
 .end method
 
 
 
-.method public d(IBS)V
+.method public d(ICS)V
 
 	.locals 5
 
 
 
-	const/16 v0, 0xbe9a
+	const/16 v0, 0xc4c9
+
+	nop
+
+
+	const/16 v1, 0x18b4
 
 	nop
 	nop
 	nop
 
 
-	const/16 v1, 0x4bdd
+	xor-int/2addr v0, v1
 
 	nop
+	nop
+	nop
+	nop
+
+
+	const/16 v0, 0x3265
+
+	nop
+	nop
+	nop
+
+
+	const/16 v1, 0x3975
+
+	nop
+
+
+	xor-int/2addr v0, v1
+
+	nop
+	nop
+	nop
+	nop
+
+
+	const/16 v0, 0xc3ad
+
+	nop
+	nop
+	nop
+
+
+	const/16 v1, 0x3d4a
+
 	nop
 	nop
 	nop
@@ -7825,48 +7838,6 @@
 	rem-int v0, v0, v1
 
 	nop
-	nop
-	nop
-	nop
-
-
-	const/16 v0, 0x6ef4
-
-	nop
-	nop
-
-
-	const/16 v1, 0x495c
-
-	nop
-	nop
-	nop
-	nop
-
-
-	xor-int/2addr v0, v1
-
-	nop
-	nop
-	nop
-	nop
-
-
-	const/16 v0, 0x5326
-
-	nop
-	nop
-	nop
-
-
-	const/16 v1, 0x5b36
-
-	nop
-	nop
-
-
-	xor-int/2addr v0, v1
-
 	nop
 	nop
 	nop
@@ -7888,13 +7859,12 @@
 
 
 
-	const/16 v0, 0xeb6b
+	const/16 v0, 0x4b6c
 
 	nop
-	nop
-	nop
-	const/16 v1, 0xba85
+	const/16 v1, 0x6d1b
 
+	nop
 	nop
 	nop
 	nop
@@ -7903,28 +7873,28 @@
 	nop
 	nop
 	nop
-	nop
 	rem-int v0, v0, v1
 
 	nop
 	nop
-	if-gtz v0, :KPYmxBPfUCklyspR
+	nop
+	nop
+	if-gtz v0, :kQpzBGNNLMuOCjch
+
+	nop
+	goto/32 :HSuPNUnAALnVUiRA
 
 	nop
 	nop
-	nop
-	nop
-	goto/32 :bstNyuolOIdfHCnZ
+	:kQpzBGNNLMuOCjch
 
-	nop
-	:KPYmxBPfUCklyspR
-
-	:HOGXXBLudAozaXVl
+	:OFhbkvlicexxmEIT
 
 
 
     const-string v0, "SCORE"
 
+	nop
 	nop
 	nop
 
@@ -7947,7 +7917,6 @@
 
     iput-object v0, p0, Lcom/androbaby/game2048/MainActivity;->ia:Landroid/content/SharedPreferences;
 
-	nop
 	nop
 	nop
 
@@ -7972,6 +7941,7 @@
     const-string v1, "RATE_TYPE"
 
 	nop
+	nop
 
 
     invoke-interface {v0, v1, p1}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
@@ -7986,11 +7956,10 @@
 
 	nop
 	nop
-	:bstNyuolOIdfHCnZ
+	:HSuPNUnAALnVUiRA
 
-	goto/32 :HOGXXBLudAozaXVl
+	goto/32 :OFhbkvlicexxmEIT
 
-	nop
 	nop
 	nop
 	nop
@@ -7998,42 +7967,45 @@
 
 
 
-.method public e(BF)V
+.method public e(F)V
 
-	.locals 4
-
-
-
-	const/16 v0, 0x2f42
-
-	nop
-	nop
-	nop
+	.locals 3
 
 
-	const/16 v1, 0x4181
 
-	nop
-	nop
-
-
-	mul-int/2addr v0, v1
-
-	nop
-	nop
-	nop
-	nop
-
-
-	const/16 v0, 0x22a4
+	const/16 v0, 0xe41b
 
 	nop
 	nop
 	nop
 
 
-	const/16 v1, 0x1f48
+	const/16 v1, 0x8c8d
 
+	nop
+	nop
+	nop
+
+
+	add-int v0, v0, v1
+
+	nop
+	nop
+	nop
+	nop
+
+
+	const/16 v0, 0x1e9b
+
+	nop
+	nop
+	nop
+	nop
+
+
+	const/16 v1, 0xdbc5
+
+	nop
 	nop
 	nop
 	nop
@@ -8047,10 +8019,25 @@
 	nop
 
 
-	return-void
+	const/16 v0, 0xd836
+
+	nop
+
+
+	const/16 v1, 0x386c
 
 	nop
 	nop
+	nop
+
+
+	xor-int/2addr v0, v1
+
+	nop
+
+
+	return-void
+
 	nop
 	nop
 .end method
@@ -8063,38 +8050,39 @@
 
 
 
-	const/16 v0, 0xd653
+	const/16 v0, 0xe897
 
 	nop
 	nop
-	const/16 v1, 0x7fde
+	const/16 v1, 0x7b53
 
-	nop
 	nop
 	nop
 	add-int v0, v0, v1
 
 	nop
-	nop
 	rem-int v0, v0, v1
 
 	nop
-	nop
-	if-gtz v0, :HofFiZrcmRZhlxCf
+	if-gtz v0, :zERfZidXsEIJfvyO
 
 	nop
-	goto/32 :khUgvZakLpCqZCfM
+	nop
+	nop
+	nop
+	goto/32 :oYrnAmQuZhVbuJth
 
 	nop
-	:HofFiZrcmRZhlxCf
+	nop
+	nop
+	:zERfZidXsEIJfvyO
 
-	:JLRNoyXmfdyenNxG
+	:spSTRAkzJvgnABMs
 
 
 
     iput p1, p0, Lcom/androbaby/game2048/MainActivity;->va:I
 
-	nop
 	nop
 
 
@@ -8109,11 +8097,12 @@
 
 	nop
 	nop
-	nop
 
 
     const/4 v2, 0x1
 
+	nop
+	nop
 	nop
 	nop
 
@@ -8128,7 +8117,6 @@
     iget-object p1, p0, Lcom/androbaby/game2048/MainActivity;->qa:Landroid/widget/ImageView;
 
 	nop
-	nop
 
 
     invoke-virtual {p1, v1}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -8137,8 +8125,6 @@
 
     iget-object p1, p0, Lcom/androbaby/game2048/MainActivity;->ra:Landroid/widget/ImageView;
 
-	nop
-	nop
 	nop
 	nop
 
@@ -8152,9 +8138,6 @@
     iget-object p1, p0, Lcom/androbaby/game2048/MainActivity;->sa:Landroid/widget/ImageView;
 
 	nop
-	nop
-	nop
-	nop
 
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -8165,7 +8148,6 @@
 
     iget-object p1, p0, Lcom/androbaby/game2048/MainActivity;->ta:Landroid/widget/ImageView;
 
-	nop
 	nop
 	nop
 
@@ -8179,7 +8161,6 @@
     iget-object p1, p0, Lcom/androbaby/game2048/MainActivity;->ua:Landroid/widget/ImageView;
 
 	nop
-	nop
 
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -8190,6 +8171,8 @@
 
 	nop
 	nop
+	nop
+	nop
 
 
     :cond_0
@@ -8198,17 +8181,18 @@
 
 	nop
 	nop
-	nop
 
 
     if-ne p1, v2, :cond_1
 
 	nop
 	nop
+	nop
 
 
     iget-object p1, p0, Lcom/androbaby/game2048/MainActivity;->qa:Landroid/widget/ImageView;
 
+	nop
 	nop
 	nop
 	nop
@@ -8243,13 +8227,13 @@
     if-ne p1, v2, :cond_2
 
 	nop
-	nop
-	nop
-	nop
 
 
     iget-object p1, p0, Lcom/androbaby/game2048/MainActivity;->qa:Landroid/widget/ImageView;
 
+	nop
+	nop
+	nop
 	nop
 
 
@@ -8270,9 +8254,6 @@
 
     iget-object p1, p0, Lcom/androbaby/game2048/MainActivity;->sa:Landroid/widget/ImageView;
 
-	nop
-	nop
-	nop
 	nop
 
 
@@ -8299,10 +8280,13 @@
 
 	nop
 	nop
+	nop
+	nop
 
 
     iget-object p1, p0, Lcom/androbaby/game2048/MainActivity;->qa:Landroid/widget/ImageView;
 
+	nop
 	nop
 	nop
 
@@ -8313,8 +8297,6 @@
 
     iget-object p1, p0, Lcom/androbaby/game2048/MainActivity;->ra:Landroid/widget/ImageView;
 
-	nop
-	nop
 	nop
 	nop
 
@@ -8336,6 +8318,7 @@
 
 	nop
 	nop
+	nop
 
 
     invoke-virtual {p1, v1}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -8345,12 +8328,15 @@
     goto :goto_2
 
 	nop
+	nop
 
 
     :cond_3
 
     const/4 v0, 0x5
 
+	nop
+	nop
 	nop
 
 
@@ -8364,8 +8350,6 @@
     iget-object p1, p0, Lcom/androbaby/game2048/MainActivity;->qa:Landroid/widget/ImageView;
 
 	nop
-	nop
-	nop
 
 
     invoke-virtual {p1, v1}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -8375,7 +8359,6 @@
     iget-object p1, p0, Lcom/androbaby/game2048/MainActivity;->ra:Landroid/widget/ImageView;
 
 	nop
-	nop
 
 
     invoke-virtual {p1, v1}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -8384,8 +8367,6 @@
 
     iget-object p1, p0, Lcom/androbaby/game2048/MainActivity;->sa:Landroid/widget/ImageView;
 
-	nop
-	nop
 	nop
 	nop
 
@@ -8409,6 +8390,8 @@
 
 	nop
 	nop
+	nop
+	nop
 
 
     invoke-virtual {p1, v1}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -8422,81 +8405,38 @@
     return-void
 
 	nop
-	:khUgvZakLpCqZCfM
+	nop
+	:oYrnAmQuZhVbuJth
 
-	goto/32 :JLRNoyXmfdyenNxG
+	goto/32 :spSTRAkzJvgnABMs
 
-	nop
-	nop
-	nop
 	nop
 .end method
 
 
 
-.method public o(FI)V
+.method public o(B)V
 
-	.locals 4
+	.locals 3
 
 
 
-	const/16 v0, 0x4a9f
+	const/16 v0, 0x6f9e
 
+	nop
 	nop
 	nop
 	nop
-	nop
 
 
-	const/16 v1, 0x31a4
+	const/16 v1, 0x29f3
 
-	nop
 	nop
 	nop
 
 
 	rem-int v0, v0, v1
 
-	nop
-
-
-	const/16 v0, 0xe354
-
-	nop
-	nop
-	nop
-	nop
-
-
-	const/16 v1, 0xd7ac
-
-	nop
-	nop
-
-
-	add-int v0, v0, v1
-
-	nop
-	nop
-	nop
-	nop
-
-
-	const/16 v0, 0xef12
-
-	nop
-
-
-	const/16 v1, 0x66bd
-
-	nop
-	nop
-
-
-	mul-int/2addr v0, v1
-
-	nop
-	nop
 	nop
 
 
@@ -8516,15 +8456,14 @@
 
 
 
-	const/16 v0, 0xaf59
-
-	nop
-	nop
-	const/16 v1, 0x3cc2
+	const/16 v0, 0xcd78
 
 	nop
 	nop
 	nop
+	nop
+	const/16 v1, 0x466a
+
 	nop
 	add-int v0, v0, v1
 
@@ -8532,24 +8471,24 @@
 	rem-int v0, v0, v1
 
 	nop
-	if-gtz v0, :iQSKGizzicyQeoAu
+	nop
+	nop
+	if-gtz v0, :QFsVIWxswhzpbDYR
+
+	nop
+	goto/32 :qAOjpJCWVpgKMXrL
 
 	nop
 	nop
-	goto/32 :edJnmQWemKNzmOnW
+	:QFsVIWxswhzpbDYR
 
-	nop
-	nop
-	nop
-	nop
-	:iQSKGizzicyQeoAu
-
-	:ytHOqYjVnTUHQQDV
+	:wURUwcvqFiHwPDqT
 
 
 
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
+	nop
 	nop
 
 
@@ -8559,9 +8498,6 @@
 
     const v1, 0x7f0b002e
 
-	nop
-	nop
-	nop
 	nop
 
 
@@ -8574,10 +8510,14 @@
 	nop
 	nop
 	nop
+	nop
 
 
     new-instance v2, Lcom/androbaby/game2048/z;
 
+	nop
+	nop
+	nop
 	nop
 
 
@@ -8587,6 +8527,7 @@
 
     const v3, 0x7f0b003b
 
+	nop
 	nop
 
 
@@ -8599,19 +8540,17 @@
 	nop
 	nop
 	nop
-	nop
 
 
     const v2, 0x7f0b002c
 
 	nop
-	nop
-	nop
-	nop
 
 
     const/4 v3, 0x0
 
+	nop
+	nop
 	nop
 	nop
 
@@ -8636,42 +8575,65 @@
     return-void
 
 	nop
-	:edJnmQWemKNzmOnW
+	:qAOjpJCWVpgKMXrL
 
-	goto/32 :ytHOqYjVnTUHQQDV
+	goto/32 :wURUwcvqFiHwPDqT
 
+	nop
+	nop
 	nop
 .end method
 
 
 
-.method private onActivityResult(S)V
+.method private onActivityResult(SBZI)V
 
-	.locals 3
+	.locals 6
 
 
 
-	const/16 v0, 0x2569
+	const/16 v0, 0x759d
+
+	nop
+	nop
+
+
+	const/16 v1, 0xc31c
+
+	nop
+
+
+	add-int v0, v0, v1
+
+	nop
+	nop
+	nop
+	nop
+
+
+	const/16 v0, 0x7c17
 
 	nop
 	nop
 	nop
 
 
-	const/16 v1, 0xf732
+	const/16 v1, 0xbcb3
 
 	nop
 	nop
 	nop
 
 
-	rem-int v0, v0, v1
+	xor-int/2addr v0, v1
 
 	nop
 
 
 	return-void
 
+	nop
+	nop
 	nop
 .end method
 
@@ -8683,37 +8645,44 @@
 
 
 
-	const/16 v0, 0x3bcb
+	const/16 v0, 0x5c75
 
 	nop
 	nop
-	const/16 v1, 0xd816
+	nop
+	nop
+	const/16 v1, 0x4e1a
 
+	nop
+	nop
 	nop
 	add-int v0, v0, v1
 
 	nop
-	nop
-	nop
 	rem-int v0, v0, v1
 
 	nop
-	if-gtz v0, :OPxPHqutJyMrHPnu
-
-	nop
-	goto/32 :uUUKbGElMcFHXWbo
-
 	nop
 	nop
-	:OPxPHqutJyMrHPnu
+	if-gtz v0, :onHtgxzNBUXmbfmM
 
-	:EINkinkJWEiLngnL
+	nop
+	nop
+	nop
+	nop
+	goto/32 :xkCstoosmXhKkcoR
+
+	nop
+	nop
+	nop
+	:onHtgxzNBUXmbfmM
+
+	:dKGKkSXsVsWHHZbw
 
 
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-	nop
 	nop
 
 
@@ -8723,7 +8692,6 @@
 
     const-string v1, "onActivityResult("
 
-	nop
 	nop
 	nop
 	nop
@@ -8766,10 +8734,14 @@
     move-result-object v0
 
 	nop
+	nop
 
 
     const-string v1, ""
 
+	nop
+	nop
+	nop
 	nop
 
 
@@ -8779,7 +8751,6 @@
 
     const-string v0, "SIGN"
 
-	nop
 	nop
 	nop
 	nop
@@ -8799,8 +8770,6 @@
 
     const/16 v0, 0x2329
 
-	nop
-	nop
 	nop
 
 
@@ -8835,8 +8804,6 @@
 
     move-result-object v0
 
-	nop
-	nop
 	nop
 
 
@@ -8877,7 +8844,6 @@
 	nop
 	nop
 	nop
-	nop
 
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/androbaby/game2048/n;->a(IILandroid/content/Intent;)Z
@@ -8891,7 +8857,6 @@
 
     if-nez v0, :cond_1
 
-	nop
 	nop
 	nop
 
@@ -8912,9 +8877,6 @@
     const-string p1, "onActivityResult handled by IABUtil."
 
 	nop
-	nop
-	nop
-	nop
 
 
     invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
@@ -8927,34 +8889,34 @@
 
 	nop
 	nop
-	nop
-	nop
-	:uUUKbGElMcFHXWbo
+	:xkCstoosmXhKkcoR
 
-	goto/32 :EINkinkJWEiLngnL
+	goto/32 :dKGKkSXsVsWHHZbw
 
-	nop
-	nop
 	nop
 	nop
 .end method
 
 
 
-.method public onBackPressed(BFBI)V
+.method public onBackPressed(FSB)V
 
-	.locals 6
+	.locals 5
 
 
 
-	const/16 v0, 0x23a1
+	const/16 v0, 0x1a31
 
 	nop
 	nop
+	nop
 
 
-	const/16 v1, 0xebdd
+	const/16 v1, 0xbdb2
 
+	nop
+	nop
+	nop
 	nop
 
 
@@ -8962,6 +8924,25 @@
 
 	nop
 	nop
+	nop
+
+
+	const/16 v0, 0x3134
+
+	nop
+	nop
+
+
+	const/16 v1, 0x713a
+
+	nop
+	nop
+	nop
+	nop
+
+
+	mul-int/2addr v0, v1
+
 	nop
 	nop
 
@@ -8981,12 +8962,12 @@
 
 
 
-	const/16 v0, 0xd5d6
+	const/16 v0, 0xddb3
 
 	nop
 	nop
 	nop
-	const/16 v1, 0x7f97
+	const/16 v1, 0xebda
 
 	nop
 	nop
@@ -8996,25 +8977,25 @@
 
 	nop
 	nop
+	nop
 	rem-int v0, v0, v1
 
 	nop
-	if-gtz v0, :szootNjUGQnTgbuF
+	if-gtz v0, :lrjLecSwjyFQVnSj
 
 	nop
-	goto/32 :KxyUTaoqDcaYmIUG
+	goto/32 :SibwJqeTfDUKvvwJ
 
 	nop
-	nop
-	nop
-	:szootNjUGQnTgbuF
+	:lrjLecSwjyFQVnSj
 
-	:WGzWGpMygiQdkgRz
+	:GBabKHbLmuflOIYU
 
 
 
     iget v0, p0, Lcom/androbaby/game2048/MainActivity;->C:I
 
+	nop
 	nop
 
 
@@ -9027,7 +9008,6 @@
 
     iget-boolean v0, p0, Lcom/androbaby/game2048/MainActivity;->xa:Z
 
-	nop
 	nop
 	nop
 
@@ -9049,6 +9029,7 @@
 	nop
 	nop
 	nop
+	nop
 
 
     invoke-virtual {p0}, Lcom/androbaby/game2048/MainActivity;->w()I
@@ -9058,10 +9039,13 @@
     move-result v0
 
 	nop
+	nop
+	nop
 
 
     if-nez v0, :cond_0
 
+	nop
 	nop
 	nop
 
@@ -9074,13 +9058,10 @@
 
 	nop
 	nop
-	nop
-	nop
 
 
     const/4 v1, 0x1
 
-	nop
 	nop
 
 
@@ -9098,15 +9079,12 @@
     goto :goto_0
 
 	nop
-	nop
-	nop
 
 
     :cond_0
 
     iget-boolean v0, p0, Lcom/androbaby/game2048/MainActivity;->wa:Z
 
-	nop
 	nop
 	nop
 
@@ -9127,11 +9105,11 @@
 
 	nop
 	nop
+	nop
 
 
     if-nez v0, :cond_1
 
-	nop
 	nop
 	nop
 
@@ -9143,17 +9121,20 @@
     move-result v0
 
 	nop
+	nop
+	nop
+	nop
 
 
     iget v1, p0, Lcom/androbaby/game2048/MainActivity;->ja:I
 
 	nop
 	nop
-	nop
 
 
     if-lt v0, v1, :cond_1
 
+	nop
 	nop
 
 
@@ -9163,6 +9144,7 @@
 
     goto :goto_0
 
+	nop
 	nop
 	nop
 	nop
@@ -9176,6 +9158,7 @@
 
     goto :goto_0
 
+	nop
 	nop
 	nop
 	nop
@@ -9200,6 +9183,8 @@
     move-result v0
 
 	nop
+	nop
+	nop
 
 
     if-nez v0, :cond_3
@@ -9215,6 +9200,8 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+	nop
+	nop
 	nop
 	nop
 
@@ -9234,6 +9221,7 @@
 
     iget v1, p0, Lcom/androbaby/game2048/MainActivity;->H:I
 
+	nop
 	nop
 	nop
 
@@ -9260,17 +9248,18 @@
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->X:Lcom/androbaby/game2048/K;
 
 	nop
-	nop
-	nop
 
 
     iget-object v0, v0, Lcom/androbaby/game2048/K;->h:Lcom/androbaby/game2048/J;
 
 	nop
+	nop
+	nop
 
 
     iget-wide v0, v0, Lcom/androbaby/game2048/J;->i:J
 
+	nop
 	nop
 	nop
 	nop
@@ -9285,51 +9274,35 @@
     return-void
 
 	nop
-	:KxyUTaoqDcaYmIUG
+	nop
+	nop
+	nop
+	:SibwJqeTfDUKvvwJ
 
-	goto/32 :WGzWGpMygiQdkgRz
+	goto/32 :GBabKHbLmuflOIYU
 
 	nop
 .end method
 
 
 
-.method private onCreate(IIZB)V
+.method private onCreate(CFIS)V
 
 	.locals 6
 
 
 
-	const/16 v0, 0x7f34
+	const/16 v0, 0x2bb8
 
 	nop
 	nop
 	nop
 
 
-	const/16 v1, 0xa535
+	const/16 v1, 0xf6c2
 
 	nop
 	nop
-	nop
-
-
-	xor-int/2addr v0, v1
-
-	nop
-	nop
-	nop
-	nop
-
-
-	const/16 v0, 0x5bc5
-
-	nop
-	nop
-
-
-	const/16 v1, 0x3846
-
 	nop
 	nop
 
@@ -9337,23 +9310,25 @@
 	rem-int v0, v0, v1
 
 	nop
-
-
-	const/16 v0, 0xcfc1
-
 	nop
 	nop
 
 
-	const/16 v1, 0x2561
+	const/16 v0, 0x96dc
 
 	nop
+
+
+	const/16 v1, 0xbaae
+
 	nop
 	nop
 
 
 	add-int v0, v0, v1
 
+	nop
+	nop
 	nop
 	nop
 
@@ -9371,38 +9346,30 @@
 
 
 
-	const/16 v0, 0xe29a
+	const/16 v0, 0xd881
 
 	nop
 	nop
-	nop
-	const/16 v1, 0xd3a7
+	const/16 v1, 0x8797
 
 	nop
 	add-int v0, v0, v1
 
 	nop
-	nop
-	nop
 	rem-int v0, v0, v1
 
 	nop
-	nop
-	nop
-	nop
-	if-gtz v0, :RpNTNjjVYJBRfhDp
+	if-gtz v0, :sCIsiVfvzmcryXcS
 
 	nop
 	nop
 	nop
-	goto/32 :aqWrFxxqWWXTtDfP
+	goto/32 :TgqFfmpJDCmdeMPp
 
 	nop
-	nop
-	nop
-	:RpNTNjjVYJBRfhDp
+	:sCIsiVfvzmcryXcS
 
-	:BzgyAVRlhosAxQNP
+	:nFRxwVUdZDWdUYsS
 
 
 
@@ -9428,8 +9395,6 @@
 
 	nop
 	nop
-	nop
-	nop
 
 
     const/4 v1, 0x1
@@ -9442,6 +9407,7 @@
 
     if-lez v0, :cond_0
 
+	nop
 	nop
 	nop
 	nop
@@ -9461,7 +9427,6 @@
 
 	nop
 	nop
-	nop
 
 
     :cond_0
@@ -9471,11 +9436,12 @@
 	nop
 	nop
 	nop
-	nop
 
 
     sget-object v2, Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;->g:Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;
 
+	nop
+	nop
 	nop
 	nop
 
@@ -9493,7 +9459,6 @@
 	nop
 	nop
 	nop
-	nop
 
 
     invoke-static {p0, v0}, Lcom/google/android/gms/auth/api/signin/a;->a(Landroid/app/Activity;Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;)Lcom/google/android/gms/auth/api/signin/c;
@@ -9508,8 +9473,6 @@
 
     iput-object v0, p0, Lcom/androbaby/game2048/MainActivity;->da:Lcom/google/android/gms/auth/api/signin/c;
 
-	nop
-	nop
 	nop
 	nop
 
@@ -9536,8 +9499,6 @@
 
 	nop
 	nop
-	nop
-	nop
 
 
     invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
@@ -9547,16 +9508,19 @@
     move-result-object v0
 
 	nop
+	nop
+	nop
+	nop
 
 
     check-cast v0, Landroid/widget/RelativeLayout;
 
 	nop
-	nop
 
 
     iput-object v0, p0, Lcom/androbaby/game2048/MainActivity;->B:Landroid/widget/RelativeLayout;
 
+	nop
 	nop
 	nop
 
@@ -9583,6 +9547,8 @@
 
     iget v0, p0, Lcom/androbaby/game2048/MainActivity;->H:I
 
+	nop
+	nop
 	nop
 
 
@@ -9612,12 +9578,11 @@
 
 	nop
 	nop
-	nop
-	nop
 
 
     goto :goto_1
 
+	nop
 	nop
 	nop
 	nop
@@ -9629,13 +9594,10 @@
 
 	nop
 	nop
-	nop
-	nop
 
 
     if-ne v0, v3, :cond_2
 
-	nop
 	nop
 
 
@@ -9646,7 +9608,6 @@
 
     goto :goto_1
 
-	nop
 	nop
 
 
@@ -9661,12 +9622,12 @@
     if-ne v0, v1, :cond_3
 
 	nop
+	nop
+	nop
 
 
     const/4 v0, 0x2
 
-	nop
-	nop
 	nop
 	nop
 
@@ -9682,17 +9643,20 @@
 
 	nop
 	nop
+	nop
+	nop
 
 
     const/4 v3, 0x3
 
 	nop
 	nop
-	nop
 
 
     if-ne v0, v1, :cond_4
 
+	nop
+	nop
 	nop
 
 
@@ -9708,6 +9672,8 @@
 
 	nop
 	nop
+	nop
+	nop
 
 
     :cond_4
@@ -9717,11 +9683,12 @@
 	nop
 	nop
 	nop
-	nop
 
 
     iput v2, p0, Lcom/androbaby/game2048/MainActivity;->F:I
 
+	nop
+	nop
 	nop
 	nop
 
@@ -9734,24 +9701,23 @@
 
 	nop
 	nop
+	nop
+	nop
 
 
     iget-object v1, p0, Lcom/androbaby/game2048/MainActivity;->D:[Ljava/lang/String;
 
-	nop
-	nop
-	nop
 	nop
 
 
     iget v2, p0, Lcom/androbaby/game2048/MainActivity;->F:I
 
 	nop
+	nop
 
 
     aget-object v1, v1, v2
 
-	nop
 	nop
 	nop
 
@@ -9770,19 +9736,17 @@
 
 	nop
 	nop
-	nop
-	nop
 
 
     iget v2, p0, Lcom/androbaby/game2048/MainActivity;->F:I
 
 	nop
 	nop
+	nop
 
 
     aget v1, v1, v2
 
-	nop
 	nop
 	nop
 
@@ -9794,12 +9758,13 @@
     if-eqz p1, :cond_6
 
 	nop
+	nop
+	nop
+	nop
 
 
     const-string v0, "hasState"
 
-	nop
-	nop
 	nop
 	nop
 
@@ -9813,15 +9778,19 @@
 	nop
 	nop
 	nop
+	nop
 
 
     if-eqz p1, :cond_6
 
 	nop
+	nop
 
 
     new-instance p1, Ljava/lang/StringBuilder;
 
+	nop
+	nop
 	nop
 	nop
 
@@ -9834,6 +9803,7 @@
 
 	nop
 	nop
+	nop
 
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -9842,6 +9812,7 @@
 
     iget v0, p0, Lcom/androbaby/game2048/MainActivity;->H:I
 
+	nop
 	nop
 
 
@@ -9858,7 +9829,6 @@
 	nop
 	nop
 	nop
-	nop
 
 
     invoke-direct {p0, p1}, Lcom/androbaby/game2048/MainActivity;->b(Ljava/lang/String;)V
@@ -9871,6 +9841,8 @@
 
 	nop
 	nop
+	nop
+	nop
 
 
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
@@ -9880,22 +9852,16 @@
     move-result p1
 
 	nop
-	nop
-	nop
-	nop
 
 
     if-nez p1, :cond_7
 
 	nop
 	nop
-	nop
-	nop
 
 
     new-instance p1, Lcom/androbaby/game2048/h;
 
-	nop
 	nop
 	nop
 
@@ -9917,6 +9883,9 @@
     new-instance p1, Lcom/androbaby/game2048/n;
 
 	nop
+	nop
+	nop
+	nop
 
 
     invoke-direct {p1, p0}, Lcom/androbaby/game2048/n;-><init>(Lcom/androbaby/game2048/MainActivity;)V
@@ -9925,6 +9894,7 @@
 
     iput-object p1, p0, Lcom/androbaby/game2048/MainActivity;->la:Lcom/androbaby/game2048/n;
 
+	nop
 	nop
 	nop
 	nop
@@ -9948,11 +9918,10 @@
 	nop
 	nop
 	nop
-	:aqWrFxxqWWXTtDfP
+	:TgqFfmpJDCmdeMPp
 
-	goto/32 :BzgyAVRlhosAxQNP
+	goto/32 :nFRxwVUdZDWdUYsS
 
-	nop
 	nop
 	nop
 	nop
@@ -9960,20 +9929,13 @@
 
 
 
-.method private onDestroy(FFI)V
+.method private onDestroy(S)V
 
-	.locals 5
-
-
-
-	const/16 v0, 0xa36c
-
-	nop
-	nop
-	nop
+	.locals 3
 
 
-	const/16 v1, 0xbe93
+
+	const/16 v0, 0x8b6f
 
 	nop
 	nop
@@ -9981,29 +9943,15 @@
 	nop
 
 
-	mul-int/2addr v0, v1
+	const/16 v1, 0x3a2b
 
 	nop
 	nop
 	nop
-	nop
 
 
-	const/16 v0, 0x49b5
+	add-int v0, v0, v1
 
-	nop
-
-
-	const/16 v1, 0x938a
-
-	nop
-	nop
-
-
-	xor-int/2addr v0, v1
-
-	nop
-	nop
 	nop
 
 
@@ -10029,7 +9977,6 @@
 	nop
 	nop
 	nop
-	nop
 
 
     invoke-virtual {v0}, Lcom/androbaby/game2048/n;->a()V
@@ -10040,23 +9987,43 @@
 
 	nop
 	nop
+	nop
 .end method
 
 
 
-.method private onPause(SFCI)V
+.method private onPause(F)V
 
-	.locals 6
+	.locals 3
 
 
 
-	const/16 v0, 0x4fc6
+	const/16 v0, 0x5234
 
 	nop
 	nop
 
 
-	const/16 v1, 0xade5
+	const/16 v1, 0x411c
+
+	nop
+	nop
+	nop
+
+
+	add-int v0, v0, v1
+
+	nop
+	nop
+	nop
+
+
+	const/16 v0, 0x96d6
+
+	nop
+
+
+	const/16 v1, 0x2293
 
 	nop
 	nop
@@ -10067,15 +10034,14 @@
 	nop
 
 
-	const/16 v0, 0x2949
+	const/16 v0, 0xa2b9
 
 	nop
+
+
+	const/16 v1, 0x533a
+
 	nop
-	nop
-
-
-	const/16 v1, 0x1a61
-
 	nop
 	nop
 
@@ -10083,36 +10049,12 @@
 	add-int v0, v0, v1
 
 	nop
-	nop
-	nop
-	nop
-
-
-	const/16 v0, 0xc362
-
-	nop
-	nop
-	nop
-
-
-	const/16 v1, 0xaa17
-
-	nop
-	nop
-	nop
-
-
-	rem-int v0, v0, v1
-
 	nop
 	nop
 
 
 	return-void
 
-	nop
-	nop
-	nop
 	nop
 .end method
 
@@ -10124,35 +10066,37 @@
 
 
 
-	const/16 v0, 0xb22d
+	const/16 v0, 0x21be
 
 	nop
 	nop
-	const/16 v1, 0xe8f9
+	nop
+	const/16 v1, 0x629c
 
 	nop
 	nop
 	add-int v0, v0, v1
 
 	nop
-	nop
-	nop
 	rem-int v0, v0, v1
 
 	nop
 	nop
-	nop
-	if-gtz v0, :ghoBeuwyjIhRTXet
-
-	nop
-	goto/32 :KGOTIWQQbTLijkGw
+	if-gtz v0, :siFwHKXrDiBfpHcL
 
 	nop
 	nop
 	nop
-	:ghoBeuwyjIhRTXet
+	nop
+	goto/32 :MuxkZvNcVyDVkZJV
 
-	:DnbpWKIXdJGxnQnV
+	nop
+	nop
+	nop
+	nop
+	:siFwHKXrDiBfpHcL
+
+	:dSISdmvKtjyyERHb
 
 
 
@@ -10174,6 +10118,9 @@
     const-string v1, "view"
 
 	nop
+	nop
+	nop
+	nop
 
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -10196,8 +10143,6 @@
 
     move-result-object v0
 
-	nop
-	nop
 	nop
 	nop
 
@@ -10210,42 +10155,62 @@
 
 	nop
 	nop
-	:KGOTIWQQbTLijkGw
-
-	goto/32 :DnbpWKIXdJGxnQnV
-
 	nop
+	:MuxkZvNcVyDVkZJV
+
+	goto/32 :dSISdmvKtjyyERHb
+
 	nop
 	nop
 .end method
 
 
 
-.method private onResume(ZIB)V
+.method private onResume(BC)V
 
-	.locals 5
+	.locals 4
 
 
 
-	const/16 v0, 0x6916
+	const/16 v0, 0xc82a
+
+	nop
+
+
+	const/16 v1, 0x16aa
 
 	nop
 
 
-	const/16 v1, 0xb3eb
+	add-int v0, v0, v1
 
 	nop
 	nop
 	nop
 
 
-	xor-int/2addr v0, v1
+	const/16 v0, 0xc6b5
 
+	nop
+	nop
+
+
+	const/16 v1, 0x343b
+
+	nop
+
+
+	add-int v0, v0, v1
+
+	nop
+	nop
+	nop
 	nop
 
 
 	return-void
 
+	nop
 	nop
 .end method
 
@@ -10257,21 +10222,15 @@
 
 
 
-	const/16 v0, 0x4751
+	const/16 v0, 0x15f3
 
 	nop
-	nop
-	nop
-	nop
-	const/16 v1, 0x3619
+	const/16 v1, 0x19a5
 
-	nop
-	nop
 	nop
 	nop
 	add-int v0, v0, v1
 
-	nop
 	nop
 	nop
 	nop
@@ -10281,20 +10240,18 @@
 	nop
 	nop
 	nop
-	if-gtz v0, :ThFkRYNyAWMBCHHf
+	if-gtz v0, :DjdvXnrGMWEwcfGL
+
+	nop
+	nop
+	goto/32 :rBaeeTAGoowpUBRt
 
 	nop
 	nop
 	nop
-	nop
-	goto/32 :BSQsqfAxlEeGjhCk
+	:DjdvXnrGMWEwcfGL
 
-	nop
-	nop
-	nop
-	:ThFkRYNyAWMBCHHf
-
-	:ePUudQxeyeASiFCj
+	:bKvGaRItPemffgSz
 
 
 
@@ -10304,9 +10261,6 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-	nop
-	nop
-	nop
 	nop
 
 
@@ -10318,6 +10272,8 @@
 
 	nop
 	nop
+	nop
+	nop
 
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -10326,7 +10282,6 @@
 
     iget v1, p0, Lcom/androbaby/game2048/MainActivity;->H:I
 
-	nop
 	nop
 	nop
 	nop
@@ -10342,7 +10297,6 @@
 
     move-result-object v0
 
-	nop
 	nop
 
 
@@ -10358,10 +10312,11 @@
 
 	nop
 	nop
-	:BSQsqfAxlEeGjhCk
+	:rBaeeTAGoowpUBRt
 
-	goto/32 :ePUudQxeyeASiFCj
+	goto/32 :bKvGaRItPemffgSz
 
+	nop
 	nop
 	nop
 	nop
@@ -10369,42 +10324,21 @@
 
 
 
-.method public onSaveInstanceState(FFF)V
+.method public onSaveInstanceState(CIZ)V
 
 	.locals 5
 
 
 
-	const/16 v0, 0xf31a
+	const/16 v0, 0x6ced
 
 	nop
 	nop
-	nop
 
 
-	const/16 v1, 0x4499
-
-	nop
-	nop
-	nop
-
-
-	rem-int v0, v0, v1
+	const/16 v1, 0xf8f4
 
 	nop
-	nop
-	nop
-
-
-	const/16 v0, 0x9922
-
-	nop
-	nop
-	nop
-
-
-	const/16 v1, 0xd9b4
-
 	nop
 
 
@@ -10418,6 +10352,8 @@
 
 	nop
 	nop
+	nop
+	nop
 .end method
 
 
@@ -10428,13 +10364,12 @@
 
 
 
-	const/16 v0, 0x8275
+	const/16 v0, 0xb38d
 
 	nop
 	nop
 	nop
-	nop
-	const/16 v1, 0x34ac
+	const/16 v1, 0x23f5
 
 	nop
 	nop
@@ -10444,22 +10379,26 @@
 
 	nop
 	nop
+	nop
+	nop
 	rem-int v0, v0, v1
 
 	nop
 	nop
 	nop
-	nop
-	if-gtz v0, :AuzoOmwmzQdzMiMl
+	if-gtz v0, :MkxnUHRDqEDeODNV
 
 	nop
 	nop
-	goto/32 :HSuLFtpdjDxvwTLW
+	nop
+	goto/32 :NkMWKtAsHSQARUuy
 
 	nop
-	:AuzoOmwmzQdzMiMl
+	nop
+	nop
+	:MkxnUHRDqEDeODNV
 
-	:srERfYDeacKDkHbE
+	:CnujDHcMxGDFtRYg
 
 
 
@@ -10469,9 +10408,6 @@
 
     const-string v0, "hasState"
 
-	nop
-	nop
-	nop
 	nop
 
 
@@ -10490,9 +10426,6 @@
     new-instance p1, Ljava/lang/StringBuilder;
 
 	nop
-	nop
-	nop
-	nop
 
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -10503,8 +10436,6 @@
 
 	nop
 	nop
-	nop
-	nop
 
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -10513,6 +10444,7 @@
 
     iget v0, p0, Lcom/androbaby/game2048/MainActivity;->H:I
 
+	nop
 	nop
 	nop
 	nop
@@ -10531,7 +10463,6 @@
 	nop
 	nop
 	nop
-	nop
 
 
     invoke-direct {p0, p1}, Lcom/androbaby/game2048/MainActivity;->c(Ljava/lang/String;)V
@@ -10544,11 +10475,10 @@
 	nop
 	nop
 	nop
-	:HSuLFtpdjDxvwTLW
+	:NkMWKtAsHSQARUuy
 
-	goto/32 :srERfYDeacKDkHbE
+	goto/32 :CnujDHcMxGDFtRYg
 
-	nop
 	nop
 	nop
 	nop
@@ -10556,19 +10486,21 @@
 
 
 
-.method public onTouch(SZ)Z
+.method public onTouch(SSIC)Z
 
-	.locals 4
+	.locals 6
 
 
 
-	const/16 v0, 0xf4ab
+	const/16 v0, 0x8a79
 
+	nop
+	nop
 	nop
 	nop
 
 
-	const/16 v1, 0x43df
+	const/16 v1, 0x85c9
 
 	nop
 
@@ -10576,24 +10508,22 @@
 	xor-int/2addr v0, v1
 
 	nop
-	nop
-	nop
 
 
-	const/16 v0, 0x8a3b
+	const/16 v0, 0x1afd
 
 	nop
+
+
+	const/16 v1, 0x7456
+
 	nop
-
-
-	const/16 v1, 0x2623
-
 	nop
 	nop
 	nop
 
 
-	rem-int v0, v0, v1
+	add-int v0, v0, v1
 
 	nop
 	nop
@@ -10612,33 +10542,37 @@
 
 
 
-	const/16 v0, 0x7fdb
+	const/16 v0, 0x5525
 
 	nop
 	nop
-	const/16 v1, 0xa9e4
+	nop
+	const/16 v1, 0xdcac
 
+	nop
+	nop
+	nop
 	nop
 	add-int v0, v0, v1
 
 	nop
 	nop
+	nop
 	rem-int v0, v0, v1
 
 	nop
+	if-gtz v0, :tIdqWtuYPKbuQHGK
+
 	nop
-	if-gtz v0, :dkHhZfvdjptZVsSA
+	goto/32 :TbooHaxIskKQyOsj
 
 	nop
 	nop
 	nop
-	goto/32 :VVHONeGpJMshlByT
-
 	nop
-	nop
-	:dkHhZfvdjptZVsSA
+	:tIdqWtuYPKbuQHGK
 
-	:ICoHwGCgrgSMdbKV
+	:VgjwSUjjpAvsWlGa
 
 
 
@@ -10649,23 +10583,25 @@
     move-result v0
 
 	nop
+	nop
+	nop
 
 
     const/4 v1, 0x1
 
-	nop
-	nop
 	nop
 
 
     if-nez v0, :cond_0
 
 	nop
-	nop
 
 
     goto :goto_1
 
+	nop
+	nop
+	nop
 	nop
 
 
@@ -10677,7 +10613,6 @@
 
     move-result p2
 
-	nop
 	nop
 	nop
 
@@ -10696,6 +10631,7 @@
     move-result p1
 
 	nop
+	nop
 
 
     const/4 p2, 0x3
@@ -10707,23 +10643,24 @@
     if-eq p1, p2, :cond_5
 
 	nop
-	nop
 
 
     const/4 p2, 0x4
 
+	nop
+	nop
+	nop
 	nop
 
 
     if-eq p1, p2, :cond_4
 
 	nop
+	nop
 
 
     const/4 p2, 0x5
 
-	nop
-	nop
 	nop
 	nop
 
@@ -10732,28 +10669,28 @@
 
 	nop
 	nop
+	nop
+	nop
 
 
     const/4 p2, 0x6
 
+	nop
 	nop
 
 
     if-eq p1, p2, :cond_2
 
 	nop
-	nop
 
 
     const/4 p2, 0x7
 
 	nop
-	nop
 
 
     if-eq p1, p2, :cond_1
 
-	nop
 	nop
 	nop
 	nop
@@ -10789,8 +10726,6 @@
 
 	nop
 	nop
-	nop
-	nop
 
 
     :cond_3
@@ -10801,6 +10736,7 @@
 
     goto :goto_1
 
+	nop
 	nop
 
 
@@ -10820,15 +10756,10 @@
     iget-object p2, p0, Lcom/androbaby/game2048/MainActivity;->D:[Ljava/lang/String;
 
 	nop
-	nop
-	nop
-	nop
 
 
     array-length p2, p2
 
-	nop
-	nop
 	nop
 	nop
 
@@ -10837,13 +10768,14 @@
 
 	nop
 	nop
+	nop
+	nop
 
 
     :cond_5
 
     iget p1, p0, Lcom/androbaby/game2048/MainActivity;->F:I
 
-	nop
 	nop
 	nop
 	nop
@@ -10860,10 +10792,13 @@
     iget-object p2, p0, Lcom/androbaby/game2048/MainActivity;->D:[Ljava/lang/String;
 
 	nop
+	nop
+	nop
 
 
     array-length v0, p2
 
+	nop
 	nop
 	nop
 	nop
@@ -10882,12 +10817,15 @@
 	nop
 	nop
 	nop
+	nop
 
 
     :goto_0
 
     rem-int/2addr p1, p2
 
+	nop
+	nop
 	nop
 
 
@@ -10909,10 +10847,9 @@
 
 	nop
 	nop
-	nop
-	:VVHONeGpJMshlByT
+	:TbooHaxIskKQyOsj
 
-	goto/32 :ICoHwGCgrgSMdbKV
+	goto/32 :VgjwSUjjpAvsWlGa
 
 	nop
 	nop
@@ -10922,13 +10859,40 @@
 
 
 
-.method public p(ZBF)V
+.method public p(BZSC)V
 
-	.locals 5
+	.locals 6
 
 
 
-	const/16 v0, 0xf549
+	const/16 v0, 0x361a
+
+	nop
+	nop
+	nop
+	nop
+
+
+	const/16 v1, 0x3f41
+
+	nop
+	nop
+	nop
+
+
+	add-int v0, v0, v1
+
+	nop
+
+
+	const/16 v0, 0xf2ae
+
+	nop
+	nop
+	nop
+
+
+	const/16 v1, 0x4a31
 
 	nop
 	nop
@@ -10936,41 +10900,16 @@
 	nop
 
 
-	const/16 v1, 0x5a14
+	xor-int/2addr v0, v1
 
 	nop
 	nop
 	nop
-
-
-	rem-int v0, v0, v1
-
-	nop
-	nop
-	nop
-
-
-	const/16 v0, 0x2e8b
-
-	nop
-
-
-	const/16 v1, 0x34e9
-
-	nop
-	nop
-	nop
-
-
-	mul-int/2addr v0, v1
-
 	nop
 
 
 	return-void
 
-	nop
-	nop
 	nop
 	nop
 .end method
@@ -10983,54 +10922,43 @@
 
 
 
-	const/16 v0, 0x977b
+	const/16 v0, 0x8c86
 
 	nop
 	nop
 	nop
-	const/16 v1, 0xd643
+	const/16 v1, 0x8667
 
-	nop
-	nop
-	nop
 	nop
 	add-int v0, v0, v1
 
-	nop
 	nop
 	rem-int v0, v0, v1
 
 	nop
 	nop
 	nop
-	if-gtz v0, :QizGjtNPTVpUTBhg
+	if-gtz v0, :DHhXXUDZRyPeHmYi
 
 	nop
 	nop
-	nop
-	nop
-	goto/32 :cedSPHkfkOchEGPI
+	goto/32 :cesAhxCgQGHeIPmH
 
 	nop
 	nop
-	nop
-	:QizGjtNPTVpUTBhg
+	:DHhXXUDZRyPeHmYi
 
-	:MWfWKuMWBwVpgLCh
+	:FWaNAgKtoCuqKZzd
 
 
 
     sget v0, Lcom/androbaby/game2048/MainActivity;->s:I
 
 	nop
-	nop
-	nop
-	nop
 
 
     mul-int/lit8 v0, v0, 0x5
 
-	nop
 	nop
 
 
@@ -11043,18 +10971,17 @@
     mul-int/lit8 v1, v0, 0x6
 
 	nop
+	nop
+	nop
 
 
     mul-int/lit8 v2, v0, 0x5
 
 	nop
-	nop
-	nop
 
 
     div-int/lit8 v3, v1, 0x2
 
-	nop
 	nop
 	nop
 
@@ -11063,12 +10990,11 @@
 
 	nop
 	nop
-	nop
-	nop
 
 
     new-instance v4, Landroid/app/Dialog;
 
+	nop
 	nop
 	nop
 
@@ -11081,18 +11007,17 @@
 
 	nop
 	nop
-	nop
-	nop
 
 
     iget-object v4, p0, Lcom/androbaby/game2048/MainActivity;->R:Landroid/app/Dialog;
 
 	nop
+	nop
+	nop
 
 
     const/4 v5, 0x1
 
-	nop
 	nop
 	nop
 
@@ -11109,18 +11034,20 @@
 
 	nop
 	nop
+	nop
+	nop
 
 
     const v6, 0x7f090003
 
 	nop
 	nop
+	nop
+	nop
 
 
     const/4 v7, 0x0
 
-	nop
-	nop
 	nop
 	nop
 
@@ -11138,10 +11065,12 @@
 
 	nop
 	nop
+	nop
 
 
     new-instance v6, Landroid/widget/ImageView;
 
+	nop
 	nop
 	nop
 	nop
@@ -11165,6 +11094,9 @@
     move-result-object v7
 
 	nop
+	nop
+	nop
+	nop
 
 
     invoke-virtual {v7}, Ljava/lang/Integer;->intValue()I
@@ -11173,6 +11105,7 @@
 
     move-result v7
 
+	nop
 	nop
 	nop
 
@@ -11184,8 +11117,6 @@
     const/4 v7, 0x0
 
 	nop
-	nop
-	nop
 
 
     invoke-virtual {v6, v7, v7, v7, v7}, Landroid/widget/ImageView;->setPadding(IIII)V
@@ -11196,6 +11127,8 @@
 
 	nop
 	nop
+	nop
+	nop
 
 
     invoke-virtual {v6, v8}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
@@ -11204,7 +11137,6 @@
 
     new-instance v8, Lcom/androbaby/game2048/F;
 
-	nop
 	nop
 	nop
 
@@ -11220,8 +11152,6 @@
     new-instance v8, Landroid/widget/ImageView;
 
 	nop
-	nop
-	nop
 
 
     invoke-direct {v8, p0}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
@@ -11230,6 +11160,8 @@
 
     const/16 v9, 0x65
 
+	nop
+	nop
 	nop
 	nop
 
@@ -11241,6 +11173,9 @@
     move-result-object v9
 
 	nop
+	nop
+	nop
+	nop
 
 
     invoke-virtual {v9}, Ljava/lang/Integer;->intValue()I
@@ -11249,6 +11184,8 @@
 
     move-result v9
 
+	nop
+	nop
 	nop
 	nop
 
@@ -11264,6 +11201,8 @@
     sget-object v9, Lcom/androbaby/game2048/h;->g:Landroid/graphics/Bitmap;
 
 	nop
+	nop
+	nop
 
 
     invoke-virtual {v8, v9}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
@@ -11272,7 +11211,6 @@
 
     new-instance v9, Lcom/androbaby/game2048/G;
 
-	nop
 	nop
 	nop
 
@@ -11287,9 +11225,6 @@
 
     new-instance v9, Landroid/widget/ImageView;
 
-	nop
-	nop
-	nop
 	nop
 
 
@@ -11329,7 +11264,6 @@
 
 	nop
 	nop
-	nop
 
 
     invoke-virtual {v9, v10}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
@@ -11354,6 +11288,7 @@
 
     new-instance v10, Landroid/widget/RelativeLayout$LayoutParams;
 
+	nop
 	nop
 	nop
 	nop
@@ -11389,6 +11324,8 @@
 
 	nop
 	nop
+	nop
+	nop
 
 
     invoke-direct {v1, v3, v0}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
@@ -11416,6 +11353,7 @@
 	nop
 	nop
 	nop
+	nop
 
 
     invoke-virtual {v1, v11, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
@@ -11427,6 +11365,7 @@
 	nop
 	nop
 	nop
+	nop
 
 
     invoke-virtual {v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
@@ -11435,8 +11374,6 @@
 
     new-instance v2, Landroid/widget/RelativeLayout$LayoutParams;
 
-	nop
-	nop
 	nop
 	nop
 
@@ -11456,9 +11393,6 @@
     move-result v0
 
 	nop
-	nop
-	nop
-	nop
 
 
     invoke-virtual {v2, v11, v0}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
@@ -11471,6 +11405,9 @@
 
     move-result v0
 
+	nop
+	nop
+	nop
 	nop
 
 
@@ -11507,6 +11444,7 @@
 	nop
 	nop
 	nop
+	nop
 
 
     invoke-virtual {v0, v4}, Landroid/app/Dialog;->setContentView(Landroid/view/View;)V
@@ -11515,7 +11453,6 @@
 
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->R:Landroid/app/Dialog;
 
-	nop
 	nop
 
 
@@ -11527,15 +11464,10 @@
 
 	nop
 	nop
-	nop
-	nop
 
 
     const v1, 0x106000d
 
-	nop
-	nop
-	nop
 	nop
 
 
@@ -11547,45 +11479,67 @@
 
 	nop
 	nop
-	:cedSPHkfkOchEGPI
+	:cesAhxCgQGHeIPmH
 
-	goto/32 :MWfWKuMWBwVpgLCh
+	goto/32 :FWaNAgKtoCuqKZzd
 
-	nop
-	nop
 	nop
 .end method
 
 
 
-.method public q(SZSS)V
+.method public q(C)V
 
-	.locals 6
+	.locals 3
 
 
 
-	const/16 v0, 0x8ad8
+	const/16 v0, 0x6c7e
+
+	nop
+	nop
+	nop
+	nop
+
+
+	const/16 v1, 0x7d99
 
 	nop
 	nop
 	nop
 
 
-	const/16 v1, 0xe9d6
+	xor-int/2addr v0, v1
 
 	nop
 
 
-	add-int v0, v0, v1
+	const/16 v0, 0xbf16
 
+	nop
+	nop
+	nop
+	nop
+
+
+	const/16 v1, 0x1997
+
+	nop
+	nop
+	nop
+	nop
+
+
+	mul-int/2addr v0, v1
+
+	nop
+	nop
+	nop
 	nop
 
 
 	return-void
 
-	nop
-	nop
-	nop
 	nop
 .end method
 
@@ -11597,45 +11551,52 @@
 
 
 
-	const/16 v0, 0xd251
+	const/16 v0, 0xb4a2
 
 	nop
 	nop
-	nop
-	nop
-	const/16 v1, 0x15f3
+	const/16 v1, 0x839b
 
 	nop
 	add-int v0, v0, v1
 
 	nop
 	nop
+	nop
+	nop
 	rem-int v0, v0, v1
 
 	nop
-	if-gtz v0, :nASzoQphJCfgrtXZ
+	nop
+	nop
+	nop
+	if-gtz v0, :fNqvcXmgwRMDtMMD
 
 	nop
 	nop
 	nop
-	goto/32 :AzQtcdOUFzDnjLpy
+	nop
+	goto/32 :njuiQIxKezbnrtsl
 
 	nop
 	nop
-	nop
-	:nASzoQphJCfgrtXZ
+	:fNqvcXmgwRMDtMMD
 
-	:LJhFfOHLtEntpVUF
+	:iDWqGkqjAUHmtzjR
 
 
 
     move-object/from16 v0, p0
 
 	nop
+	nop
+	nop
 
 
     new-instance v1, Lcom/androbaby/game2048/K;
 
+	nop
+	nop
 	nop
 
 
@@ -11662,6 +11623,7 @@
     iput-object v1, v0, Lcom/androbaby/game2048/MainActivity;->S:Lcom/androbaby/game2048/K;
 
 	nop
+	nop
 
 
     new-instance v1, Lcom/androbaby/game2048/K;
@@ -11677,10 +11639,13 @@
     move-result-object v2
 
 	nop
+	nop
+	nop
 
 
     const/4 v3, 0x5
 
+	nop
 	nop
 	nop
 	nop
@@ -11693,12 +11658,10 @@
     iput-object v1, v0, Lcom/androbaby/game2048/MainActivity;->T:Lcom/androbaby/game2048/K;
 
 	nop
-	nop
 
 
     new-instance v1, Lcom/androbaby/game2048/K;
 
-	nop
 	nop
 
 
@@ -11711,13 +11674,10 @@
 	nop
 	nop
 	nop
-	nop
 
 
     const/4 v3, 0x6
 
-	nop
-	nop
 	nop
 
 
@@ -11730,10 +11690,12 @@
 	nop
 	nop
 	nop
+	nop
 
 
     new-instance v1, Lcom/androbaby/game2048/K;
 
+	nop
 	nop
 	nop
 	nop
@@ -11745,9 +11707,6 @@
 
     move-result-object v2
 
-	nop
-	nop
-	nop
 	nop
 
 
@@ -11766,6 +11725,7 @@
     iput-object v1, v0, Lcom/androbaby/game2048/MainActivity;->V:Lcom/androbaby/game2048/K;
 
 	nop
+	nop
 
 
     new-instance v1, Lcom/androbaby/game2048/K;
@@ -11782,10 +11742,12 @@
 	nop
 	nop
 	nop
+	nop
 
 
     const/4 v4, 0x3
 
+	nop
 	nop
 	nop
 
@@ -11797,17 +11759,16 @@
     iput-object v1, v0, Lcom/androbaby/game2048/MainActivity;->W:Lcom/androbaby/game2048/K;
 
 	nop
-	nop
 
 
     sget-wide v1, Lcom/androbaby/game2048/MainActivity;->u:D
 
 	nop
+	nop
 
 
     const-wide/high16 v4, 0x3ff0000000000000L    # 1.0
 
-	nop
 	nop
 	nop
 
@@ -11823,16 +11784,10 @@
     if-lez v6, :cond_5
 
 	nop
-	nop
-	nop
-	nop
 
 
     sget v1, Lcom/androbaby/game2048/MainActivity;->t:I
 
-	nop
-	nop
-	nop
 	nop
 
 
@@ -11840,15 +11795,21 @@
 
 	nop
 	nop
+	nop
+	nop
 
 
     iget-object v2, v0, Lcom/androbaby/game2048/MainActivity;->A:Landroid/util/DisplayMetrics;
 
 	nop
+	nop
+	nop
 
 
     iget v2, v2, Landroid/util/DisplayMetrics;->density:F
 
+	nop
+	nop
 	nop
 	nop
 
@@ -11857,18 +11818,18 @@
 
 	nop
 	nop
+	nop
+	nop
 
 
     const/high16 v4, 0x44340000    # 720.0f
 
 	nop
-	nop
-	nop
-	nop
 
 
     const/high16 v5, 0x42480000    # 50.0f
 
+	nop
 	nop
 	nop
 	nop
@@ -11884,16 +11845,17 @@
     if-lez v1, :cond_0
 
 	nop
+	nop
 
 
     const/high16 v1, 0x42b40000    # 90.0f
 
 	nop
+	nop
 
 
     mul-float v2, v2, v1
 
-	nop
 	nop
 	nop
 	nop
@@ -11903,12 +11865,14 @@
 
 	nop
 	nop
+	nop
 
 
     :cond_0
 
     mul-float v2, v2, v5
 
+	nop
 	nop
 	nop
 	nop
@@ -11921,6 +11885,7 @@
 	nop
 	nop
 	nop
+	nop
 
 
     invoke-static {v1, v2}, Ljava/lang/Math;->ceil(D)D
@@ -11929,7 +11894,6 @@
 
     move-result-wide v1
 
-	nop
 	nop
 	nop
 	nop
@@ -11954,18 +11918,18 @@
 	nop
 	nop
 	nop
-	nop
 
 
     cmpg-double v2, v6, v8
 
 	nop
 	nop
-	nop
 
 
     if-gez v2, :cond_1
 
+	nop
+	nop
 	nop
 	nop
 
@@ -11993,6 +11957,7 @@
 	nop
 	nop
 	nop
+	nop
 
 
     invoke-static {v1, v2}, Ljava/lang/Math;->ceil(D)D
@@ -12009,7 +11974,6 @@
 	nop
 	nop
 	nop
-	nop
 
 
     :cond_1
@@ -12023,17 +11987,18 @@
     div-int/lit8 v2, v2, 0x3c
 
 	nop
+	nop
 
 
     sget-wide v4, Lcom/androbaby/game2048/MainActivity;->u:D
 
 	nop
-	nop
-	nop
 
 
     cmpg-double v7, v4, v8
 
+	nop
+	nop
 	nop
 
 
@@ -12041,10 +12006,13 @@
 
 	nop
 	nop
+	nop
+	nop
 
 
     const/4 v2, 0x0
 
+	nop
 	nop
 	nop
 
@@ -12054,7 +12022,6 @@
     sget v4, Lcom/androbaby/game2048/MainActivity;->t:I
 
 	nop
-	nop
 
 
     add-int v5, v1, v2
@@ -12062,11 +12029,11 @@
 	nop
 	nop
 	nop
+	nop
 
 
     sub-int/2addr v4, v5
 
-	nop
 	nop
 
 
@@ -12084,7 +12051,6 @@
 
 	nop
 	nop
-	nop
 
 
     invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
@@ -12093,6 +12059,9 @@
 
     const-string v7, ""
 
+	nop
+	nop
+	nop
 	nop
 
 
@@ -12108,12 +12077,11 @@
 
 	nop
 	nop
+	nop
 
 
     const-string v10, "height"
 
-	nop
-	nop
 	nop
 	nop
 
@@ -12154,6 +12122,8 @@
     const-string v7, "margin"
 
 	nop
+	nop
+	nop
 
 
     invoke-static {v7, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
@@ -12164,12 +12134,11 @@
 
 	nop
 	nop
+	nop
 
 
     const/4 v7, -0x1
 
-	nop
-	nop
 	nop
 	nop
 
@@ -12191,7 +12160,6 @@
 
 	nop
 	nop
-	nop
 
 
     invoke-direct {v11, v7, v4}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
@@ -12200,7 +12168,6 @@
 
     new-instance v12, Landroid/widget/RelativeLayout$LayoutParams;
 
-	nop
 	nop
 
 
@@ -12223,7 +12190,6 @@
     iget-object v4, v0, Lcom/androbaby/game2048/MainActivity;->ma:Ljava/lang/Boolean;
 
 	nop
-	nop
 
 
     invoke-virtual {v4}, Ljava/lang/Boolean;->booleanValue()Z
@@ -12234,11 +12200,12 @@
 
 	nop
 	nop
-	nop
 
 
     if-nez v4, :cond_4
 
+	nop
+	nop
 	nop
 
 
@@ -12259,10 +12226,12 @@
 
 	nop
 	nop
+	nop
 
 
     const/16 v6, 0xc
 
+	nop
 	nop
 	nop
 	nop
@@ -12275,6 +12244,8 @@
 
     if-ltz v16, :cond_3
 
+	nop
+	nop
 	nop
 
 
@@ -12289,6 +12260,7 @@
 
     iput-object v8, v0, Lcom/androbaby/game2048/MainActivity;->Y:Lcom/google/android/gms/ads/f;
 
+	nop
 	nop
 
 
@@ -12305,15 +12277,10 @@
     iget-object v3, v0, Lcom/androbaby/game2048/MainActivity;->Y:Lcom/google/android/gms/ads/f;
 
 	nop
-	nop
-	nop
 
 
     sget-object v8, Lcom/google/android/gms/ads/e;->g:Lcom/google/android/gms/ads/e;
 
-	nop
-	nop
-	nop
 	nop
 
 
@@ -12323,6 +12290,7 @@
 
     new-instance v3, Landroid/widget/RelativeLayout$LayoutParams;
 
+	nop
 	nop
 	nop
 	nop
@@ -12340,6 +12308,7 @@
 
 	nop
 	nop
+	nop
 
 
     invoke-virtual {v3, v4}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
@@ -12348,6 +12317,7 @@
 
     iget-object v4, v0, Lcom/androbaby/game2048/MainActivity;->Y:Lcom/google/android/gms/ads/f;
 
+	nop
 	nop
 	nop
 
@@ -12360,7 +12330,6 @@
 
 	nop
 	nop
-	nop
 
 
     invoke-direct {v3}, Lcom/google/android/gms/ads/d$a;-><init>()V
@@ -12370,14 +12339,14 @@
     goto :goto_1
 
 	nop
+	nop
+	nop
 
 
     :cond_3
 
     new-instance v8, Lcom/google/android/gms/ads/f;
 
-	nop
-	nop
 	nop
 
 
@@ -12388,12 +12357,11 @@
     iput-object v8, v0, Lcom/androbaby/game2048/MainActivity;->Y:Lcom/google/android/gms/ads/f;
 
 	nop
+	nop
 
 
     iget-object v8, v0, Lcom/androbaby/game2048/MainActivity;->Y:Lcom/google/android/gms/ads/f;
 
-	nop
-	nop
 	nop
 
 
@@ -12410,8 +12378,6 @@
     sget-object v8, Lcom/google/android/gms/ads/e;->a:Lcom/google/android/gms/ads/e;
 
 	nop
-	nop
-	nop
 
 
     invoke-virtual {v3, v8}, Lcom/google/android/gms/ads/f;->setAdSize(Lcom/google/android/gms/ads/e;)V
@@ -12420,6 +12386,8 @@
 
     new-instance v3, Landroid/widget/RelativeLayout$LayoutParams;
 
+	nop
+	nop
 	nop
 
 
@@ -12433,6 +12401,7 @@
 
     const/16 v4, 0xe
 
+	nop
 	nop
 	nop
 	nop
@@ -12471,11 +12440,11 @@
 	nop
 	nop
 	nop
-	nop
 
 
     iget-object v4, v0, Lcom/androbaby/game2048/MainActivity;->Y:Lcom/google/android/gms/ads/f;
 
+	nop
 	nop
 	nop
 
@@ -12516,13 +12485,10 @@
 
 	nop
 	nop
-	nop
 
 
     iget-object v3, v0, Lcom/androbaby/game2048/MainActivity;->Z:Landroid/view/View;
 
-	nop
-	nop
 	nop
 	nop
 
@@ -12534,15 +12500,10 @@
     move-result-object v4
 
 	nop
-	nop
-	nop
-	nop
 
 
     const v8, 0x7f040005
 
-	nop
-	nop
 	nop
 
 
@@ -12552,8 +12513,6 @@
 
     move-result v4
 
-	nop
-	nop
 	nop
 
 
@@ -12584,6 +12543,7 @@
     const/16 v1, 0xe
 
 	nop
+	nop
 
 
     invoke-virtual {v3, v1}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
@@ -12596,6 +12556,7 @@
 
     iget-object v1, v0, Lcom/androbaby/game2048/MainActivity;->Z:Landroid/view/View;
 
+	nop
 	nop
 	nop
 
@@ -12611,7 +12572,6 @@
 
     iget-object v2, v0, Lcom/androbaby/game2048/MainActivity;->Z:Landroid/view/View;
 
-	nop
 	nop
 	nop
 	nop
@@ -12636,8 +12596,6 @@
     iget-object v1, v0, Lcom/androbaby/game2048/MainActivity;->T:Lcom/androbaby/game2048/K;
 
 	nop
-	nop
-	nop
 
 
     invoke-virtual {v1, v10}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
@@ -12646,6 +12604,7 @@
 
     iget-object v1, v0, Lcom/androbaby/game2048/MainActivity;->U:Lcom/androbaby/game2048/K;
 
+	nop
 	nop
 	nop
 
@@ -12657,7 +12616,6 @@
     iget-object v1, v0, Lcom/androbaby/game2048/MainActivity;->V:Lcom/androbaby/game2048/K;
 
 	nop
-	nop
 
 
     invoke-virtual {v1, v12}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
@@ -12666,6 +12624,7 @@
 
     iget-object v1, v0, Lcom/androbaby/game2048/MainActivity;->W:Lcom/androbaby/game2048/K;
 
+	nop
 	nop
 
 
@@ -12677,9 +12636,6 @@
 
     iget-object v1, v0, Lcom/androbaby/game2048/MainActivity;->B:Landroid/widget/RelativeLayout;
 
-	nop
-	nop
-	nop
 	nop
 
 
@@ -12712,13 +12668,12 @@
     iget-object v1, v0, Lcom/androbaby/game2048/MainActivity;->B:Landroid/widget/RelativeLayout;
 
 	nop
-	nop
-	nop
-	nop
 
 
     iget-object v2, v0, Lcom/androbaby/game2048/MainActivity;->U:Lcom/androbaby/game2048/K;
 
+	nop
+	nop
 	nop
 
 
@@ -12728,7 +12683,6 @@
 
     iget-object v1, v0, Lcom/androbaby/game2048/MainActivity;->B:Landroid/widget/RelativeLayout;
 
-	nop
 	nop
 	nop
 
@@ -12736,8 +12690,6 @@
     iget-object v2, v0, Lcom/androbaby/game2048/MainActivity;->V:Lcom/androbaby/game2048/K;
 
 	nop
-	nop
-	nop
 
 
     invoke-virtual {v1, v2}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
@@ -12746,7 +12698,6 @@
 
     iget-object v1, v0, Lcom/androbaby/game2048/MainActivity;->B:Landroid/widget/RelativeLayout;
 
-	nop
 	nop
 	nop
 
@@ -12762,8 +12713,6 @@
 
     iget-object v1, v0, Lcom/androbaby/game2048/MainActivity;->S:Lcom/androbaby/game2048/K;
 
-	nop
-	nop
 	nop
 	nop
 
@@ -12783,6 +12732,8 @@
     iget-object v1, v0, Lcom/androbaby/game2048/MainActivity;->T:Lcom/androbaby/game2048/K;
 
 	nop
+	nop
+	nop
 
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
@@ -12791,7 +12742,6 @@
 
     iget-object v1, v0, Lcom/androbaby/game2048/MainActivity;->U:Lcom/androbaby/game2048/K;
 
-	nop
 	nop
 	nop
 	nop
@@ -12805,6 +12755,8 @@
 
 	nop
 	nop
+	nop
+	nop
 
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
@@ -12813,7 +12765,6 @@
 
     iget-object v1, v0, Lcom/androbaby/game2048/MainActivity;->W:Lcom/androbaby/game2048/K;
 
-	nop
 	nop
 	nop
 
@@ -12825,25 +12776,52 @@
     return-void
 
 	nop
-	:AzQtcdOUFzDnjLpy
+	nop
+	nop
+	:njuiQIxKezbnrtsl
 
-	goto/32 :LJhFfOHLtEntpVUF
+	goto/32 :iDWqGkqjAUHmtzjR
 
-	nop
-	nop
-	nop
 	nop
 .end method
 
 
 
-.method public r(SZS)V
+.method public r(SC)V
 
-	.locals 5
+	.locals 4
 
 
 
-	const/16 v0, 0xb7be
+	const/16 v0, 0xb7bb
+
+	nop
+
+
+	const/16 v1, 0x351c
+
+	nop
+	nop
+
+
+	add-int v0, v0, v1
+
+	nop
+	nop
+	nop
+
+
+	const/16 v0, 0x967f
+
+	nop
+
+
+	const/16 v1, 0xcca4
+
+	nop
+
+
+	rem-int v0, v0, v1
 
 	nop
 	nop
@@ -12851,8 +12829,18 @@
 	nop
 
 
-	const/16 v1, 0xfa7c
+	const/16 v0, 0x324b
 
+	nop
+	nop
+	nop
+	nop
+
+
+	const/16 v1, 0x3345
+
+	nop
+	nop
 	nop
 	nop
 
@@ -12860,14 +12848,10 @@
 	mul-int/2addr v0, v1
 
 	nop
-	nop
-	nop
 
 
 	return-void
 
-	nop
-	nop
 	nop
 	nop
 .end method
@@ -12880,42 +12864,42 @@
 
 
 
-	const/16 v0, 0xbc7f
+	const/16 v0, 0x6fe4
 
 	nop
-	const/16 v1, 0x8d89
+	const/16 v1, 0xceb6
 
+	nop
+	nop
 	nop
 	nop
 	add-int v0, v0, v1
 
 	nop
 	nop
-	nop
-	nop
 	rem-int v0, v0, v1
 
 	nop
-	if-gtz v0, :oMczPhePbLMSjcNV
+	nop
+	nop
+	if-gtz v0, :OUdXFLPePXtCBHCR
+
+	nop
+	nop
+	goto/32 :XlNzijEkRbxGhhmW
 
 	nop
 	nop
 	nop
-	goto/32 :SyJPEfJeANVKWeTx
-
 	nop
-	nop
-	:oMczPhePbLMSjcNV
+	:OUdXFLPePXtCBHCR
 
-	:cHonToZvNjAQWuzR
+	:jaCKdSkoNOyaBPSx
 
 
 
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->ma:Ljava/lang/Boolean;
 
-	nop
-	nop
-	nop
 	nop
 
 
@@ -12925,6 +12909,8 @@
 
     move-result v0
 
+	nop
+	nop
 	nop
 	nop
 
@@ -12940,13 +12926,13 @@
     return-void
 
 	nop
-	nop
 
 
     :cond_0
 
     new-instance v0, Lcom/google/android/gms/ads/i;
 
+	nop
 	nop
 	nop
 
@@ -12959,15 +12945,21 @@
 
 	nop
 	nop
+	nop
+	nop
 
 
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->ea:Lcom/google/android/gms/ads/i;
 
 	nop
+	nop
+	nop
+	nop
 
 
     const-string v1, "ca-app-pub-6838441978875625/2392948331"
 
+	nop
 	nop
 	nop
 
@@ -12988,7 +12980,6 @@
 
 	nop
 	nop
-	nop
 
 
     invoke-direct {v1, p0}, Lcom/androbaby/game2048/E;-><init>(Lcom/androbaby/game2048/MainActivity;)V
@@ -13007,26 +12998,31 @@
 
 	nop
 	nop
-	nop
-	:SyJPEfJeANVKWeTx
+	:XlNzijEkRbxGhhmW
 
-	goto/32 :cHonToZvNjAQWuzR
+	goto/32 :jaCKdSkoNOyaBPSx
 
-	nop
-	nop
 	nop
 	nop
 .end method
 
 
 
-.method public s(Z)V
+.method public s(SIZF)V
 
-	.locals 3
+	.locals 6
 
 
 
-	const/16 v0, 0x13e6
+	const/16 v0, 0x471d
+
+	nop
+	nop
+	nop
+	nop
+
+
+	const/16 v1, 0xb774
 
 	nop
 	nop
@@ -13034,26 +13030,51 @@
 	nop
 
 
-	const/16 v1, 0xaf54
+	add-int v0, v0, v1
+
+	nop
+
+
+	const/16 v0, 0xd524
+
+	nop
+	nop
+
+
+	const/16 v1, 0x3d6d
+
+	nop
+
+
+	rem-int v0, v0, v1
 
 	nop
 	nop
 	nop
+	nop
 
 
-	mul-int/2addr v0, v1
+	const/16 v0, 0xbc87
 
 	nop
 	nop
 	nop
+	nop
+
+
+	const/16 v1, 0x66d6
+
+	nop
+	nop
+
+
+	rem-int v0, v0, v1
+
 	nop
 
 
 	return-void
 
-	nop
-	nop
-	nop
 	nop
 .end method
 
@@ -13065,14 +13086,13 @@
 
 
 
-	const/16 v0, 0x5e7d
+	const/16 v0, 0x1959
+
+	nop
+	const/16 v1, 0x3c75
 
 	nop
 	nop
-	nop
-	nop
-	const/16 v1, 0x81fc
-
 	nop
 	nop
 	add-int v0, v0, v1
@@ -13084,18 +13104,21 @@
 	nop
 	nop
 	nop
-	nop
-	if-gtz v0, :qAwGAPecvAMABOrM
+	if-gtz v0, :onNvFsuFpCoAsFVt
 
 	nop
 	nop
 	nop
-	goto/32 :okGXlRwiJRoIfMsE
+	nop
+	goto/32 :EsDmmQnnHKcsPgfE
 
 	nop
-	:qAwGAPecvAMABOrM
+	nop
+	nop
+	nop
+	:onNvFsuFpCoAsFVt
 
-	:mcCaRTXFdXPPkvfM
+	:pJXuIggITdCQygba
 
 
 
@@ -13107,6 +13130,7 @@
 
     sget v1, Lcom/androbaby/game2048/MainActivity;->t:I
 
+	nop
 	nop
 	nop
 
@@ -13122,17 +13146,19 @@
     div-int/lit8 v3, v1, 0xf
 
 	nop
-	nop
-	nop
 
 
     div-int/lit8 v4, v1, 0x3
 
 	nop
+	nop
+	nop
+	nop
 
 
     div-int/lit8 v5, v1, 0x1b
 
+	nop
 	nop
 	nop
 
@@ -13142,12 +13168,10 @@
 	nop
 	nop
 	nop
-	nop
 
 
     div-int/lit8 v7, v1, 0x10
 
-	nop
 	nop
 
 
@@ -13161,7 +13185,6 @@
 
     div-int/lit8 v9, v1, 0x32
 
-	nop
 	nop
 
 
@@ -13188,14 +13211,10 @@
 
 	nop
 	nop
-	nop
-	nop
 
 
     div-int/lit8 v1, v1, 0x19
 
-	nop
-	nop
 	nop
 	nop
 
@@ -13204,11 +13223,11 @@
 
 	nop
 	nop
+	nop
 
 
     sget-wide v14, Lcom/androbaby/game2048/MainActivity;->u:D
 
-	nop
 	nop
 	nop
 
@@ -13218,29 +13237,28 @@
 	nop
 	nop
 	nop
-	nop
 
 
     const-wide/high16 v16, 0x4000000000000000L    # 2.0
 
+	nop
+	nop
 	nop
 
 
     cmpl-double v18, v14, v16
 
 	nop
-	nop
-	nop
 
 
     if-lez v18, :cond_0
 
 	nop
-	nop
 
 
     div-int/lit8 v6, v2, 0x8
 
+	nop
 	nop
 	nop
 
@@ -13249,8 +13267,6 @@
 
     new-instance v2, Landroid/widget/RelativeLayout;
 
-	nop
-	nop
 	nop
 	nop
 
@@ -13263,11 +13279,11 @@
 
 	nop
 	nop
+	nop
 
 
     new-instance v2, Landroid/widget/ImageView;
 
-	nop
 	nop
 	nop
 
@@ -13284,7 +13300,6 @@
 
     iget-object v2, v0, Lcom/androbaby/game2048/MainActivity;->K:Landroid/widget/ImageView;
 
-	nop
 	nop
 	nop
 
@@ -13305,6 +13320,7 @@
 
 	nop
 	nop
+	nop
 
 
     invoke-virtual {v15}, Ljava/lang/Integer;->intValue()I
@@ -13313,7 +13329,6 @@
 
     move-result v15
 
-	nop
 	nop
 
 
@@ -13325,7 +13340,6 @@
 
 	nop
 	nop
-	nop
 
 
     invoke-direct {v2, v0}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
@@ -13335,6 +13349,9 @@
     iput-object v2, v0, Lcom/androbaby/game2048/MainActivity;->J:Landroid/widget/TextView;
 
 	nop
+	nop
+	nop
+	nop
 
 
     iget-object v2, v0, Lcom/androbaby/game2048/MainActivity;->J:Landroid/widget/TextView;
@@ -13342,11 +13359,12 @@
 	nop
 	nop
 	nop
-	nop
 
 
     const/4 v15, 0x2
 
+	nop
+	nop
 	nop
 
 
@@ -13407,6 +13425,8 @@
 
 	nop
 	nop
+	nop
+	nop
 
 
     int-to-float v5, v5
@@ -13420,7 +13440,6 @@
 	nop
 	nop
 	nop
-	nop
 
 
     invoke-virtual {v2, v14, v5}, Landroid/widget/TextView;->setTextSize(IF)V
@@ -13429,6 +13448,8 @@
 
     iget-object v2, v0, Lcom/androbaby/game2048/MainActivity;->J:Landroid/widget/TextView;
 
+	nop
+	nop
 	nop
 	nop
 
@@ -13454,6 +13475,7 @@
 
 	nop
 	nop
+	nop
 
 
     invoke-virtual {v2, v15}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
@@ -13462,6 +13484,7 @@
 
     iget-object v2, v0, Lcom/androbaby/game2048/MainActivity;->J:Landroid/widget/TextView;
 
+	nop
 	nop
 	nop
 
@@ -13482,6 +13505,9 @@
     iput-object v2, v0, Lcom/androbaby/game2048/MainActivity;->L:Landroid/widget/ImageView;
 
 	nop
+	nop
+	nop
+	nop
 
 
     iget-object v2, v0, Lcom/androbaby/game2048/MainActivity;->L:Landroid/widget/ImageView;
@@ -13494,9 +13520,6 @@
     const/4 v15, 0x3
 
 	nop
-	nop
-	nop
-	nop
 
 
     invoke-static {v15}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -13505,6 +13528,9 @@
 
     move-result-object v17
 
+	nop
+	nop
+	nop
 	nop
 
 
@@ -13515,6 +13541,7 @@
     move-result v15
 
 	nop
+	nop
 
 
     invoke-virtual {v2, v15}, Landroid/widget/ImageView;->setId(I)V
@@ -13523,6 +13550,9 @@
 
     iget-object v2, v0, Lcom/androbaby/game2048/MainActivity;->L:Landroid/widget/ImageView;
 
+	nop
+	nop
+	nop
 	nop
 
 
@@ -13533,10 +13563,16 @@
     iget-object v2, v0, Lcom/androbaby/game2048/MainActivity;->L:Landroid/widget/ImageView;
 
 	nop
+	nop
+	nop
+	nop
 
 
     const/high16 v15, 0x7f060000
 
+	nop
+	nop
+	nop
 	nop
 
 
@@ -13553,6 +13589,7 @@
 
 	nop
 	nop
+	nop
 
 
     invoke-virtual {v2, v15}, Landroid/widget/ImageView;->setAlpha(I)V
@@ -13561,9 +13598,6 @@
 
     new-instance v2, Landroid/widget/ImageView;
 
-	nop
-	nop
-	nop
 	nop
 
 
@@ -13575,11 +13609,11 @@
 
 	nop
 	nop
-	nop
 
 
     iget-object v2, v0, Lcom/androbaby/game2048/MainActivity;->M:Landroid/widget/ImageView;
 
+	nop
 	nop
 	nop
 	nop
@@ -13597,8 +13631,6 @@
     move-result-object v17
 
 	nop
-	nop
-	nop
 
 
     invoke-virtual/range {v17 .. v17}, Ljava/lang/Integer;->intValue()I
@@ -13610,7 +13642,6 @@
 	nop
 	nop
 	nop
-	nop
 
 
     invoke-virtual {v2, v11}, Landroid/widget/ImageView;->setId(I)V
@@ -13619,7 +13650,6 @@
 
     iget-object v2, v0, Lcom/androbaby/game2048/MainActivity;->M:Landroid/widget/ImageView;
 
-	nop
 	nop
 
 
@@ -13636,7 +13666,6 @@
     const v11, 0x7f060001
 
 	nop
-	nop
 
 
     invoke-virtual {v2, v11}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -13646,6 +13675,8 @@
     iget-object v2, v0, Lcom/androbaby/game2048/MainActivity;->M:Landroid/widget/ImageView;
 
 	nop
+	nop
+	nop
 
 
     invoke-virtual {v2, v15}, Landroid/widget/ImageView;->setAlpha(I)V
@@ -13654,6 +13685,7 @@
 
     new-instance v2, Landroid/widget/Button;
 
+	nop
 	nop
 
 
@@ -13665,17 +13697,17 @@
 
 	nop
 	nop
+	nop
+	nop
 
 
     iget-object v2, v0, Lcom/androbaby/game2048/MainActivity;->O:Landroid/widget/Button;
 
 	nop
-	nop
 
 
     const/4 v11, 0x5
 
-	nop
 	nop
 	nop
 
@@ -13697,8 +13729,6 @@
 
 	nop
 	nop
-	nop
-	nop
 
 
     invoke-virtual {v2, v11}, Landroid/widget/Button;->setId(I)V
@@ -13708,10 +13738,13 @@
     iget-object v2, v0, Lcom/androbaby/game2048/MainActivity;->O:Landroid/widget/Button;
 
 	nop
+	nop
 
 
     const v11, 0x7f0b0038
 
+	nop
+	nop
 	nop
 
 
@@ -13732,12 +13765,11 @@
 
 	nop
 	nop
-	nop
-	nop
 
 
     iget-object v11, v0, Lcom/androbaby/game2048/MainActivity;->G:Landroid/graphics/Typeface;
 
+	nop
 	nop
 
 
@@ -13747,8 +13779,6 @@
 
     iget-object v2, v0, Lcom/androbaby/game2048/MainActivity;->O:Landroid/widget/Button;
 
-	nop
-	nop
 	nop
 
 
@@ -13760,10 +13790,14 @@
 
 	nop
 	nop
+	nop
+	nop
 
 
     const v15, 0x7f04001f
 
+	nop
+	nop
 	nop
 	nop
 
@@ -13788,7 +13822,6 @@
 
 	nop
 	nop
-	nop
 
 
     invoke-virtual {v2, v14, v14, v14, v14}, Landroid/widget/Button;->setPadding(IIII)V
@@ -13807,8 +13840,6 @@
 
     iget-object v2, v0, Lcom/androbaby/game2048/MainActivity;->O:Landroid/widget/Button;
 
-	nop
-	nop
 	nop
 	nop
 
@@ -13844,6 +13875,8 @@
     const v15, 0x7f060003
 
 	nop
+	nop
+	nop
 
 
     invoke-virtual {v11, v15}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -13852,8 +13885,6 @@
 
     move-result-object v11
 
-	nop
-	nop
 	nop
 	nop
 
@@ -13865,8 +13896,6 @@
     new-instance v2, Landroid/widget/Button;
 
 	nop
-	nop
-	nop
 
 
     invoke-direct {v2, v0}, Landroid/widget/Button;-><init>(Landroid/content/Context;)V
@@ -13876,16 +13905,19 @@
     iput-object v2, v0, Lcom/androbaby/game2048/MainActivity;->P:Landroid/widget/Button;
 
 	nop
+	nop
+	nop
 
 
     iget-object v2, v0, Lcom/androbaby/game2048/MainActivity;->P:Landroid/widget/Button;
 
 	nop
+	nop
+	nop
 
 
     const/4 v11, 0x6
 
-	nop
 	nop
 	nop
 
@@ -13908,9 +13940,6 @@
     move-result v11
 
 	nop
-	nop
-	nop
-	nop
 
 
     invoke-virtual {v2, v11}, Landroid/widget/Button;->setId(I)V
@@ -13919,6 +13948,7 @@
 
     iget-object v2, v0, Lcom/androbaby/game2048/MainActivity;->P:Landroid/widget/Button;
 
+	nop
 	nop
 	nop
 
@@ -13938,6 +13968,8 @@
 
 	nop
 	nop
+	nop
+	nop
 
 
     invoke-virtual {v2, v14, v5}, Landroid/widget/Button;->setTextSize(IF)V
@@ -13947,10 +13979,12 @@
     iget-object v2, v0, Lcom/androbaby/game2048/MainActivity;->P:Landroid/widget/Button;
 
 	nop
+	nop
 
 
     iget-object v5, v0, Lcom/androbaby/game2048/MainActivity;->G:Landroid/graphics/Typeface;
 
+	nop
 	nop
 	nop
 
@@ -13964,7 +13998,6 @@
 	nop
 	nop
 	nop
-	nop
 
 
     invoke-virtual/range {p0 .. p0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
@@ -13975,12 +14008,12 @@
 
 	nop
 	nop
-	nop
-	nop
 
 
     const v11, 0x7f04001f
 
+	nop
+	nop
 	nop
 	nop
 
@@ -14004,6 +14037,7 @@
 
 	nop
 	nop
+	nop
 
 
     invoke-virtual {v2, v14, v14, v14, v14}, Landroid/widget/Button;->setPadding(IIII)V
@@ -14024,7 +14058,6 @@
     iget-object v2, v0, Lcom/androbaby/game2048/MainActivity;->P:Landroid/widget/Button;
 
 	nop
-	nop
 
 
     invoke-virtual {v2, v14}, Landroid/widget/Button;->setMinWidth(I)V
@@ -14035,6 +14068,8 @@
 
 	nop
 	nop
+	nop
+	nop
 
 
     invoke-virtual {v2, v0}, Landroid/widget/Button;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
@@ -14043,9 +14078,6 @@
 
     iget-object v2, v0, Lcom/androbaby/game2048/MainActivity;->P:Landroid/widget/Button;
 
-	nop
-	nop
-	nop
 	nop
 
 
@@ -14061,9 +14093,6 @@
 
     const v11, 0x7f060004
 
-	nop
-	nop
-	nop
 	nop
 
 
@@ -14096,12 +14125,12 @@
 
 	nop
 	nop
+	nop
+	nop
 
 
     iget-object v2, v0, Lcom/androbaby/game2048/MainActivity;->N:Landroid/widget/ImageView;
 
-	nop
-	nop
 	nop
 	nop
 
@@ -14120,6 +14149,7 @@
     move-result-object v5
 
 	nop
+	nop
 
 
     invoke-virtual {v5}, Ljava/lang/Integer;->intValue()I
@@ -14130,6 +14160,7 @@
 
 	nop
 	nop
+	nop
 
 
     invoke-virtual {v2, v5}, Landroid/widget/ImageView;->setId(I)V
@@ -14138,6 +14169,7 @@
 
     iget-object v2, v0, Lcom/androbaby/game2048/MainActivity;->N:Landroid/widget/ImageView;
 
+	nop
 	nop
 
 
@@ -14155,9 +14187,6 @@
     const v5, 0x7f060005
 
 	nop
-	nop
-	nop
-	nop
 
 
     invoke-virtual {v2, v5}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -14167,9 +14196,6 @@
     iget-object v2, v0, Lcom/androbaby/game2048/MainActivity;->ma:Ljava/lang/Boolean;
 
 	nop
-	nop
-	nop
-	nop
 
 
     invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
@@ -14178,19 +14204,21 @@
 
     move-result v2
 
+	nop
+	nop
 	nop
 
 
     if-nez v2, :cond_2
 
 	nop
+	nop
+	nop
+	nop
 
 
     iget-object v2, v0, Lcom/androbaby/game2048/MainActivity;->na:Ljava/lang/Boolean;
 
-	nop
-	nop
-	nop
 	nop
 
 
@@ -14200,6 +14228,7 @@
 
     move-result v2
 
+	nop
 	nop
 	nop
 
@@ -14207,10 +14236,13 @@
     if-eqz v2, :cond_1
 
 	nop
+	nop
 
 
     goto :goto_0
 
+	nop
+	nop
 	nop
 	nop
 
@@ -14221,6 +14253,8 @@
 
 	nop
 	nop
+	nop
+	nop
 
 
     invoke-virtual {v2, v14}, Landroid/widget/ImageView;->setVisibility(I)V
@@ -14229,6 +14263,7 @@
 
     goto :goto_1
 
+	nop
 	nop
 
 
@@ -14241,11 +14276,13 @@
 	nop
 	nop
 	nop
-	nop
 
 
     const/16 v5, 0x8
 
+	nop
+	nop
+	nop
 	nop
 
 
@@ -14257,7 +14294,6 @@
 
     new-instance v2, Landroid/widget/RelativeLayout$LayoutParams;
 
-	nop
 	nop
 	nop
 
@@ -14273,7 +14309,6 @@
 
     new-instance v5, Landroid/widget/RelativeLayout$LayoutParams;
 
-	nop
 	nop
 	nop
 	nop
@@ -14300,6 +14335,8 @@
     new-instance v11, Landroid/widget/RelativeLayout$LayoutParams;
 
 	nop
+	nop
+	nop
 
 
     const/4 v15, -0x2
@@ -14324,6 +14361,7 @@
 	nop
 	nop
 	nop
+	nop
 
 
     invoke-virtual {v6}, Landroid/widget/ImageView;->getId()I
@@ -14332,7 +14370,6 @@
 
     move-result v6
 
-	nop
 	nop
 	nop
 	nop
@@ -14364,7 +14401,6 @@
 
 	nop
 	nop
-	nop
 
 
     invoke-virtual {v15}, Landroid/widget/TextView;->getId()I
@@ -14373,7 +14409,6 @@
 
     move-result v15
 
-	nop
 	nop
 	nop
 	nop
@@ -14388,6 +14423,7 @@
 	nop
 	nop
 	nop
+	nop
 
 
     invoke-virtual {v15}, Landroid/widget/ImageView;->getId()I
@@ -14397,6 +14433,7 @@
     move-result v15
 
 	nop
+	nop
 
 
     invoke-virtual {v6, v9, v15}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
@@ -14405,6 +14442,9 @@
 
     new-instance v15, Landroid/widget/RelativeLayout$LayoutParams;
 
+	nop
+	nop
+	nop
 	nop
 
 
@@ -14418,6 +14458,8 @@
 
     iget-object v7, v0, Lcom/androbaby/game2048/MainActivity;->J:Landroid/widget/TextView;
 
+	nop
+	nop
 	nop
 
 
@@ -14434,6 +14476,7 @@
     const/4 v8, 0x1
 
 	nop
+	nop
 
 
     invoke-virtual {v15, v8, v7}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
@@ -14442,6 +14485,7 @@
 
     iget-object v7, v0, Lcom/androbaby/game2048/MainActivity;->K:Landroid/widget/ImageView;
 
+	nop
 	nop
 	nop
 
@@ -14462,8 +14506,6 @@
     new-instance v7, Landroid/widget/RelativeLayout$LayoutParams;
 
 	nop
-	nop
-	nop
 
 
     invoke-direct {v7, v12, v3}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
@@ -14480,6 +14522,9 @@
 
     iget-object v8, v0, Lcom/androbaby/game2048/MainActivity;->J:Landroid/widget/TextView;
 
+	nop
+	nop
+	nop
 	nop
 
 
@@ -14521,7 +14566,6 @@
     iget-object v1, v0, Lcom/androbaby/game2048/MainActivity;->O:Landroid/widget/Button;
 
 	nop
-	nop
 
 
     invoke-virtual {v1}, Landroid/widget/Button;->getId()I
@@ -14530,6 +14574,7 @@
 
     move-result v1
 
+	nop
 	nop
 	nop
 	nop
@@ -14556,8 +14601,6 @@
 
 	nop
 	nop
-	nop
-	nop
 
 
     invoke-virtual {v1, v3}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
@@ -14566,6 +14609,8 @@
 
     const/16 v3, 0xb
 
+	nop
+	nop
 	nop
 
 
@@ -14576,9 +14621,6 @@
     iget-object v3, v0, Lcom/androbaby/game2048/MainActivity;->I:Landroid/widget/RelativeLayout;
 
 	nop
-	nop
-	nop
-	nop
 
 
     invoke-virtual {v3, v2}, Landroid/widget/RelativeLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
@@ -14587,7 +14629,6 @@
 
     iget-object v2, v0, Lcom/androbaby/game2048/MainActivity;->K:Landroid/widget/ImageView;
 
-	nop
 	nop
 
 
@@ -14598,6 +14639,8 @@
     iget-object v2, v0, Lcom/androbaby/game2048/MainActivity;->J:Landroid/widget/TextView;
 
 	nop
+	nop
+	nop
 
 
     invoke-virtual {v2, v11}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
@@ -14606,6 +14649,9 @@
 
     iget-object v2, v0, Lcom/androbaby/game2048/MainActivity;->L:Landroid/widget/ImageView;
 
+	nop
+	nop
+	nop
 	nop
 
 
@@ -14640,6 +14686,8 @@
 
 	nop
 	nop
+	nop
+	nop
 
 
     invoke-virtual {v2, v8}, Landroid/widget/Button;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
@@ -14648,6 +14696,8 @@
 
     iget-object v2, v0, Lcom/androbaby/game2048/MainActivity;->N:Landroid/widget/ImageView;
 
+	nop
+	nop
 	nop
 
 
@@ -14666,9 +14716,6 @@
     iget-object v2, v0, Lcom/androbaby/game2048/MainActivity;->K:Landroid/widget/ImageView;
 
 	nop
-	nop
-	nop
-	nop
 
 
     invoke-virtual {v1, v2}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
@@ -14679,10 +14726,14 @@
 
 	nop
 	nop
+	nop
+	nop
 
 
     iget-object v2, v0, Lcom/androbaby/game2048/MainActivity;->J:Landroid/widget/TextView;
 
+	nop
+	nop
 	nop
 	nop
 
@@ -14699,7 +14750,6 @@
 
     iget-object v2, v0, Lcom/androbaby/game2048/MainActivity;->L:Landroid/widget/ImageView;
 
-	nop
 	nop
 	nop
 
@@ -14726,6 +14776,9 @@
     iget-object v1, v0, Lcom/androbaby/game2048/MainActivity;->I:Landroid/widget/RelativeLayout;
 
 	nop
+	nop
+	nop
+	nop
 
 
     iget-object v2, v0, Lcom/androbaby/game2048/MainActivity;->O:Landroid/widget/Button;
@@ -14740,6 +14793,7 @@
 
     iget-object v1, v0, Lcom/androbaby/game2048/MainActivity;->I:Landroid/widget/RelativeLayout;
 
+	nop
 	nop
 
 
@@ -14756,13 +14810,10 @@
     iget-object v1, v0, Lcom/androbaby/game2048/MainActivity;->I:Landroid/widget/RelativeLayout;
 
 	nop
-	nop
 
 
     iget-object v2, v0, Lcom/androbaby/game2048/MainActivity;->N:Landroid/widget/ImageView;
 
-	nop
-	nop
 	nop
 	nop
 
@@ -14780,8 +14831,6 @@
 
 	nop
 	nop
-	nop
-	nop
 
 
     invoke-virtual {v1, v2}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
@@ -14793,9 +14842,9 @@
 	nop
 	nop
 	nop
-	:okGXlRwiJRoIfMsE
+	:EsDmmQnnHKcsPgfE
 
-	goto/32 :mcCaRTXFdXPPkvfM
+	goto/32 :pJXuIggITdCQygba
 
 	nop
 	nop
@@ -14805,34 +14854,55 @@
 
 
 
-.method public t(IBCS)V
+.method public t(CIB)V
 
-	.locals 6
+	.locals 5
 
 
 
-	const/16 v0, 0xf42f
+	const/16 v0, 0x491e
+
+	nop
+	nop
+	nop
+	nop
+
+
+	const/16 v1, 0x358e
 
 	nop
 	nop
 	nop
 
 
-	const/16 v1, 0x9b65
+	rem-int v0, v0, v1
 
 	nop
 	nop
 
 
-	xor-int/2addr v0, v1
+	const/16 v0, 0x2dd5
 
 	nop
+
+
+	const/16 v1, 0x3965
+
+	nop
+	nop
+	nop
+
+
+	rem-int v0, v0, v1
+
 	nop
 	nop
 
 
 	return-void
 
+	nop
+	nop
 	nop
 	nop
 .end method
@@ -14845,48 +14915,51 @@
 
 
 
-	const/16 v0, 0x899e
+	const/16 v0, 0x6685
 
 	nop
 	nop
 	nop
-	const/16 v1, 0xdb5d
+	const/16 v1, 0x9d48
 
+	nop
 	nop
 	nop
 	add-int v0, v0, v1
 
 	nop
 	nop
+	nop
 	rem-int v0, v0, v1
 
 	nop
 	nop
-	if-gtz v0, :muvThREraHLUGudK
+	nop
+	if-gtz v0, :NazZLBWYOimXpzRo
+
+	nop
+	goto/32 :EdaTTdFyncFyzgJr
 
 	nop
 	nop
 	nop
-	goto/32 :lmeeGWMVPhxgectu
+	nop
+	:NazZLBWYOimXpzRo
 
-	nop
-	nop
-	nop
-	nop
-	:muvThREraHLUGudK
-
-	:MxvaRxcXIVEHXByN
+	:SXGfOpfwQwhmjByt
 
 
 
     move-object/from16 v0, p0
 
 	nop
+	nop
+	nop
+	nop
 
 
     sget v1, Lcom/androbaby/game2048/MainActivity;->s:I
 
-	nop
 	nop
 
 
@@ -14900,10 +14973,14 @@
     mul-int/lit8 v3, v1, 0x5
 
 	nop
+	nop
+	nop
+	nop
 
 
     div-int/lit8 v3, v3, 0x6
 
+	nop
 	nop
 	nop
 	nop
@@ -14913,11 +14990,12 @@
 
 	nop
 	nop
+	nop
+	nop
 
 
     mul-int/lit8 v2, v2, 0x2
 
-	nop
 	nop
 	nop
 	nop
@@ -14926,14 +15004,10 @@
     div-int/lit8 v2, v2, 0x5
 
 	nop
-	nop
-	nop
-	nop
 
 
     iput v2, v0, Lcom/androbaby/game2048/MainActivity;->za:I
 
-	nop
 	nop
 	nop
 
@@ -14949,17 +15023,20 @@
 
 	nop
 	nop
-	nop
-	nop
 
 
     div-int/lit8 v3, v2, 0x5
 
 	nop
+	nop
+	nop
 
 
     div-int/lit8 v1, v1, 0x18
 
+	nop
+	nop
+	nop
 	nop
 
 
@@ -14968,16 +15045,18 @@
 	nop
 	nop
 	nop
-	nop
 
 
     mul-int/lit8 v5, v2, 0x4
 
 	nop
+	nop
 
 
     div-int/lit8 v5, v5, 0x7
 
+	nop
+	nop
 	nop
 
 
@@ -14990,14 +15069,10 @@
     iget v7, v0, Lcom/androbaby/game2048/MainActivity;->ya:I
 
 	nop
-	nop
 
 
     div-int/lit8 v7, v7, 0x4
 
-	nop
-	nop
-	nop
 	nop
 
 
@@ -15005,20 +15080,26 @@
 
 	nop
 	nop
+	nop
+	nop
 
 
     div-int/lit8 v8, v8, 0x5
 
+	nop
 	nop
 
 
     div-int/lit8 v9, v7, 0x3
 
 	nop
+	nop
 
 
     div-int/lit8 v10, v8, 0x2
 
+	nop
+	nop
 	nop
 
 
@@ -15040,6 +15121,7 @@
 
     iget-object v11, v0, Lcom/androbaby/game2048/MainActivity;->Aa:Landroid/app/Dialog;
 
+	nop
 	nop
 	nop
 	nop
@@ -15074,10 +15156,14 @@
     move-result-object v13
 
 	nop
+	nop
+	nop
+	nop
 
 
     const v14, 0x7f04001f
 
+	nop
 	nop
 	nop
 
@@ -15090,6 +15176,7 @@
 
 	nop
 	nop
+	nop
 
 
     invoke-virtual {v11, v13}, Landroid/view/ViewGroup;->setBackgroundColor(I)V
@@ -15098,6 +15185,7 @@
 
     new-instance v13, Landroid/widget/ImageView;
 
+	nop
 	nop
 	nop
 
@@ -15118,6 +15206,8 @@
     move-result-object v15
 
 	nop
+	nop
+	nop
 
 
     invoke-virtual {v15}, Ljava/lang/Integer;->intValue()I
@@ -15126,8 +15216,6 @@
 
     move-result v15
 
-	nop
-	nop
 	nop
 
 
@@ -15140,6 +15228,7 @@
 	nop
 	nop
 	nop
+	nop
 
 
     invoke-virtual {v13, v15}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -15149,6 +15238,7 @@
     new-instance v15, Landroid/widget/TextView;
 
 	nop
+	nop
 
 
     invoke-direct {v15, v0}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
@@ -15157,6 +15247,8 @@
 
     const/16 v16, 0x25a
 
+	nop
+	nop
 	nop
 	nop
 
@@ -15178,6 +15270,7 @@
     move-result v12
 
 	nop
+	nop
 
 
     invoke-virtual {v15, v12}, Landroid/widget/TextView;->setId(I)V
@@ -15186,8 +15279,6 @@
 
     const v12, 0x7f0b0002
 
-	nop
-	nop
 	nop
 	nop
 
@@ -15207,8 +15298,6 @@
 
 	nop
 	nop
-	nop
-	nop
 
 
     invoke-virtual {v15, v12, v4}, Landroid/widget/TextView;->setTextSize(IF)V
@@ -15224,12 +15313,10 @@
 	nop
 	nop
 	nop
-	nop
 
 
     const v14, 0x7f04001d
 
-	nop
 	nop
 	nop
 	nop
@@ -15251,8 +15338,6 @@
     const/16 v4, 0x11
 
 	nop
-	nop
-	nop
 
 
     invoke-virtual {v15, v4}, Landroid/widget/TextView;->setGravity(I)V
@@ -15262,6 +15347,8 @@
     new-instance v14, Landroid/widget/ImageView;
 
 	nop
+	nop
+	nop
 
 
     invoke-direct {v14, v0}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
@@ -15270,7 +15357,6 @@
 
     iput-object v14, v0, Lcom/androbaby/game2048/MainActivity;->qa:Landroid/widget/ImageView;
 
-	nop
 	nop
 
 
@@ -15294,8 +15380,6 @@
     move-result-object v17
 
 	nop
-	nop
-	nop
 
 
     invoke-virtual/range {v17 .. v17}, Ljava/lang/Integer;->intValue()I
@@ -15316,12 +15400,11 @@
 
 	nop
 	nop
-	nop
-	nop
 
 
     const v14, 0x7f060040
 
+	nop
 	nop
 
 
@@ -15332,14 +15415,10 @@
     iget-object v4, v0, Lcom/androbaby/game2048/MainActivity;->qa:Landroid/widget/ImageView;
 
 	nop
-	nop
 
 
     new-instance v12, Lcom/androbaby/game2048/r;
 
-	nop
-	nop
-	nop
 	nop
 
 
@@ -15364,12 +15443,11 @@
     iput-object v4, v0, Lcom/androbaby/game2048/MainActivity;->ra:Landroid/widget/ImageView;
 
 	nop
-	nop
-	nop
 
 
     iget-object v4, v0, Lcom/androbaby/game2048/MainActivity;->ra:Landroid/widget/ImageView;
 
+	nop
 	nop
 	nop
 
@@ -15386,6 +15464,9 @@
     move-result-object v12
 
 	nop
+	nop
+	nop
+	nop
 
 
     invoke-virtual {v12}, Ljava/lang/Integer;->intValue()I
@@ -15395,9 +15476,6 @@
     move-result v12
 
 	nop
-	nop
-	nop
-	nop
 
 
     invoke-virtual {v4, v12}, Landroid/widget/ImageView;->setId(I)V
@@ -15406,7 +15484,6 @@
 
     iget-object v4, v0, Lcom/androbaby/game2048/MainActivity;->ra:Landroid/widget/ImageView;
 
-	nop
 	nop
 	nop
 	nop
@@ -15421,11 +15498,13 @@
 	nop
 	nop
 	nop
-	nop
 
 
     new-instance v12, Lcom/androbaby/game2048/s;
 
+	nop
+	nop
+	nop
 	nop
 
 
@@ -15442,7 +15521,6 @@
 	nop
 	nop
 	nop
-	nop
 
 
     invoke-direct {v4, v0}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
@@ -15453,11 +15531,11 @@
 
 	nop
 	nop
+	nop
 
 
     iget-object v4, v0, Lcom/androbaby/game2048/MainActivity;->sa:Landroid/widget/ImageView;
 
-	nop
 	nop
 	nop
 
@@ -15476,7 +15554,6 @@
     move-result-object v12
 
 	nop
-	nop
 
 
     invoke-virtual {v12}, Ljava/lang/Integer;->intValue()I
@@ -15485,6 +15562,7 @@
 
     move-result v12
 
+	nop
 	nop
 	nop
 
@@ -15496,9 +15574,6 @@
     iget-object v4, v0, Lcom/androbaby/game2048/MainActivity;->sa:Landroid/widget/ImageView;
 
 	nop
-	nop
-	nop
-	nop
 
 
     invoke-virtual {v4, v14}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -15509,11 +15584,11 @@
 
 	nop
 	nop
-	nop
 
 
     new-instance v12, Lcom/androbaby/game2048/t;
 
+	nop
 	nop
 
 
@@ -15529,6 +15604,8 @@
 
 	nop
 	nop
+	nop
+	nop
 
 
     invoke-direct {v4, v0}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
@@ -15538,19 +15615,18 @@
     iput-object v4, v0, Lcom/androbaby/game2048/MainActivity;->ta:Landroid/widget/ImageView;
 
 	nop
+	nop
+	nop
+	nop
 
 
     iget-object v4, v0, Lcom/androbaby/game2048/MainActivity;->ta:Landroid/widget/ImageView;
 
 	nop
-	nop
-	nop
-	nop
 
 
     const/16 v12, 0x25e
 
-	nop
 	nop
 	nop
 	nop
@@ -15562,6 +15638,8 @@
 
     move-result-object v12
 
+	nop
+	nop
 	nop
 	nop
 
@@ -15582,6 +15660,7 @@
 
     iget-object v4, v0, Lcom/androbaby/game2048/MainActivity;->ta:Landroid/widget/ImageView;
 
+	nop
 	nop
 	nop
 	nop
@@ -15601,8 +15680,6 @@
 
     new-instance v12, Lcom/androbaby/game2048/u;
 
-	nop
-	nop
 	nop
 	nop
 
@@ -15628,19 +15705,18 @@
     iput-object v4, v0, Lcom/androbaby/game2048/MainActivity;->ua:Landroid/widget/ImageView;
 
 	nop
+	nop
+	nop
+	nop
 
 
     iget-object v4, v0, Lcom/androbaby/game2048/MainActivity;->ua:Landroid/widget/ImageView;
 
 	nop
-	nop
-	nop
-	nop
 
 
     const/16 v12, 0x25f
 
-	nop
 	nop
 
 
@@ -15661,6 +15737,7 @@
 
     move-result v12
 
+	nop
 	nop
 	nop
 	nop
@@ -15683,10 +15760,15 @@
     iget-object v4, v0, Lcom/androbaby/game2048/MainActivity;->ua:Landroid/widget/ImageView;
 
 	nop
+	nop
+	nop
 
 
     new-instance v12, Lcom/androbaby/game2048/v;
 
+	nop
+	nop
+	nop
 	nop
 
 
@@ -15700,7 +15782,6 @@
 
     new-instance v4, Landroid/widget/TextView;
 
-	nop
 	nop
 
 
@@ -15722,7 +15803,6 @@
     move-result-object v12
 
 	nop
-	nop
 
 
     invoke-virtual {v12}, Ljava/lang/Integer;->intValue()I
@@ -15731,8 +15811,6 @@
 
     move-result v12
 
-	nop
-	nop
 	nop
 	nop
 
@@ -15757,11 +15835,11 @@
 
 	nop
 	nop
-	nop
 
 
     const/4 v14, 0x0
 
+	nop
 	nop
 
 
@@ -15776,9 +15854,6 @@
     move-result-object v14
 
 	nop
-	nop
-	nop
-	nop
 
 
     move-object/from16 v18, v11
@@ -15786,10 +15861,12 @@
 	nop
 	nop
 	nop
+	nop
 
 
     const v11, 0x7f04001f
 
+	nop
 	nop
 	nop
 
@@ -15800,6 +15877,7 @@
 
     move-result v14
 
+	nop
 	nop
 	nop
 
@@ -15815,12 +15893,11 @@
     move-result-object v11
 
 	nop
-	nop
-	nop
 
 
     const v14, 0x7f06003e
 
+	nop
 	nop
 	nop
 
@@ -15845,6 +15922,7 @@
 	nop
 	nop
 	nop
+	nop
 
 
     invoke-virtual {v4, v11}, Landroid/widget/TextView;->setGravity(I)V
@@ -15853,7 +15931,6 @@
 
     new-instance v11, Lcom/androbaby/game2048/w;
 
-	nop
 	nop
 
 
@@ -15867,7 +15944,6 @@
 
     new-instance v11, Landroid/widget/TextView;
 
-	nop
 	nop
 
 
@@ -15890,8 +15966,6 @@
     move-result-object v14
 
 	nop
-	nop
-	nop
 
 
     invoke-virtual {v14}, Ljava/lang/Integer;->intValue()I
@@ -15912,6 +15986,7 @@
 
     const v14, 0x7f0b0026
 
+	nop
 	nop
 
 
@@ -15939,6 +16014,7 @@
 	nop
 	nop
 	nop
+	nop
 
 
     move-object/from16 v19, v4
@@ -15950,7 +16026,6 @@
     const v4, 0x7f04001f
 
 	nop
-	nop
 
 
     invoke-virtual {v14, v4}, Landroid/content/res/Resources;->getColor(I)I
@@ -15959,6 +16034,7 @@
 
     move-result v14
 
+	nop
 	nop
 	nop
 
@@ -15976,13 +16052,10 @@
 	nop
 	nop
 	nop
-	nop
 
 
     const v14, 0x7f06003f
 
-	nop
-	nop
 	nop
 
 
@@ -15992,6 +16065,7 @@
 
     move-result-object v4
 
+	nop
 	nop
 	nop
 	nop
@@ -16016,9 +16090,6 @@
     new-instance v4, Lcom/androbaby/game2048/x;
 
 	nop
-	nop
-	nop
-	nop
 
 
     invoke-direct {v4, v0}, Lcom/androbaby/game2048/x;-><init>(Lcom/androbaby/game2048/MainActivity;)V
@@ -16032,7 +16103,6 @@
     new-instance v4, Landroid/widget/TextView;
 
 	nop
-	nop
 
 
     invoke-direct {v4, v0}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
@@ -16044,6 +16114,7 @@
 	nop
 	nop
 	nop
+	nop
 
 
     invoke-static/range {v20 .. v20}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -16052,6 +16123,8 @@
 
     move-result-object v20
 
+	nop
+	nop
 	nop
 	nop
 
@@ -16075,6 +16148,8 @@
 
 	nop
 	nop
+	nop
+	nop
 
 
     invoke-virtual {v4, v14}, Landroid/widget/TextView;->setText(I)V
@@ -16083,9 +16158,6 @@
 
     const/4 v14, 0x0
 
-	nop
-	nop
-	nop
 	nop
 
 
@@ -16106,6 +16178,8 @@
     const v14, 0x7f04001f
 
 	nop
+	nop
+	nop
 
 
     invoke-virtual {v12, v14}, Landroid/content/res/Resources;->getColor(I)I
@@ -16114,7 +16188,6 @@
 
     move-result v12
 
-	nop
 	nop
 	nop
 
@@ -16132,11 +16205,13 @@
 	nop
 	nop
 	nop
-	nop
 
 
     const v14, 0x7f06003f
 
+	nop
+	nop
+	nop
 	nop
 
 
@@ -16148,8 +16223,6 @@
 
 	nop
 	nop
-	nop
-	nop
 
 
     invoke-virtual {v4, v12}, Landroid/widget/TextView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
@@ -16159,6 +16232,8 @@
     const/16 v12, 0x11
 
 	nop
+	nop
+	nop
 
 
     invoke-virtual {v4, v12}, Landroid/widget/TextView;->setGravity(I)V
@@ -16167,7 +16242,6 @@
 
     new-instance v12, Lcom/androbaby/game2048/y;
 
-	nop
 	nop
 	nop
 	nop
@@ -16185,12 +16259,12 @@
 
 	nop
 	nop
+	nop
+	nop
 
 
     iget v14, v0, Lcom/androbaby/game2048/MainActivity;->ya:I
 
-	nop
-	nop
 	nop
 
 
@@ -16199,11 +16273,12 @@
 	nop
 	nop
 	nop
-	nop
 
 
     iget v4, v0, Lcom/androbaby/game2048/MainActivity;->za:I
 
+	nop
+	nop
 	nop
 	nop
 
@@ -16236,7 +16311,6 @@
 
 	nop
 	nop
-	nop
 
 
     invoke-virtual {v4, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
@@ -16245,6 +16319,9 @@
 
     const/16 v2, 0xe
 
+	nop
+	nop
+	nop
 	nop
 
 
@@ -16255,11 +16332,11 @@
     new-instance v14, Landroid/widget/RelativeLayout$LayoutParams;
 
 	nop
-	nop
 
 
     const/4 v2, -0x2
 
+	nop
 	nop
 	nop
 
@@ -16279,12 +16356,12 @@
     move-result v1
 
 	nop
-	nop
-	nop
 
 
     const/4 v2, 0x3
 
+	nop
+	nop
 	nop
 
 
@@ -16317,6 +16394,7 @@
 	nop
 	nop
 	nop
+	nop
 
 
     invoke-virtual {v3, v6, v1, v6, v1}, Landroid/widget/RelativeLayout$LayoutParams;->setMargins(IIII)V
@@ -16332,7 +16410,6 @@
 	nop
 	nop
 	nop
-	nop
 
 
     invoke-virtual {v3, v2, v1}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
@@ -16341,6 +16418,7 @@
 
     const/16 v1, 0xe
 
+	nop
 	nop
 	nop
 	nop
@@ -16362,6 +16440,7 @@
     const/4 v2, 0x0
 
 	nop
+	nop
 
 
     invoke-virtual {v1, v2, v2, v6, v2}, Landroid/widget/RelativeLayout$LayoutParams;->setMargins(IIII)V
@@ -16375,19 +16454,19 @@
     move-result v2
 
 	nop
+	nop
+	nop
+	nop
 
 
     move-object/from16 v21, v3
 
 	nop
 	nop
-	nop
-	nop
 
 
     const/4 v3, 0x3
 
-	nop
 	nop
 
 
@@ -16397,6 +16476,8 @@
 
     iget-object v2, v0, Lcom/androbaby/game2048/MainActivity;->sa:Landroid/widget/ImageView;
 
+	nop
+	nop
 	nop
 	nop
 
@@ -16409,12 +16490,10 @@
 
 	nop
 	nop
-	nop
 
 
     const/4 v3, 0x1
 
-	nop
 	nop
 	nop
 	nop
@@ -16427,6 +16506,7 @@
     new-instance v2, Landroid/widget/RelativeLayout$LayoutParams;
 
 	nop
+	nop
 
 
     invoke-direct {v2, v5, v5}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
@@ -16435,9 +16515,6 @@
 
     const/4 v3, 0x0
 
-	nop
-	nop
-	nop
 	nop
 
 
@@ -16453,11 +16530,11 @@
 
 	nop
 	nop
-	nop
 
 
     move-object/from16 v22, v1
 
+	nop
 	nop
 
 
@@ -16475,6 +16552,8 @@
     iget-object v3, v0, Lcom/androbaby/game2048/MainActivity;->ta:Landroid/widget/ImageView;
 
 	nop
+	nop
+	nop
 
 
     invoke-virtual {v3}, Landroid/widget/ImageView;->getId()I
@@ -16485,12 +16564,11 @@
 
 	nop
 	nop
-	nop
-	nop
 
 
     const/4 v1, 0x1
 
+	nop
 	nop
 	nop
 	nop
@@ -16503,8 +16581,6 @@
     new-instance v1, Landroid/widget/RelativeLayout$LayoutParams;
 
 	nop
-	nop
-	nop
 
 
     invoke-direct {v1, v5, v5}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
@@ -16513,8 +16589,6 @@
 
     const/4 v3, 0x0
 
-	nop
-	nop
 	nop
 	nop
 
@@ -16530,12 +16604,11 @@
     move-result v6
 
 	nop
+	nop
 
 
     const/4 v3, 0x3
 
-	nop
-	nop
 	nop
 	nop
 
@@ -16548,6 +16621,7 @@
 
 	nop
 	nop
+	nop
 
 
     invoke-virtual {v6}, Landroid/widget/ImageView;->getId()I
@@ -16558,10 +16632,13 @@
 
 	nop
 	nop
+	nop
+	nop
 
 
     const/4 v3, 0x0
 
+	nop
 	nop
 
 
@@ -16590,12 +16667,13 @@
 
 	nop
 	nop
-	nop
-	nop
 
 
     const/4 v3, 0x3
 
+	nop
+	nop
+	nop
 	nop
 
 
@@ -16605,6 +16683,7 @@
 
     iget-object v3, v0, Lcom/androbaby/game2048/MainActivity;->ra:Landroid/widget/ImageView;
 
+	nop
 	nop
 	nop
 	nop
@@ -16619,11 +16698,12 @@
 	nop
 	nop
 	nop
-	nop
 
 
     const/4 v5, 0x0
 
+	nop
+	nop
 	nop
 	nop
 
@@ -16634,7 +16714,6 @@
 
     new-instance v3, Landroid/widget/RelativeLayout$LayoutParams;
 
-	nop
 	nop
 	nop
 
@@ -16665,16 +16744,19 @@
     move-result v5
 
 	nop
-	nop
 
 
     move-object/from16 v23, v2
 
 	nop
+	nop
+	nop
+	nop
 
 
     const/4 v2, 0x0
 
+	nop
 	nop
 	nop
 	nop
@@ -16686,6 +16768,8 @@
 
     new-instance v5, Landroid/widget/RelativeLayout$LayoutParams;
 
+	nop
+	nop
 	nop
 	nop
 
@@ -16702,8 +16786,6 @@
 
 	nop
 	nop
-	nop
-	nop
 
 
     invoke-virtual {v5, v9}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
@@ -16713,7 +16795,6 @@
     const/16 v9, 0xe
 
 	nop
-	nop
 
 
     invoke-virtual {v5, v9}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
@@ -16722,6 +16803,7 @@
 
     new-instance v9, Landroid/widget/RelativeLayout$LayoutParams;
 
+	nop
 	nop
 	nop
 
@@ -16753,11 +16835,11 @@
 	nop
 	nop
 	nop
-	nop
 
 
     const/4 v7, 0x1
 
+	nop
 	nop
 
 
@@ -16767,6 +16849,7 @@
 
     move-object/from16 v2, v18
 
+	nop
 	nop
 	nop
 
@@ -16786,8 +16869,6 @@
     iget-object v4, v0, Lcom/androbaby/game2048/MainActivity;->qa:Landroid/widget/ImageView;
 
 	nop
-	nop
-	nop
 
 
     invoke-virtual {v4, v6}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
@@ -16796,6 +16877,7 @@
 
     iget-object v4, v0, Lcom/androbaby/game2048/MainActivity;->ra:Landroid/widget/ImageView;
 
+	nop
 	nop
 	nop
 	nop
@@ -16812,7 +16894,6 @@
 
     move-object/from16 v4, v21
 
-	nop
 	nop
 
 
@@ -16831,8 +16912,6 @@
 
 	nop
 	nop
-	nop
-	nop
 
 
     invoke-virtual {v1, v4}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
@@ -16843,14 +16922,10 @@
 
 	nop
 	nop
-	nop
 
 
     move-object/from16 v4, v23
 
-	nop
-	nop
-	nop
 	nop
 
 
@@ -16860,6 +16935,7 @@
 
     move-object/from16 v1, v19
 
+	nop
 	nop
 	nop
 
@@ -16874,6 +16950,7 @@
 
     move-object/from16 v4, v16
 
+	nop
 	nop
 	nop
 	nop
@@ -16904,8 +16981,6 @@
 
 	nop
 	nop
-	nop
-	nop
 
 
     invoke-virtual {v2, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
@@ -16914,7 +16989,6 @@
 
     iget-object v3, v0, Lcom/androbaby/game2048/MainActivity;->sa:Landroid/widget/ImageView;
 
-	nop
 	nop
 	nop
 
@@ -16926,9 +17000,6 @@
     iget-object v3, v0, Lcom/androbaby/game2048/MainActivity;->ta:Landroid/widget/ImageView;
 
 	nop
-	nop
-	nop
-	nop
 
 
     invoke-virtual {v2, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
@@ -16937,7 +17008,6 @@
 
     iget-object v3, v0, Lcom/androbaby/game2048/MainActivity;->ua:Landroid/widget/ImageView;
 
-	nop
 	nop
 	nop
 	nop
@@ -16964,6 +17034,7 @@
 	nop
 	nop
 	nop
+	nop
 
 
     invoke-virtual {v1, v2}, Landroid/app/Dialog;->setContentView(Landroid/view/View;)V
@@ -16972,6 +17043,9 @@
 
     iget-object v1, v0, Lcom/androbaby/game2048/MainActivity;->Aa:Landroid/app/Dialog;
 
+	nop
+	nop
+	nop
 	nop
 
 
@@ -16983,12 +17057,12 @@
 
 	nop
 	nop
-	nop
-	nop
 
 
     const v2, 0x106000b
 
+	nop
+	nop
 	nop
 	nop
 
@@ -17001,63 +17075,34 @@
 
 	nop
 	nop
-	:lmeeGWMVPhxgectu
+	nop
+	nop
+	:EdaTTdFyncFyzgJr
 
-	goto/32 :MxvaRxcXIVEHXByN
+	goto/32 :SXGfOpfwQwhmjByt
 
+	nop
+	nop
 	nop
 .end method
 
 
 
-.method public u(FZCC)Z
+.method public u(CZIC)Z
 
 	.locals 6
 
 
 
-	const/16 v0, 0xa93a
+	const/16 v0, 0xeec3
 
 	nop
-	nop
-
-
-	const/16 v1, 0xbdcc
-
-	nop
-
-
-	add-int v0, v0, v1
-
 	nop
 	nop
 	nop
 
 
-	const/16 v0, 0x5479
-
-	nop
-	nop
-
-
-	const/16 v1, 0x8155
-
-	nop
-	nop
-
-
-	xor-int/2addr v0, v1
-
-	nop
-
-
-	const/16 v0, 0x88e9
-
-	nop
-	nop
-
-
-	const/16 v1, 0xdc6b
+	const/16 v1, 0x1a87
 
 	nop
 	nop
@@ -17084,18 +17129,17 @@
 
 
 
-	const/16 v0, 0xd628
+	const/16 v0, 0x66cb
 
 	nop
-	const/16 v1, 0x14eb
+	nop
+	nop
+	const/16 v1, 0xe3a7
 
 	nop
 	nop
 	add-int v0, v0, v1
 
-	nop
-	nop
-	nop
 	nop
 	rem-int v0, v0, v1
 
@@ -17103,26 +17147,23 @@
 	nop
 	nop
 	nop
-	if-gtz v0, :gECYMfPMdHJcLTha
+	if-gtz v0, :ETSzPEYohHXzoynk
+
+	nop
+	goto/32 :EJjebznsoIqGlgZi
 
 	nop
 	nop
 	nop
 	nop
-	goto/32 :hNNffDydYIEbpYlm
+	:ETSzPEYohHXzoynk
 
-	nop
-	nop
-	nop
-	:gECYMfPMdHJcLTha
-
-	:KeCgoIhKGYVRXGeD
+	:PUXJliKGTIsiOjaL
 
 
 
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->ma:Ljava/lang/Boolean;
 
-	nop
 	nop
 	nop
 	nop
@@ -17135,14 +17176,10 @@
     move-result v0
 
 	nop
-	nop
-	nop
-	nop
 
 
     const/4 v1, 0x0
 
-	nop
 	nop
 	nop
 	nop
@@ -17151,10 +17188,14 @@
     if-eqz v0, :cond_0
 
 	nop
+	nop
 
 
     return v1
 
+	nop
+	nop
+	nop
 	nop
 
 
@@ -17175,7 +17216,6 @@
 
 	nop
 	nop
-	nop
 
 
     if-eqz v0, :cond_1
@@ -17183,11 +17223,11 @@
 	nop
 	nop
 	nop
+	nop
 
 
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->ea:Lcom/google/android/gms/ads/i;
 
-	nop
 	nop
 	nop
 
@@ -17199,13 +17239,10 @@
     const/4 v0, 0x1
 
 	nop
-	nop
 
 
     return v0
 
-	nop
-	nop
 	nop
 	nop
 
@@ -17221,30 +17258,30 @@
 	nop
 	nop
 	nop
-	:hNNffDydYIEbpYlm
+	nop
+	:EJjebznsoIqGlgZi
 
-	goto/32 :KeCgoIhKGYVRXGeD
+	goto/32 :PUXJliKGTIsiOjaL
 
 	nop
 .end method
 
 
 
-.method public v(ZIFZ)I
+.method public v(ZB)I
 
-	.locals 6
+	.locals 4
 
 
 
-	const/16 v0, 0x47a7
+	const/16 v0, 0x65d8
 
-	nop
-	nop
 	nop
 
 
-	const/16 v1, 0xc39d
+	const/16 v1, 0xebb7
 
+	nop
 	nop
 
 
@@ -17255,143 +17292,30 @@
 	nop
 
 
-	return v0
-
-	nop
-.end method
-
-
-
-.method public v()I
-
-	.locals 5
-
-
-
-	const/16 v0, 0xe97b
-
-	nop
-	nop
-	const/16 v1, 0x86c3
-
-	nop
-	add-int v0, v0, v1
-
-	nop
-	rem-int v0, v0, v1
-
-	nop
-	if-gtz v0, :ShtQCJKRcBYTbVyY
-
-	nop
-	nop
-	nop
-	nop
-	goto/32 :tTHQyVpgHLHgRpoq
-
-	nop
-	nop
-	nop
-	:ShtQCJKRcBYTbVyY
-
-	:tfegRGPUvIXIkcVY
-
-
-
-    invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
-
-
-
-    move-result-object v0
+	const/16 v0, 0x33f7
 
 	nop
 
 
-    const-string v1, "view_type"
-
-	nop
-	nop
-	nop
-	nop
-
-
-    const/4 v2, 0x4
+	const/16 v1, 0x97e4
 
 	nop
 
 
-    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
-
-
-
-    move-result v0
-
-	nop
-
-
-    iput v0, p0, Lcom/androbaby/game2048/MainActivity;->H:I
-
-	nop
-	nop
-
-
-    iget v0, p0, Lcom/androbaby/game2048/MainActivity;->H:I
-
-	nop
-	nop
-
-
-    return v0
-
-	nop
-	:tTHQyVpgHLHgRpoq
-
-	goto/32 :tfegRGPUvIXIkcVY
-
-	nop
-	nop
-	nop
-	nop
-.end method
-
-
-
-.method public w(ZIZ)I
-
-	.locals 5
-
-
-
-	const/16 v0, 0xef83
-
-	nop
-	nop
-	nop
-	nop
-
-
-	const/16 v1, 0x1784
-
-	nop
-	nop
-
-
-	add-int v0, v0, v1
-
-	nop
-	nop
-	nop
-	nop
-
-
-	const/16 v0, 0x31e5
+	xor-int/2addr v0, v1
 
 	nop
 	nop
 	nop
 
 
-	const/16 v1, 0x3f33
+	const/16 v0, 0xf5d5
+
+	nop
+	nop
+
+
+	const/16 v1, 0xb145
 
 	nop
 	nop
@@ -17407,6 +17331,161 @@
 	return v0
 
 	nop
+	nop
+	nop
+	nop
+.end method
+
+
+
+.method public v()I
+
+	.locals 5
+
+
+
+	const/16 v0, 0x7efc
+
+	nop
+	const/16 v1, 0xd997
+
+	nop
+	nop
+	nop
+	nop
+	add-int v0, v0, v1
+
+	nop
+	rem-int v0, v0, v1
+
+	nop
+	nop
+	if-gtz v0, :yfyJUZmQSUjyMXSW
+
+	nop
+	nop
+	nop
+	goto/32 :PGNCoRfAdjRdSIkC
+
+	nop
+	nop
+	nop
+	:yfyJUZmQSUjyMXSW
+
+	:tJjWsvKryovReJuU
+
+
+
+    invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
+
+
+
+    move-result-object v0
+
+	nop
+	nop
+
+
+    const-string v1, "view_type"
+
+	nop
+	nop
+	nop
+	nop
+
+
+    const/4 v2, 0x4
+
+	nop
+	nop
+	nop
+
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+
+
+
+    move-result v0
+
+	nop
+	nop
+	nop
+	nop
+
+
+    iput v0, p0, Lcom/androbaby/game2048/MainActivity;->H:I
+
+	nop
+	nop
+	nop
+
+
+    iget v0, p0, Lcom/androbaby/game2048/MainActivity;->H:I
+
+	nop
+	nop
+
+
+    return v0
+
+	nop
+	nop
+	:PGNCoRfAdjRdSIkC
+
+	goto/32 :tJjWsvKryovReJuU
+
+	nop
+	nop
+.end method
+
+
+
+.method public w(FBF)I
+
+	.locals 5
+
+
+
+	const/16 v0, 0x5a43
+
+	nop
+	nop
+
+
+	const/16 v1, 0xd2e7
+
+	nop
+
+
+	add-int v0, v0, v1
+
+	nop
+	nop
+
+
+	const/16 v0, 0x321c
+
+	nop
+	nop
+	nop
+	nop
+
+
+	const/16 v1, 0xa1ea
+
+	nop
+
+
+	mul-int/2addr v0, v1
+
+	nop
+
+
+	return v0
+
+	nop
+	nop
+	nop
 .end method
 
 
@@ -17417,35 +17496,38 @@
 
 
 
-	const/16 v0, 0x2337
+	const/16 v0, 0x1894
 
 	nop
 	nop
 	nop
-	nop
-	const/16 v1, 0x29c6
+	const/16 v1, 0xd1f6
 
+	nop
 	nop
 	nop
 	add-int v0, v0, v1
 
 	nop
+	nop
+	nop
+	nop
 	rem-int v0, v0, v1
 
 	nop
 	nop
-	if-gtz v0, :UIsbUleDzdJVmbTo
+	nop
+	if-gtz v0, :JoMgYorRBkNrgCpx
 
 	nop
-	goto/32 :IhiaaWHAmpPpTITE
+	nop
+	goto/32 :YslaNHAgWifHDWVZ
 
 	nop
 	nop
-	nop
-	nop
-	:UIsbUleDzdJVmbTo
+	:JoMgYorRBkNrgCpx
 
-	:mLQUvERUJfstCDAP
+	:EjTVHUbofIBspNDp
 
 
 
@@ -17453,13 +17535,10 @@
 
 	nop
 	nop
-	nop
 
 
     const-string v1, "CHOICE"
 
-	nop
-	nop
 	nop
 	nop
 
@@ -17470,6 +17549,9 @@
 
     move-result-object v1
 
+	nop
+	nop
+	nop
 	nop
 
 
@@ -17492,7 +17574,6 @@
 
 	nop
 	nop
-	nop
 
 
     invoke-interface {v1, v2, v0}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
@@ -17502,15 +17583,17 @@
     move-result v0
 
 	nop
+	nop
+	nop
 
 
     return v0
 
 	nop
 	nop
-	:IhiaaWHAmpPpTITE
+	:YslaNHAgWifHDWVZ
 
-	goto/32 :mLQUvERUJfstCDAP
+	goto/32 :EjTVHUbofIBspNDp
 
 	nop
 	nop
@@ -17519,26 +17602,30 @@
 
 
 
-.method public x(ZF)I
+.method public x(CB)I
 
 	.locals 4
 
 
 
-	const/16 v0, 0x84bc
+	const/16 v0, 0x733d
 
 	nop
 	nop
 	nop
 
 
-	const/16 v1, 0x9116
+	const/16 v1, 0x4ddf
 
+	nop
+	nop
+	nop
 	nop
 
 
 	xor-int/2addr v0, v1
 
+	nop
 	nop
 	nop
 	nop
@@ -17560,40 +17647,38 @@
 
 
 
-	const/16 v0, 0xe185
+	const/16 v0, 0xf97d
 
 	nop
-	const/16 v1, 0x4797
+	nop
+	const/16 v1, 0xea97
 
 	nop
 	nop
 	add-int v0, v0, v1
 
 	nop
+	nop
 	rem-int v0, v0, v1
 
 	nop
 	nop
-	if-gtz v0, :cVoUiFLRuYNsqiMH
+	nop
+	if-gtz v0, :ypgMKhHEAkiGOOkf
 
 	nop
-	nop
-	nop
-	nop
-	goto/32 :mxCZsNwrOnAiAlUF
+	goto/32 :pIlVCujGlFwiHRZw
 
 	nop
-	nop
-	nop
-	nop
-	:cVoUiFLRuYNsqiMH
+	:ypgMKhHEAkiGOOkf
 
-	:KOwKylEWGChMSoTp
+	:xHuAnENGvaVRytJr
 
 
 
     const/4 v0, 0x0
 
+	nop
 	nop
 	nop
 
@@ -17619,6 +17704,7 @@
     iput-object v1, p0, Lcom/androbaby/game2048/MainActivity;->ia:Landroid/content/SharedPreferences;
 
 	nop
+	nop
 
 
     iget-object v1, p0, Lcom/androbaby/game2048/MainActivity;->ia:Landroid/content/SharedPreferences;
@@ -17630,8 +17716,6 @@
     const-string v2, "BUY"
 
 	nop
-	nop
-	nop
 
 
     invoke-interface {v1, v2, v0}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
@@ -17642,8 +17726,6 @@
 
 	nop
 	nop
-	nop
-	nop
 
 
     return v0
@@ -17651,9 +17733,9 @@
 	nop
 	nop
 	nop
-	:mxCZsNwrOnAiAlUF
+	:pIlVCujGlFwiHRZw
 
-	goto/32 :KOwKylEWGChMSoTp
+	goto/32 :xHuAnENGvaVRytJr
 
 	nop
 	nop
@@ -17661,18 +17743,38 @@
 
 
 
-.method public y(BCZI)I
+.method public y(CCF)I
 
-	.locals 6
+	.locals 5
 
 
 
-	const/16 v0, 0x9b39
+	const/16 v0, 0xedbe
 
+	nop
 	nop
 
 
-	const/16 v1, 0x79d3
+	const/16 v1, 0x84b3
+
+	nop
+	nop
+
+
+	rem-int v0, v0, v1
+
+	nop
+	nop
+
+
+	const/16 v0, 0xc775
+
+	nop
+	nop
+	nop
+
+
+	const/16 v1, 0x9135
 
 	nop
 	nop
@@ -17684,26 +17786,13 @@
 
 	nop
 	nop
-
-
-	const/16 v0, 0xc3fb
-
-	nop
-
-
-	const/16 v1, 0x4fd4
-
-	nop
-
-
-	rem-int v0, v0, v1
-
 	nop
 	nop
 
 
 	return v0
 
+	nop
 	nop
 	nop
 .end method
@@ -17716,14 +17805,11 @@
 
 
 
-	const/16 v0, 0xe9c4
+	const/16 v0, 0x4723
 
 	nop
-	nop
-	nop
-	const/16 v1, 0xd86f
+	const/16 v1, 0x98fa
 
-	nop
 	nop
 	nop
 	nop
@@ -17734,28 +17820,35 @@
 	rem-int v0, v0, v1
 
 	nop
-	if-gtz v0, :klwMNNGjRLAOHLZc
+	nop
+	nop
+	if-gtz v0, :dPxYlEShnnXGnGAM
 
 	nop
 	nop
-	goto/32 :iBjjTtSZQtslsAyG
+	nop
+	nop
+	goto/32 :gSlxJofVMCJXODMC
 
 	nop
 	nop
-	nop
-	:klwMNNGjRLAOHLZc
+	:dPxYlEShnnXGnGAM
 
-	:nvimgQcEdThZhcDO
+	:yJRGSlEwONgnSnVb
 
 
 
     const/4 v0, 0x0
 
 	nop
+	nop
+	nop
 
 
     const-string v1, "CHOICE"
 
+	nop
+	nop
 	nop
 	nop
 
@@ -17768,18 +17861,17 @@
 
 	nop
 	nop
-	nop
 
 
     iput-object v1, p0, Lcom/androbaby/game2048/MainActivity;->ia:Landroid/content/SharedPreferences;
 
 	nop
+	nop
+	nop
 
 
     iget-object v1, p0, Lcom/androbaby/game2048/MainActivity;->ia:Landroid/content/SharedPreferences;
 
-	nop
-	nop
 	nop
 	nop
 
@@ -17799,34 +17891,31 @@
 
 	nop
 	nop
+	nop
 
 
     return v0
 
 	nop
 	nop
-	:iBjjTtSZQtslsAyG
+	nop
+	nop
+	:gSlxJofVMCJXODMC
 
-	goto/32 :nvimgQcEdThZhcDO
+	goto/32 :yJRGSlEwONgnSnVb
 
 	nop
 .end method
 
 
 
-.method public z(ZCZ)I
+.method public z(SB)I
 
-	.locals 5
-
-
-
-	const/16 v0, 0xba39
-
-	nop
-	nop
+	.locals 4
 
 
-	const/16 v1, 0xfab2
+
+	const/16 v0, 0x41cf
 
 	nop
 	nop
@@ -17834,13 +17923,20 @@
 	nop
 
 
-	rem-int v0, v0, v1
+	const/16 v1, 0x877c
 
+	nop
+
+
+	xor-int/2addr v0, v1
+
+	nop
 	nop
 
 
 	return v0
 
+	nop
 	nop
 	nop
 	nop
@@ -17854,37 +17950,33 @@
 
 
 
-	const/16 v0, 0x95d7
+	const/16 v0, 0xefc9
 
 	nop
 	nop
 	nop
-	const/16 v1, 0x1bd9
+	nop
+	const/16 v1, 0x423d
 
+	nop
+	nop
+	nop
 	nop
 	add-int v0, v0, v1
 
 	nop
-	nop
-	nop
-	nop
 	rem-int v0, v0, v1
 
 	nop
-	nop
-	nop
-	nop
-	if-gtz v0, :HHjlefuhtQNYQTYL
+	if-gtz v0, :XcyJruqgfDYrMCHj
 
 	nop
-	nop
-	nop
-	goto/32 :vvWOpxLkpkZBVMtg
+	goto/32 :raygXCGbBstipYmw
 
 	nop
-	:HHjlefuhtQNYQTYL
+	:XcyJruqgfDYrMCHj
 
-	:uezqLOfUSELsZWxk
+	:tfKfWbvAGMrUTujm
 
 
 
@@ -17896,9 +17988,6 @@
     const-string v1, "SCORE"
 
 	nop
-	nop
-	nop
-	nop
 
 
     invoke-virtual {p0, v1, v0}, Landroid/app/Activity;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
@@ -17908,10 +17997,14 @@
     move-result-object v1
 
 	nop
+	nop
+	nop
 
 
     iput-object v1, p0, Lcom/androbaby/game2048/MainActivity;->ia:Landroid/content/SharedPreferences;
 
+	nop
+	nop
 	nop
 	nop
 
@@ -17926,7 +18019,6 @@
     const-string v2, "PLAY_COUNT"
 
 	nop
-	nop
 
 
     invoke-interface {v1, v2, v0}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
@@ -17936,22 +18028,21 @@
     move-result v0
 
 	nop
-	nop
-	nop
-	nop
 
 
     return v0
 
 	nop
 	nop
-	:vvWOpxLkpkZBVMtg
-
-	goto/32 :uezqLOfUSELsZWxk
-
 	nop
+	nop
+	:raygXCGbBstipYmw
+
+	goto/32 :tfKfWbvAGMrUTujm
+
 	nop
 	nop
 	nop
 .end method
+
 
