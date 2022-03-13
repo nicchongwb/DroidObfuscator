@@ -22,6 +22,21 @@ def get_lines_from_file(fileName):
 	except Exception as e:
 		raise
 
+def read_file(file_name):
+    try:
+        with open(file_name, "r", encoding="utf-8") as file:
+            return list(filter(None, (line.rstrip() for line in file)))
+    except Exception as e:
+        print(e)
+
+def read_file_content(file_name):
+	with open(file_name, "r", encoding="utf-8") as f:
+		return f.read()
+
+def get_nop_valid_op_codes():
+	return read_file(os.path.join(os.path.dirname(__file__), "Lists", "nop_valid_op_codes.txt"))
+
+
 def get_methodSig(line):
 	isStatic = False
 	isPublic = False
@@ -200,6 +215,45 @@ def overload_method(get_lines, outfile):
 
 	outfile.close()
 
+def nop_addition(get_lines, outfile):
+	op_codes = get_nop_valid_op_codes()
+	# pattern = re.compile(r"\s+(?P<op_code>\S+)")
+	for line in get_lines:
+		outfile.write(line + "\n") 
+		is_local = locals_pattern.match(line) # Check if line is .local
+		match = re.compile(r"\s+(?P<op_code>\S+)").match(line)
+		if match:
+			op_code = match.group("op_code")
+			# If this is a valid op code, insert some nop instructions
+			# after it.
+			if op_code in op_codes:
+				outfile.write("\tnop\n" * generate_randInt(1, 4))
+	
+	outfile.close()
+
+def debug_removal(file_content, outfile):
+	debug_op_codes = [".epilogue",".line ",".local ",".source ",".prologue",".epilogue",".end local",".restart local",".param "]
+	# param_pattern = re.compile(r"\s+\.param\s(?P<register>[vp0-9]+)")
+	reversed_lines = []
+	inside_param_declaration = False
+	for line in reversed(file_content.splitlines(keepends=True)):
+		if line.strip().startswith(".end param"):
+			inside_param_declaration = True
+			reversed_lines.append(line)
+		elif (line.strip().startswith(".param ") and inside_param_declaration):
+			inside_param_declaration = False
+			# Remove unnecessary data from param (name and type
+			# comment).
+			line = "{0}\n".format(re.compile(r"\s+\.param\s(?P<register>[vp0-9]+)").match(line).group())
+			reversed_lines.append(line)
+		elif not inside_param_declaration:
+			if not any(line.strip().startswith(op_code) for op_code in debug_op_codes):
+				reversed_lines.append(line)
+		else:
+			reversed_lines.append(line)
+
+	outfile.writelines(list(reversed(reversed_lines)))
+	outfile.close()
 
 # Main Loop
 script_dir = os.path.dirname(__file__)
@@ -224,3 +278,14 @@ overload_method(get_lines, outfile)
 end = time.time()
 print(f"Overload Method time elapsed: {end - start} seconds")
 
+overload_method(get_lines, outfile)
+
+get_lines = get_lines_from_file(outfile_file_name)
+outfile = open(outfile_file_name, "w+", encoding="utf-8")
+
+nop_addition(get_lines, outfile)
+
+file_content = read_file_content(outfile_file_name)
+outfile = open(outfile_file_name, "w", encoding="utf-8")
+
+debug_removal(file_content, outfile)
