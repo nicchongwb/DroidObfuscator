@@ -1,5 +1,8 @@
 from tkinter import *
-from tkinter import filedialog
+from tkinter import filedialog, simpledialog, messagebox
+import subprocess
+import sys
+import os
 
 # functions
 def openFile():
