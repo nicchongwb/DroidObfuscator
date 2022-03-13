@@ -3,6 +3,7 @@ import re
 import os
 import random
 import string
+import time
 
 # Other methods
 def generate_randInt(min, max):
@@ -41,10 +42,7 @@ def generate_randParam(length):
 
 def generate_randLine(paramCount, localCount):
 	returnStr = ""
-
-	opcodes = [
-		"add-int", "rem-int", "xor-int/2addr", "mul-long/2addr"
-	]
+	opcodes = ["add-int", "rem-int", "xor-int/2addr", "mul-long/2addr"]
 
 	opcode = "".join(random.choices(opcodes))
 	if opcode == opcodes[0]:
@@ -71,9 +69,6 @@ def generate_randLine(paramCount, localCount):
 
 def generate_randMethodBody(paramCount, localCount, method_return):
 	returnStr = ""
-	# returnStr += "\tconst/16 v0, 0x{0}\n\n".format(generate_randHexChar(4))
-	# returnStr += "\tconst/16 v1, 0x{0}\n\n".format(generate_randHexChar(4))
-	# returnStr += "\txor-int/2addr v0, v1\n\n"
 	randInt = generate_randInt(1, 3)
 	for i in range(randInt):
 		returnStr += generate_randLine(paramCount, localCount)
@@ -88,7 +83,8 @@ def generate_randMethodBody(paramCount, localCount, method_return):
 # Regex Patterns - https://regex101.com/
 locals_pattern = re.compile(r"\s+\.locals\s(?P<count>\d+)")
 const4_pattern = re.compile(r"\s+const\/4\sv(?P<regId>\d+),\s0x(?P<hexVal>\d)")
-method_pattern = re.compile(r"\.method.+?(?P<method_name>\S+?)\((?P<method_param>\S*?)\)(?P<method_return>\S+)")
+method_pattern = re.compile(
+	r"\.method.+?(?P<method_name>\S+?)\((?P<method_param>\S*?)\)(?P<method_return>\S+)")
 
 def opaque_predicate(get_lines, outfile):
 	edit_mode = False
@@ -186,10 +182,13 @@ def overload_method(get_lines, outfile):
 				method_param = generate_randParam(paramCount)
 
 				localCount = generate_randInt(paramCount + 2, paramCount + 2) # include v0, v1 
-				outfile.write(".method {0} {1}({2}){3}\n".format(method_sig, method_name, method_param, method_return))
+				outfile.write(".method {0} {1}({2}){3}\n".format(method_sig, 
+					method_name, method_param, method_return))
+
 				outfile.write("\t.locals {0}\n\n".format(localCount))
 
-				outfile.write(generate_randMethodBody(paramCount, localCount, method_return))
+				outfile.write(generate_randMethodBody(paramCount, localCount, 
+					method_return))
 
 				outfile.write(".end method\n\n")
 
@@ -211,9 +210,17 @@ outfile_file_name = "new_MainActivity.smali"
 get_lines = get_lines_from_file(abs_file_path)
 outfile = open(outfile_file_name, "w+", encoding="utf-8")
 
+start = time.time()
 opaque_predicate(get_lines, outfile)
+end = time.time()
+print(f"Opaque Predicate time elapsed: {end - start} seconds")
 
-get_lines = get_lines_from_file(outfile_file_name)
+get_lines = get_lines_from_file(outfile_file_name) # Use this for normal, not timing
+# get_lines = get_lines_from_file(smali_file_name) # Use this for timing
 outfile = open(outfile_file_name, "w+", encoding="utf-8")
 
+start = time.time()
 overload_method(get_lines, outfile)
+end = time.time()
+print(f"Overload Method time elapsed: {end - start} seconds")
+

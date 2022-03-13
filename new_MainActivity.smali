@@ -213,29 +213,32 @@
     return-void
 .end method
 
-.method private Q(Z)V
-	.locals 3
+	# Overloaded Method.method private Q(BZ)V
+	.locals 4
 
-	const/16 v0, 0xcfea
+	const/16 v0, 0x4ccb
 
-	const/16 v1, 0x7161
+	const/16 v1, 0x6963
+
+	mul-int/2addr v0, v1
+
+	const/16 v0, 0x878b
+
+	const/16 v1, 0x6b4d
 
 	xor-int/2addr v0, v1
+
+	const/16 v0, 0xf6d5
+
+	const/16 v1, 0xfb8e
+
+	add-int v0, v0, v1
 
 	return-void
 .end method
 
 .method private Q()V
-	.locals 4
-
-	const/16 v0, 0xdf4a
-	const/16 v1, 0x3e5a
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :WPLPYMijzYdZbsLs
-	goto/32 :sceNqfhrHBfECNSd
-	:WPLPYMijzYdZbsLs
-	:HClOJgmosXVgrrvS
+    .locals 2
 
     iget v0, p0, Lcom/androbaby/game2048/MainActivity;->H:I
 
@@ -289,28 +292,14 @@
     :cond_4
     :goto_1
     return-void
-	:sceNqfhrHBfECNSd
-	goto/32 :HClOJgmosXVgrrvS
 .end method
 
-.method private R(SCBC)Z
-	.locals 6
+	# Overloaded Method.method private R(BFI)Z
+	.locals 5
 
-	const/16 v0, 0xcf4b
+	const/16 v0, 0x34de
 
-	const/16 v1, 0x3c9e
-
-	mul-int/2addr v0, v1
-
-	const/16 v0, 0x77d8
-
-	const/16 v1, 0x2724
-
-	rem-int v0, v0, v1
-
-	const/16 v0, 0xf78e
-
-	const/16 v1, 0xbcb8
+	const/16 v1, 0xa617
 
 	add-int v0, v0, v1
 
@@ -337,35 +326,32 @@
     return v0
 .end method
 
-.method private S(ZC)V
+	# Overloaded Method.method private S(BB)V
 	.locals 4
 
-	const/16 v0, 0xbeb6
+	const/16 v0, 0x9de3
 
-	const/16 v1, 0x6d19
-
-	add-int v0, v0, v1
-
-	const/16 v0, 0x7af4
-
-	const/16 v1, 0x5e96
+	const/16 v1, 0xf8cd
 
 	mul-int/2addr v0, v1
+
+	const/16 v0, 0xd466
+
+	const/16 v1, 0xd262
+
+	mul-int/2addr v0, v1
+
+	const/16 v0, 0x4e9f
+
+	const/16 v1, 0xb129
+
+	rem-int v0, v0, v1
 
 	return-void
 .end method
 
 .method private S()V
-	.locals 4
-
-	const/16 v0, 0xfdc3
-	const/16 v1, 0xf469
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :XFiRQJbCjNGhaKeV
-	goto/32 :xGTfpQcyXAbJQwHF
-	:XFiRQJbCjNGhaKeV
-	:ZUDSVSffBMqXkvMn
+    .locals 2
 
     const-string v0, "SIGN"
 
@@ -387,22 +373,14 @@
 
     :cond_0
     return-void
-	:xGTfpQcyXAbJQwHF
-	goto/32 :ZUDSVSffBMqXkvMn
 .end method
 
-.method private T(SB)V
+	# Overloaded Method.method private T(IZ)V
 	.locals 4
 
-	const/16 v0, 0x3c7d
+	const/16 v0, 0xad55
 
-	const/16 v1, 0x1cfb
-
-	xor-int/2addr v0, v1
-
-	const/16 v0, 0x132b
-
-	const/16 v1, 0xf4b7
+	const/16 v1, 0x9881
 
 	mul-int/2addr v0, v1
 
@@ -410,16 +388,7 @@
 .end method
 
 .method private T()V
-	.locals 5
-
-	const/16 v0, 0x9e6a
-	const/16 v1, 0x7d48
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :jEcTQDcCTpIXGxhz
-	goto/32 :VDGJmFPJPtbKZhhW
-	:jEcTQDcCTpIXGxhz
-	:ZlIUNTJwSXsGAIul
+    .locals 3
 
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->J:Landroid/widget/TextView;
 
@@ -491,22 +460,14 @@
     invoke-direct {p0}, Lcom/androbaby/game2048/MainActivity;->Q()V
 
     return-void
-	:VDGJmFPJPtbKZhhW
-	goto/32 :ZlIUNTJwSXsGAIul
 .end method
 
-.method private U(BICS)V
-	.locals 6
+	# Overloaded Method.method private U(Z)V
+	.locals 3
 
-	const/16 v0, 0x62fa
+	const/16 v0, 0xebf2
 
-	const/16 v1, 0xbc37
-
-	mul-int/2addr v0, v1
-
-	const/16 v0, 0x3e79
-
-	const/16 v1, 0xaacb
+	const/16 v1, 0xac5f
 
 	add-int v0, v0, v1
 
@@ -514,16 +475,7 @@
 .end method
 
 .method private U()V
-	.locals 4
-
-	const/16 v0, 0x5515
-	const/16 v1, 0x34cc
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :OfxlPXsTnHCsybkM
-	goto/32 :yuXFxqvUjvqKyjEW
-	:OfxlPXsTnHCsybkM
-	:lITQaZjVMlaHvTnD
+    .locals 2
 
     const-string v0, "SIGN"
 
@@ -544,28 +496,26 @@
     invoke-virtual {v0, p0, v1}, Lb/c/b/a/g/h;->a(Landroid/app/Activity;Lb/c/b/a/g/c;)Lb/c/b/a/g/h;
 
     return-void
-	:yuXFxqvUjvqKyjEW
-	goto/32 :lITQaZjVMlaHvTnD
 .end method
 
-.method private V(Z)V
-	.locals 3
+	# Overloaded Method.method private V(SF)V
+	.locals 4
 
-	const/16 v0, 0x93d7
+	const/16 v0, 0x2ab7
 
-	const/16 v1, 0x715e
-
-	mul-int/2addr v0, v1
-
-	const/16 v0, 0x96da
-
-	const/16 v1, 0xa1e7
+	const/16 v1, 0x6782
 
 	add-int v0, v0, v1
 
-	const/16 v0, 0x4de6
+	const/16 v0, 0x635f
 
-	const/16 v1, 0x41ec
+	const/16 v1, 0xbc8b
+
+	xor-int/2addr v0, v1
+
+	const/16 v0, 0xcdd5
+
+	const/16 v1, 0x4bdb
 
 	rem-int v0, v0, v1
 
@@ -573,16 +523,7 @@
 .end method
 
 .method private V()V
-	.locals 4
-
-	const/16 v0, 0xca37
-	const/16 v1, 0xaa15
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :JeLCimbmdhHpuleu
-	goto/32 :RojdaSdMJOiwllnz
-	:JeLCimbmdhHpuleu
-	:WgUrxpGBYnRwkHUX
+    .locals 2
 
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->da:Lcom/google/android/gms/auth/api/signin/c;
 
@@ -595,18 +536,28 @@
     invoke-virtual {p0, v0, v1}, La/b/b/a/n;->startActivityForResult(Landroid/content/Intent;I)V
 
     return-void
-	:RojdaSdMJOiwllnz
-	goto/32 :WgUrxpGBYnRwkHUX
 .end method
 
-.method private static a(C)V
-	.locals 3
+	# Overloaded Method.method private static a(FSBF)V
+	.locals 6
 
-	const/16 v0, 0xe456
+	const/16 v0, 0x51dc
 
-	const/16 v1, 0x3d93
+	const/16 v1, 0xd8fe
 
-	rem-int v0, v0, v1
+	xor-int/2addr v0, v1
+
+	const/16 v0, 0x672c
+
+	const/16 v1, 0xb83d
+
+	mul-int/2addr v0, v1
+
+	const/16 v0, 0x8b2b
+
+	const/16 v1, 0x6ac1
+
+	add-int v0, v0, v1
 
 	return-void
 .end method
@@ -619,26 +570,20 @@
     return-void
 .end method
 
-.method private static a(ZSC)V
-	.locals 5
+	# Overloaded Method.method private static a(FZ)V
+	.locals 4
 
-	const/16 v0, 0xea95
+	const/16 v0, 0x66c8
 
-	const/16 v1, 0x4216
+	const/16 v1, 0xae1b
 
 	xor-int/2addr v0, v1
 
-	const/16 v0, 0xe119
+	const/16 v0, 0x8d95
 
-	const/16 v1, 0x592c
+	const/16 v1, 0xcff7
 
 	add-int v0, v0, v1
-
-	const/16 v0, 0x9cc2
-
-	const/16 v1, 0x734d
-
-	xor-int/2addr v0, v1
 
 	return-void
 .end method
@@ -651,35 +596,26 @@
     return-void
 .end method
 
-.method private a(S)V
-	.locals 3
+	# Overloaded Method.method private a(CZZS)V
+	.locals 6
 
-	const/16 v0, 0x8d41
+	const/16 v0, 0x723d
 
-	const/16 v1, 0x4829
+	const/16 v1, 0xcb3e
 
-	rem-int v0, v0, v1
+	xor-int/2addr v0, v1
 
-	const/16 v0, 0xdabe
+	const/16 v0, 0x29d4
 
-	const/16 v1, 0xbac3
+	const/16 v1, 0xd8e6
 
-	add-int v0, v0, v1
+	xor-int/2addr v0, v1
 
 	return-void
 .end method
 
 .method private a(Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;)V
-	.locals 4
-
-	const/16 v0, 0xffb2
-	const/16 v1, 0xd994
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :mDJYuMRBTXySqMiJ
-	goto/32 :XzCEVnxSoithnyBo
-	:mDJYuMRBTXySqMiJ
-	:GxLVNTYLdUAAgedq
+    .locals 2
 
     const-string v0, "SIGN"
 
@@ -713,45 +649,34 @@
 
     :cond_0
     return-void
-	:XzCEVnxSoithnyBo
-	goto/32 :GxLVNTYLdUAAgedq
 .end method
 
-.method private b(S)V
+	# Overloaded Method.method private b(F)V
 	.locals 3
 
-	const/16 v0, 0x6d4f
+	const/16 v0, 0xbffa
 
-	const/16 v1, 0xa214
+	const/16 v1, 0xeafd
 
 	mul-int/2addr v0, v1
 
-	const/16 v0, 0x29e5
+	const/16 v0, 0x584f
 
-	const/16 v1, 0xe987
+	const/16 v1, 0xb999
 
-	xor-int/2addr v0, v1
+	mul-int/2addr v0, v1
 
-	const/16 v0, 0x434a
+	const/16 v0, 0xb4d4
 
-	const/16 v1, 0x5747
+	const/16 v1, 0xce25
 
-	rem-int v0, v0, v1
+	mul-int/2addr v0, v1
 
 	return-void
 .end method
 
 .method private b(Ljava/lang/String;)V
-	.locals 11
-
-	const/16 v0, 0x2ba1
-	const/16 v1, 0x5a6b
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :jNmGBlnzPqjOUubY
-	goto/32 :DUFlzuYVKIyhGkDH
-	:jNmGBlnzPqjOUubY
-	:rvsSXNTVcpBBDeoq
+    .locals 9
 
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->X:Lcom/androbaby/game2048/K;
 
@@ -1028,39 +953,22 @@
     iput v0, p1, Lcom/androbaby/game2048/J;->l:I
 
     return-void
-	:DUFlzuYVKIyhGkDH
-	goto/32 :rvsSXNTVcpBBDeoq
 .end method
 
-.method private c(FCZ)V
+	# Overloaded Method.method private c(FIZ)V
 	.locals 5
 
-	const/16 v0, 0x217f
+	const/16 v0, 0x85e2
 
-	const/16 v1, 0x9792
+	const/16 v1, 0x28a4
 
-	rem-int v0, v0, v1
-
-	const/16 v0, 0x9116
-
-	const/16 v1, 0x5bf6
-
-	add-int v0, v0, v1
+	mul-int/2addr v0, v1
 
 	return-void
 .end method
 
 .method private c(Ljava/lang/String;)V
-	.locals 10
-
-	const/16 v0, 0xa6d3
-	const/16 v1, 0x64a2
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :OYgKUZiCUJblwhqp
-	goto/32 :yqCbyOfxByBJAQtk
-	:OYgKUZiCUJblwhqp
-	:rykslQhlIcWZRbyy
+    .locals 8
 
     invoke-virtual {p0}, Lcom/androbaby/game2048/MainActivity;->I()V
 
@@ -1297,41 +1205,30 @@
     invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
-	:yqCbyOfxByBJAQtk
-	goto/32 :rykslQhlIcWZRbyy
 .end method
 
 
 # virtual methods
-.method public A(BCZ)I
-	.locals 5
+	# Overloaded Method.method public A(BFZZ)I
+	.locals 6
 
-	const/16 v0, 0xfad9
+	const/16 v0, 0x695c
 
-	const/16 v1, 0x3764
+	const/16 v1, 0x8864
 
-	rem-int v0, v0, v1
+	add-int v0, v0, v1
 
-	const/16 v0, 0x8ee1
+	const/16 v0, 0xac6e
 
-	const/16 v1, 0x3155
+	const/16 v1, 0x2de5
 
-	mul-int/2addr v0, v1
+	xor-int/2addr v0, v1
 
 	return v0
 .end method
 
 .method public A()I
-	.locals 5
-
-	const/16 v0, 0x4d31
-	const/16 v1, 0xbf24
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :GQmrmFqbSYWnCZpk
-	goto/32 :SNQoJzGjYWrQWeBh
-	:GQmrmFqbSYWnCZpk
-	:SiHDkBMITubScvwE
+    .locals 3
 
     const/4 v0, 0x0
 
@@ -1352,39 +1249,22 @@
     move-result v0
 
     return v0
-	:SNQoJzGjYWrQWeBh
-	goto/32 :SiHDkBMITubScvwE
 .end method
 
-.method public B(BS)I
-	.locals 4
+	# Overloaded Method.method public B(CFZI)I
+	.locals 6
 
-	const/16 v0, 0x669f
+	const/16 v0, 0xea5d
 
-	const/16 v1, 0x2d76
+	const/16 v1, 0xe422
 
-	rem-int v0, v0, v1
-
-	const/16 v0, 0xcb95
-
-	const/16 v1, 0x5d1f
-
-	rem-int v0, v0, v1
+	mul-int/2addr v0, v1
 
 	return v0
 .end method
 
 .method public B()I
-	.locals 5
-
-	const/16 v0, 0x9495
-	const/16 v1, 0x26ed
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :HDIkVgxKmUUyFweN
-	goto/32 :zqovjlArvIzFMMBo
-	:HDIkVgxKmUUyFweN
-	:iQbUWDBDUMPrxzpI
+    .locals 3
 
     const/4 v0, 0x0
 
@@ -1405,33 +1285,22 @@
     move-result v0
 
     return v0
-	:zqovjlArvIzFMMBo
-	goto/32 :iQbUWDBDUMPrxzpI
 .end method
 
-.method public C(FZBI)V
-	.locals 6
+	# Overloaded Method.method public C(S)V
+	.locals 3
 
-	const/16 v0, 0xb6b7
+	const/16 v0, 0x7dc1
 
-	const/16 v1, 0x85b7
+	const/16 v1, 0x4397
 
-	xor-int/2addr v0, v1
+	mul-int/2addr v0, v1
 
 	return-void
 .end method
 
 .method public C()V
-	.locals 7
-
-	const/16 v0, 0x143c
-	const/16 v1, 0x5e41
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :ATFZiqjBqPOkYnID
-	goto/32 :RELImVXqXHAXziXU
-	:ATFZiqjBqPOkYnID
-	:fmnZbOYvSYkZvvIZ
+    .locals 5
 
     invoke-virtual {p0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
@@ -1590,45 +1459,34 @@
     sput-wide v0, Lcom/androbaby/game2048/MainActivity;->u:D
 
     return-void
-	:RELImVXqXHAXziXU
-	goto/32 :fmnZbOYvSYkZvvIZ
 .end method
 
-.method public D(IZZF)V
-	.locals 6
+	# Overloaded Method.method public D(BSZ)V
+	.locals 5
 
-	const/16 v0, 0x38b6
+	const/16 v0, 0xd7ef
 
-	const/16 v1, 0xdf7e
-
-	xor-int/2addr v0, v1
-
-	const/16 v0, 0x6b86
-
-	const/16 v1, 0xf282
+	const/16 v1, 0x8d5a
 
 	rem-int v0, v0, v1
 
-	const/16 v0, 0x14a4
+	const/16 v0, 0x28b7
 
-	const/16 v1, 0xbef9
+	const/16 v1, 0xe785
 
-	xor-int/2addr v0, v1
+	add-int v0, v0, v1
+
+	const/16 v0, 0x99d4
+
+	const/16 v1, 0x95df
+
+	mul-int/2addr v0, v1
 
 	return-void
 .end method
 
 .method public D()V
-	.locals 4
-
-	const/16 v0, 0x8752
-	const/16 v1, 0xc4f9
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :ixuABGIrRHeKqytW
-	goto/32 :YtocgBSyvpyNfjrM
-	:ixuABGIrRHeKqytW
-	:uJviwEMylaOjwXGM
+    .locals 2
 
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->ma:Ljava/lang/Boolean;
 
@@ -1654,33 +1512,34 @@
     invoke-virtual {v1, v0}, Lcom/google/android/gms/ads/i;->a(Lcom/google/android/gms/ads/d;)V
 
     return-void
-	:YtocgBSyvpyNfjrM
-	goto/32 :uJviwEMylaOjwXGM
 .end method
 
-.method public E(IZF)V
+	# Overloaded Method.method public E(IFZ)V
 	.locals 5
 
-	const/16 v0, 0x2fea
+	const/16 v0, 0x166d
 
-	const/16 v1, 0xdc54
+	const/16 v1, 0x2d66
 
-	xor-int/2addr v0, v1
+	rem-int v0, v0, v1
+
+	const/16 v0, 0xa8c2
+
+	const/16 v1, 0x8d96
+
+	mul-int/2addr v0, v1
+
+	const/16 v0, 0x5954
+
+	const/16 v1, 0xa6fb
+
+	add-int v0, v0, v1
 
 	return-void
 .end method
 
 .method public E()V
-	.locals 4
-
-	const/16 v0, 0x2714
-	const/16 v1, 0x75d8
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :QJEQAsDghhHsqvrO
-	goto/32 :iKsYpjRhSzpTlrZv
-	:QJEQAsDghhHsqvrO
-	:GEEGikDIFQTtIbYI
+    .locals 2
 
     const/4 v0, 0x1
 
@@ -1744,45 +1603,28 @@
     invoke-virtual {p0}, Lcom/androbaby/game2048/MainActivity;->L()V
 
     return-void
-	:iKsYpjRhSzpTlrZv
-	goto/32 :GEEGikDIFQTtIbYI
 .end method
 
-.method public F(BFCF)V
+	# Overloaded Method.method public F(BCSB)V
 	.locals 6
 
-	const/16 v0, 0xa5e5
+	const/16 v0, 0xf8f7
 
-	const/16 v1, 0x1497
+	const/16 v1, 0x5c7a
 
-	rem-int v0, v0, v1
+	add-int v0, v0, v1
 
-	const/16 v0, 0xde32
+	const/16 v0, 0x5c1c
 
-	const/16 v1, 0x642d
+	const/16 v1, 0x2cbc
 
-	rem-int v0, v0, v1
-
-	const/16 v0, 0x3b18
-
-	const/16 v1, 0x71fa
-
-	xor-int/2addr v0, v1
+	add-int v0, v0, v1
 
 	return-void
 .end method
 
 .method public F()V
-	.locals 4
-
-	const/16 v0, 0x5365
-	const/16 v1, 0x3b5e
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :QJBhORZcadNwesoz
-	goto/32 :QrpGQWiFJLIdiSXR
-	:QJBhORZcadNwesoz
-	:AFMVWajGuBehicCb
+    .locals 2
 
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->ca:Lcom/google/android/gms/games/f;
 
@@ -1806,45 +1648,34 @@
 
     :cond_0
     return-void
-	:QrpGQWiFJLIdiSXR
-	goto/32 :AFMVWajGuBehicCb
 .end method
 
-.method public G(CF)V
-	.locals 4
+	# Overloaded Method.method public G(Z)V
+	.locals 3
 
-	const/16 v0, 0x1bcd
+	const/16 v0, 0x58e9
 
-	const/16 v1, 0x52c7
-
-	xor-int/2addr v0, v1
-
-	const/16 v0, 0x5799
-
-	const/16 v1, 0x797b
+	const/16 v1, 0x51ed
 
 	xor-int/2addr v0, v1
 
-	const/16 v0, 0x162d
+	const/16 v0, 0xa54e
 
-	const/16 v1, 0xb7fb
+	const/16 v1, 0xae99
 
 	rem-int v0, v0, v1
+
+	const/16 v0, 0x3926
+
+	const/16 v1, 0x352a
+
+	add-int v0, v0, v1
 
 	return-void
 .end method
 
 .method public G()V
-	.locals 4
-
-	const/16 v0, 0xafa9
-	const/16 v1, 0xf123
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :YkRVhjGeYLMxOycy
-	goto/32 :ZzGDTXDfCeenJypd
-	:YkRVhjGeYLMxOycy
-	:OcvtZrNUFnexocbT
+    .locals 2
 
     const/4 v0, 0x0
 
@@ -1939,39 +1770,34 @@
     :cond_4
     :goto_0
     return-void
-	:ZzGDTXDfCeenJypd
-	goto/32 :OcvtZrNUFnexocbT
 .end method
 
-.method public H(SBZS)V
-	.locals 6
+	# Overloaded Method.method public H(F)V
+	.locals 3
 
-	const/16 v0, 0x79ef
+	const/16 v0, 0xb1a2
 
-	const/16 v1, 0x4dd8
+	const/16 v1, 0x1476
 
-	mul-int/2addr v0, v1
+	xor-int/2addr v0, v1
 
-	const/16 v0, 0x7881
+	const/16 v0, 0x4316
 
-	const/16 v1, 0x89ba
+	const/16 v1, 0x172c
 
-	mul-int/2addr v0, v1
+	xor-int/2addr v0, v1
+
+	const/16 v0, 0x5cd9
+
+	const/16 v1, 0x26a1
+
+	add-int v0, v0, v1
 
 	return-void
 .end method
 
 .method public H()V
-	.locals 5
-
-	const/16 v0, 0x4ea4
-	const/16 v1, 0x8ff3
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :UJQxmaciHjfkhMwM
-	goto/32 :PXEEyPjNoWzLjTyE
-	:UJQxmaciHjfkhMwM
-	:mlbnUJmFhIPteAIg
+    .locals 3
 
     const/4 v0, 0x0
 
@@ -2000,39 +1826,28 @@
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
-	:PXEEyPjNoWzLjTyE
-	goto/32 :mlbnUJmFhIPteAIg
 .end method
 
-.method public I(S)V
-	.locals 3
+	# Overloaded Method.method public I(SS)V
+	.locals 4
 
-	const/16 v0, 0xdd29
+	const/16 v0, 0xc938
 
-	const/16 v1, 0x67b5
+	const/16 v1, 0x54ff
 
-	xor-int/2addr v0, v1
+	mul-int/2addr v0, v1
 
-	const/16 v0, 0x3b6d
+	const/16 v0, 0x7bc3
 
-	const/16 v1, 0xeede
+	const/16 v1, 0xe245
 
-	add-int v0, v0, v1
+	mul-int/2addr v0, v1
 
 	return-void
 .end method
 
 .method public I()V
-	.locals 5
-
-	const/16 v0, 0x7ba1
-	const/16 v1, 0x11fe
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :HxYsHWFHamqpzSZR
-	goto/32 :reBRBpwnFKyadtwJ
-	:HxYsHWFHamqpzSZR
-	:zBZDXozacgeLseed
+    .locals 3
 
     invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
@@ -2051,39 +1866,22 @@
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
-	:reBRBpwnFKyadtwJ
-	goto/32 :zBZDXozacgeLseed
 .end method
 
-.method public J(I)V
-	.locals 3
+	# Overloaded Method.method public J(CIB)V
+	.locals 5
 
-	const/16 v0, 0x78cc
+	const/16 v0, 0x167f
 
-	const/16 v1, 0x2fa1
+	const/16 v1, 0x7f44
 
-	rem-int v0, v0, v1
-
-	const/16 v0, 0xf567
-
-	const/16 v1, 0x3e18
-
-	rem-int v0, v0, v1
+	add-int v0, v0, v1
 
 	return-void
 .end method
 
 .method public J()V
-	.locals 5
-
-	const/16 v0, 0x7f1d
-	const/16 v1, 0x3616
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :UrFVWgylkjttLODy
-	goto/32 :gObaBirkNtUWfsCu
-	:UrFVWgylkjttLODy
-	:iYYvTLzHbWrhGnzK
+    .locals 3
 
     const-string v0, "SCORE"
 
@@ -2110,45 +1908,34 @@
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
-	:gObaBirkNtUWfsCu
-	goto/32 :iYYvTLzHbWrhGnzK
 .end method
 
-.method public K(F)V
-	.locals 3
+	# Overloaded Method.method public K(ZBZ)V
+	.locals 5
 
-	const/16 v0, 0xeb14
+	const/16 v0, 0x399f
 
-	const/16 v1, 0x571e
-
-	rem-int v0, v0, v1
-
-	const/16 v0, 0xda4d
-
-	const/16 v1, 0x584b
-
-	xor-int/2addr v0, v1
-
-	const/16 v0, 0x3a82
-
-	const/16 v1, 0x1fd9
+	const/16 v1, 0xb1c1
 
 	add-int v0, v0, v1
+
+	const/16 v0, 0xac3e
+
+	const/16 v1, 0x7ad8
+
+	add-int v0, v0, v1
+
+	const/16 v0, 0xafbf
+
+	const/16 v1, 0x45d5
+
+	rem-int v0, v0, v1
 
 	return-void
 .end method
 
 .method public K()V
-	.locals 5
-
-	const/16 v0, 0x66f1
-	const/16 v1, 0xaf21
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :fMyDTwRgpkJsrYvi
-	goto/32 :zyCQWEnyCosvpepk
-	:fMyDTwRgpkJsrYvi
-	:iUxCVNLBcBXyVAso
+    .locals 3
 
     const-string v0, "CHOICE"
 
@@ -2179,33 +1966,34 @@
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
-	:zyCQWEnyCosvpepk
-	goto/32 :iUxCVNLBcBXyVAso
 .end method
 
-.method public L(FZZI)V
-	.locals 6
+	# Overloaded Method.method public L(CSC)V
+	.locals 5
 
-	const/16 v0, 0x1874
+	const/16 v0, 0x2274
 
-	const/16 v1, 0x5b41
+	const/16 v1, 0x37d7
 
 	xor-int/2addr v0, v1
+
+	const/16 v0, 0xae2c
+
+	const/16 v1, 0x5253
+
+	xor-int/2addr v0, v1
+
+	const/16 v0, 0x8a47
+
+	const/16 v1, 0xb16a
+
+	rem-int v0, v0, v1
 
 	return-void
 .end method
 
 .method public L()V
-	.locals 5
-
-	const/16 v0, 0x1ad8
-	const/16 v1, 0xff1b
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :prAFutyHHesNkyDs
-	goto/32 :LeCokhYNTgtutHJz
-	:prAFutyHHesNkyDs
-	:hdrRmCpGVWyPYJAB
+    .locals 3
 
     const-string v0, "SCORE"
 
@@ -2236,39 +2024,22 @@
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
-	:LeCokhYNTgtutHJz
-	goto/32 :hdrRmCpGVWyPYJAB
 .end method
 
-.method public M(ZC)V
-	.locals 4
+	# Overloaded Method.method public M(IZC)V
+	.locals 5
 
-	const/16 v0, 0xb2ca
+	const/16 v0, 0x5717
 
-	const/16 v1, 0xaadb
+	const/16 v1, 0x8eb6
 
 	add-int v0, v0, v1
-
-	const/16 v0, 0x87dc
-
-	const/16 v1, 0x99b4
-
-	rem-int v0, v0, v1
 
 	return-void
 .end method
 
 .method public M()V
-	.locals 4
-
-	const/16 v0, 0x75f7
-	const/16 v1, 0x9fa6
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :NRwchjSLgYPFfipq
-	goto/32 :zcdnnzRYOPGhInvz
-	:NRwchjSLgYPFfipq
-	:IqLDukWZMKNAacZw
+    .locals 2
 
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->R:Landroid/app/Dialog;
 
@@ -2305,30 +2076,16 @@
 
     :goto_0
     return-void
-	:zcdnnzRYOPGhInvz
-	goto/32 :IqLDukWZMKNAacZw
 .end method
 
-.method public N(I)V
-	.locals 3
+	# Overloaded Method.method public N(ZFC)V
+	.locals 5
 
-	const/16 v0, 0x3ef8
+	const/16 v0, 0x2e9c
 
-	const/16 v1, 0xbaa7
+	const/16 v1, 0x1ab3
 
 	add-int v0, v0, v1
-
-	const/16 v0, 0xc951
-
-	const/16 v1, 0xe488
-
-	mul-int/2addr v0, v1
-
-	const/16 v0, 0x964e
-
-	const/16 v1, 0xeb5d
-
-	xor-int/2addr v0, v1
 
 	return-void
 .end method
@@ -2357,41 +2114,32 @@
     return-void
 .end method
 
-.method public O(IFF)V
-	.locals 5
+	# Overloaded Method.method public O(IZFS)V
+	.locals 6
 
-	const/16 v0, 0xfc59
+	const/16 v0, 0x3ffe
 
-	const/16 v1, 0x34de
+	const/16 v1, 0x694d
 
-	xor-int/2addr v0, v1
+	add-int v0, v0, v1
 
-	const/16 v0, 0xb27e
+	const/16 v0, 0xde98
 
-	const/16 v1, 0x225a
+	const/16 v1, 0x6411
 
 	rem-int v0, v0, v1
 
-	const/16 v0, 0xc9b8
+	const/16 v0, 0x2443
 
-	const/16 v1, 0xf75b
+	const/16 v1, 0xd5e6
 
-	add-int v0, v0, v1
+	xor-int/2addr v0, v1
 
 	return-void
 .end method
 
 .method public O()V
-	.locals 5
-
-	const/16 v0, 0x2275
-	const/16 v1, 0xa58f
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :BzwHBYDfvqIzqgKG
-	goto/32 :yCTsWnTFvXJyIfRE
-	:BzwHBYDfvqIzqgKG
-	:mTddWVuwtXQlvjxi
+    .locals 3
 
     const/4 v0, 0x1
 
@@ -2414,39 +2162,22 @@
     invoke-virtual {v0, v1, v2}, Landroid/view/Window;->setLayout(II)V
 
     return-void
-	:yCTsWnTFvXJyIfRE
-	goto/32 :mTddWVuwtXQlvjxi
 .end method
 
-.method public P(BSIC)V
-	.locals 6
+	# Overloaded Method.method public P(SSB)V
+	.locals 5
 
-	const/16 v0, 0xe54e
+	const/16 v0, 0x172b
 
-	const/16 v1, 0xe9d5
+	const/16 v1, 0x8bce
 
 	xor-int/2addr v0, v1
-
-	const/16 v0, 0x4944
-
-	const/16 v1, 0x8cda
-
-	rem-int v0, v0, v1
 
 	return-void
 .end method
 
 .method public P()V
-	.locals 7
-
-	const/16 v0, 0x6144
-	const/16 v1, 0x2a54
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :SjgVJwzNZIgNksDt
-	goto/32 :JFybmhmefFnRwEHZ
-	:SjgVJwzNZIgNksDt
-	:GJzoyAjAHBzbIqVU
+    .locals 5
 
     invoke-virtual {p0}, Landroid/app/Activity;->getLayoutInflater()Landroid/view/LayoutInflater;
 
@@ -2513,33 +2244,34 @@
     invoke-virtual {v1}, Landroid/widget/Toast;->show()V
 
     return-void
-	:JFybmhmefFnRwEHZ
-	goto/32 :GJzoyAjAHBzbIqVU
 .end method
 
-.method public a(SBZZ)V
-	.locals 6
+	# Overloaded Method.method public a(S)V
+	.locals 3
 
-	const/16 v0, 0xa8d8
+	const/16 v0, 0xfd19
 
-	const/16 v1, 0xbed4
+	const/16 v1, 0x992b
 
 	rem-int v0, v0, v1
+
+	const/16 v0, 0x14fb
+
+	const/16 v1, 0xdbb7
+
+	add-int v0, v0, v1
+
+	const/16 v0, 0xeef5
+
+	const/16 v1, 0x711a
+
+	mul-int/2addr v0, v1
 
 	return-void
 .end method
 
 .method public a(J)V
-	.locals 5
-
-	const/16 v0, 0x5bae
-	const/16 v1, 0xe841
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :pBzCpouRYcZWaBaH
-	goto/32 :acTIJRyFLzAXAtSR
-	:pBzCpouRYcZWaBaH
-	:ZIZICrsPUZkNxfLM
+    .locals 3
 
     const-wide/16 v0, 0x0
 
@@ -2616,33 +2348,22 @@
     :cond_5
     :goto_1
     return-void
-	:acTIJRyFLzAXAtSR
-	goto/32 :ZIZICrsPUZkNxfLM
 .end method
 
-.method public b(CF)V
-	.locals 4
+	# Overloaded Method.method public b(IFCZ)V
+	.locals 6
 
-	const/16 v0, 0x3d27
+	const/16 v0, 0x4b32
 
-	const/16 v1, 0xd8c5
+	const/16 v1, 0x1162
 
-	mul-int/2addr v0, v1
+	xor-int/2addr v0, v1
 
 	return-void
 .end method
 
 .method public b(I)V
-	.locals 4
-
-	const/16 v0, 0x717d
-	const/16 v1, 0x4899
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :REvMlQCsHPkLowVK
-	goto/32 :erduKiksHRkUNYSP
-	:REvMlQCsHPkLowVK
-	:rkivytHsdSsbKlaa
+    .locals 2
 
     const-string v0, "CHOICE"
 
@@ -2667,45 +2388,34 @@
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
-	:erduKiksHRkUNYSP
-	goto/32 :rkivytHsdSsbKlaa
 .end method
 
-.method public c(CZ)V
-	.locals 4
+	# Overloaded Method.method public c(S)V
+	.locals 3
 
-	const/16 v0, 0xc49e
+	const/16 v0, 0xdbe2
 
-	const/16 v1, 0xb36d
+	const/16 v1, 0x5acb
 
 	mul-int/2addr v0, v1
 
-	const/16 v0, 0x282e
+	const/16 v0, 0xb4bd
 
-	const/16 v1, 0xaef7
+	const/16 v1, 0xb821
 
-	rem-int v0, v0, v1
+	mul-int/2addr v0, v1
 
-	const/16 v0, 0xcdee
+	const/16 v0, 0x2585
 
-	const/16 v1, 0x7f55
+	const/16 v1, 0x35b7
 
-	rem-int v0, v0, v1
+	add-int v0, v0, v1
 
 	return-void
 .end method
 
 .method public c(I)V
-	.locals 4
-
-	const/16 v0, 0x8a1d
-	const/16 v1, 0x33f8
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :etBIwWeBHhYhuUpu
-	goto/32 :FBHDeVGKuzriuEEA
-	:etBIwWeBHhYhuUpu
-	:KEXAuUaiqvBeyQcA
+    .locals 2
 
     const-string v0, "SCORE"
 
@@ -2730,39 +2440,22 @@
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
-	:FBHDeVGKuzriuEEA
-	goto/32 :KEXAuUaiqvBeyQcA
 .end method
 
-.method public d(FBBC)V
-	.locals 6
+	# Overloaded Method.method public d(SZC)V
+	.locals 5
 
-	const/16 v0, 0xb64d
+	const/16 v0, 0x5387
 
-	const/16 v1, 0xf2ff
+	const/16 v1, 0x1a8d
 
-	rem-int v0, v0, v1
-
-	const/16 v0, 0x2e19
-
-	const/16 v1, 0x56ca
-
-	rem-int v0, v0, v1
+	mul-int/2addr v0, v1
 
 	return-void
 .end method
 
 .method public d(I)V
-	.locals 4
-
-	const/16 v0, 0x5eab
-	const/16 v1, 0x795f
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :YxbZRLGPfPntBrKa
-	goto/32 :wIgoRdVwXelpdyKg
-	:YxbZRLGPfPntBrKa
-	:MPFrhNGSwztQCyDY
+    .locals 2
 
     const-string v0, "SCORE"
 
@@ -2787,45 +2480,34 @@
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
-	:wIgoRdVwXelpdyKg
-	goto/32 :MPFrhNGSwztQCyDY
 .end method
 
-.method public e(SZSI)V
-	.locals 6
+	# Overloaded Method.method public e(ZI)V
+	.locals 4
 
-	const/16 v0, 0xe439
+	const/16 v0, 0x6619
 
-	const/16 v1, 0xe543
+	const/16 v1, 0x7a13
+
+	mul-int/2addr v0, v1
+
+	const/16 v0, 0x6523
+
+	const/16 v1, 0xe729
 
 	xor-int/2addr v0, v1
 
-	const/16 v0, 0x92de
+	const/16 v0, 0x7124
 
-	const/16 v1, 0xe64c
+	const/16 v1, 0x56c9
 
-	xor-int/2addr v0, v1
-
-	const/16 v0, 0xee8a
-
-	const/16 v1, 0x486d
-
-	add-int v0, v0, v1
+	rem-int v0, v0, v1
 
 	return-void
 .end method
 
 .method public e(I)V
-	.locals 5
-
-	const/16 v0, 0x6c96
-	const/16 v1, 0x53e9
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :ROgQUrWMhIMcFARB
-	goto/32 :CCiHswYhcFvatGJD
-	:ROgQUrWMhIMcFARB
-	:UtSEJewdrtKFcgMZ
+    .locals 3
 
     iput p1, p0, Lcom/androbaby/game2048/MainActivity;->va:I
 
@@ -2947,22 +2629,14 @@
     :cond_4
     :goto_3
     return-void
-	:CCiHswYhcFvatGJD
-	goto/32 :UtSEJewdrtKFcgMZ
 .end method
 
-.method public o(SIZ)V
-	.locals 5
+	# Overloaded Method.method public o(BBSZ)V
+	.locals 6
 
-	const/16 v0, 0x6a3d
+	const/16 v0, 0x8761
 
-	const/16 v1, 0x1dd5
-
-	rem-int v0, v0, v1
-
-	const/16 v0, 0x3fe3
-
-	const/16 v1, 0xd574
+	const/16 v1, 0xd7cf
 
 	xor-int/2addr v0, v1
 
@@ -2970,16 +2644,7 @@
 .end method
 
 .method public o()V
-	.locals 6
-
-	const/16 v0, 0x3262
-	const/16 v1, 0x73ce
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :mowwDoNFcjolHUap
-	goto/32 :yomPvAOiciCiWcVm
-	:mowwDoNFcjolHUap
-	:acqtdpMxHbUpYNws
+    .locals 4
 
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
@@ -3014,33 +2679,28 @@
     invoke-virtual {v0}, Landroid/app/AlertDialog;->show()V
 
     return-void
-	:yomPvAOiciCiWcVm
-	goto/32 :acqtdpMxHbUpYNws
 .end method
 
-.method private onActivityResult(BCSS)V
-	.locals 6
+	# Overloaded Method.method private onActivityResult(C)V
+	.locals 3
 
-	const/16 v0, 0x1e65
+	const/16 v0, 0xd7e4
 
-	const/16 v1, 0x48b7
+	const/16 v1, 0xf69c
 
-	rem-int v0, v0, v1
+	add-int v0, v0, v1
+
+	const/16 v0, 0x91e3
+
+	const/16 v1, 0xdde8
+
+	mul-int/2addr v0, v1
 
 	return-void
 .end method
 
 .method protected onActivityResult(IILandroid/content/Intent;)V
-	.locals 5
-
-	const/16 v0, 0x7b33
-	const/16 v1, 0x5624
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :LEbsxgtOUXLfrHXQ
-	goto/32 :XZpfoSMDRkBXAzJw
-	:LEbsxgtOUXLfrHXQ
-	:bxCLIJhZguMQtLqq
+    .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -3123,28 +2783,14 @@
 
     :goto_1
     return-void
-	:XZpfoSMDRkBXAzJw
-	goto/32 :bxCLIJhZguMQtLqq
 .end method
 
-.method public onBackPressed(ZC)V
-	.locals 4
+	# Overloaded Method.method public onBackPressed(Z)V
+	.locals 3
 
-	const/16 v0, 0x1163
+	const/16 v0, 0x8117
 
-	const/16 v1, 0xc739
-
-	mul-int/2addr v0, v1
-
-	const/16 v0, 0xd4d1
-
-	const/16 v1, 0x86fb
-
-	xor-int/2addr v0, v1
-
-	const/16 v0, 0x61ad
-
-	const/16 v1, 0xee8c
+	const/16 v1, 0xe9aa
 
 	add-int v0, v0, v1
 
@@ -3152,16 +2798,7 @@
 .end method
 
 .method public onBackPressed()V
-	.locals 4
-
-	const/16 v0, 0x315e
-	const/16 v1, 0xc848
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :ucmbVfGfzGyUfmah
-	goto/32 :VaRGrOGEUTLIKvrp
-	:ucmbVfGfzGyUfmah
-	:CQEwvHeMEntNejMx
+    .locals 2
 
     iget v0, p0, Lcom/androbaby/game2048/MainActivity;->C:I
 
@@ -3263,33 +2900,34 @@
 
     :goto_0
     return-void
-	:VaRGrOGEUTLIKvrp
-	goto/32 :CQEwvHeMEntNejMx
 .end method
 
-.method private onCreate(FZFZ)V
+	# Overloaded Method.method private onCreate(SFFC)V
 	.locals 6
 
-	const/16 v0, 0x3999
+	const/16 v0, 0xe942
 
-	const/16 v1, 0x1a7d
+	const/16 v1, 0x8863
 
-	xor-int/2addr v0, v1
+	add-int v0, v0, v1
+
+	const/16 v0, 0x296b
+
+	const/16 v1, 0x7d1a
+
+	add-int v0, v0, v1
+
+	const/16 v0, 0xdf7d
+
+	const/16 v1, 0xb7bc
+
+	rem-int v0, v0, v1
 
 	return-void
 .end method
 
 .method protected onCreate(Landroid/os/Bundle;)V
-	.locals 6
-
-	const/16 v0, 0xa4ef
-	const/16 v1, 0x3de3
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :PKcPdNgfEpiuyCQq
-	goto/32 :NTfiRNGUAzpsJaOo
-	:PKcPdNgfEpiuyCQq
-	:OyhlConUWyjJWXJp
+    .locals 4
 
     invoke-super {p0, p1}, La/b/b/a/n;->onCreate(Landroid/os/Bundle;)V
 
@@ -3482,30 +3120,16 @@
     invoke-virtual {p1}, Lcom/androbaby/game2048/n;->b()V
 
     return-void
-	:NTfiRNGUAzpsJaOo
-	goto/32 :OyhlConUWyjJWXJp
 .end method
 
-.method private onDestroy(SFSF)V
+	# Overloaded Method.method private onDestroy(SIIC)V
 	.locals 6
 
-	const/16 v0, 0xad95
+	const/16 v0, 0x1d3f
 
-	const/16 v1, 0x981d
+	const/16 v1, 0x5353
 
-	rem-int v0, v0, v1
-
-	const/16 v0, 0x3182
-
-	const/16 v1, 0x879f
-
-	add-int v0, v0, v1
-
-	const/16 v0, 0x5d5c
-
-	const/16 v1, 0x5147
-
-	rem-int v0, v0, v1
+	xor-int/2addr v0, v1
 
 	return-void
 .end method
@@ -3522,29 +3146,32 @@
     return-void
 .end method
 
-.method private onPause(IZZF)V
-	.locals 6
+	# Overloaded Method.method private onPause(IZ)V
+	.locals 4
 
-	const/16 v0, 0xd5ff
+	const/16 v0, 0xee75
 
-	const/16 v1, 0x4be6
+	const/16 v1, 0x1413
 
-	rem-int v0, v0, v1
+	xor-int/2addr v0, v1
+
+	const/16 v0, 0x7ed9
+
+	const/16 v1, 0x62f1
+
+	add-int v0, v0, v1
+
+	const/16 v0, 0x1db1
+
+	const/16 v1, 0x18df
+
+	add-int v0, v0, v1
 
 	return-void
 .end method
 
 .method protected onPause()V
-	.locals 4
-
-	const/16 v0, 0xe54b
-	const/16 v1, 0x1b11
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :gWttlDwDWjDCmHXG
-	goto/32 :WypHDQFUtdWipNTn
-	:gWttlDwDWjDCmHXG
-	:UUiaYaTQrTnnxifh
+    .locals 2
 
     invoke-super {p0}, La/b/b/a/n;->onPause()V
 
@@ -3567,33 +3194,22 @@
     invoke-direct {p0, v0}, Lcom/androbaby/game2048/MainActivity;->c(Ljava/lang/String;)V
 
     return-void
-	:WypHDQFUtdWipNTn
-	goto/32 :UUiaYaTQrTnnxifh
 .end method
 
-.method private onResume(C)V
-	.locals 3
+	# Overloaded Method.method private onResume(SCBZ)V
+	.locals 6
 
-	const/16 v0, 0xb758
+	const/16 v0, 0x7b2f
 
-	const/16 v1, 0xc78e
+	const/16 v1, 0xce96
 
-	add-int v0, v0, v1
+	rem-int v0, v0, v1
 
 	return-void
 .end method
 
 .method protected onResume()V
-	.locals 4
-
-	const/16 v0, 0xde56
-	const/16 v1, 0x345a
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :mKscTUHcbwjpyWbc
-	goto/32 :UCcriehbNvyKYlpl
-	:mKscTUHcbwjpyWbc
-	:sVmtVouVyHOZEpim
+    .locals 2
 
     invoke-super {p0}, La/b/b/a/n;->onResume()V
 
@@ -3618,33 +3234,28 @@
     invoke-direct {p0}, Lcom/androbaby/game2048/MainActivity;->U()V
 
     return-void
-	:UCcriehbNvyKYlpl
-	goto/32 :sVmtVouVyHOZEpim
 .end method
 
-.method public onSaveInstanceState(ZBI)V
-	.locals 5
+	# Overloaded Method.method public onSaveInstanceState(BSIF)V
+	.locals 6
 
-	const/16 v0, 0x7b6a
+	const/16 v0, 0x556b
 
-	const/16 v1, 0xbb29
+	const/16 v1, 0x7cbb
 
-	add-int v0, v0, v1
+	rem-int v0, v0, v1
+
+	const/16 v0, 0x2acd
+
+	const/16 v1, 0x6f3d
+
+	rem-int v0, v0, v1
 
 	return-void
 .end method
 
 .method public onSaveInstanceState(Landroid/os/Bundle;)V
-	.locals 4
-
-	const/16 v0, 0x3fbd
-	const/16 v1, 0xfa5c
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :CrsMYAnhrYYSLFsg
-	goto/32 :RNcWyTxHgPhShuwy
-	:CrsMYAnhrYYSLFsg
-	:xZUHDTnwCiWwEFIa
+    .locals 2
 
     invoke-super {p0, p1}, La/b/b/a/n;->onSaveInstanceState(Landroid/os/Bundle;)V
 
@@ -3673,45 +3284,34 @@
     invoke-direct {p0, p1}, Lcom/androbaby/game2048/MainActivity;->c(Ljava/lang/String;)V
 
     return-void
-	:RNcWyTxHgPhShuwy
-	goto/32 :xZUHDTnwCiWwEFIa
 .end method
 
-.method public onTouch(ZSZZ)Z
-	.locals 6
+	# Overloaded Method.method public onTouch(BZ)Z
+	.locals 4
 
-	const/16 v0, 0x7613
+	const/16 v0, 0x57ef
 
-	const/16 v1, 0x7898
-
-	xor-int/2addr v0, v1
-
-	const/16 v0, 0x4f78
-
-	const/16 v1, 0x1619
+	const/16 v1, 0xf9a3
 
 	add-int v0, v0, v1
 
-	const/16 v0, 0x69b8
+	const/16 v0, 0xdd2b
 
-	const/16 v1, 0x6e6a
+	const/16 v1, 0xa8ca
 
 	xor-int/2addr v0, v1
+
+	const/16 v0, 0x3c6b
+
+	const/16 v1, 0xb259
+
+	mul-int/2addr v0, v1
 
 	return v0
 .end method
 
 .method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
-	.locals 4
-
-	const/16 v0, 0x1f2c
-	const/16 v1, 0x57fc
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :jKvTdoKNefjjUjzP
-	goto/32 :zlhjAzIBlsZSxjrM
-	:jKvTdoKNefjjUjzP
-	:tNApDHyAfqwVaxoS
+    .locals 2
 
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
@@ -3805,33 +3405,34 @@
     :cond_6
     :goto_1
     return v1
-	:zlhjAzIBlsZSxjrM
-	goto/32 :tNApDHyAfqwVaxoS
 .end method
 
-.method public p(I)V
-	.locals 3
+	# Overloaded Method.method public p(ZFI)V
+	.locals 5
 
-	const/16 v0, 0x1195
+	const/16 v0, 0xbd23
 
-	const/16 v1, 0x71ca
+	const/16 v1, 0x13d6
 
-	rem-int v0, v0, v1
+	mul-int/2addr v0, v1
+
+	const/16 v0, 0x17e5
+
+	const/16 v1, 0x1958
+
+	xor-int/2addr v0, v1
+
+	const/16 v0, 0x544c
+
+	const/16 v1, 0x6ca7
+
+	add-int v0, v0, v1
 
 	return-void
 .end method
 
 .method public p()V
-	.locals 14
-
-	const/16 v0, 0x559c
-	const/16 v1, 0x4f72
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :BRrnIvpWMohBabpC
-	goto/32 :whSuUGqJkPRUHTuT
-	:BRrnIvpWMohBabpC
-	:nTEiIhSsVDLPUZOr
+    .locals 12
 
     sget v0, Lcom/androbaby/game2048/MainActivity;->s:I
 
@@ -4034,33 +3635,28 @@
     invoke-virtual {v0, v1}, Landroid/view/Window;->setBackgroundDrawableResource(I)V
 
     return-void
-	:whSuUGqJkPRUHTuT
-	goto/32 :nTEiIhSsVDLPUZOr
 .end method
 
-.method public q(ISBC)V
+	# Overloaded Method.method public q(IZFC)V
 	.locals 6
 
-	const/16 v0, 0x4493
+	const/16 v0, 0x12ff
 
-	const/16 v1, 0xca4c
+	const/16 v1, 0x237b
 
-	xor-int/2addr v0, v1
+	rem-int v0, v0, v1
+
+	const/16 v0, 0x2651
+
+	const/16 v1, 0xe98a
+
+	add-int v0, v0, v1
 
 	return-void
 .end method
 
 .method public q()V
     .locals 17
-
-	const/16 v0, 0xa853
-	const/16 v1, 0xb1a3
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :eGozruhRLNzgFNfk
-	goto/32 :WaFQbMMDgxEqouHS
-	:eGozruhRLNzgFNfk
-	:WtuJdMZLSPTSiTAT
 
     move-object/from16 v0, p0
 
@@ -4493,33 +4089,34 @@
     invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
 
     return-void
-	:WaFQbMMDgxEqouHS
-	goto/32 :WtuJdMZLSPTSiTAT
 .end method
 
-.method public r(IF)V
-	.locals 4
+	# Overloaded Method.method public r(Z)V
+	.locals 3
 
-	const/16 v0, 0x6e35
+	const/16 v0, 0x2eac
 
-	const/16 v1, 0xffb1
+	const/16 v1, 0x9786
+
+	add-int v0, v0, v1
+
+	const/16 v0, 0xad28
+
+	const/16 v1, 0xe37e
 
 	mul-int/2addr v0, v1
+
+	const/16 v0, 0xc652
+
+	const/16 v1, 0xd461
+
+	add-int v0, v0, v1
 
 	return-void
 .end method
 
 .method public r()V
-	.locals 4
-
-	const/16 v0, 0x32fc
-	const/16 v1, 0x3214
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :XqcgcowYvvtSHtxU
-	goto/32 :XyMTxBNBlqQhCIkt
-	:XqcgcowYvvtSHtxU
-	:cHjOvQkqarEmIVEp
+    .locals 2
 
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->ma:Ljava/lang/Boolean;
 
@@ -4555,39 +4152,28 @@
     invoke-virtual {p0}, Lcom/androbaby/game2048/MainActivity;->D()V
 
     return-void
-	:XyMTxBNBlqQhCIkt
-	goto/32 :cHjOvQkqarEmIVEp
 .end method
 
-.method public s(C)V
+	# Overloaded Method.method public s(I)V
 	.locals 3
 
-	const/16 v0, 0x1135
+	const/16 v0, 0x82ce
 
-	const/16 v1, 0x5bd4
+	const/16 v1, 0x4c2d
 
 	mul-int/2addr v0, v1
 
-	const/16 v0, 0x4849
+	const/16 v0, 0xeddc
 
-	const/16 v1, 0x8e74
+	const/16 v1, 0x48c8
 
-	xor-int/2addr v0, v1
+	rem-int v0, v0, v1
 
 	return-void
 .end method
 
 .method public s()V
     .locals 19
-
-	const/16 v0, 0x4e9f
-	const/16 v1, 0xc63c
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :SKMslCirHNSzqtTe
-	goto/32 :AJhTxwmdeGBBEkxj
-	:SKMslCirHNSzqtTe
-	:TtjktWiCTqIZRVDh
 
     move-object/from16 v0, p0
 
@@ -5217,33 +4803,34 @@
     invoke-virtual {v1, v2}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
 
     return-void
-	:AJhTxwmdeGBBEkxj
-	goto/32 :TtjktWiCTqIZRVDh
 .end method
 
-.method public t(S)V
-	.locals 3
+	# Overloaded Method.method public t(SB)V
+	.locals 4
 
-	const/16 v0, 0x9ea4
+	const/16 v0, 0x3173
 
-	const/16 v1, 0xafa1
+	const/16 v1, 0xd183
+
+	mul-int/2addr v0, v1
+
+	const/16 v0, 0xc987
+
+	const/16 v1, 0x9193
 
 	rem-int v0, v0, v1
+
+	const/16 v0, 0xda5d
+
+	const/16 v1, 0x7e44
+
+	xor-int/2addr v0, v1
 
 	return-void
 .end method
 
 .method public t()V
     .locals 24
-
-	const/16 v0, 0x2dde
-	const/16 v1, 0x625a
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :EgmipdxSriSylEqu
-	goto/32 :XjOQlVTLGwtSsfLY
-	:EgmipdxSriSylEqu
-	:iGNjIRjYnscOPQgL
 
     move-object/from16 v0, p0
 
@@ -6034,33 +5621,22 @@
     invoke-virtual {v1, v2}, Landroid/view/Window;->setBackgroundDrawableResource(I)V
 
     return-void
-	:XjOQlVTLGwtSsfLY
-	goto/32 :iGNjIRjYnscOPQgL
 .end method
 
-.method public u(FS)Z
-	.locals 4
+	# Overloaded Method.method public u(S)Z
+	.locals 3
 
-	const/16 v0, 0x8f84
+	const/16 v0, 0x8bc8
 
-	const/16 v1, 0xf2a5
+	const/16 v1, 0x7b82
 
-	xor-int/2addr v0, v1
+	add-int v0, v0, v1
 
 	return v0
 .end method
 
 .method public u()Z
-	.locals 4
-
-	const/16 v0, 0xd9fc
-	const/16 v1, 0xab5a
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :bDERjBgCLJOZivQK
-	goto/32 :oDirighiDZfYQzea
-	:bDERjBgCLJOZivQK
-	:IdvSoovCGWJhiBno
+    .locals 2
 
     iget-object v0, p0, Lcom/androbaby/game2048/MainActivity;->ma:Ljava/lang/Boolean;
 
@@ -6095,39 +5671,34 @@
     invoke-virtual {p0}, Lcom/androbaby/game2048/MainActivity;->D()V
 
     return v1
-	:oDirighiDZfYQzea
-	goto/32 :IdvSoovCGWJhiBno
 .end method
 
-.method public v(Z)I
-	.locals 3
+	# Overloaded Method.method public v(ZCBI)I
+	.locals 6
 
-	const/16 v0, 0x17b2
+	const/16 v0, 0xb737
 
-	const/16 v1, 0x72cf
+	const/16 v1, 0x9cd2
 
-	xor-int/2addr v0, v1
+	rem-int v0, v0, v1
 
-	const/16 v0, 0x858e
+	const/16 v0, 0x3d9c
 
-	const/16 v1, 0x7aa4
+	const/16 v1, 0xb7f3
 
-	xor-int/2addr v0, v1
+	rem-int v0, v0, v1
+
+	const/16 v0, 0x276a
+
+	const/16 v1, 0x77b5
+
+	rem-int v0, v0, v1
 
 	return v0
 .end method
 
 .method public v()I
-	.locals 5
-
-	const/16 v0, 0x7a9f
-	const/16 v1, 0x8ecd
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :XMMLgxXefwXXqRFq
-	goto/32 :vLhJcCsjnCuKDVwW
-	:XMMLgxXefwXXqRFq
-	:wKRLkLpIjOmGlNYW
+    .locals 3
 
     invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
@@ -6146,39 +5717,22 @@
     iget v0, p0, Lcom/androbaby/game2048/MainActivity;->H:I
 
     return v0
-	:vLhJcCsjnCuKDVwW
-	goto/32 :wKRLkLpIjOmGlNYW
 .end method
 
-.method public w(ZZI)I
+	# Overloaded Method.method public w(FIB)I
 	.locals 5
 
-	const/16 v0, 0x8a7f
+	const/16 v0, 0xa933
 
-	const/16 v1, 0xf46c
+	const/16 v1, 0x98e3
 
-	xor-int/2addr v0, v1
-
-	const/16 v0, 0x561a
-
-	const/16 v1, 0xf586
-
-	mul-int/2addr v0, v1
+	rem-int v0, v0, v1
 
 	return v0
 .end method
 
 .method public w()I
-	.locals 5
-
-	const/16 v0, 0x132e
-	const/16 v1, 0xcfc3
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :JeYFkhrEABVInHKi
-	goto/32 :fqyFnpocKIpGSHnG
-	:JeYFkhrEABVInHKi
-	:oJqtUBxspwTcHusa
+    .locals 3
 
     const/4 v0, 0x0
 
@@ -6199,39 +5753,28 @@
     move-result v0
 
     return v0
-	:fqyFnpocKIpGSHnG
-	goto/32 :oJqtUBxspwTcHusa
 .end method
 
-.method public x(S)I
+	# Overloaded Method.method public x(S)I
 	.locals 3
 
-	const/16 v0, 0x2ba2
+	const/16 v0, 0x7e4f
 
-	const/16 v1, 0xd2ac
+	const/16 v1, 0xd9ec
 
-	mul-int/2addr v0, v1
+	add-int v0, v0, v1
 
-	const/16 v0, 0xba9a
+	const/16 v0, 0x44d7
 
-	const/16 v1, 0x37f5
+	const/16 v1, 0x3276
 
-	mul-int/2addr v0, v1
+	rem-int v0, v0, v1
 
 	return v0
 .end method
 
 .method public x()I
-	.locals 5
-
-	const/16 v0, 0x888c
-	const/16 v1, 0xd2c5
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :rafpdIUyrOCfLKwG
-	goto/32 :FhMrlJhOsfQTXNeO
-	:rafpdIUyrOCfLKwG
-	:VkLwnONtlVdSUrbV
+    .locals 3
 
     const/4 v0, 0x0
 
@@ -6252,39 +5795,28 @@
     move-result v0
 
     return v0
-	:FhMrlJhOsfQTXNeO
-	goto/32 :VkLwnONtlVdSUrbV
 .end method
 
-.method public y(FBSB)I
-	.locals 6
+	# Overloaded Method.method public y(CF)I
+	.locals 4
 
-	const/16 v0, 0x86e2
+	const/16 v0, 0xb8c6
 
-	const/16 v1, 0x1dd7
+	const/16 v1, 0x5557
 
-	mul-int/2addr v0, v1
+	rem-int v0, v0, v1
 
-	const/16 v0, 0x6a78
+	const/16 v0, 0x8337
 
-	const/16 v1, 0x5595
+	const/16 v1, 0x7712
 
-	add-int v0, v0, v1
+	rem-int v0, v0, v1
 
 	return v0
 .end method
 
 .method public y()I
-	.locals 5
-
-	const/16 v0, 0x742e
-	const/16 v1, 0xc891
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :YGuPgvmXJWOOnFOr
-	goto/32 :jMFgyNjvjlfwdeuu
-	:YGuPgvmXJWOOnFOr
-	:MjAmIVByMHaCFJwN
+    .locals 3
 
     const/4 v0, 0x0
 
@@ -6305,33 +5837,34 @@
     move-result v0
 
     return v0
-	:jMFgyNjvjlfwdeuu
-	goto/32 :MjAmIVByMHaCFJwN
 .end method
 
-.method public z(S)I
-	.locals 3
+	# Overloaded Method.method public z(CI)I
+	.locals 4
 
-	const/16 v0, 0x145f
+	const/16 v0, 0x143d
 
-	const/16 v1, 0x8188
+	const/16 v1, 0x2ce6
+
+	xor-int/2addr v0, v1
+
+	const/16 v0, 0x565d
+
+	const/16 v1, 0x9c65
 
 	add-int v0, v0, v1
+
+	const/16 v0, 0xc766
+
+	const/16 v1, 0xea15
+
+	rem-int v0, v0, v1
 
 	return v0
 .end method
 
 .method public z()I
-	.locals 5
-
-	const/16 v0, 0x9671
-	const/16 v1, 0x4eb1
-	add-int v0, v0, v1
-	rem-int v0, v0, v1
-	if-gtz v0, :FTZSBNSUnIdWkndB
-	goto/32 :QxzzvolxlzXTelQb
-	:FTZSBNSUnIdWkndB
-	:xTvJGgSwZSDIXhdC
+    .locals 3
 
     const/4 v0, 0x0
 
@@ -6352,6 +5885,4 @@
     move-result v0
 
     return v0
-	:QxzzvolxlzXTelQb
-	goto/32 :xTvJGgSwZSDIXhdC
 .end method
