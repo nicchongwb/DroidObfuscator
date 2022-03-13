@@ -45,6 +45,88 @@ def Func3():
     txtarea.delete('1.0', END)
     txtarea.insert(END, "Technique 3")
 
+def repackage(targetFile):
+    '''Rebuilds and resigns the apk from the smali files'''
+    targetFile = "fourgoats"
+    searchResult = None #Used to search for the relevant files in current directory
+    targetDir = os.getcwd()  #Checks only for relevant files and folder in current directory
+    
+    fileName = "apktool"
+    fileList = os.listdir(targetDir)
+    
+    for file in fileList:
+        if (fileName in file):
+            searchResult = file
+    if(searchResult == None):
+        print("ERROR COMPILING! apktool not found in the same directory as this program!")
+        #GUI to create error message if no apktool is found
+        messagebox.showerror(title="Error", message="apktool file not found in same directory as this exe!")
+        return
+    else:
+        subprocess.run(["java", "-jar", searchResult, "b", targetFile]) #Recompiles back to APK
+        
+    searchResult = None #Clears search
+    
+    for file in fileList:
+            if (file.endswith(".jks")): #Searches for a key
+                searchResult = file
+                
+    if (os.name == "posix"): #Only run in linux to sign the app   
+        
+        if(searchResult == None):
+            print("ERROR SIGNING! Key not found!")
+            #TODO: GUI to create error message if no key is found
+            messagebox.showerror(title="Error", message="apktool file not found in same directory as this exe!")
+            #Following code spawns shell and prompts user to create a key before signing the APK
+            subprocess.run(["keytool", "-genkey", "-v", "-keystore", "2207RSAKey.jks", "-keyalg", "RSA", "-keysize", "2048","-validity", "10000", "-alias", "2207"])
+            subprocess.run(["jarsigner", "-verbose", "-sigalg", "SHA1withRSA", "-digestalg", "SHA1", "-keystore", "2207RSAKey.jks", targetFile +".apk", "2207"])
+            subprocess.run(["jarsigner", "-verify", "-verbose", "-certs", targetFile + ".apk"])
+        else:
+            print("Key Found! Using " + searchResult + "to sign app")
+            subprocess.run(["jarsigner", "-verbose", "-sigalg", "SHA1withRSA", "-digestalg", "SHA1", "-keystore", searchResult, targetFile +".apk", "2207"])
+            subprocess.run(["jarsigner", "-verify", "-verbose", "-certs", targetFile + ".apk"])
+        return
+            
+    if (os.name == "nt"): #For those clients running in Windows to sign the app
+        targetDir = "C:/Program Files/Java/" #Search for both keytool and jarsigner in the JDK directory, searches for any version of JDK
+        fileList = os.listdir(targetDir)
+        check = 0
+        for i in fileList: #Search for bin directory on Windows as the two binaries requires relevant dll to function
+            if(i.startswith("jdk")):
+                targetDir = targetDir + i + "/bin/"
+                fileList = os.listdir(targetDir)
+                check = 1 #Hit found for JDK
+               
+        if(check == 0):
+            messagebox.showerror(title="Error", message="Unable to locate JDK directory! Ensure JDK is in C:\Program Files\Java!")
+            return
+        
+                
+        if(searchResult == None): #Unable to find key in directory, using keytool to create
+            fileName = "keytool.exe"
+        
+            if (fileName in fileList):
+                searchResult = targetDir + fileName
+                subprocess.run([searchResult, "-genkey", "-v", "-keystore", "2207RSAKey.jks", "-keyalg", "RSA", "-keysize", "2048","-validity", "10000", "-alias", "2207"])
+            else:
+                messagebox.showerror(title="Error", message="Unable to locate keytool.exe! Ensure JDK is installed in C:\Program Files\Java\!")
+                return
+        
+        searchResult = None
+        
+        fileName = "jarsigner.exe"
+        if (fileName in fileList):
+            searchResult = targetDir + fileName
+            
+        if(searchResult != None):
+            subprocess.run([searchResult, "-verbose", "-sigalg", "SHA1withRSA", "-digestalg", "SHA1", "-keystore", "2207RSAKey.jks", targetFile +".apk", "2207"])
+            subprocess.run([searchResult, "-verify", "-verbose", "-certs", targetFile + ".apk"])
+        else:
+            messagebox.showerror(title="Error", message="Unable to locate jarsigner.exe! Ensure JDK is installed in C:\Program Files\Java!")
+            return
+
+        return
+
 ws = Tk()
 ws.title("Obfuscation GUI")
 ws.geometry("800x500")
@@ -91,8 +173,8 @@ Button(
 
 Button(
     ws,
-    text="Technique 3",
-    command=Func3
+    text="Recompile & Sign to APK",
+    command=command=lambda: repackage("fourgoats")
     ).pack(side=LEFT, expand=True, fill=X, padx=20)
 
 
