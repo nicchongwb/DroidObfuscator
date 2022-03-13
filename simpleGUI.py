@@ -53,22 +53,24 @@ def repackage():
     
     searchResult = None #Used to search for the relevant files in current directory
     targetDir = os.getcwd()  #Checks only for relevant files and folder in current directory
+    fileList = os.listdir(targetDir)
+    if (targetFile not in fileList):
+        messagebox.showerror(title="Error", message=str(targetFile) + " not found in current directory!")
+        return
     
     fileName = "apktool"
-    fileList = os.listdir(targetDir)
     
     for file in fileList:
         if (fileName in file):
             searchResult = file
     if(searchResult == None):
         print("ERROR COMPILING! apktool not found in the same directory as this program!")
-        #GUI to create error message if no apktool is found
+        #Error Message Prompt if apktool is not found
         messagebox.showerror(title="Error", message="apktool file not found in same directory as this exe!")
         return
     else:
         subprocess.run(["java", "-jar", searchResult, "b", targetFile]) #Recompiles back to APK
 
-      
     searchResult = None #Clears search
     
     for file in fileList:
