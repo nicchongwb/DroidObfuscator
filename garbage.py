@@ -2,6 +2,42 @@ import subprocess
 import sys
 import os
 
+def get_lines_from_file(fileName):
+	try:
+		with open(fileName, "r", encoding="utf-8") as f:
+			return list(filter(None, (line for line in f)))
+	except Exception as e:
+		raise
+	    
+def badCodeInject(fileName):
+    '''Inject bad code into methods to defeat decompilation'''
+    fileName = "Main.smali"
+    try:
+        lines = get_lines_from_file(fileName)
+    except FileNotFoundError:
+        print("Error! File " + fileName + " does not exist!")
+        return
+        
+    check = 0  # Used as a check if editing a method
+    obsfuscatedFile = open("newMain.smali", "w") #Edit a new smali file
+    
+    for line in lines:
+        if (line.startswith(".method ") and (" abstract " not in line) and (" native " not in line) and (check == 0)):
+            print(line)
+            obsfuscatedFile.write(line)
+            obsfuscatedFile.write("\tgoto :sensitivelabel\n") 
+            obsfuscatedFile.write("\t:sensitivelabel2\n")  
+            check = 1
+
+        elif (line.startswith(".end method") and (check == 1)):
+            obsfuscatedFile.write("\t:sensitivelabel\n")  
+            obsfuscatedFile.write("\tgoto :sensitivelabel2\n") 
+            obsfuscatedFile.write(line)
+            check = 0
+        else:
+            obsfuscatedFile.write(line)
+    obsfuscatedFile.close()
+
 def xorify(line, val=0):
     ''' Obfuscation through utilising more registers and injecting bad smali code'''
     xorValue = hex(int(line[12:], 16)) #Get the value to XOR
@@ -41,10 +77,9 @@ def repackage(targetFile):
         subprocess.run(["java", "-jar", searchResult, "b", targetFile]) #Recompiles back to APK
         
     searchResult = None #Clears search
-    print(searchResult)
+ 
     if (os.name == "posix"): #Only run in linux to sign the app   
         for file in fileList:
-            print(file)
             if (file.endswith(".jks")): #Searches for a key
                 searchResult = file
         
@@ -62,9 +97,10 @@ def repackage(targetFile):
 
 def main():
     smaliLine = "const/4 v2, 0x0"
-    if (smaliLine.startswith("const/4")):
-        xorify(smaliLine)
-    repackage("fourgoats")
+    badCodeInject("Main.smali")
+    #if (smaliLine.startswith("const/4")):
+    #    xorify(smaliLine)
+    #repackage("fourgoats")
 
 if __name__ == "__main__":
     main()
