@@ -3,10 +3,10 @@ from tkinter import filedialog, simpledialog, messagebox
 import subprocess
 import sys
 import os
-import re
+import time
 from main import opaque_predicate, overload_method
 
-get_lines = list()
+#get_lines = list()
 # Creates a temp file for updating of new techniques. File to be removed.
 outfile_file_name = r"new_MainActivity.smali"
 outfile = open(outfile_file_name, "w+", encoding="utf-8")
@@ -23,13 +23,13 @@ def openFile():
         )
     pathh.insert(END, tf)
     global get_lines
-    with open(tf, "r", encoding="utf-8") as file: 
-        # prints to textbox       
+    with open(tf, "r", encoding="utf-8") as file:
+        # prints to textbox
         file_cont = file.read()
         # go back to beginning of file and convert lines into a list
         file.seek(0)
         get_lines = list(file.readlines())
-        
+
     txtarea.insert(END, file_cont)
 
 
@@ -52,15 +52,26 @@ def DisplayUpdate(newfile, outfile):
     tf = open(newfile)
     file_cont = tf.read()
     txtarea2.insert(END, file_cont)
-    outfile.close()
+    #outfile.close()
     tf.close()
     #os.remove(newfile)
 
 def Func1(get_lines, outfile):
     outfile = open(outfile_file_name, "w+", encoding="utf-8")
     # locals_pattern = re.compile(r"\s+\.locals\s(?P<count>\d+)")
+    start = time.time()
     opaque_predicate(get_lines, outfile)
+    end = time.time()
+    print(f"Opaque Predicate time elapsed: {end - start} seconds")
     DisplayUpdate(outfile_file_name, outfile)
+
+    start = time.time()
+    overload_method(get_lines, outfile)
+    end = time.time()
+    print(f"Overload Method time elapsed: {end - start} seconds")
+    DisplayUpdate(outfile_file_name, outfile)
+
+    outfile.close()
 
 def Func2(get_lines, outfile):
     outfile = open(outfile_file_name, "w+", encoding="utf-8")
@@ -227,7 +238,7 @@ Button(
     text="Technique 2",
     command=lambda: Func2(get_lines, outfile)
     ).place(x=80, y=550)
-    
+
 Button(
     ws,
     text="Technique 3",
@@ -245,13 +256,13 @@ Button(
     text="Technique 5",
     command=lambda: Func2(get_lines, outfile)
     ).place(x=320, y=500)
-    
+
 Button(
     ws,
     text="Technique 6",
     command=lambda: Func1(get_lines, outfile)
     ).place(x=320, y=550)
-    
+
 Button(
     ws,
     text="Open File",
