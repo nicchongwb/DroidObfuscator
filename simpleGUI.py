@@ -8,7 +8,7 @@ from main import opaque_predicate, overload_method
 
 get_lines = list()
 # Creates a temp file for updating of new techniques. File to be removed.
-outfile_file_name = r"C:\Users\DEV-Hon Siang\Desktop\new_MainActivity.smali"
+outfile_file_name = r"new_MainActivity.smali"
 outfile = open(outfile_file_name, "w+", encoding="utf-8")
 # functions
 def openFile():
@@ -168,11 +168,14 @@ def repackage():
 ws = Tk()
 ws.title("Obfuscation GUI")
 ws.geometry("960x600")
+ws.resizable(False, False)
 ws['bg']='#2a636e'
 
-# adding frame
 frame = Frame(ws)
-frame.place(x=80, y=20, width=800)
+frame.place(x=80, y=20, width=400)
+
+frame2 = Frame(ws)
+frame2.place(x=500, y=20, width=400)
 
 # adding scrollbars
 ver_sb = Scrollbar(frame, orient=VERTICAL )
@@ -181,17 +184,17 @@ ver_sb.pack(side=RIGHT, fill=BOTH)
 hor_sb = Scrollbar(frame, orient=HORIZONTAL)
 hor_sb.pack(side=BOTTOM, fill=BOTH)
 
-ver_sb2 = Scrollbar(frame, orient=VERTICAL )
+ver_sb2 = Scrollbar(frame2, orient=VERTICAL )
 ver_sb2.pack(side=RIGHT, fill=BOTH)
 
-hor_sb2 = Scrollbar(frame, orient=HORIZONTAL)
+hor_sb2 = Scrollbar(frame2, orient=HORIZONTAL)
 hor_sb2.pack(side=BOTTOM, fill=BOTH)
 
 # adding writing space
 txtarea = Text(frame, width=40, height=20)
 txtarea.pack(side=LEFT, padx=20)
 
-txtarea2 = Text(frame, width=40, height=20)
+txtarea2 = Text(frame2, width=40, height=20)
 txtarea2.pack(side=LEFT, padx=20)
 
 # binding scrollbar with text area
