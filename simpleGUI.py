@@ -231,37 +231,7 @@ Button(
     ws,
     text="Technique 1",
     command=lambda: Func1(get_lines,outfile)
-    ).place(x=80, y=500)
-
-Button(
-    ws,
-    text="Technique 2",
-    command=lambda: Func2(get_lines, outfile)
-    ).place(x=80, y=550)
-
-Button(
-    ws,
-    text="Technique 3",
-    command=lambda: Func1(get_lines, outfile)
-    ).place(x=200,y=500)
-
-Button(
-    ws,
-    text="Technique 4",
-    command=lambda: Func1(get_lines, outfile)
-    ).place(x=200, y=550)
-
-Button(
-    ws,
-    text="Technique 5",
-    command=lambda: Func2(get_lines, outfile)
     ).place(x=320, y=500)
-
-Button(
-    ws,
-    text="Technique 6",
-    command=lambda: Func1(get_lines, outfile)
-    ).place(x=320, y=550)
 
 Button(
     ws,
