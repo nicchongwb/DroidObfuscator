@@ -12,25 +12,30 @@ outfile_file_name = r"new_MainActivity.smali"
 outfile = open(outfile_file_name, "w+", encoding="utf-8")
 # functions
 def openFile():
-    tf = filedialog.askopenfilename(
-        initialdir="/",
-        title="Open Text file",
-        filetypes=(
-        ('smali files', '*.smali'),
-        ('text files', '*.txt'),
-        ('All files', '*.*')
-        )
-        )
-    pathh.insert(END, tf)
-    global get_lines
-    with open(tf, "r", encoding="utf-8") as file:
-        # prints to textbox
-        file_cont = file.read()
-        # go back to beginning of file and convert lines into a list
-        file.seek(0)
-        get_lines = list(file.readlines())
-
-    txtarea.insert(END, file_cont)
+    '''Opens and reads the target smali file '''
+    try:
+        tf = filedialog.askopenfilename(
+            initialdir="/",
+            title="Open Text file",
+            filetypes=(
+            ('smali files', '*.smali'),
+            ('text files', '*.txt'),
+            ('All files', '*.*')
+            )
+            )
+    
+    
+        pathh.insert(END, tf)
+        global get_lines
+        with open(tf, "r", encoding="utf-8") as file:
+            # prints to textbox
+            file_cont = file.read()
+            # go back to beginning of file and convert lines into a list
+            file.seek(0)
+            get_lines = list(file.readlines())
+            txtarea.insert(END, file_cont)
+    except FileNotFoundError:
+        return
 
 
 def saveFile():
