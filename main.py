@@ -5,6 +5,8 @@ import random
 import string
 import time
 from hashlib import md5
+import glob
+from contextlib import contextmanager
 
 # Other methods
 def generate_randInt(min, max):
@@ -46,6 +48,9 @@ def rename_method(method_name) :
 
 def get_string_md5(input_string):
     return md5(input_string.encode()).hexdigest()
+
+def get_libs_to_ignore():
+	return read_file(os.path.join(os.path.dirname(__file__), "Lists", "libs_to_ignore.txt"))
 
 def get_methodSig(line):
 	isStatic = False
@@ -230,7 +235,6 @@ def nop_addition(get_lines, outfile):
 	# pattern = re.compile(r"\s+(?P<op_code>\S+)")
 	for line in get_lines:
 		outfile.write(line + "\n") 
-		is_local = locals_pattern.match(line) # Check if line is .local
 		match = re.compile(r"\s+(?P<op_code>\S+)").match(line)
 		if match:
 			op_code = match.group("op_code")
@@ -266,55 +270,56 @@ def debug_removal(file_content, outfile):
 	outfile.close()
 
 def rename_meth_declarations(get_lines, out_file):
-	skip_remaining_lines = False
+	skip_lines = False
 	class_name = None
 	ignore_package_names = []
-	class_names_to_ignore = get_android_class_names()
-	method_pattern = re.compile(
+	ignore_class_names_list = get_android_class_names()
+	method_declaration_pattern = re.compile(
     r"\.method.+?(?P<method_name>\S+?)"
     r"\((?P<method_param>\S*?)\)"
     r"(?P<method_return>\S+)",
     re.UNICODE,
 	)
-	renamed_methods = set()
+	renamed_methods_set = set()
+	#loop through lines in file
 	for line in get_lines:
 
-		if skip_remaining_lines:
+		if skip_lines:
 			out_file.write(line)
 			continue
 
 		if not class_name:
+			#check if the line matches a class pattern
 			class_match = re.compile(r"L[^():\s]+?;", re.UNICODE).match(line)
-			# If this is an enum class, don't rename anything.
+			# If an enum class, don't perform renaming
 			if " enum " in line:
-				skip_remaining_lines = True
+				skip_lines = True
 				out_file.write(line)
 				continue
 			elif class_match:
+				# group as class name
 				class_name = class_match.group("class_name")
+				# if class name in the ignore list or class name consists of package name, skip the remaining line
 				if (
-					class_name in class_names_to_ignore
+					class_name in ignore_class_names_list
 					or class_name.startswith(
 						tuple(ignore_package_names)
 					)
 				):
-					# The methods of this class should be ignored when
-					# renaming, so proceed with the next class.
-					skip_remaining_lines = True
+					skip_lines = True
 				out_file.write(line)
 				continue
 
-		# Skip virtual methods, consider only the direct methods defined
-		# earlier in the file.
+		# Skip any virtual methods
 		if line.startswith("# virtual methods"):
-			skip_remaining_lines = True
+			skip_lines = True
 			out_file.write(line)
 			continue
 
-		# Method declared in class.
-		method_match = method_pattern.match(line)
+		# Method that is declared in class.
+		method_match = method_declaration_pattern.match(line)
 
-		# Avoid constructors, native and abstract methods.
+		# Avoid any constructors,native and abstract methods.
 		if (
 			method_match
 			and "<init>" not in line
@@ -329,6 +334,7 @@ def rename_meth_declarations(get_lines, out_file):
 			)
 			# Rename method declaration (invocations of this method will be
 			# renamed later).
+			# rename the method
 			method_name = method_match.group("method_name")
 			out_file.write(
 				line.replace(
@@ -336,9 +342,8 @@ def rename_meth_declarations(get_lines, out_file):
 					"{0}(".format(rename_method(method_name)),
 				)
 			)
-			# Direct methods cannot be overridden, so they can be called
-			# only by the same class that declares them.
-			renamed_methods.add(
+			# Direct methods will not be renamed
+			renamed_methods_set.add(
 				"{class_name}->{method}".format(
 					class_name=class_name, method=method
 				)
@@ -346,10 +351,11 @@ def rename_meth_declarations(get_lines, out_file):
 		else:
 			out_file.write(line)
 
-	return renamed_methods
+	return renamed_methods_set
 
-def rename_method_invocations(get_lines, renamed_methods, out_file):
-	invoke_pattern = re.compile(
+def rename_method_invocations(get_lines, renamed_methods_set, out_file):
+	#method inovation regex pattern
+	method_invocation_pattern = re.compile(
     r"\s+(?P<invoke_type>invoke-\S+)\s"
     r"{(?P<invoke_pass>[vp0-9,.\s]*)},\s"
     r"(?P<invoke_object>\S+?)"
@@ -357,10 +363,11 @@ def rename_method_invocations(get_lines, renamed_methods, out_file):
     r"\((?P<invoke_param>\S*?)\)"
     r"(?P<invoke_return>\S+)",
     re.UNICODE,
-)
+)	
+	#loop through lines in file
 	for line in get_lines:
-		# Method invocation.
-		invoke_match = invoke_pattern.match(line)
+		# Check if line matches the method invocation pattern
+		invoke_match = method_invocation_pattern.match(line)
 		if invoke_match:
 			method = (
 				"{class_name}->"
@@ -379,7 +386,7 @@ def rename_method_invocations(get_lines, renamed_methods, out_file):
 			# renamed.
 			if (
 				"direct" in invoke_type or "static" in invoke_type
-			) and method in renamed_methods:
+			) and method in renamed_methods_set:
 				method_name = invoke_match.group("invoke_method")
 				out_file.write(
 					line.replace(
@@ -392,17 +399,18 @@ def rename_method_invocations(get_lines, renamed_methods, out_file):
 		else:
 			out_file.write(line)	
 
-def method_rename():
+
+def methods_rename():
 	get_lines = get_lines_from_file(outfile_file_name)
 	outfile = open(outfile_file_name, "w+", encoding="utf-8")
-	renamed_methods = rename_meth_declarations(get_lines, outfile)
+	renamed_methods_set = rename_meth_declarations(get_lines, outfile)
 	get_lines = get_lines_from_file(outfile_file_name)
 	outfile = open(outfile_file_name, "w+", encoding="utf-8")
-	rename_method_invocations(get_lines, renamed_methods, outfile)
+	rename_method_invocations(get_lines, renamed_methods_set, outfile)
 
 # Main Loop
 script_dir = os.path.dirname(__file__)
-smali_file_name = "MainActivity.smali"
+smali_file_name = "Login.smali"
 abs_file_path = os.path.join(script_dir, smali_file_name)
 outfile_file_name = "new_MainActivity.smali"
 
@@ -435,4 +443,4 @@ outfile = open(outfile_file_name, "w", encoding="utf-8")
 
 debug_removal(file_content, outfile)
 
-method_rename()
+methods_rename()
