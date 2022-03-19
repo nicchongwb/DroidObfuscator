@@ -4,9 +4,8 @@ import os
 import random
 import string
 import time
-from hashlib import md5
-import glob
-from contextlib import contextmanager
+from hashlib import sha3_256
+
 
 # Other methods
 def generate_randInt(min, max):
@@ -40,17 +39,14 @@ def get_nop_valid_op_codes():
 	return read_file(os.path.join(os.path.dirname(__file__), "Lists", "nop_valid_op_codes.txt"))
 
 def get_android_class_names():
-	return read_file(os.path.join(os.path.dirname(__file__), "Lists", "android_class_names_api_27.txt"))
+	return read_file(os.path.join(os.path.dirname(__file__), "Lists", "android_class_names.txt"))
 
 def rename_method(method_name) :
-        method_md5 = get_string_md5(method_name)
-        return "m{0}".format(method_md5.lower()[:8])
+        method_sha3_256 = sha3_256_hash(method_name)
+        return "m{0}".format(method_sha3_256.lower()[:8])
 
-def get_string_md5(input_string):
-    return md5(input_string.encode()).hexdigest()
-
-def get_libs_to_ignore():
-	return read_file(os.path.join(os.path.dirname(__file__), "Lists", "libs_to_ignore.txt"))
+def sha3_256_hash(input_string):
+    return sha3_256(input_string.encode()).hexdigest()
 
 def get_methodSig(line):
 	isStatic = False
@@ -234,12 +230,11 @@ def nop_addition(get_lines, outfile):
 	op_codes = get_nop_valid_op_codes()
 	# pattern = re.compile(r"\s+(?P<op_code>\S+)")
 	for line in get_lines:
-		outfile.write(line + "\n") 
+		outfile.write(line) 
 		match = re.compile(r"\s+(?P<op_code>\S+)").match(line)
 		if match:
 			op_code = match.group("op_code")
-			# If this is a valid op code, insert some nop instructions
-			# after it.
+			# If it is a valid op code, insert nop instructions
 			if op_code in op_codes:
 				outfile.write("\tnop\n" * generate_randInt(1, 4))
 	
@@ -250,26 +245,30 @@ def debug_removal(file_content, outfile):
 	# param_pattern = re.compile(r"\s+\.param\s(?P<register>[vp0-9]+)")
 	reversed_lines = []
 	inside_param_declaration = False
+	#loop through the file content
 	for line in reversed(file_content.splitlines(keepends=True)):
+		# check if line starts with ".end param", if so set inside_param_declaration to True and append line to reversed_lines
 		if line.strip().startswith(".end param"):
 			inside_param_declaration = True
 			reversed_lines.append(line)
+		# check if line starts with ".param" and inside_param_declaration is True, remove any information from param
 		elif (line.strip().startswith(".param ") and inside_param_declaration):
 			inside_param_declaration = False
-			# Remove unnecessary data from param (name and type
-			# comment).
 			line = "{0}\n".format(re.compile(r"\s+\.param\s(?P<register>[vp0-9]+)").match(line).group())
 			reversed_lines.append(line)
+		# check if line is in the param declaration
 		elif not inside_param_declaration:
+			# check if line consists any op code, if no, add the line to the reversed_lines
 			if not any(line.strip().startswith(op_code) for op_code in debug_op_codes):
 				reversed_lines.append(line)
 		else:
 			reversed_lines.append(line)
 
+	# write the reversed_lines to the outfile
 	outfile.writelines(list(reversed(reversed_lines)))
 	outfile.close()
 
-def rename_meth_declarations(get_lines, out_file):
+def rename_method_declarations(get_lines, out_file):
 	skip_lines = False
 	class_name = None
 	ignore_package_names = []
@@ -279,29 +278,27 @@ def rename_meth_declarations(get_lines, out_file):
     r"\((?P<method_param>\S*?)\)"
     r"(?P<method_return>\S+)",
     re.UNICODE,
-	)
+)
 	renamed_methods_set = set()
 	#loop through lines in file
 	for line in get_lines:
-
 		if skip_lines:
 			out_file.write(line)
 			continue
-
 		if not class_name:
 			#check if the line matches a class pattern
-			class_match = re.compile(r"L[^():\s]+?;", re.UNICODE).match(line)
+			class_match = re.compile(r"\.class.+?(?P<class_name>\S+?;)", re.UNICODE).match(line)
 			# If an enum class, don't perform renaming
 			if " enum " in line:
 				skip_lines = True
 				out_file.write(line)
 				continue
 			elif class_match:
-				# group as class name
+				# group the line as class name
 				class_name = class_match.group("class_name")
 				# if class name in the ignore list or class name consists of package name, skip the remaining line
 				if (
-					class_name in ignore_class_names_list
+					class_name in ignore_class_names_list 
 					or class_name.startswith(
 						tuple(ignore_package_names)
 					)
@@ -318,22 +315,14 @@ def rename_meth_declarations(get_lines, out_file):
 
 		# Method that is declared in class.
 		method_match = method_declaration_pattern.match(line)
-
+		
 		# Avoid any constructors,native and abstract methods.
-		if (
-			method_match
-			and "<init>" not in line
-			and "<clinit>" not in line
-			and " native " not in line
-			and " abstract " not in line
-		):
+		if (method_match and "<init>" not in line and "<clinit>" not in line and " native " not in line and " abstract " not in line):
 			method = "{method_name}({method_param}){method_return}".format(
 				method_name=method_match.group("method_name"),
 				method_param=method_match.group("method_param"),
 				method_return=method_match.group("method_return"),
 			)
-			# Rename method declaration (invocations of this method will be
-			# renamed later).
 			# rename the method
 			method_name = method_match.group("method_name")
 			out_file.write(
@@ -343,14 +332,10 @@ def rename_meth_declarations(get_lines, out_file):
 				)
 			)
 			# Direct methods will not be renamed
-			renamed_methods_set.add(
-				"{class_name}->{method}".format(
-					class_name=class_name, method=method
-				)
-			)
+			renamed_methods_set.add("{class_name}->{method}".format(class_name=class_name, method=method))
 		else:
 			out_file.write(line)
-
+	out_file.close()
 	return renamed_methods_set
 
 def rename_method_invocations(get_lines, renamed_methods_set, out_file):
@@ -379,11 +364,7 @@ def rename_method_invocations(get_lines, renamed_methods_set, out_file):
 				)
 			)
 			invoke_type = invoke_match.group("invoke_type")
-			# Rename the method invocation only if is direct or static (we
-			# are renaming only direct methods). The list of methods to
-			# rename already contains the class name of each method, since
-			# here we have a list of methods whose declarations were already
-			# renamed.
+			# Rename the method only if is direct or static
 			if (
 				"direct" in invoke_type or "static" in invoke_type
 			) and method in renamed_methods_set:
@@ -397,50 +378,46 @@ def rename_method_invocations(get_lines, renamed_methods_set, out_file):
 			else:
 				out_file.write(line)
 		else:
-			out_file.write(line)	
-
+			out_file.write(line)
+	out_file.close()
 
 def methods_rename():
-	get_lines = get_lines_from_file(outfile_file_name)
-	outfile = open(outfile_file_name, "w+", encoding="utf-8")
-	renamed_methods_set = rename_meth_declarations(get_lines, outfile)
-	get_lines = get_lines_from_file(outfile_file_name)
-	outfile = open(outfile_file_name, "w+", encoding="utf-8")
+	get_lines = get_lines_from_file(abs_file_path)
+	outfile = open(out_file_path, "w", encoding="utf-8")
+	renamed_methods_set = rename_method_declarations(get_lines, outfile)
+	get_lines = get_lines_from_file(out_file_path)
+	outfile = open(out_file_path, "w", encoding="utf-8")
 	rename_method_invocations(get_lines, renamed_methods_set, outfile)
 
 # Main Loop
 script_dir = os.path.dirname(__file__)
-smali_file_name = "Login.smali"
+smali_file_name = "MainActivity.smali"
 abs_file_path = os.path.join(script_dir, smali_file_name)
 outfile_file_name = "new_MainActivity.smali"
+out_file_path = os.path.join(script_dir, outfile_file_name)
 
-get_lines = get_lines_from_file(abs_file_path)
-outfile = open(outfile_file_name, "w+", encoding="utf-8")
+# get_lines = get_lines_from_file(abs_file_path)
+# outfile = open(outfile_file_name, "w+", encoding="utf-8")
 
-start = time.time()
-opaque_predicate(get_lines, outfile)
-end = time.time()
-print(f"Opaque Predicate time elapsed: {end - start} seconds")
+# start = time.time()
+# opaque_predicate(get_lines, outfile)
+# end = time.time()
+# print(f"Opaque Predicate time elapsed: {end - start} seconds")
 
-get_lines = get_lines_from_file(outfile_file_name) # Use this for normal, not timing
-# get_lines = get_lines_from_file(smali_file_name) # Use this for timing
-outfile = open(outfile_file_name, "w+", encoding="utf-8")
+# get_lines = get_lines_from_file(outfile_file_name) # Use this for normal, not timing
+# # get_lines = get_lines_from_file(smali_file_name) # Use this for timing
+# outfile = open(outfile_file_name, "w+", encoding="utf-8")
 
-start = time.time()
-overload_method(get_lines, outfile)
-end = time.time()
-print(f"Overload Method time elapsed: {end - start} seconds")
+# start = time.time()
+# overload_method(get_lines, outfile)
+# end = time.time()
+# print(f"Overload Method time elapsed: {end - start} seconds")
 
 # overload_method(get_lines, outfile)
 
-get_lines = get_lines_from_file(outfile_file_name)
-outfile = open(outfile_file_name, "w+", encoding="utf-8")
+# nop_addition(get_lines, outfile)
 
-nop_addition(get_lines, outfile)
-
-file_content = read_file_content(outfile_file_name)
-outfile = open(outfile_file_name, "w", encoding="utf-8")
-
-debug_removal(file_content, outfile)
+# file_content = read_file_content(smali_file_name)
+# debug_removal(file_content, outfile)
 
 methods_rename()
