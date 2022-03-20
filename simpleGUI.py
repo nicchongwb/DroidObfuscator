@@ -24,7 +24,7 @@ def openFile():
             )
             )
 
-
+        pathh.delete(0, END)    #clear path box
         pathh.insert(END, tf)
 
         with open(tf, "r", encoding="utf-8") as file:
@@ -39,34 +39,52 @@ def openFile():
         return
 
 
-def saveFile():
-    tf = filedialog.asksaveasfile(
-        mode='w',
-
-        title ="Save file",
-        defaultextension=".txt"
+def decompile():
+    ''' Decompiles APK into folder in same directory '''
+    try:
+        apk = filedialog.askopenfilename(
+            initialdir="/",
+            title="Open APK file",
+            filetypes=(
+            ('apk files', '*.apk'),
+            )
         )
-    tf.config(mode='w')
+        print(apk)
 
-    pathh.insert(END, tf)
-    data = str(txtarea.get(1.0, END))
-    tf.write(data)
+        fileName = "apktool"
+        searchResult = None #Used to search for the relevant files in current directory
+        targetDir = os.getcwd()  #Checks only for relevant files and folder in current directory
+        fileList = os.listdir(targetDir)
+        for file in fileList:
+            if (fileName in file):
+                searchResult = file
+        if(searchResult == None):
+            print("ERROR COMPILING! apktool not found in the same directory as this program!")
+            #Error Message Prompt if apktool is not found
+            messagebox.showerror(title="Error", message="apktool file not found in same directory as this exe!")
+            return
+        else:
+            subprocess.run(["java", "-jar", searchResult, "d", apk]) #Decompiles APK
+            messagebox.showinfo("Success!", "APK has been decompiled!")
 
-    tf.close()
+    except FileNotFoundError:
+        return
+
 
 def DisplayUpdate(newfile, outfile):
+    ''' Updates 2nd textbox with changes '''
     txtarea2.delete('1.0', END)
     file = open(newfile)
     file_cont = file.read()
     txtarea2.insert(END, file_cont)
-    #outfile.close()
     file.close()
-    #os.remove(newfile)
+
 
 def Func1(get_lines):
+    ''' Runs obfuscation methods '''
     outfile_file_name = os.path.basename(tf)
     file_path = tf
-    outfile = open(tf, "w", encoding="utf-8")
+    outfile = open(tf, "w", encoding="utf-8") # Opens file chosen and prepares to overwrite with new changes 
 
     start = time.time()
     opaque_predicate(get_lines, outfile)
@@ -87,7 +105,7 @@ def Func1(get_lines):
     badCodeInject(tf)
     print("bad code injected")
 
-    DisplayUpdate(tf, outfile)
+    DisplayUpdate(tf, outfile)  # Display changes in 2nd text box
 
     outfile.close()
 
@@ -269,8 +287,8 @@ Button(
 
 Button(
     ws,
-    text="Save File",
-    command=saveFile
+    text="Decompile APK",
+    command=lambda: decompile()
     ).place(x=440, y=550)
 
 Button(
