@@ -93,10 +93,19 @@ def repackage():
     '''if targetFile is None:'''
     '''    return	     '''
 
-    targetFile = filedialog.askdirectory()
-    if targetFile is None:
+    targetFile = filedialog.askdirectory(initialdir=os.getcwd(), title="Select your Source File directory") #Opens file prompt for input
+          
+    if (targetFile == "" or targetFile is None):
         return
-
+    
+    targetDir = os.path.dirname(targetFile) #Checks only for relevant files and folder in the directory
+    targetFile = os.path.basename(os.path.normpath(targetFile)) #Strips path to retrieve the target folder
+    searchResult = None #Used to search for the relevant files in current directory
+    fileList = os.listdir(targetDir)
+    if (targetFile not in fileList):
+        messagebox.showerror(title="Error", message=str(targetFile) + " not found in current directory!")
+        return
+    
     searchResult = None #Used to search for the relevant files in current directory
     targetDir = os.getcwd()  #Checks only for relevant files and folder in current directory
     fileList = os.listdir(targetDir)
