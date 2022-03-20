@@ -34,7 +34,7 @@ def openFile():
             file.seek(0)
             get_lines = list(file.readlines())
             txtarea.insert(END, file_cont)
-            tf.close()
+
     except FileNotFoundError:
         return
 
@@ -55,23 +55,23 @@ def saveFile():
     tf.close()
 
 def DisplayUpdate(newfile, outfile):
-    tf = open(newfile)
-    file_cont = tf.read()
+    txtarea2.delete('1.0', END)
+    file = open(newfile)
+    file_cont = file.read()
     txtarea2.insert(END, file_cont)
     #outfile.close()
-    tf.close()
+    file.close()
     #os.remove(newfile)
 
 def Func1(get_lines):
     outfile_file_name = os.path.basename(tf)
-    print(outfile_file_name)
-    outfile = open(outfile_file_name, "w", encoding="utf-8")
+    file_path = tf
+    outfile = open(tf, "w", encoding="utf-8")
 
     start = time.time()
     opaque_predicate(get_lines, outfile)
     end = time.time()
     print(f"Opaque Predicate time elapsed: {end - start} seconds")
-    DisplayUpdate(outfile_file_name, outfile)
 
     start = time.time()
     overload_method(get_lines, outfile)
@@ -79,9 +79,15 @@ def Func1(get_lines):
     print(f"Overload Method time elapsed: {end - start} seconds")
 
     nop_addition(get_lines, outfile)
+    print("nop added")
     debug_removal(file_cont, outfile)
+    print("debug added")
     methods_rename(get_lines, outfile)
-    DisplayUpdate(outfile_file_name, outfile)
+    print("rename added")
+    badCodeInject(tf)
+    print("bad code injected")
+
+    DisplayUpdate(tf, outfile)
 
     outfile.close()
 
