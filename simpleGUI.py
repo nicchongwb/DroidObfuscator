@@ -156,7 +156,7 @@ def repackage():
         targetJavaDir = "C:/Program Files/Java/" #Search for both keytool and jarsigner in the JDK directory, searches for any version of JDK
         fileList = os.listdir(targetJavaDir)
         check = 0
-        print(targetFile)
+
         for i in fileList: #Search for bin directory on Windows as the two binaries requires relevant dll to function
             if(i.startswith("jdk")):
                 targetJavaDir = targetJavaDir + i + "/bin/"
@@ -174,7 +174,7 @@ def repackage():
             if (fileName in fileList):
                 searchResult = targetJavaDir + fileName
                 subprocess.run([searchResult, "-genkey", "-v", "-keystore", "2207RSAKey.jks", "-keyalg", "RSA", "-keysize", "2048","-validity", "10000", "-alias", "2207"])
-                key = "2207RSAKey"
+                key = "2207RSAKey.jks"
             else:
                 messagebox.showerror(title="Error", message="Unable to locate keytool.exe! Ensure JDK is installed in C:\Program Files\Java\!")
                 return
