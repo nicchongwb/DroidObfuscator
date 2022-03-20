@@ -118,8 +118,8 @@ def opaque_predicate(get_lines, outfile):
 	label_end = None
 	for line in get_lines:
 		# Check if start of method
-		if (line.startswith(".method") 
-			and " native " not in line 
+		if (line.startswith(".method")
+			and " native " not in line
 			and " abstract " not in line
 			and " constructor " not in line
 			and not edit_mode):
@@ -175,7 +175,7 @@ def opaque_predicate(get_lines, outfile):
 		else:
 			outfile.write(line)
 
-	outfile.close()
+	#outfile.close()
 
 def overload_method(get_lines, outfile):
 	edit_mode = False
@@ -183,14 +183,14 @@ def overload_method(get_lines, outfile):
 	label_end = None
 	for line in get_lines:
 		# Check if start of method
-		if (line.startswith(".method") 
-			and " native " not in line 
+		if (line.startswith(".method")
+			and " native " not in line
 			and " abstract " not in line
 			and " constructor " not in line
 			and "<init>" not in line
 			and "<clinit>" not in line
 			and not edit_mode):
-	
+
 				# Write fake method
 				method_sig = get_methodSig(line)
 				match_method = method_pattern.match(line)
@@ -199,7 +199,7 @@ def overload_method(get_lines, outfile):
 				method_return = match_method.group("method_return")
 
 				return_sig = ["Z", "B", "S", "C", "I", "F", "V"]
-				
+
 				new_method_return = "".join(random.choices(return_sig))
 				while new_method_return == method_return:
 					new_method_return = "".join(random.choices(return_sig))
@@ -207,13 +207,13 @@ def overload_method(get_lines, outfile):
 				paramCount = generate_randInt(1, 4) # p0 - p3
 				method_param = generate_randParam(paramCount)
 
-				localCount = generate_randInt(paramCount + 2, paramCount + 2) # include v0, v1 
-				outfile.write(".method {0} {1}({2}){3}\n".format(method_sig, 
+				localCount = generate_randInt(paramCount + 2, paramCount + 2) # include v0, v1
+				outfile.write(".method {0} {1}({2}){3}\n".format(method_sig,
 					method_name, method_param, method_return))
 
 				outfile.write("\t.locals {0}\n\n".format(localCount))
 
-				outfile.write(generate_randMethodBody(paramCount, localCount, 
+				outfile.write(generate_randMethodBody(paramCount, localCount,
 					method_return))
 
 				outfile.write(".end method\n\n")
@@ -224,21 +224,21 @@ def overload_method(get_lines, outfile):
 		else:
 			outfile.write(line)
 
-	outfile.close()
+	#outfile.close()
 
 def nop_addition(get_lines, outfile):
 	op_codes = get_nop_valid_op_codes()
 	# pattern = re.compile(r"\s+(?P<op_code>\S+)")
 	for line in get_lines:
-		outfile.write(line) 
+		outfile.write(line)
 		match = re.compile(r"\s+(?P<op_code>\S+)").match(line)
 		if match:
 			op_code = match.group("op_code")
 			# If it is a valid op code, insert nop instructions
 			if op_code in op_codes:
 				outfile.write("\tnop\n" * generate_randInt(1, 4))
-	
-	outfile.close()
+
+	#outfile.close()
 
 def debug_removal(file_content, outfile):
 	debug_op_codes = [".epilogue",".line ",".local ",".source ",".prologue",".epilogue",".end local",".restart local",".param "]
@@ -266,7 +266,7 @@ def debug_removal(file_content, outfile):
 
 	# write the reversed_lines to the outfile
 	outfile.writelines(list(reversed(reversed_lines)))
-	outfile.close()
+	#outfile.close()
 
 def rename_method_declarations(get_lines, out_file):
 	skip_lines = False
@@ -298,7 +298,7 @@ def rename_method_declarations(get_lines, out_file):
 				class_name = class_match.group("class_name")
 				# if class name in the ignore list or class name consists of package name, skip the remaining line
 				if (
-					class_name in ignore_class_names_list 
+					class_name in ignore_class_names_list
 					or class_name.startswith(
 						tuple(ignore_package_names)
 					)
@@ -315,7 +315,7 @@ def rename_method_declarations(get_lines, out_file):
 
 		# Method that is declared in class.
 		method_match = method_declaration_pattern.match(line)
-		
+
 		# Avoid any constructors,native and abstract methods.
 		if (method_match and "<init>" not in line and "<clinit>" not in line and " native " not in line and " abstract " not in line):
 			method = "{method_name}({method_param}){method_return}".format(
@@ -335,7 +335,7 @@ def rename_method_declarations(get_lines, out_file):
 			renamed_methods_set.add("{class_name}->{method}".format(class_name=class_name, method=method))
 		else:
 			out_file.write(line)
-	out_file.close()
+	#out_file.close()
 	return renamed_methods_set
 
 def rename_method_invocations(get_lines, renamed_methods_set, out_file):
@@ -348,7 +348,7 @@ def rename_method_invocations(get_lines, renamed_methods_set, out_file):
     r"\((?P<invoke_param>\S*?)\)"
     r"(?P<invoke_return>\S+)",
     re.UNICODE,
-)	
+)
 	#loop through lines in file
 	for line in get_lines:
 		# Check if line matches the method invocation pattern
@@ -379,14 +379,14 @@ def rename_method_invocations(get_lines, renamed_methods_set, out_file):
 				out_file.write(line)
 		else:
 			out_file.write(line)
-	out_file.close()
+	#out_file.close()
 
-def methods_rename():
-	get_lines = get_lines_from_file(abs_file_path)
-	outfile = open(out_file_path, "w", encoding="utf-8")
+def methods_rename(get_lines, outfile):
+	# get_lines = get_lines_from_file(abs_file_path)
+	# outfile = open(out_file_path, "w", encoding="utf-8")
 	renamed_methods_set = rename_method_declarations(get_lines, outfile)
-	get_lines = get_lines_from_file(out_file_path)
-	outfile = open(out_file_path, "w", encoding="utf-8")
+	# get_lines = get_lines_from_file(out_file_path)
+	# outfile = open(out_file_path, "w", encoding="utf-8")
 	rename_method_invocations(get_lines, renamed_methods_set, outfile)
 
 # Main Loop
@@ -420,4 +420,4 @@ out_file_path = os.path.join(script_dir, outfile_file_name)
 # file_content = read_file_content(smali_file_name)
 # debug_removal(file_content, outfile)
 
-methods_rename()
+# methods_rename()
