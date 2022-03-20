@@ -89,7 +89,11 @@ def Func3():
 
 def repackage():
     '''Rebuilds and resigns the apk from the smali files'''
-    targetFile = simpledialog.askstring("Target File to recompile & sign", "What is the name of the folder to recompile? \nNote: Ensure exe is in the same level directory as folder.")
+    '''targetFile = simpledialog.askstring("Target File to recompile & sign", "What is the name of the folder to recompile? \nNote: Ensure exe is in the same level directory as folder.")'''
+    '''if targetFile is None:'''
+    '''    return	     '''
+
+    targetFile = filedialog.askdirectory()
     if targetFile is None:
         return
 
