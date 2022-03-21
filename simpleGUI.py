@@ -275,32 +275,32 @@ pathh.place(x=80, width=800, y=450)
 # adding buttons
 Button(
     ws,
-    text="Technique 1",
+    text="Obfuscate",
     command=lambda: Func1(get_lines)
-    ).place(x=320, y=500)
+    ).place(x=180, y=500, height=30, width=150)
 
 Button(
     ws,
     text="Open File",
     command=openFile
-    ).place(x=440, y=500)
+    ).place(x=400, y=500, height=30, width=150)
 
 Button(
     ws,
     text="Decompile APK",
     command=lambda: decompile()
-    ).place(x=440, y=550)
+    ).place(x=290, y=550, height=30, width=150)
 
 Button(
     ws,
     text="Recompile & Sign to APK",
     command=lambda: repackage()
-    ).place(x=560, y=500)
+    ).place(x=620, y=500, height=30, width=150)
 
 Button(
     ws,
     text="Exit",
     command=lambda:ws.destroy()
-    ).place(x=560, y=550)
+    ).place(x=510, y=550, height=30, width=150)
 
 ws.mainloop()
