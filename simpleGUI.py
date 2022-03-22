@@ -7,12 +7,13 @@ import time
 from main import opaque_predicate, overload_method, nop_addition, debug_removal, methods_rename
 from garbage import badCodeInject
 
-#get_lines = list()
+get_lines = list()
 
 # functions
 def openFile():
     '''Opens and reads the target smali file '''
     global get_lines, file_cont, tf
+
     try:
         tf = filedialog.askopenfilename(
             initialdir="/",
@@ -82,45 +83,47 @@ def DisplayUpdate(newfile, outfile):
 
 def Obfuscate(get_lines):
     ''' Runs obfuscation methods '''
-    outfile_file_name = os.path.basename(tf)
-    file_path = tf
-    outfile = open(tf, "w", encoding="utf-8") # Opens file chosen and prepares to overwrite with new changes
+    # checks whether file is provided, else error is thrown
+    try:
+        outfile_file_name = os.path.basename(tf)
+        file_path = tf
+        outfile = open(tf, "w", encoding="utf-8") # Opens file chosen and prepares to overwrite with new changes
 
-    start = time.time()
-    opaque_predicate(get_lines, outfile)
-    end = time.time()
-    print(f"Opaque Predicate time elapsed: {end - start} seconds")
+        start = time.time()
+        opaque_predicate(get_lines, outfile)
+        end = time.time()
+        print(f"Opaque Predicate time elapsed: {end - start} seconds")
 
-    start = time.time()
-    overload_method(get_lines, outfile)
-    end = time.time()
-    print(f"Overload Method time elapsed: {end - start} seconds")
+        start = time.time()
+        overload_method(get_lines, outfile)
+        end = time.time()
+        print(f"Overload Method time elapsed: {end - start} seconds")
 
-    start = time.time()
-    nop_addition(get_lines, outfile)
-    end = time.time()
-    print(f"NOP Addition time elapsed: {end - start} seconds")
+        start = time.time()
+        nop_addition(get_lines, outfile)
+        end = time.time()
+        print(f"NOP Addition time elapsed: {end - start} seconds")
 
-    start = time.time()
-    debug_removal(file_cont, outfile)
-    end = time.time()
-    print(f"Debug Removal time elapsed: {end - start} seconds")
+        start = time.time()
+        debug_removal(file_cont, outfile)
+        end = time.time()
+        print(f"Debug Removal time elapsed: {end - start} seconds")
 
-    start = time.time()
-    methods_rename(get_lines, outfile)
-    end = time.time()
-    print(f"Method Rename time elapsed: {end - start} seconds")
+        start = time.time()
+        methods_rename(get_lines, outfile)
+        end = time.time()
+        print(f"Method Rename time elapsed: {end - start} seconds")
 
-    start = time.time()
-    badCodeInject(tf)
-    end = time.time()
-    print(f"Bad Code Inject time elapsed: {end - start} seconds")
+        start = time.time()
+        badCodeInject(tf)
+        end = time.time()
+        print(f"Bad Code Inject time elapsed: {end - start} seconds")
 
-    DisplayUpdate(tf, outfile)  # Display changes in 2nd text box
+        DisplayUpdate(tf, outfile)  # Display changes in 2nd text box
 
-    outfile.close()
-
-
+        outfile.close()
+    except NameError:
+        messagebox.showinfo(title="Error", message="Please select a file")
 
 def repackage():
     '''Rebuilds and resigns the apk from the smali files'''
@@ -252,6 +255,7 @@ ver_sb.pack(side=RIGHT, fill=BOTH)
 hor_sb = Scrollbar(frame, orient=HORIZONTAL)
 hor_sb.pack(side=BOTTOM, fill=BOTH)
 
+# adding scrollbars for 2nd frame
 ver_sb2 = Scrollbar(frame2, orient=VERTICAL )
 ver_sb2.pack(side=RIGHT, fill=BOTH)
 
@@ -272,7 +276,7 @@ ver_sb.config(command=txtarea.yview)
 txtarea.config(xscrollcommand=hor_sb.set)
 hor_sb.config(command=txtarea.xview)
 
-# binding scrollbar with text area
+# binding scrollbar with text area 2
 txtarea2.config(yscrollcommand=ver_sb2.set)
 ver_sb2.config(command=txtarea2.yview)
 
@@ -314,6 +318,7 @@ Button(
     command=lambda:ws.destroy()
     ).place(x=510, y=550, height=30, width=150)
 
+# adding graceful exit due to keyboard interrupts
 try:
     ws.mainloop()
 except KeyboardInterrupt:
