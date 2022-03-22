@@ -19,7 +19,6 @@ def openFile():
             title="Open Text file",
             filetypes=(
             ('smali files', '*.smali'),
-            ('text files', '*.txt'),
             ('All files', '*.*')
             )
             )
@@ -303,4 +302,8 @@ Button(
     command=lambda:ws.destroy()
     ).place(x=510, y=550, height=30, width=150)
 
-ws.mainloop()
+try:
+    ws.mainloop()
+except KeyboardInterrupt:
+    print("Keyboard Interrupt Detected.")
+    ws.destroy()
