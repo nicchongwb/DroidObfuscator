@@ -23,7 +23,7 @@ def badCodeInject(fileName):
 
     for line in lines:
         if (line.startswith(".method ") and (" abstract " not in line) and (" native " not in line) and (check == 0)):
-            print(line)
+        #    print(line)
             obsfuscatedFile.write(line)
             obsfuscatedFile.write("\tgoto :sensitivelabel\n")
             obsfuscatedFile.write("\t:sensitivelabel2\n")

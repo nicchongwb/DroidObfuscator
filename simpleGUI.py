@@ -23,7 +23,8 @@ def openFile():
             )
             )
 
-        pathh.delete(0, END)    #clear path box
+        pathh.delete(0, END)            # clear path box
+        txtarea2.delete('1.0', END)     # clear 2nd textbox in the case of opening another smali file
         pathh.insert(END, tf)
 
         with open(tf, "r", encoding="utf-8") as file:
@@ -79,11 +80,11 @@ def DisplayUpdate(newfile, outfile):
     file.close()
 
 
-def Func1(get_lines):
+def Obfuscate(get_lines):
     ''' Runs obfuscation methods '''
     outfile_file_name = os.path.basename(tf)
     file_path = tf
-    outfile = open(tf, "w", encoding="utf-8") # Opens file chosen and prepares to overwrite with new changes 
+    outfile = open(tf, "w", encoding="utf-8") # Opens file chosen and prepares to overwrite with new changes
 
     start = time.time()
     opaque_predicate(get_lines, outfile)
@@ -95,14 +96,25 @@ def Func1(get_lines):
     end = time.time()
     print(f"Overload Method time elapsed: {end - start} seconds")
 
+    start = time.time()
     nop_addition(get_lines, outfile)
-    print("nop added")
+    end = time.time()
+    print(f"NOP Addition time elapsed: {end - start} seconds")
+
+    start = time.time()
     debug_removal(file_cont, outfile)
-    print("debug added")
+    end = time.time()
+    print(f"Debug Removal time elapsed: {end - start} seconds")
+
+    start = time.time()
     methods_rename(get_lines, outfile)
-    print("rename added")
+    end = time.time()
+    print(f"Method Rename time elapsed: {end - start} seconds")
+
+    start = time.time()
     badCodeInject(tf)
-    print("bad code injected")
+    end = time.time()
+    print(f"Bad Code Inject time elapsed: {end - start} seconds")
 
     DisplayUpdate(tf, outfile)  # Display changes in 2nd text box
 
@@ -275,7 +287,7 @@ pathh.place(x=80, width=800, y=450)
 Button(
     ws,
     text="Obfuscate",
-    command=lambda: Func1(get_lines)
+    command=lambda: Obfuscate(get_lines)
     ).place(x=180, y=500, height=30, width=150)
 
 Button(

@@ -390,11 +390,11 @@ def methods_rename(get_lines, outfile):
 	rename_method_invocations(get_lines, renamed_methods_set, outfile)
 
 # Main Loop
-script_dir = os.path.dirname(__file__)
-smali_file_name = "MainActivity.smali"
-abs_file_path = os.path.join(script_dir, smali_file_name)
-outfile_file_name = "new_MainActivity.smali"
-out_file_path = os.path.join(script_dir, outfile_file_name)
+# script_dir = os.path.dirname(__file__)
+# smali_file_name = "MainActivity.smali"
+# abs_file_path = os.path.join(script_dir, smali_file_name)
+# outfile_file_name = "new_MainActivity.smali"
+# out_file_path = os.path.join(script_dir, outfile_file_name)
 
 # get_lines = get_lines_from_file(abs_file_path)
 # outfile = open(outfile_file_name, "w+", encoding="utf-8")
