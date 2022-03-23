@@ -4,8 +4,8 @@ import subprocess
 import sys
 import os
 import time
-from main import opaque_predicate, overload_method, nop_addition, debug_removal, methods_rename
-from garbage import badCodeInject
+from main import opaque_predicate, overload_method, nop_addition, debug_removal, methods_rename, badCodeInject
+# from garbage import badCodeInject
 
 get_lines = list()
 

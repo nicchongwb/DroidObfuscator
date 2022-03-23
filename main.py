@@ -388,6 +388,35 @@ def methods_rename(get_lines, outfile):
 	# get_lines = get_lines_from_file(out_file_path)
 	# outfile = open(out_file_path, "w", encoding="utf-8")
 	rename_method_invocations(get_lines, renamed_methods_set, outfile)
+    
+def badCodeInject(fileName):
+    '''Inject bad code into methods to defeat decompilation'''
+    #fileName = "Main.smali"
+    try:
+        lines = get_lines_from_file(fileName)
+    except FileNotFoundError:
+        print("Error! File " + fileName + " does not exist!")
+        return
+
+    check = 0  # Used as a check if editing a method
+    obsfuscatedFile = open(fileName, "w") #Edit a new smali file
+
+    for line in lines:
+        if (line.startswith(".method ") and (" abstract " not in line) and (" native " not in line) and (check == 0)):
+        #    print(line)
+            obsfuscatedFile.write(line)
+            obsfuscatedFile.write("\tgoto :sensitivelabel\n")
+            obsfuscatedFile.write("\t:sensitivelabel2\n")
+            check = 1
+
+        elif (line.startswith(".end method") and (check == 1)):
+            obsfuscatedFile.write("\t:sensitivelabel\n")
+            obsfuscatedFile.write("\tgoto :sensitivelabel2\n")
+            obsfuscatedFile.write(line)
+            check = 0
+        else:
+            obsfuscatedFile.write(line)
+    obsfuscatedFile.close()
 
 # Main Loop
 # script_dir = os.path.dirname(__file__)
