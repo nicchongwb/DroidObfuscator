@@ -1,5 +1,5 @@
 import tkinter as tk
-from tkinter import filedialog, simpledialog, messagebox, ttk
+from tkinter import ttk, filedialog, messagebox, simpledialog
 import subprocess
 import sys
 import os
@@ -14,7 +14,7 @@ def openFile():
     global get_lines, file_cont, tf
 
     try:
-        tf = filedialog.askopenfilename(
+        tf = tk.filedialog.askopenfilename(
             initialdir=os.getcwd(),
             title="Open Text file",
             filetypes=(
@@ -41,16 +41,11 @@ def openFile():
             txtarea.delete('1.0', tk.END)
             txtarea.insert(tk.END, file_cont)
             txtarea.configure(state="disabled")
+            
         folderPath.configure(state="disabled") #Prevents user from typing into textbox
-        option['state'] = 'normal' #Allow editing of the dropdown
-        if(not smaliFileList):
-            smaliFileList.append(os.path.basename(os.path.normpath(tf)))
-            variable.set(os.path.basename(os.path.normpath(tf)))#Display Smali File Name
-        else:
-            smaliFileList.append(os.path.basename(os.path.normpath(tf)))
-            variable.set(os.path.basename(os.path.normpath(tf)))#Display Smali File Name
-        option['values'] = smaliFileList #Update Dropdown List with the files
-        option['state'] = 'disabled' #Disable text editing on the smali file dropdown
+        smaliFileDict.update({os.path.basename(os.path.normpath(tf)): [tf, file_cont]})
+        variable.set(os.path.basename(os.path.normpath(tf)))#Display Smali File Name
+        option['values'] = list(smaliFileDict.keys()) #Update Dropdown List with the files
 
     except FileNotFoundError:
         return
@@ -105,44 +100,44 @@ def Obfuscate(get_lines):
     ''' Runs obfuscation methods '''
     # checks whether file is provided, else error is thrown
     try:
-        if(tf == None or tf == ""):
+        if(smaliFileDict[option.get()][0] == None or smaliFileDict[option.get()][0] == ""):
             raise NameError
         
-        outfile_file_name = os.path.basename(tf)
-        file_path = tf
-        outfile = open(tf, "w", encoding="utf-8") # Opens file chosen and prepares to overwrite with new changes
-
+        outfile_file_name = os.path.basename(smaliFileDict[option.get()][0])
+        file_path = smaliFileDict[option.get()][0]
+        outfile = open(smaliFileDict[option.get()][0], "w", encoding="utf-8") # Opens file chosen and prepares to overwrite with new changes
+       
         start = time.time()
-        opaque_predicate(get_lines, outfile)
+        opaque_predicate(smaliFileDict[option.get()][1], outfile)
         end = time.time()
         print(f"Opaque Predicate time elapsed: {end - start} seconds")
 
         start = time.time()
-        overload_method(get_lines, outfile)
+        overload_method(smaliFileDict[option.get()][1], outfile)
         end = time.time()
         print(f"Overload Method time elapsed: {end - start} seconds")
 
         start = time.time()
-        nop_addition(get_lines, outfile)
+        nop_addition(smaliFileDict[option.get()][1], outfile)
         end = time.time()
         print(f"NOP Addition time elapsed: {end - start} seconds")
 
         start = time.time()
-        debug_removal(file_cont, outfile)
+        debug_removal(smaliFileDict[option.get()][1], outfile)
         end = time.time()
         print(f"Debug Removal time elapsed: {end - start} seconds")
 
         start = time.time()
-        methods_rename(get_lines, outfile)
+        methods_rename(smaliFileDict[option.get()][1], outfile)
         end = time.time()
         print(f"Method Rename time elapsed: {end - start} seconds")
 
         start = time.time()
-        badCodeInject(tf) #Passes full file path to function
+        badCodeInject(smaliFileDict[option.get()][0]) #Passes full file path to function
         end = time.time()
         print(f"Bad Code Inject time elapsed: {end - start} seconds")
 
-        DisplayUpdate(tf, outfile)  # Display changes in 2nd text box
+        DisplayUpdate(smaliFileDict[option.get()][0], outfile)  # Display changes in 2nd text box
 
         outfile.close()
     except NameError:
@@ -150,7 +145,7 @@ def Obfuscate(get_lines):
 
 def recompile():
     '''Rebuilds to APK from a given folder'''
-
+    print(get_lines)
     try:
         result = subprocess.check_output(["java", "-version"], stderr=subprocess.STDOUT)
     except:
@@ -293,31 +288,44 @@ def sign():
 
         return #Completes after signing app
 
+def ComboBoxBinding(event):
+    '''Callback function for displaying drop down'''
+    txtarea.configure(state="normal")
+    txtarea.delete('1.0', tk.END)
+    txtarea.insert(tk.END, smaliFileDict[event.widget.get()][1])
+    txtarea.configure(state="disabled")
+    folderPath.configure(state="normal") #Enable back textbox for edit
+    folderPath.delete(0, tk.END) # Clear directory path box
+    txtarea2.configure(state="normal")
+    txtarea2.delete('1.0', tk.END) # Clear 2nd textbox in the case of opening another smali file
+    txtarea2.configure(state="disabled")
+    folderPath.insert(tk.END, smaliFileDict[event.widget.get()][0])
+    folderPath.configure(state="disabled") #Enable back textbox for edit
+
 ws = tk.Tk()
-ws.title("Obfuscation GUI")
+ws.title("DroidObfuscator")
 ws.geometry("960x600")
 ws.resizable(False, False)
 ws['bg']='#2a636e'
 
-title_label = tk.Label(text="Android Obfuscator v1.0", width=30) #Title Label
+title_label = tk.Label(text="DroidObfuscator v1.0", width=30) #Title Label
 title_label.place(x=400, y=10)
 
-tabControl = ttk.Notebook(ws) #Tabs
-
-smaliFileList = list()
+smaliFileDict = dict()
 variable = tk.StringVar(ws)# For Dropdownlist 
 SmaliFiles_label = tk.Label(text="Smali Files", width=10) #Drop down list to show smali
 SmaliFiles_label.place(x=10, y=10)
 option = ttk.Combobox(ws, textvariable=variable, state='readonly')
-option['values'] = smaliFileList
+option['values'] = list(smaliFileDict.keys())
 variable.set("No Files Loaded") # initial value
 option.place(x=100, y=10)
+option.bind('<<ComboboxSelected>>', ComboBoxBinding)
 
 frame = tk.Frame(ws, bg='white', height=400) #Creates a frame for original files
 frame.place(bordermode=tk.OUTSIDE, x=30, y=70, width=400)
 originalLabel = tk.Label(text="Original", width=10)
 originalLabel.place(x=170, y=40)
-txtarea = tk.Text(frame, width=40, height=25) 
+txtarea = tk.Text(frame, width=40, height=25)
 txtarea.pack(side=tk.LEFT, padx=20) #Displays textbox
 txtarea.configure(state="disabled") #Prevents user from typing into textbox
 ver_sb = tk.Scrollbar(frame, orient=tk.VERTICAL) #Frame 1 vertical scroll bar
@@ -342,9 +350,9 @@ txtarea2.config(yscrollcommand=ver_sb2.set) #binding scrollbar with text area fo
 ver_sb2.config(command=txtarea2.yview)
 
 folderPath_label = tk.Label(text="Directory Path", width=12)
-folderPath_label.place(x=25, y=490)
+folderPath_label.place(x=25, y=512)
 folderPath = tk.Entry(ws) # Textbox to display path
-folderPath.place(x=120, width=800, y=490)
+folderPath.place(x=120, width=800, y=513)
 folderPath.configure(state="disabled") #Prevents user from typing into textbox
 
 
@@ -352,12 +360,12 @@ folderPath.configure(state="disabled") #Prevents user from typing into textbox
 tk.Button(
     ws,
     text="Obfuscate",
-    command=lambda: Obfuscate(get_lines)
+    command=lambda: Obfuscate(smaliFileDict[option.get()][1])
     ).place(x=15, y=550, height=30, width=150)
 
 tk.Button(
     ws,
-    text="Open File",
+    text="Open Smali File",
     command=openFile
     ).place(x=175, y=550, height=30, width=150)
 
