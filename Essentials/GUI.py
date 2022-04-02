@@ -91,7 +91,6 @@ def DisplayUpdate(newfile, outfile):
     txtarea2.delete('1.0', tk.END)
     file = open(newfile)
     file_cont = file.read()
-    
     txtarea2.insert('1.0', file_cont)
     txtarea2.configure(state="disabled")
     file.close()
@@ -100,36 +99,55 @@ def Obfuscate():
     ''' Runs obfuscation methods '''
     # checks whether file is provided, else error is thrown
     try:
-        
         if(smaliFileDict[option.get()][0] == None or smaliFileDict[option.get()][0] == ""):
             raise NameError
         
         outfile_file_name = os.path.basename(smaliFileDict[option.get()][0])
         file_path = smaliFileDict[option.get()][0]
-        outfile = open(smaliFileDict[option.get()][0], "w", encoding="utf-8") # Opens file chosen and prepares to overwrite with new changes
-       
+        #outfile = open(smaliFileDict[option.get()][0], "w", encoding="utf-8") # Opens file chosen and prepares to overwrite with new changes
+                           
         start = time.time()
+        outfile = open(smaliFileDict[option.get()][0], "w", encoding="utf-8")
         opaque_predicate(smaliFileDict[option.get()][1], outfile)
+        outfile.close()
+        outfile = open(smaliFileDict[option.get()][0], "r", encoding="utf-8")
+        smaliFileDict[option.get()][1] = outfile.read()
         end = time.time()
         print(f"Opaque Predicate time elapsed: {end - start} seconds")
 
         start = time.time()
+        outfile = open(smaliFileDict[option.get()][0], "w", encoding="utf-8")
         overload_method(smaliFileDict[option.get()][1], outfile)
+        outfile.close()
+        outfile = open(smaliFileDict[option.get()][0], "r", encoding="utf-8")
+        smaliFileDict[option.get()][1] = outfile.read()
         end = time.time()
         print(f"Overload Method time elapsed: {end - start} seconds")
 
         start = time.time()
+        outfile = open(smaliFileDict[option.get()][0], "w", encoding="utf-8")
         nop_addition(smaliFileDict[option.get()][1], outfile)
+        outfile.close()
+        outfile = open(smaliFileDict[option.get()][0], "r", encoding="utf-8")
+        smaliFileDict[option.get()][1] = outfile.read()
         end = time.time()
         print(f"NOP Addition time elapsed: {end - start} seconds")
 
         start = time.time()
+        outfile = open(smaliFileDict[option.get()][0], "w", encoding="utf-8")
         debug_removal(smaliFileDict[option.get()][1], outfile)
+        outfile.close()
+        outfile = open(smaliFileDict[option.get()][0], "r", encoding="utf-8")
+        smaliFileDict[option.get()][1] = outfile.read()
         end = time.time()
         print(f"Debug Removal time elapsed: {end - start} seconds")
 
         start = time.time()
+        outfile = open(smaliFileDict[option.get()][0], "w", encoding="utf-8")
         methods_rename(smaliFileDict[option.get()][1], outfile)
+        outfile.close()
+        outfile = open(smaliFileDict[option.get()][0], "r", encoding="utf-8")
+        smaliFileDict[option.get()][1] = outfile.read()
         end = time.time()
         print(f"Method Rename time elapsed: {end - start} seconds")
 
@@ -137,7 +155,6 @@ def Obfuscate():
         badCodeInject(smaliFileDict[option.get()][0]) #Passes full file path to function
         end = time.time()
         print(f"Bad Code Inject time elapsed: {end - start} seconds")
-
         DisplayUpdate(smaliFileDict[option.get()][0], outfile)  # Display changes in 2nd text box
 
         outfile.close()
@@ -225,6 +242,7 @@ def sign():
             searchResult = file
 
     key = searchResult
+    #searchResult = None #Clears search
 
     if (os.name == "posix"): #Only run in linux to sign the app
 
