@@ -389,16 +389,12 @@ def methods_rename(get_lines, outfile):
 	# outfile = open(out_file_path, "w", encoding="utf-8")
 	rename_method_invocations(get_lines, renamed_methods_set, outfile)
     
-def badCodeInject(fileName):
+def badCodeInject(get_lines, outfile):
     '''Inject bad code into methods to defeat decompilation'''
-    try:
-        lines = get_lines_from_file(fileName)
-    except FileNotFoundError:
-        print("Error! File " + fileName + " does not exist!")
-        return
+    lines = get_lines
 
     check = 0  # Used as a check if editing a method
-    obsfuscatedFile = open(fileName, "w") #Edit a new smali file
+    obsfuscatedFile = outfile #Edit a new smali file
 
     for line in lines:
         if (line.startswith(".method ") and (" abstract " not in line) and (" native " not in line) and (check == 0)):
@@ -416,36 +412,47 @@ def badCodeInject(fileName):
             obsfuscatedFile.write(line)
     obsfuscatedFile.close()
 
-# # Main Loop
-# script_dir = os.path.dirname(__file__)
-# smali_file_name = "MainActivity.smali"
-# abs_file_path = os.path.join(script_dir, smali_file_name)
-# outfile_file_name = "new_MainActivity.smali"
-# out_file_path = os.path.join(script_dir, outfile_file_name)
+# Main Loop
+script_dir = os.path.dirname(__file__)
+smali_file_name = "MainActivity.smali"
+abs_file_path = os.path.join(script_dir, smali_file_name)
+outfile_file_name = "new_MainActivity.smali"
+out_file_path = os.path.join(script_dir, outfile_file_name)
 
-# get_lines = get_lines_from_file(abs_file_path)
-# outfile = open(outfile_file_name, "w+", encoding="utf-8")
+get_lines = get_lines_from_file(abs_file_path)
+outfile = open(outfile_file_name, "w+", encoding="utf-8")
 
-# start = time.time()
-# opaque_predicate(get_lines, outfile)
-# end = time.time()
-# print(f"Opaque Predicate time elapsed: {end - start} seconds")
+start = time.time()
+opaque_predicate(get_lines, outfile)
+end = time.time()
+print(f"Opaque Predicate time elapsed: {end - start} seconds")
 
-# get_lines = get_lines_from_file(outfile_file_name) # Use this for normal, not timing
-# # get_lines = get_lines_from_file(smali_file_name) # Use this for timing
-# outfile = open(outfile_file_name, "w+", encoding="utf-8")
+get_lines = get_lines_from_file(outfile_file_name) # Use this for normal, not timing
+# get_lines = get_lines_from_file(smali_file_name) # Use this for timing
+outfile = open(outfile_file_name, "w+", encoding="utf-8")
 
-# start = time.time()
-# overload_method(get_lines, outfile)
-# end = time.time()
-# print(f"Overload Method time elapsed: {end - start} seconds")
+start = time.time()
+overload_method(get_lines, outfile)
+end = time.time()
+print(f"Overload Method time elapsed: {end - start} seconds")
 
-# overload_method(get_lines, outfile)
+start = time.time()
+nop_addition(get_lines, outfile)
+end = time.time()
+print(f"NOP Addition Method time elapsed: {end - start} seconds")
 
-# nop_addition(get_lines, outfile)
+file_content = read_file_content(smali_file_name)
+start = time.time()
+debug_removal(file_content, outfile)
+end = time.time()
+print(f"Debug Removal Method time elapsed: {end - start} seconds")
 
-# file_content = read_file_content(smali_file_name)
-# debug_removal(file_content, outfile)
+start = time.time()
+methods_rename(get_lines, outfile)
+end = time.time()
+print(f"Method Rename Method time elapsed: {end - start} seconds")
 
-# methods_rename(get_lines, outfile)
-# badCodeInject(get_lines)
+start = time.time()
+badCodeInject(get_lines, outfile)
+end = time.time()
+print(f"BadCodeInject Method time elapsed: {end - start} seconds")
