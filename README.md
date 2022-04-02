@@ -1,28 +1,46 @@
-# Android-Obfuscator
+# DroidObfuscator - Android Obfuscation Tool
 
-Resources:
+```bash
+# Clone repository
+git clone https://github.com/nicchongwb/Android-Obfuscator.git
+
+# Set up python environment - Windows/Ubuntu
+cd Essentials
+python3 -m venv venv
+
+. venv/bin/activate # Linux
+venv\Scripts\activate.bat # Windows
+
+pip install tk
+
+# Start GUI
+python3 GUI.py
+```
+
+## GUI User Guide
+![1](src/01.png)
+
+Select the Decompile APK button to decompile APK
+![2](src/02.png)
+![3](src/03.png)
+
+Next, select the Open Smali File button to open the smali file that you want to obfuscate
+![4](src/04.png)
+
+The smali file will be loaded as shown below and select the Obfuscate button
+![5](src/05.png)
+
+The right panel contains the the obfuscated smali
+![6](src/06.png)
+
+Next, select the Recompile APK button and select the folder of the decompiled apk
+![7](src/07.png)
+
+Finally, select the Sign button and select the APK that you want to sign
+![8](src/08.png)
+
+
+## Resources:
 - [Dalvik Opcodes](http://pallergabor.uw.hu/androidblog/dalvik_opcodes.html)
 - [Smali Wiki](https://github.com/JesusFreke/smali/wiki)
 - [Regex101](https://regex101.com/)
-
-```bash
-apktool d -f -r game2048.apk
-
-# Perform obs and transfer replace file in game2048 folder
-apktool b -f -d game2048 # apk will be in the /dist folder
-
-# Generate Key - Skip, already generated
-keytool -genkey -v -keystore game_2048.keystore -alias key_2048 -keyalg RSA -keysize 2048 -validity 10000
-# Keystore passcode: 123456
-
-# Sign APK
-jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore game_2048.keystore game2048/dist/game2048.apk key_2048
-
-# Verify if apk is signed
-jarsigner -verify -verbose -certs game2048/dist/game2048.apk
-
-# Zip align apk - don't really work when installing on emulator
-zipalign -v 4 game2048.apk game2048_zipaligned.apk
-
-adb install game2048.apk
-```
