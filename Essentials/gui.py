@@ -1,5 +1,5 @@
 import tkinter as tk
-from tkinter import filedialog, simpledialog, messagebox, ttk
+from tkinter import ttk, filedialog, messagebox, simpledialog
 import subprocess
 import sys
 import os
@@ -10,11 +10,11 @@ get_lines = list()
 
 # functions
 def openFile():
-    '''Opens and reads the target smali file '''
+    '''Opens and reads the a single target smali file '''
     global get_lines, file_cont, tf
 
     try:
-        tf = filedialog.askopenfilename(
+        tf = tk.filedialog.askopenfilename(
             initialdir=os.getcwd(),
             title="Open Text file",
             filetypes=(
@@ -22,11 +22,15 @@ def openFile():
             ('All files', '*.*')
             )
             )
-
-        pathh.delete(0, tk.END)            # clear path box
+        
+        if(tf == None or tf == ""):
+            return
+        
+        folderPath.configure(state="normal") #Enable back textbox for edit
+        folderPath.delete(0, tk.END)            # clear path box
         txtarea2.delete('1.0', tk.END)     # clear 2nd textbox in the case of opening another smali file
-        pathh.insert(tk.END, tf)
-
+        folderPath.insert(tk.END, tf)
+        
         with open(tf, "r", encoding="utf-8") as file:
             # prints to textbox
             file_cont = file.read()
@@ -37,10 +41,14 @@ def openFile():
             txtarea.delete('1.0', tk.END)
             txtarea.insert(tk.END, file_cont)
             txtarea.configure(state="disabled")
+            
+        folderPath.configure(state="disabled") #Prevents user from typing into textbox
+        smaliFileDict.update({os.path.basename(os.path.normpath(tf)): [tf, file_cont]})
+        variable.set(os.path.basename(os.path.normpath(tf)))#Display Smali File Name
+        option['values'] = list(smaliFileDict.keys()) #Update Dropdown List with the files
 
     except FileNotFoundError:
         return
-
 
 def decompile():
     ''' Decompiles APK into folder in same directory '''
@@ -52,6 +60,7 @@ def decompile():
             ('apk files', '*.apk'),
             )
         )
+        
         if(apk == "" or apk == None):
             return
 
@@ -78,66 +87,65 @@ def decompile():
 
 def DisplayUpdate(newfile, outfile):
     ''' Updates 2nd textbox with changes '''
+    txtarea2.configure(state="normal")
     txtarea2.delete('1.0', tk.END)
     file = open(newfile)
     file_cont = file.read()
-    txtarea2.configure(state="normal")
+    
     txtarea2.insert(tk.END, file_cont)
-    txtarea.configure(state="disabled")
+    txtarea2.configure(state="disabled")
     file.close()
-
 
 def Obfuscate(get_lines):
     ''' Runs obfuscation methods '''
     # checks whether file is provided, else error is thrown
     try:
-        if(tf == None or tf == ""):
+        if(smaliFileDict[option.get()][0] == None or smaliFileDict[option.get()][0] == ""):
             raise NameError
         
-        outfile_file_name = os.path.basename(tf)
-        file_path = tf
-        outfile = open(tf, "w", encoding="utf-8") # Opens file chosen and prepares to overwrite with new changes
-
+        outfile_file_name = os.path.basename(smaliFileDict[option.get()][0])
+        file_path = smaliFileDict[option.get()][0]
+        outfile = open(smaliFileDict[option.get()][0], "w", encoding="utf-8") # Opens file chosen and prepares to overwrite with new changes
+       
         start = time.time()
-        opaque_predicate(get_lines, outfile)
+        opaque_predicate(smaliFileDict[option.get()][1], outfile)
         end = time.time()
         print(f"Opaque Predicate time elapsed: {end - start} seconds")
 
         start = time.time()
-        overload_method(get_lines, outfile)
+        overload_method(smaliFileDict[option.get()][1], outfile)
         end = time.time()
         print(f"Overload Method time elapsed: {end - start} seconds")
 
         start = time.time()
-        nop_addition(get_lines, outfile)
+        nop_addition(smaliFileDict[option.get()][1], outfile)
         end = time.time()
         print(f"NOP Addition time elapsed: {end - start} seconds")
 
         start = time.time()
-        debug_removal(file_cont, outfile)
+        debug_removal(smaliFileDict[option.get()][1], outfile)
         end = time.time()
         print(f"Debug Removal time elapsed: {end - start} seconds")
 
         start = time.time()
-        methods_rename(get_lines, outfile)
+        methods_rename(smaliFileDict[option.get()][1], outfile)
         end = time.time()
         print(f"Method Rename time elapsed: {end - start} seconds")
 
         start = time.time()
-        badCodeInject(tf)
+        badCodeInject(smaliFileDict[option.get()][0]) #Passes full file path to function
         end = time.time()
         print(f"Bad Code Inject time elapsed: {end - start} seconds")
 
-        DisplayUpdate(tf, outfile)  # Display changes in 2nd text box
+        DisplayUpdate(smaliFileDict[option.get()][0], outfile)  # Display changes in 2nd text box
 
         outfile.close()
     except NameError:
         messagebox.showinfo(title="Error", message="Please select a file")
 
 def recompile():
-    #Rebuilds and resigns the apk from the smali files
-    #targetFile = simpledialog.askstring("Target File to recompile & sign", "What is the name of the folder to recompile? \nNote: Ensure exe is in the same level directory as folder.")
-
+    '''Rebuilds to APK from a given folder'''
+    print(get_lines)
     try:
         result = subprocess.check_output(["java", "-version"], stderr=subprocess.STDOUT)
     except:
@@ -185,8 +193,7 @@ def recompile():
         
         
 def sign():
-     #Rebuilds and resigns the apk from the smali files
-
+    '''Signs given apk'''
     targetFile = filedialog.askopenfilename(
             initialdir=os.getcwd(),
             title="Select APK",
@@ -281,96 +288,110 @@ def sign():
 
         return #Completes after signing app
 
+def ComboBoxBinding(event):
+    '''Callback function for displaying drop down'''
+    txtarea.configure(state="normal")
+    txtarea.delete('1.0', tk.END)
+    txtarea.insert(tk.END, smaliFileDict[event.widget.get()][1])
+    txtarea.configure(state="disabled")
+    folderPath.configure(state="normal") #Enable back textbox for edit
+    folderPath.delete(0, tk.END) # Clear directory path box
+    txtarea2.configure(state="normal")
+    txtarea2.delete('1.0', tk.END) # Clear 2nd textbox in the case of opening another smali file
+    txtarea2.configure(state="disabled")
+    folderPath.insert(tk.END, smaliFileDict[event.widget.get()][0])
+    folderPath.configure(state="disabled") #Enable back textbox for edit
+
 ws = tk.Tk()
-ws.title("Obfuscation GUI")
+ws.title("DroidObfuscator")
 ws.geometry("960x600")
 ws.resizable(False, False)
 ws['bg']='#2a636e'
 
-frame = tk.Frame(ws)
-frame.place(x=80, y=20, width=400)
+title_label = tk.Label(text="DroidObfuscator v1.0", width=30) #Title Label
+title_label.place(x=400, y=10)
 
-frame2 = tk.Frame(ws)
-frame2.place(x=500, y=20, width=400)
+smaliFileDict = dict()
+variable = tk.StringVar(ws)# For Dropdownlist 
+SmaliFiles_label = tk.Label(text="Smali Files", width=10) #Drop down list to show smali
+SmaliFiles_label.place(x=10, y=10)
+option = ttk.Combobox(ws, textvariable=variable, state='readonly')
+option['values'] = list(smaliFileDict.keys())
+variable.set("No Files Loaded") # initial value
+option.place(x=100, y=10)
+option.bind('<<ComboboxSelected>>', ComboBoxBinding)
 
-# adding scrollbars
-ver_sb = tk.Scrollbar(frame, orient=tk.VERTICAL )
+frame = tk.Frame(ws, bg='white', height=400) #Creates a frame for original files
+frame.place(bordermode=tk.OUTSIDE, x=30, y=70, width=400)
+originalLabel = tk.Label(text="Original", width=10)
+originalLabel.place(x=170, y=40)
+txtarea = tk.Text(frame, width=40, height=25)
+txtarea.pack(side=tk.LEFT, padx=20) #Displays textbox
+txtarea.configure(state="disabled") #Prevents user from typing into textbox
+ver_sb = tk.Scrollbar(frame, orient=tk.VERTICAL) #Frame 1 vertical scroll bar
 ver_sb.pack(side=tk.RIGHT, fill=tk.BOTH)
-
-hor_sb = tk.Scrollbar(frame, orient=tk.HORIZONTAL)
+hor_sb = tk.Scrollbar(frame, orient=tk.HORIZONTAL) #Frame 1 Horizontal scroll bar
 hor_sb.pack(side=tk.BOTTOM, fill=tk.BOTH)
-
-# adding scrollbars for 2nd frame
-ver_sb2 = tk.Scrollbar(frame2, orient=tk.VERTICAL )
-ver_sb2.pack(side=tk.RIGHT, fill=tk.BOTH)
-
-hor_sb2 = tk.Scrollbar(frame2, orient=tk.HORIZONTAL)
-hor_sb2.pack(side=tk.BOTTOM, fill=tk.BOTH)
-
-# adding writing space
-txtarea = tk.Text(frame, width=40, height=20)
-txtarea.pack(side=tk.LEFT, padx=20)
-
-txtarea2 = tk.Text(frame2, width=40, height=20)
-txtarea2.pack(side=tk.LEFT, padx=20)
-
-txtarea.configure(state="disabled")
-txtarea2.configure(state="disabled")
-
-# binding scrollbar with text area
-txtarea.config(yscrollcommand=ver_sb.set)
+txtarea.config(yscrollcommand=ver_sb.set) #binding scrollbar with text area for frame 1
 ver_sb.config(command=txtarea.yview)
 
-txtarea.config(xscrollcommand=hor_sb.set)
-hor_sb.config(command=txtarea.xview)
-
-# binding scrollbar with text area 2
-txtarea2.config(yscrollcommand=ver_sb2.set)
+frame2 = tk.Frame(ws, bg='white',height=400) #Frame for Obfuscated result
+frame2.place(bordermode=tk.OUTSIDE, x=500, y=70, width=400)
+obfuscatedLabel = tk.Label(text="Obfuscated", width=10)
+obfuscatedLabel.place(x=670, y=40)
+txtarea2 = tk.Text(frame2, width=40, height=25)
+txtarea2.pack(side=tk.LEFT, padx=20)
+txtarea2.configure(state="disabled") #Prevents user from typing into textbox
+ver_sb2 = tk.Scrollbar(frame2, orient=tk.VERTICAL) #Frame 2 vertical scroll bar
+ver_sb2.pack(side=tk.RIGHT, fill=tk.BOTH)
+hor_sb2 = tk.Scrollbar(frame2, orient=tk.HORIZONTAL) #Frame 2 Horizontal scroll bar
+hor_sb2.pack(side=tk.BOTTOM, fill=tk.BOTH)
+txtarea2.config(yscrollcommand=ver_sb2.set) #binding scrollbar with text area for frame 2
 ver_sb2.config(command=txtarea2.yview)
 
-txtarea2.config(xscrollcommand=hor_sb2.set)
-hor_sb2.config(command=txtarea2.xview)
+folderPath_label = tk.Label(text="Directory Path", width=12)
+folderPath_label.place(x=25, y=512)
+folderPath = tk.Entry(ws) # Textbox to display path
+folderPath.place(x=120, width=800, y=513)
+folderPath.configure(state="disabled") #Prevents user from typing into textbox
 
-# adding path showing box
-pathh = tk.Entry(ws)
-pathh.place(x=80, width=800, y=450)
 
 # adding buttons
 tk.Button(
     ws,
     text="Obfuscate",
-    command=lambda: Obfuscate(get_lines)
-    ).place(x=180, y=500, height=30, width=150)
+    command=lambda: Obfuscate(smaliFileDict[option.get()][1])
+    ).place(x=15, y=550, height=30, width=150)
 
 tk.Button(
     ws,
-    text="Open File",
+    text="Open Smali File",
     command=openFile
-    ).place(x=400, y=500, height=30, width=150)
+    ).place(x=175, y=550, height=30, width=150)
 
 tk.Button(
     ws,
     text="Decompile APK",
     command=lambda: decompile()
-    ).place(x=180, y=550, height=30, width=150)
+    ).place(x=335, y=550, height=30, width=150)
 
 tk.Button(
     ws,
     text="Sign",
     command=lambda: sign()
-    ).place(x=620, y=500, height=30, width=150)
+    ).place(x=495, y=550, height=30, width=150)
     
 tk.Button(
     ws,
     text="Recompile APK",
     command=lambda: recompile()
-    ).place(x=400, y=550, height=30, width=150)
+    ).place(x=650, y=550, height=30, width=150)
 
 tk.Button(
     ws,
     text="Exit",
     command=lambda:ws.destroy()
-    ).place(x=620, y=550, height=30, width=150)
+    ).place(x=830, y=10, height=30, width=120)
 
 # adding graceful exit due to keyboard interrupts
 try:
