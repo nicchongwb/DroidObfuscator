@@ -92,7 +92,7 @@ def DisplayUpdate(newfile, outfile):
     file = open(newfile)
     file_cont = file.read()
     
-    txtarea2.insert(tk.END, file_cont)
+    txtarea2.insert('1.0', file_cont)
     txtarea2.configure(state="disabled")
     file.close()
 
