@@ -96,10 +96,11 @@ def DisplayUpdate(newfile, outfile):
     txtarea2.configure(state="disabled")
     file.close()
 
-def Obfuscate(get_lines):
+def Obfuscate():
     ''' Runs obfuscation methods '''
     # checks whether file is provided, else error is thrown
     try:
+        
         if(smaliFileDict[option.get()][0] == None or smaliFileDict[option.get()][0] == ""):
             raise NameError
         
@@ -142,10 +143,11 @@ def Obfuscate(get_lines):
         outfile.close()
     except NameError:
         messagebox.showinfo(title="Error", message="Please select a file")
+    except KeyError:
+        return
 
 def recompile():
     '''Rebuilds to APK from a given folder'''
-    print(get_lines)
     try:
         result = subprocess.check_output(["java", "-version"], stderr=subprocess.STDOUT)
     except:
@@ -360,7 +362,7 @@ folderPath.configure(state="disabled") #Prevents user from typing into textbox
 tk.Button(
     ws,
     text="Obfuscate",
-    command=lambda: Obfuscate(smaliFileDict[option.get()][1])
+    command=lambda: Obfuscate()
     ).place(x=15, y=550, height=30, width=150)
 
 tk.Button(
