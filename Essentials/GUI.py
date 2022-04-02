@@ -225,7 +225,6 @@ def sign():
             searchResult = file
 
     key = searchResult
-    #searchResult = None #Clears search
 
     if (os.name == "posix"): #Only run in linux to sign the app
 
